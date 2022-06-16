@@ -6,8 +6,15 @@ const format_duration = number => {
     let solution = [];
     for (let x = 0; x < bp.length; x++) {
       if (number % bp[x] !== 0) {
-        const value = Math.floor((number % bp[x]) / (bp[x-1] || 1));
+        let numModBP =  number % bp[x];
+        console.log("numModBP: " + numModBP)
+        let prevBP =  bp[x-1];
+        console.log("prevBP: " + prevBP)
+        const value = Math.floor(
+          (number % bp[x]) / (bp[x-1] || 1));
+
         solution.push(`${value} ${units[x]}${value > 1 ? 's' : ''}`);
+
         number -= number % bp[x];
       }
     }
