@@ -1,20 +1,23 @@
 var myAtoi = function(s) {
-  //     Read in and ignore any leading whitespace.
- 
+  // The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
 
-  while(s.slice(0,1) == ' '){
-    s = s.substr(1);
-    console.log(s)
-    return s
-  }
-  console.log("second s: ", s)
-  return s
-  // Check if the next character (if not already at the end of the sing) is '-' or '+'. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.
-  // Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the sing is ignored.
-  // Convert these digits into an integer (i.e. "123" -> 123, "0032" -> 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).
-  // If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -231 should be clamped to -231, and integers greater than 231 - 1 should be clamped to 231 - 1.
-  // Return the integer as the final result.
+  // RADIX, WHAT?!?!  a radix of 10 converts from a decimal number, 8 converts from octal, 16 from hexadecimal, and so on.)
+  // For radices above 10, letters of the English alphabet indicate numerals greater than 9. For example, for hexadecimal numbers (base 16), A through F are used.
+
+  // SYNTAX - parseInt(string)
+  // string = The value to parse. If this argument is not a string, then it is converted to one using the ToString abstract operation. Leading whitespace in this argument is ignored.
+
+  let n  = parseInt(s); 
+  
+  if(!n)
+    return 0;
+  // The Math.pow() static method, given two arguments, base and exponent, returns base exponent.
+  // Math.pow(base, exponent)
+  if(n < Math.pow(-2,31)) 
+    return Math.pow(-2,31);
+
+  if(n > Math.pow(2,31) - 1) 
+    return Math.pow(2,31) - 1;
+
+  return n
 };
-
-
-console.log(myAtoi(" hello"));
