@@ -2,7 +2,7 @@ var maxArea = function(height) {
   if (!height.length || height.length === 1) return null;
 
 
-  let maxArea = 0;
+  let maximumArea = 0;
   let i = 0;
   let j = height.length - 1;
 
@@ -12,10 +12,10 @@ var maxArea = function(height) {
 
   while (i < j) {
       let area = Math.min(height[i], height[j]) * (j - i);
-      area > maxArea ? maxArea = area : maxArea;
+      area > maximumArea ? maximumArea = area : maximumArea;
       height[i] < height[j] ? i++ : j--;
   }
-  return maxArea;
+  return maximumArea;
 
 }
 
