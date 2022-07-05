@@ -1,11 +1,9 @@
 var fourSum = function(nums, target) {
   nums.sort((a,b) => a-b)
-
   let qdrplts = [];
   let numsLength= nums.length;
   
   for(let i = 0; i < numsLength- 3; i++) {
-
       if(i > 0 && nums[i] == nums[i-1]) {
           while(nums[i] == nums[i-1]) {
               i++;
@@ -37,7 +35,9 @@ function searchPairs(nums, target, first, second, qdrplts) {
       
       if(currentSum == target) {
 
+
           qdrplts.push([nums[first], nums[second], nums[left], nums[right]]);
+
 
           left++;
           right--;
