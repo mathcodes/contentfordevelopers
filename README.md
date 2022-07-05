@@ -46,7 +46,7 @@ GitHub: [mathcodes](https://github.com/mathcodes)
 [<code><img width="36" src="https://img.icons8.com/color/48/000000/soundcloud.png"/></code>](https://soundcloud.com/jonchristie#/)       
 [<code><img width="36" src="https://img.icons8.com/color/48/000000/spotify--v1.png"/></code>](https://open.spotify.com/artist/07S7aLfxH70VAX64g1WuFw?si=tlOj1OMBRLm-y4sY8Lox3Q)
 
-<!-- Contributors list:
+Contributors list:
 <table>
   <tr>
     <th>Name</th>
@@ -59,9 +59,9 @@ GitHub: [mathcodes](https://github.com/mathcodes)
     <td>Admin, contributor</td>
   </tr>
   <tr>
-    <td>NAME HERE</td>
-    <td>GITHUB LINK HERE</td>
-    <td>INFO/BIO HERE</td>
+    <td>Chris Jones</td>
+    <td><a href="https://github.com/mernmonster">mernmonster</a></td>
+    <td>Contributor</td>
   </tr>
   <tr>
     <td>NAME HERE</td>
@@ -83,4 +83,4 @@ GitHub: [mathcodes](https://github.com/mathcodes)
     <td>GITHUB LINK HERE</td>
     <td>INFO/BIO HERE</td>
   </tr>
-</table> -->
+</table>
