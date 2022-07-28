@@ -10,7 +10,7 @@ An example of [Python Tutor](www.pythontutor.com) doing what it does best:
 
 <img alt="longest common prefix" src="./LeetCode/0014.%20Longest%20Common%20Prefix/LongestCommonPrefixGif" height="300px;" />
 
-I use <a href="https://app.diagrams.net/" style="color:#d35400; font-weight:900">app.diagrams.net</a> to make these charts... its a <span style="color:#32cd32; font-weight:900">FREE</span> google=doc-compatible diagram creator:
+I use <a href="https://app.diagrams.net/" style="color:#d35400; font-weight:900">app.diagrams.net</a> to make charts... its a <span style="color:#32cd32; font-weight:900">FREE</span> google=doc-compatible diagram creator:
 
 
 <img src="https://raw.githubusercontent.com/mathcodes/lc_hr_cw/main/LeetCode/0001.%20Two%20Sum/1.twoSum.png" height="200px"/> <img src="https://raw.githubusercontent.com/mathcodes/lc_hr_cw/main/LeetCode/0004.%20Median%20of%20Two%20Sorted%20Arrays/4.MedianOfTwoSortedArrays.drawio.png" height="200px"/>
