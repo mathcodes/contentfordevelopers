@@ -26,5 +26,3 @@ const removeElement2 = (nums, val) => {
 
 
  
-
- 
