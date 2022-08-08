@@ -7,6 +7,7 @@
   if (numRows === 1) return s;
   
   const stack = new Array(numRows).fill('');
+  console.log(stack);
   let idx = 0;
   let isZigZag = false;
   
@@ -22,3 +23,5 @@
 
   return stack.join('');
 };
+
+convert('PAYPALISHIRING', 3);
