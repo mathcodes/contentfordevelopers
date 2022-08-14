@@ -1,5 +1,4 @@
 # lc_hr_cw
-
 Leetcode, Hackerrank, and Codewars challenges with solutions and a diverse collection of visual aids, cheatsheets and other learning methods to help make sense of it all!!! Got something you'd like to add??? This is a collaborative effort!!! Please visit this repo and read the instructions on the correct way to contribute to open source projects: [First Contributions](https://github.com/firstcontributions/first-contributions).
 
 ## Description
@@ -21,7 +20,8 @@ I use <a href="https://app.diagrams.net/" style="color:#d35400; font-weight:900"
 ## Why join the team?
 Well, we all know that there are countless resources for basically any topic in web development out there. So no, this is NOT just another resource that regurgitates info and slaps their logo on it. This is an effort to not only provide solutions to `Data Structures and Algorithms` problems, but to take each one a step or two further by including easy follow, broken down explanations of each step with the mindset that we are teaching coding to a toddler! 
 
-Here are some ways you can get your contributions up and become an asset to the tech industry!!! 
+## Why join the team?
+Well, we all know that there are countless resources for basically any topic in web development out there. So no, this is NOT just another resource that regurgitates info and slaps their logo on it. This is an effort to not only provide solutions to `Data Structures and Algorithms` problems, but to take each one a step or two further by including easy follow, broken down explanations of each step with the mindset that we are teaching coding to a toddler! 
 
 1. List your name and info in the table below. THATS IT. Do that using the guidelines in the link above and you are a contributor!!!!!
 2. Improve existing code (please leave original files untouched and add "-updated" to the end of your new filename (if you update `twoSum.js`, create your own file called `twoSum-updated.js`)
