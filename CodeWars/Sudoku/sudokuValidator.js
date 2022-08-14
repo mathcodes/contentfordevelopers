@@ -11,7 +11,7 @@ function rowChecker(matrix){
 }
 
 // Checking the columns
-function columnChecker(matrix){
+function columnChecker(matrix) {
   let colArr = [[],[],[],[],[],[],[],[],[]];
   matrix.forEach(col => col.forEach((num, i) => colArr[i].push(num)));
   return rowChecker(colArr);
