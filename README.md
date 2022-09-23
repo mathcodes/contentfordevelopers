@@ -65,9 +65,9 @@ Contributors list:
     <td>Contributor</td>
   </tr>
   <tr>
-    <td>NAME HERE</td>
-    <td>GITHUB LINK HERE</td>
-    <td>INFO/BIO HERE</td>
+    <td>Devesh Goyal</td>
+    <td><a href="https://github.com/deveshgoyal1000">deveshgoyal1000</a></td>
+    <td>Contributor</td>
   </tr>
     <tr>
     <td>NAME HERE</td>
