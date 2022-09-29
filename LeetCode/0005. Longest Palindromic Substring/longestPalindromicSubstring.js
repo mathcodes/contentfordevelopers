@@ -3,12 +3,12 @@
  * @return {string}
  */
 var longestPalindrome = function (s) {
-    let max = -Infinity, count
+    let max = -Infinity, count // max starts at -Infinity to avoid counting the first character as a palindrome
     let prev, next
     let start, end
     for (let i = 0; i < s.length; i++) {
 
-        //for odd combinations
+        //for odd combinations we can and subtract 1 from the count which 
         prev = i - 1
         next = i + 1
         count = 1
