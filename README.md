@@ -20,6 +20,7 @@ I use <a href="https://app.diagrams.net/" style="color:#d35400; font-weight:900"
 Well, we all know that there are countless resources for basically any topic in web development out there. So no, this is NOT just another resource that regurgitates info and slaps their logo on it. This is an effort to not only provide solutions to `Data Structures and Algorithms` problems, but to take each one a step or two further by including easy-to-follow, broken down explanations of each step. 
 
 ## Instructions
+
 1. List your name and info in the table below. THATS IT. Do that using the guidelines in the link above and you are a contributor!!!!!
 2. Improve existing code (please leave original files untouched and add "-updated" to the end of your new filename (if you update `twoSum.js`, create your own file called `twoSum-updated.js`)
 3. Answer any missing problem from [HackerRank](https://www.hackerrank.com/), [LeetCode](https://leetcode.com/problemset/all/), or [CodeWars](https://www.codewars.com/) and place the file in its own folder in the corresponding directory following the format already being used with previous submissions.
