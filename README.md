@@ -3,21 +3,34 @@
 Leetcode, Hackerrank, and Codewars challenges with solutions and a diverse collection of visual aids, cheatsheets and other learning methods to help make sense of it all!!! Got something you'd like to add??? This is a collaborative effort!!! 
 
 <h2>Description</h2>
-Fork this repo (button on top)
-Clone on your local machine
-git clone https://github.com/fineanmol/Hacktoberfest2022.git
+Fork this repo
+Clone to your local machine:
+
+```bash
+git clone https://github.com/mathcodes/lc_hr_cw.git
+```
 
 Navigate to project directory.
+```bash
 cd Hacktoberfest2022
+```
 Create a new Branch
+```bash
 git checkout -b my-new-branch
+```
 Add your contribution
+```bash
 git add .
+```
 Commit your changes.
+```bash
 git commit -m "Relevant message"
+```
 Then push
+```bashg
 git push origin my-new-branch
-Create a new pull request from your forked repository
+```
+Create a new pull request from your forked repository... and done!
 
 <h2>Contributing</h2>
 
