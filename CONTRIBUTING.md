@@ -6,6 +6,7 @@ If you find an issue and want to report it, GREAT! THANKS! Please include the fo
  - HAPPY HACKING!
 
 <h2>Submitting PRs</h2>
+
 Fork this repo & clone to your local machine:
 
 ```bash
@@ -14,7 +15,7 @@ git clone https://github.com/mathcodes/lc_hr_cw.git
 
 Navigate to project directory.
 ```bash
-cd Hacktoberfest2022
+cd lc_hr_cw
 ```
 Create a new Branch
 ```bash
