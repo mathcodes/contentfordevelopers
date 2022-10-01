@@ -1,6 +1,6 @@
 <h1>lc-hr-cw</h1>
 
-Leetcode, Hackerrank, and Codewars challenges with solutions and a diverse collection of visual aids, cheatsheets and other learning methods to help make sense of it all!!! Got something you'd like to add??? This is a collaborative effort!!!
+Leetcode, Hackerrank, and Codewars challenges with solutions and a diverse collection of visual aids, cheatsheets and other learning methods to help make sense of it all!!! Got something you'd like to add??? This is a collaborative effort!!! 
 
 <h2>Description</h2>
 Fork this repo
@@ -11,45 +11,33 @@ git clone https://github.com/mathcodes/lc_hr_cw.git
 ```
 
 Navigate to project directory.
-
 ```bash
 cd Hacktoberfest2022
 ```
-
 Create a new Branch
-
 ```bash
 git checkout -b my-new-branch
 ```
-
 Add your contribution
-
 ```bash
 git add .
 ```
-
 Commit your changes.
-
 ```bash
 git commit -m "Relevant message"
 ```
-
 Then push
-
 ```bashg
 git push origin my-new-branch
 ```
-
 Create a new pull request from your forked repository... and done!
 
 <h2>Contributing</h2>
 
 ### Section 1
-
 Please visit this repo and read the instructions on the correct way to contribute to open source projects: [First Contributions](https://github.com/firstcontributions/first-contributions).
 
 ### Section 2
-
 CONTRIBUTING.md
 
 We aim to please users with not just another solution bank to leetcode problems, but MORE. Contributors are encouraged to upload and share any additional content such as visual diagrams, animated GIFs, notes, charts, or whatever they use to not only solve, but UNDERSTAND the problem at hand.
@@ -66,7 +54,7 @@ I use <a href="https://app.diagrams.net/" style="color:#d35400; font-weight:900"
 
 ## Why join the team?
 
-Well, we all know that there are countless resources for basically any topic in web development out there. So no, this is NOT just another resource that regurgitates info and slaps their logo on it. This is an effort to not only provide solutions to `Data Structures and Algorithms` problems, but to take each one a step or two further by including easy-to-follow, broken down explanations of each step.
+Well, we all know that there are countless resources for basically any topic in web development out there. So no, this is NOT just another resource that regurgitates info and slaps their logo on it. This is an effort to not only provide solutions to `Data Structures and Algorithms` problems, but to take each one a step or two further by including easy-to-follow, broken down explanations of each step. 
 
 ## Instructions
 
@@ -74,6 +62,7 @@ Well, we all know that there are countless resources for basically any topic in 
 2. Improve existing code (please leave original files untouched and add "-updated" to the end of your new filename (if you update `twoSum.js`, create your own file called `twoSum-updated.js`)
 3. Answer any missing problem from [HackerRank](https://www.hackerrank.com/), [LeetCode](https://leetcode.com/problemset/all/), or [CodeWars](https://www.codewars.com/) and place the file in its own folder in the corresponding directory following the format already being used with previous submissions.
 4. Improve or add READMEs to each sub-directory.
+
 
 Thank you in advance!
 
