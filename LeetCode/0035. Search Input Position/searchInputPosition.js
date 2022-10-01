@@ -13,3 +13,8 @@ var searchInsert = function(nums, target) {
         return nums.indexOf(target);  
     }
 };
+
+/**
+ * Time complexity - O(nlog(n))
+ * Space Complexity - O(n)
+*/
