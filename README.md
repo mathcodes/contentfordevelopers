@@ -78,9 +78,9 @@ Well, we all know that there are countless resources for basically any topic in 
     <td>Contributor</td>
   </tr>
     <tr>
-    <td>NAME HERE</td>
-    <td>GITHUB LINK HERE</td>
-    <td>INFO/BIO HERE</td>
+    <td>Rashmi Subhash</td>
+    <td><a href="https://github.com/rashmisubhash">rashmisubhash</a></td>
+    <td>Contributor</td>
   </tr>
     <tr>
     <td>NAME HERE</td>
