@@ -15,9 +15,10 @@ Use the guideline in the Contributing Section below to fork, clone, edit, and pu
 
 ## Installation
 Like most repos, follow these steps to install the repo on your local machine:
-Fork the repo by clicking the fork button in teh top right corner of this page, under your profile pic.
 
-Clone it to your local machine
+- Fork the repo by clicking the fork button in teh top right corner of this page, under your profile pic.
+
+- Clone it to your local machine:
 
 ```bash
 git clone https://github.com/mathcodes/lc_hr_cw.git
