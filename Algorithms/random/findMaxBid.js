@@ -41,7 +41,7 @@ const findMaxBidQuicker = function (bids) {
       }
     `)
   for (let i = 0; i < bids.length; i++) {
-    console.log("\nITERATION", i,"\nWhere the value at bids[i] where i =",i,"is",bids[i]);
+    console.log("\n🔶 ITERATION", i,"🔶\nbids[",i,"] =",bids[i]);
     if (bids[i] >= maxBid) {
       console.log("✅CHANGES BEING MADE(TRUTHY)\nSince this value is larger that the current maximum value (",maxBid,"), we make the adjustment and set maxBid to",i, "✅")
       maxBid = bids[i]
@@ -70,3 +70,32 @@ const findMinBidQuicker = function (bids) {
 }
 console.log(allBidsQuicker);
 console.log(findMinBidQuicker(allBidsQuicker));
+
+// WHAT IF SORTED
+
+// CONSTANT TIME 
+
+//  what about .length() ???? STILL CONSTANT BECAUSE length is a property that comes with the data structure of and OBJECT, which really is what an ARRAY is :) 
+
+// accessing the property of an object has CONSTANT time complexity
+
+// IF DONE ON ARRAY, LINEAR as it would have to go through each item (n), Objects have properties, Array is an object, length is property
+
+// SO... IF SORTED:
+//      array.length-1 -  CONSTANT
+//      [array[0]         - CONSTANT
+// CONSTANT TIME 
+
+
+// EXAMPLES OF 
+// CONSTANT TIME:
+// Access to an array
+// LINEAR TIME
+// loops, adding items of the array
+// QUADRATIC TIME
+// nested loops
+// LOGARITHMIC TIME 
+// divide and conquer 
+
+// .pop(); removes last item from array
+
