@@ -54,7 +54,7 @@ Well, we all know that there are countless resources for basically any topic in 
 ## Contributors
   <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/mathcodes" width="40px" />
   <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/mernmonster" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/dejmartins" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/dejmartins" width="40px !important" />
   <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/deveshgoyal1000" width="40px" />
   <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/rashmisubhash" width="40px" />
   <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/vishalpattnaik" width="40px" />
