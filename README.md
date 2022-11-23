@@ -52,48 +52,17 @@ We aim to please users with not just another solution bank to leetcode problems,
 Well, we all know that there are countless resources for basically any topic in web development out there. So no, this is NOT just another resource that regurgitates info and slaps their logo on it. This is an effort to not only provide solutions to `Data Structures and Algorithms` problems, but to take each one a step or two further by including easy-to-follow, broken down explanations of each step. 
 
 ## Contributors
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>GitHub Account Link</th>
-    <th>Notes/Bio</th>
-  </tr>
-  <tr>
-    <td>Jon Christie</td>
-    <td><a href="https://github.com/mathcodes">mathcodes</a></td>
-    <td>Admin, contributor</td>
-  </tr>
-  <tr>
-    <td>Chris Jones</td>
-    <td><a href="https://github.com/mernmonster">mernmonster</a></td>
-    <td>Contributor</td>
-  </tr>
-  <tr>
-    <td>Jonathan Martins</td>
-    <td><a href="https://github.com/dejmartins">dejmartins</a></td>
-    <td>Contributor</td>
-  </tr>
-    <td>Devesh Goyal</td>
-    <td><a href="https://github.com/deveshgoyal1000">deveshgoyal1000</a></td>
-    <td>Contributor</td>
-  </tr>
-    <tr>
-    <td>Rashmi Subhash</td>
-    <td><a href="https://github.com/rashmisubhash">rashmisubhash</a></td>
-    <td>Contributor</td>
-  </tr>
-    <tr>
-    <td>NAME HERE</td>
-    <td>GITHUB LINK HERE</td>
-    <td>INFO/BIO HERE</td>
-  </tr>
-    <tr>
-    <td>NAME HERE</td>
-    <td>GITHUB LINK HERE</td>
-    <td>INFO/BIO HERE</td>
-  </tr>
-</table>
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/mathcodes" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/mernmonster" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/dejmartins" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/deveshgoyal1000" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/rashmisubhash" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/vishalpattnaik" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/gaurang7goel" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/xcelr8" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/suman-somu" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/raeeceip" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/AryaDeepanshu" width="40px" />
 
 ## Summary
 
