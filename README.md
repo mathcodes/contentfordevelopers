@@ -52,17 +52,7 @@ We aim to please users with not just another solution bank to leetcode problems,
 Well, we all know that there are countless resources for basically any topic in web development out there. So no, this is NOT just another resource that regurgitates info and slaps their logo on it. This is an effort to not only provide solutions to `Data Structures and Algorithms` problems, but to take each one a step or two further by including easy-to-follow, broken down explanations of each step. 
 
 ## Contributors
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/mathcodes" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/mernmonster" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/dejmartins" width="40px !important" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/deveshgoyal1000" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/rashmisubhash" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/vishalpattnaik" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/gaurang7goel" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/xcelr8" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/suman-somu" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/raeeceip" width="40px" />
-  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/AryaDeepanshu" width="40px" />
+  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/mathcodes" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/mernmonster" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/dejmartins" width="40px !important" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/deveshgoyal1000" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/rashmisubhash" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/vishalpattnaik" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/gaurang7goel" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/xcelr8" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/suman-somu" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/raeeceip" width="40px" />  <img style="border-radius:50%;" src="https://avatars.githubusercontent.com/AryaDeepanshu" width="40px" />
 
 ## Summary
 
