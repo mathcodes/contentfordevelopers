@@ -53,10 +53,13 @@ let matches = string.split(regex);
 console.log(matches); // returns [ 'Th', 'is', 'is', 'str', 'ing', '1', 'and', 'the', 'ne', 'xt', 'one', 'is', '2' ]
 ```
 
-
- 
 ## .toUpperCase() — Capitalizes entire string
 Returns a string with all upper case letters, as shown:
+```js
+const sentence = 'Jon is available under user name FullStack11235';
+
+console.log(sentence.toUpperCase());
+```
  
 ## .toLowerCase() — Lower cases entire string
 Returns a string with all lower case letters, as shown:
