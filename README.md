@@ -3,7 +3,7 @@
 <h2>Description</h2>
 Leetcode, Hackerrank, and Codewars challenges with solutions and a diverse collection of visual aids, cheatsheets and other learning methods to help make sense of it all!!! Got something you'd like to add??? This is a collaborative effort!!! 
 
-I want to be clear that this is an effort to bring developers together to HELP other developers!!! As Jon creates issues and implements ideas, keep in mind that... **`Nothing is set in stone`** as I've mentioned throughout. **`Please chime in, speak up, step up, and make this yours! I'm all ears and flexible.`** 🙏 🙏 🙏 [Jon](https://twitter.com/thejonchristie)
+I want to be clear that this is an effort to bring developers together to HELP other developers!!! As issues are created and ideas are brought forth and implemented, keep in mind that... **`Nothing is set in stone`** !!! **`Please chime in, speak up, step up, and make this yours! This is a WE project. Keep an open mind to suggestions, criticisms, and furthermore, maintain an easy-going, friendly atmosphere to harness our open-source project. A place for beginners and veterans to coincide and learn from each other! `** 🙏 🙏 🙏 [Jon](https://twitter.com/thejonchristie)
 
 ## Table of Contents
   * [Instructions](#instructions)
