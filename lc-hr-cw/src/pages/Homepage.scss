@@ -1,0 +1,26 @@
+.siteDesc{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contributors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0px;
+    padding: 20px;
+}
