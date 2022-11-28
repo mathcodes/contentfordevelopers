@@ -14,7 +14,7 @@ const arr = [1, 5, 8, 4, 7, 6, 5, 1];
 
 // const arr = [1, 5, 8, 4, 7, 6, 5, 1];
                       // -1 P 
-Iterate agaain to get new peak where 8 is P and 5 is-1, 8 is peak  
+// Iterate agaain to get new peak where 8 is P and 5 is-1, 8 is peak  
 // then find the next largest number to the right of the peak number
 
 // then swap the peak number and the next largest number to the right of the peak number
