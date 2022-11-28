@@ -23,3 +23,19 @@ function App() {
 }
 
 export default App;
+
+
+const obj = {
+  "frontendDeveloper" : [
+    'React', 
+    'TS', 
+    'TailWind', 
+    'DevRel', 
+    'OpenSource'
+  ], 
+  "codingInstructor" : [
+    'Educator', 
+    'contentCreator'
+  ]
+}
+// } linktr.ee/jonchristie

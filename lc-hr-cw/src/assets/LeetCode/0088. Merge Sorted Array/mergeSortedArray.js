@@ -19,3 +19,5 @@ var merge = function(nums1, m, nums2, n) {
   return nums1.sort( ( a , b ) => a - b );
 };
 
+// Space complexity: O(n)
+// Time complexity: O(n log n)
