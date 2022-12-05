@@ -9,6 +9,6 @@ To identify the Sliding Window:
 - Goal is to find the longest/shortest subarray, substring, or desired value
 
 Problem that can be solved using the Sliding Window:
-- Maximum sum subarray of size ‘K’ (E)
-- Longest substring with ‘K’ distinct characters (M)
-- String anagrams (H)
+- Maximum sum subarray of size ‘K’ (easy)
+- Longest substring with ‘K’ distinct characters (medium)
+- String anagrams (hard)
