@@ -30,8 +30,8 @@ var sortedSquares = function (nums) {
   let RIGHT = nums.length - 1;
   let resultIndex = nums.length - 1;
 
-  ...
 }
+  ...
 ```
 
 </details>
@@ -42,14 +42,16 @@ var sortedSquares = function (nums) {
 </summary>
 
 - condition is `LEFT` <= `RIGHT`
-- setup two variables for squared values of `LEFT` and `RIGHT`, `leftVal` and `rightVal` using `Math.pow()`
+- setup two variables for *squared values* of `LEFT` and `RIGHT`, `leftVal` and `rightVal`, using `Math.pow()`
 ```js
+...
+
   while(LEFT >= RIGHT) {
     leftVal = Math.pow(nums[LEFT], 2);
     rightVal = Math.pow(nums[RIGHT], 2);
 
-    ...
   }
+    ...
 ```
 
 </details>
@@ -61,7 +63,10 @@ var sortedSquares = function (nums) {
 
 - used to compare values of current `leftVal` and `rightVal`. 
 - Add larger of the two to the `result` at `resultIndex`
+
 ```js
+    ...
+
     if(leftVal < rightVal) {
       result[resultIndex] = rightVal;
       RIGHT --
@@ -86,6 +91,7 @@ var sortedSquares = function (nums) {
     resultIndex--;
     }
   return result
+}
 
 ```
 
@@ -322,6 +328,84 @@ var threeSum = function(nums) {
 <summary>
 <span style="font-size:2rem; color:green;">Comparing strings that contain backspaces (medium)</span>
 </summary>
+
+<details>
+<summary>
+<span style="font-size:2rem;">Iterators Solution</span>
+</summary>
+
+Psuedocode:
+1. Create pointer for `s` and bind it to the length of `s - 1`
+2. Create pointer for `t` and bind it to the length of `t - 1`
+3. WHILE LOOP 
+    - CONDITOIN: `sPointer` OR `tPointer` >= 1
+    - Check if value at `s`[ `sPointer` ] is a hashtag
+      - if it is, create `SKIP` variable and assign it to 2
+      - WHILE LOOP condition: `SKIP` > 0
+        - Decr sPointer and `SKIP` by 1
+        - if current value is `#`
+          - incr `SKIP` by 2
+        - continue
+      - REPEAT FOR `t`
+      - if pointer values != return false, else decr both pointers
+    - Return true
+
+
+```js
+// 1. Create pointer for `s` and bind it to the length of `s - 1`
+// 2. Create pointer for `t` and bind it to the length of `t - 1`
+var backspaceCompare = function(s, t) => {
+  let sPointer = s.length - 1;
+  let tPointer = t.length - 1;
+
+// 3. WHILE LOOP 
+//     - CONDITOIN: sPointer OR tPointer >= 1
+  while(sPointer >= 0 || tPointer >= 0) {
+//     - Check if value at s[ sPointer ] is a hashtag
+//       - if it is, create skip variable and assign it to 2
+    if(s[sPointer] === '#') {
+      let SKIP = 2;
+//       - WHILE LOOP condition: skip > 0
+//         - Decr sPointer and skip by 1
+      while (SKIP > 0) {
+        SKIP--;
+        sPointer--;
+//         - if current value is `#`
+//           - incr skip by 2
+        if(s[sPointer] === '#') {
+          SKIP += 2;
+        }
+      }
+//         - continue
+    continue;
+    }
+    if(t[tPointer] === '#') {
+      let SKIP = 2;
+      while(SKIP > 0){
+        SKIP--;
+        tPointer--;
+        if(t[tPointer] === '#') {
+          skip += 2;
+        }
+      }
+      continue;
+    }
+  //       - if pointer values != return false, else decr both pointers
+
+    if(s[sPointer] != t[tPointer]) {
+      return false; 
+    }
+    sPointer--;
+    tPointer--;
+  }
+//     - Return true
+  return true;
+}
+```
+
+</details>
+
+</details>
 
 
 </details>
