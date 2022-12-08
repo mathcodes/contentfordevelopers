@@ -25,12 +25,11 @@ These problems include situations where you want to iterate through the data str
 ```js
 var sortedSquares = function (nums) {
   //SETUP VARAIBLES
-  const result = new Array(nums.length).fill(0);
   let LEFT = 0;
   let RIGHT = nums.length - 1;
   let resultIndex = nums.length - 1;
+  const result = new Array(nums.length).fill(0);
 
-}
   ...
 ```
 
@@ -46,11 +45,10 @@ var sortedSquares = function (nums) {
 ```js
 ...
 
-  while(LEFT >= RIGHT) {
+  while(LEFT <= RIGHT) {
     leftVal = Math.pow(nums[LEFT], 2);
     rightVal = Math.pow(nums[RIGHT], 2);
 
-  }
     ...
 ```
 
@@ -409,3 +407,71 @@ var backspaceCompare = function(s, t) => {
 
 
 </details>
+
+var sortedSquares = function(nums) {
+  // SETUP VARIABLES 
+  // result array with same length, all zeros
+  const result = new Array(nums.length).fill(0);
+  let RIGHT = nums.length - 1;
+  let LEFT = 0;
+  let resultIndex = nums.length - 1;
+
+  // WHILE LOOP
+  // check while left is <= right we have to check which is bigger
+  // the set values for leftVal and rightVal = the squared values
+  while (LEFT <= RIGHT) {
+    let leftVal = Math.pow(nums[LEFT], 2);
+    let rightVal = Math.pow(nums[RIGHT], 2);
+    // IF ELSE STATEMENT 
+    // Then as long as leftVal < rightVal, the resultIndex = rightVal, 
+    // otherwise = leftVal
+    if (leftVal < rightVal) {
+      result[resultIndex] = rightVal;
+      RIGHT--;
+    } else {
+      result[resultIndex] = leftVal;
+      LEFT++;
+    }
+    // decremeent resultIndex and return
+    resultIndex--;
+  }
+  // RETURN 
+  return result;
+}
+
+
+var threeSum = function(nums) {
+  result= [];
+  nums = nums.sort((a, b) => a - b);
+
+  for (let i = 0; i < nums.length; i++){
+    if (i > 0 && nums[i] === nums[i-1]) continue;
+    const TARGET = 0 - nums[i];
+    let LEFT = i + 1;
+    let RIGHT = nums.length - 1;
+    // So sum = nums[LEFT] + nums[RIGHT]
+    // Case 1: sum > TARGET
+    // Case 2: sum < TARGET
+    // Case 3: sum = TARGET = solution!
+
+    // Iterate through and eliminate when not equal
+    // start with while loop condition when R > L, otherwise we have less than 2 elements
+    while(RIGHT > LEFT) {
+      const sum = nums[LEFT] + nums[RIGHT]
+      if(sum > target) {
+        //eliminate last element and decr RIGHT
+        RIGHT--;
+      } else if (sum < target){
+        // eliminate first element and inc LEFT 
+        LEFT++;
+      } else {
+        // push the results and use while loops to skip duplicates
+        result.push([nums[i], nums[LEFT], nums[RIGHT]]);
+        while(nums[LEFT] === nums[LEFT + 1]) LEFT++;
+        while(nums[RIGHT] === nums[RIGHT + 1]) RIGHT--;
+        LEFT++;
+        RIGHT--;
+      }
+    }
+  return result
+}

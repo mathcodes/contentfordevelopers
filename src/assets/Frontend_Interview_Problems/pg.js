@@ -1,15 +1,24 @@
-const guitars = ['PRS', 'Guild', 'Ibanez', 'Fender', 'Gibson'];
+// SETUP
+var sortedSquares = function(nums) {
+  let RIGHT = nums.length - 1;
+  let LEFT = 0;
+  let resultIndex = nums.length - 1;
+  const result = new Array(nums.length).fill(0);
 
-console.log(guitars.slice(4)); // ["Gibson"]
+  while (LEFT <= RIGHT) {
+    let leftVal = Math.pow(nums[LEFT], 2);
+    let rightVal = Math.pow(nums[RIGHT], 2);
 
-console.log(guitars.slice(2)); // ["Ibanez", "Fender", "Gibson"]
+    if (leftVal < rightVal) {
+      result[resultIndex] = rightVal;
+      RIGHT--;
+    } else {
+      result[resultIndex] = leftVal;
+      LEFT++;
+    }
+    resultIndex--;
+  }
+  return result;
+}
 
-console.log(guitars.slice(2, 4)); // ["Ibanez", "Fender"]
-
-console.log(guitars.slice(1, 5)); // ["Guild", "Ibanez", "Fender", "Gibson"]
-
-console.log(guitars.slice(-2)); // ["Fender", "Gibson"]
-
-console.log(guitars.slice(2, -1)); // ["Ibanez", "Fender"]
-
-console.log(guitars.slice()); // ["PRS", "Guild", "Ibanez", "Fender", "Gibson"]
+console.log(sortedSquares([0, -2, -5, 9, 8, -8]))
