@@ -1,24 +1,33 @@
-// SETUP
-var sortedSquares = function(nums) {
-  let RIGHT = nums.length - 1;
-  let LEFT = 0;
-  let resultIndex = nums.length - 1;
-  const result = new Array(nums.length).fill(0);
+var firstMissingPositive = function(nums) {
+  let i = 0,
+  arrLength = nums.length;
 
-  while (LEFT <= RIGHT) {
-    let leftVal = Math.pow(nums[LEFT], 2);
-    let rightVal = Math.pow(nums[RIGHT], 2);
+  while(i < arrLength){
+    const toSwap = nums[i],
+    swapWithIndex = toSwap - 1
 
-    if (leftVal < rightVal) {
-      result[resultIndex] = rightVal;
-      RIGHT--;
+    // we only want to SWAP if these three condition are met:
+    // toSwap > 0
+    //    our current value is positive
+    // toSwap <= arrLength
+    //    our current value is within the bounds of the array
+    // toSwap !== nums[swapWithIndex]
+    //    our current value does not equal the value of its destination
+    if(toSwap > 0 && toSwap <= arrLength && toSwap !== nums[swapWithIndex]){
+      const swapWith = nums[swapWithIndex]
+      nums[swapWithIndex] = toSwap
+      nums[i] = swapWith
     } else {
-      result[resultIndex] = leftVal;
-      LEFT++;
+      i++
     }
-    resultIndex--;
   }
-  return result;
+  console.log(nums)
+  for (let j = 0; j < nums.length; j++){
+    if(nums[j] !== j+1) {
+      return j + 1
+    }
+  }
+  return arrLength + 1
 }
 
-console.log(sortedSquares([0, -2, -5, 9, 8, -8]))
+console.log(firstMissingPositive([0,2,4,-3,99,5,1]))

@@ -71,7 +71,7 @@ var isPalindrome = function(head) {
   let curr = head;
 
   while(hare != null && hare.next != null) {
-    tortoise = sltortoiseow.next;
+    tortoise = tortoise.next;
     hare = hare.next.next;
   }
 
