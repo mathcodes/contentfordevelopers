@@ -10,6 +10,7 @@ I want to be clear that this is an effort to bring developers together to HELP o
 - [Instructions](#instructions)
 - [Installation](#installation)
 - [Contributing](#contributing)
+- [Issues](https://github.com/mathcodes/contentfordevelopers/issues)
 - [Contributors](#contributors)
 - [Summary](#summary)
 
