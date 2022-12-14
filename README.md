@@ -1,4 +1,4 @@
-# lc-hr-cw
+# Content For Developers
 
 <h2>Description</h2>
 Leetcode, Hackerrank, and Codewars challenges with solutions and a diverse collection of visual aids, cheatsheets and other learning methods to help make sense of it all!!! Got something you'd like to add??? This is a collaborative effort!!!
