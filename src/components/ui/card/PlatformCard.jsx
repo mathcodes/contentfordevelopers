@@ -1,12 +1,12 @@
 import React from 'react'
 import './PlatformCard.scss'
-function PlatformCard({title}) {
+function PlatformCard({title,src}) {
   return (
     <div className='platform-card'>
-        {/* <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" 
+        <img 
+            src={src} 
             alt="" 
-        /> */}
+        />
         <h2 className='title'>{title}</h2>
     </div>
   )
