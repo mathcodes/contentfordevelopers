@@ -2,6 +2,7 @@ import React from 'react'
 import Cards from '../components/Card'
 import Contributer from '../components/Contributer'
 import Footer from '../components/Footer'
+import PlatformCard from '../components/ui/card/PlatformCard'
 import './Homepage.scss'
 
 function Homepage() {
@@ -18,6 +19,16 @@ function Homepage() {
             <Cards name={"Data Structure & Algorithms"}/>
             <Cards name={"Notes & Resources"}/> 
         </div>
+        <div className='platform_wrapper'>
+            <PlatformCard title='Leetcode' />
+            <PlatformCard title='HackerRank' />
+            <PlatformCard title='CodeWars' />
+            <PlatformCard title='Data Structure & Algorithm' />
+            <PlatformCard title='Notes and Resources' />    
+        </div>
+        
+
+
           
         <div className='contributors'>
             <Contributer name={"Swarnit"} imgSrc={""}/>

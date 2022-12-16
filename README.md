@@ -1,4 +1,4 @@
-# lc-hr-cw
+# Content For Developers
 
 <h2>Description</h2>
 Leetcode, Hackerrank, and Codewars challenges with solutions and a diverse collection of visual aids, cheatsheets and other learning methods to help make sense of it all!!! Got something you'd like to add??? This is a collaborative effort!!!
@@ -10,6 +10,7 @@ I want to be clear that this is an effort to bring developers together to HELP o
 - [Instructions](#instructions)
 - [Installation](#installation)
 - [Contributing](#contributing)
+- [Issues](https://github.com/mathcodes/contentfordevelopers/issues)
 - [Contributors](#contributors)
 - [Summary](#summary)
 
