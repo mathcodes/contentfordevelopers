@@ -10,7 +10,7 @@ function Homepage() {
   return (
     <div  className='homepage'>
         <div className='siteDesc'>
-            <h2> Provide solution for Leetcode,<br/> Hackerrank and CodeWars</h2>
+            <h2> Provide solutions for Leetcode,<br/> HackerRank and CodeWars</h2>
             <h3>Open Source Website- Anyone can contribute.</h3>
            
         </div>
