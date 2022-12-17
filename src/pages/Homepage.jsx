@@ -35,6 +35,7 @@ function Homepage() {
                 <h1>Our Contributers</h1>
                 <h3>Who constantly try to make the website better</h3> 
             </div>
+            // Use map to iterate through the json file (prerequisite) and render ALL contributors
             <div className='contributors_wrapper'>
                 <Contributer 
                     name={"Jon Christie"} 
