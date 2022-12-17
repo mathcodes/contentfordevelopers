@@ -5,20 +5,22 @@ import Footer from '../components/Footer'
 import PlatformCard from '../components/ui/card/PlatformCard'
 import './Homepage.scss'
 
+
 function Homepage() {
   return (
     <div  className='homepage'>
         <div className='siteDesc'>
             <h2> Provide solutions for Leetcode,<br/> HackerRank and CodeWars</h2>
             <h3>Open Source Website- Anyone can contribute.</h3>
+           
         </div>
-        <div className='cards'>
+        {/* <div className='cards'>
             <Cards name={"Leetcode"}/>
             <Cards name={"HackerRank"}/>
             <Cards name={"CodeWars"}/>
             <Cards name={"Data Structure & Algorithms"}/>
             <Cards name={"Notes & Resources"}/> 
-        </div>
+        </div> */}
         <div className='platform_wrapper'>
             <PlatformCard title='Leetcode' />
             <PlatformCard title='HackerRank' />
@@ -28,16 +30,36 @@ function Homepage() {
         </div>
         
 
-
+        <section className='contributor_section'>
+            <div className='desc'>
+                <h1>Our Contributers</h1>
+                <h3>Who constantly try to make the website better</h3> 
+            </div>
+            // Use map to iterate through the json file (prerequisite) and render ALL contributors
+            <div className='contributors_wrapper'>
+                <Contributer 
+                    name={"Jon Christie"} 
+                    imgSrc={"https://avatars.githubusercontent.com/u/17928947?v=4"} 
+                    location={"North Carolina, USA"}
+                    linkToProfile={"https://github.com/mathcodes"}
+                />
+                <Contributer 
+                    name={"Swarnit Sinha"} 
+                    imgSrc={"https://avatars.githubusercontent.com/u/70957481?v=4"}
+                    location={"India"}  
+                    linkToProfile={"https://github.com/swarnitsinha"} 
+                />
+                <Contributer 
+                    name={"Ravishankar"} 
+                    imgSrc={"https://avatars.githubusercontent.com/u/39592401?v=4"}
+                    location={"India"}
+                    linkToProfile={"https://github.com/rootrsk"}
+                />
+                
+            </div>
+        </section>
           
-        <div className='contributors'>
-            <Contributer name={"Swarnit"} imgSrc={""}/>
-            <Contributer/>
-            <Contributer/>
-            <Contributer/>
-            <Contributer/>
-            <Contributer/>
-        </div>
+        
 
         <footer className='footer'>
             <Footer/>
