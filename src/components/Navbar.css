@@ -1,9 +1,42 @@
-.nav{
-    background-color: rgb(94, 173, 184);
-    min-height: 70px;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav {
+  background-color: #2b3a55;
+  min-height: 70px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
 }
+
+.site-title {
+  color: white;
+  margin: 0px 0px 0px 100px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+ul li {
+  margin: 0 20px;
+  padding: 10px;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.page-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}/*# sourceMappingURL=Navbar.css.map */
