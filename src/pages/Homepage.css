@@ -47,7 +47,7 @@
   margin-block: 0.2rem;
 }
 .contributor_section ::-webkit-scrollbar-thumb {
-  background: #62B6B7;
+  background: #62b6b7;
   border-radius: 10px;
 }
 .contributor_section ::-webkit-scrollbar-thumb:hover {
