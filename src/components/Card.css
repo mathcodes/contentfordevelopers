@@ -1,0 +1,9 @@
+.card {
+  margin: 5px;
+  padding: 25px;
+  background-color: rgb(154, 177, 197);
+  width: 30%;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}/*# sourceMappingURL=Card.css.map */

@@ -1,0 +1,68 @@
+.siteDesc {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(29, 60, 221, 0.15);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer {
+  padding: 20px;
+}
+
+.platform_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contributor_section {
+  background-color: #2B3A55;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.contributor_section .desc {
+  color: white;
+}
+.contributor_section ::-webkit-scrollbar {
+  width: 10px;
+}
+.contributor_section ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  margin-block: 0.2rem;
+}
+.contributor_section ::-webkit-scrollbar-thumb {
+  background: #62B6B7;
+  border-radius: 10px;
+}
+.contributor_section ::-webkit-scrollbar-thumb:hover {
+  background: #439A97;
+}
+@supports (scrollbar-color: red blue) {
+  .contributor_section * {
+    scrollbar-color: #62B6B7 #439A97;
+  }
+}
+.contributor_section .contributors_wrapper {
+  background-color: #181D31;
+  padding: 20px;
+  height: 500px;
+  width: 450px;
+  overflow-y: scroll;
+  border-radius: 10px;
+}/*# sourceMappingURL=Homepage.css.map */

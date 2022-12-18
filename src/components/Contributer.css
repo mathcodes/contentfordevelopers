@@ -1,0 +1,33 @@
+.contributer {
+  margin: 15px 0px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  border: 1px solid black;
+}
+.contributer img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+.contributer .detail a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+.contributer .detail button {
+  background-color: #439a97;
+  color: white;
+  padding: 5px 15px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+.contributer .detail button:hover {
+  transform: scale(1.04);
+}/*# sourceMappingURL=Contributer.css.map */
