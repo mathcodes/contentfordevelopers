@@ -55,7 +55,7 @@
 }
 @supports (scrollbar-color: red blue) {
   .contributor_section * {
-    scrollbar-color: #62B6B7 #439A97;
+    scrollbar-color: #62b6b7 #439a97;
   }
 }
 .contributor_section .contributors_wrapper {
