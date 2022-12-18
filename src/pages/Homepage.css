@@ -47,19 +47,19 @@
   margin-block: 0.2rem;
 }
 .contributor_section ::-webkit-scrollbar-thumb {
-  background: #62b6b7;
+  background: #62B6B7;
   border-radius: 10px;
 }
 .contributor_section ::-webkit-scrollbar-thumb:hover {
-  background: #439a97;
+  background: #439A97;
 }
 @supports (scrollbar-color: red blue) {
   .contributor_section * {
-    scrollbar-color: #62b6b7 #439a97;
+    scrollbar-color: #62B6B7 #439A97;
   }
 }
 .contributor_section .contributors_wrapper {
-  background-color: #181d31;
+  background-color: #181D31;
   padding: 20px;
   height: 500px;
   width: 450px;
