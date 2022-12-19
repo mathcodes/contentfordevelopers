@@ -82,5 +82,9 @@
         @include mobile-l {
             width: 20rem;
         }
+
+        @include mobile-s {
+            width: 17.4rem;
+        }
     }
 }
