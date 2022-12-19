@@ -1,3 +1,5 @@
+@import '../sass/abstract/variable';
+
 .siteDesc{
     min-height: 400px;
     display: flex;
@@ -31,6 +33,11 @@
     align-items: center;
     justify-content: space-around;
     height: 100vh;
+    
+    @include tablet {
+        flex-direction: column;
+        height: 35vh;
+    }
 
     .desc{
         color: white;

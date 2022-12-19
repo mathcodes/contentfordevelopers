@@ -35,6 +35,12 @@
   /* Handle */
   /* Handle on hover */
 }
+@media screen and (max-width: 768px) {
+  .contributor_section {
+    flex-direction: column;
+    height: 35vh;
+  }
+}
 .contributor_section .desc {
   color: white;
 }
