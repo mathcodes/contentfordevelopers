@@ -6,6 +6,7 @@ $secondary-bg:#fff;
 
 
 $breakpoints: (
+    'mobile-s': 320,
     'mobile-m': 400, 
     'mobile-l': 480, 
     'tablet': 768, 
@@ -13,6 +14,12 @@ $breakpoints: (
     'desktop': 1530, 
     'desktop-lg': 1920
 );
+
+@mixin mobile-s {
+    @media screen and (max-width: 320px) {
+        @content
+    }
+};
 
 @mixin mobile-m {
     @media screen and (max-width: 400px) {
