@@ -40,6 +40,9 @@
             outline: none;
             border: none;
             border-radius: 6px;
+           @include mobile-l {
+                margin: 5% 0;
+           }
         }
 
         button:hover{
