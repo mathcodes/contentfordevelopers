@@ -10,8 +10,9 @@ function Homepage() {
   return (
     <div  className='homepage'>
         <div className='siteDesc'>
-            <h2> Provide solutions for Leetcode,<br/> HackerRank and CodeWars</h2>
-            <h3>Open Source Website- Anyone can contribute.</h3>
+            <h2>
+                Welcome to our open-source effort to bring developers together to HELP other developers with abundant, diverse styles of learning!!! Anyone can submit/contribute their solutions to DSA and eventually all languages and coding problems, but again, what sets this project apart is the emphasis on supplemental and diverse learning styles and tools including diagrams, animations, pseudocode, retention strategies, and more... including what you bring to the table!
+            </h2>
            
         </div>
         {/* <div className='cards'>
