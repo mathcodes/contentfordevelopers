@@ -17,6 +17,10 @@
         flex-direction: column;
     }
 
+    @include mobile-s {
+        width: 15rem;
+    }
+
     img{
         border-radius: 50%;
         height: 100px;

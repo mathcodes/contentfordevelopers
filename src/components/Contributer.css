@@ -16,6 +16,11 @@
     flex-direction: column;
   }
 }
+@media screen and (max-width: 320px) {
+  .contributer {
+    width: 15rem;
+  }
+}
 .contributer img {
   border-radius: 50%;
   height: 100px;
