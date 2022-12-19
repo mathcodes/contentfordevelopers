@@ -4,3 +4,13 @@ $primary-bg: #fff;
 $secondary-color:#fff;
 $secondary-bg:#fff;
 
+
+$breakpoints: (
+    'mobile-m': 400, 
+    'mobile-l': 480, 
+    'tablet': 768, 
+    'laptop': 1280, 
+    'desktop': 1530, 
+    'desktop-lg': 1920
+);
+
