@@ -24,6 +24,10 @@
         margin:10px;
     }
     .detail{
+        @include mobile-l {
+            text-align: center;
+        }
+
         a{
             text-decoration: none;
             color: white;

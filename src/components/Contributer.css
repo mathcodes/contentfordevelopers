@@ -22,6 +22,11 @@
   width: 100px;
   margin: 10px;
 }
+@media screen and (max-width: 480px) {
+  .contributer .detail {
+    text-align: center;
+  }
+}
 .contributer .detail a {
   text-decoration: none;
   color: white;
