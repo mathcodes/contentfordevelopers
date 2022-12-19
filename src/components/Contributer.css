@@ -8,6 +8,13 @@
   flex-direction: row;
   background-color: white;
   border: 1px solid black;
+  width: 25.5rem;
+}
+@media screen and (max-width: 480px) {
+  .contributer {
+    width: 17.5rem;
+    flex-direction: column;
+  }
 }
 .contributer img {
   border-radius: 50%;

@@ -71,4 +71,9 @@
   width: 28rem;
   overflow-y: scroll;
   border-radius: 10px;
+}
+@media screen and (max-width: 480px) {
+  .contributor_section .contributors_wrapper {
+    width: 20rem;
+  }
 }/*# sourceMappingURL=Homepage.css.map */
