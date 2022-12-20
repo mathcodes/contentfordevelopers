@@ -10,28 +10,14 @@
   border: 1px solid black;
   width: 25.5rem;
 }
-@media screen and (max-width: 480px) {
-  .contributer {
-    width: 17.5rem;
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 320px) {
-  .contributer {
-    width: 15rem;
-  }
-}
+
 .contributer img {
   border-radius: 50%;
   height: 100px;
   width: 100px;
   margin: 10px;
 }
-@media screen and (max-width: 480px) {
-  .contributer .detail {
-    text-align: center;
-  }
-}
+
 .contributer .detail a {
   text-decoration: none;
   color: white;
@@ -45,11 +31,33 @@
   border: none;
   border-radius: 6px;
 }
+
+.contributer .detail button:hover {
+  transform: scale(1.04);
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+/* ---------------------------------------- Media Queries ---------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
 @media screen and (max-width: 480px) {
+  .contributer {
+    width: 17.5rem;
+    flex-direction: column;
+  }
+  .contributer .detail {
+    text-align: center;
+  }
   .contributer .detail button {
     margin: 5% 0;
   }
 }
-.contributer .detail button:hover {
-  transform: scale(1.04);
-}/*# sourceMappingURL=Contributer.css.map */
+@media screen and (max-width: 320px) {
+  .contributer {
+    width: 15rem;
+  }
+}
