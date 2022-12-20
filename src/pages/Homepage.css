@@ -35,6 +35,12 @@
   /* Handle */
   /* Handle on hover */
 }
+@media screen and (max-width: 768px) {
+  .contributor_section {
+    flex-direction: column;
+    height: 35vh;
+  }
+}
 .contributor_section .desc {
   color: white;
 }
@@ -61,8 +67,18 @@
 .contributor_section .contributors_wrapper {
   background-color: #181d31;
   padding: 20px;
-  height: 500px;
-  width: 450px;
+  height: 31rem;
+  width: 28rem;
   overflow-y: scroll;
   border-radius: 10px;
+}
+@media screen and (max-width: 480px) {
+  .contributor_section .contributors_wrapper {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .contributor_section .contributors_wrapper {
+    width: 17.4rem;
+  }
 }/*# sourceMappingURL=Homepage.css.map */

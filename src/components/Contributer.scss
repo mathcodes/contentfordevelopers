@@ -1,3 +1,5 @@
+@import '../sass/abstract/variable';
+
 .contributer{
     margin: 15px 0px;
     padding: 10px;
@@ -8,6 +10,16 @@
     flex-direction: row;
     background-color: white;
     border: 1px solid black;
+    width: 25.5rem;
+
+    @include mobile-l {
+        width: 17.5rem;
+        flex-direction: column;
+    }
+
+    @include mobile-s {
+        width: 15rem;
+    }
 
     img{
         border-radius: 50%;
@@ -16,6 +28,10 @@
         margin:10px;
     }
     .detail{
+        @include mobile-l {
+            text-align: center;
+        }
+
         a{
             text-decoration: none;
             color: white;
@@ -28,6 +44,9 @@
             outline: none;
             border: none;
             border-radius: 6px;
+           @include mobile-l {
+                margin: 5% 0;
+           }
         }
 
         button:hover{

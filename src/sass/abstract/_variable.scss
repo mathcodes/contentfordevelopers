@@ -4,3 +4,56 @@ $primary-bg: #fff;
 $secondary-color:#fff;
 $secondary-bg:#fff;
 
+
+$breakpoints: (
+    'mobile-s': 320,
+    'mobile-m': 400, 
+    'mobile-l': 480, 
+    'tablet': 768, 
+    'laptop': 1280, 
+    'desktop': 1530, 
+    'desktop-lg': 1920
+);
+
+@mixin mobile-s {
+    @media screen and (max-width: 320px) {
+        @content
+    }
+};
+
+@mixin mobile-m {
+    @media screen and (max-width: 400px) {
+        @content
+    }
+};
+
+@mixin mobile-l {
+    @media screen and (max-width: 480px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content
+    }
+};
+
+@mixin laptop {
+    @media screen and (max-width: 1280px) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media screen and (max-width: 1530px) {
+        @content
+    }
+};
+
+@mixin desktop-lg {
+    @media screen and (max-width: 1920px) {
+        @content
+    }
+};
+
