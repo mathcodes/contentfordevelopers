@@ -6,7 +6,7 @@ const Navbar = ()=>{
 
     return (
         <div className='nav'>
-                <h1 className='site-title'>Lc-Hr-Cw</h1>
+                <h1 className='site-title'>Content For Developers</h1>
                 
         </div>
     )
