@@ -7,6 +7,14 @@
     justify-content: center;
     flex-direction: column;
     background: rgba(29, 60, 221, 0.15);
+    padding: 5% 5%;
+    font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+    // @include mobile-s {
+    //     font-size: .8rem;
+    // }
+    hr{
+        margin: 5% 0;
+    }
 
 }
 .cards{
