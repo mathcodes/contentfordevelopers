@@ -1,21 +1,29 @@
-import React from 'react'
-import './Contributer.scss'
-function Contributer({name,imgSrc,location,linkToProfile}) {
-  return (
-    <div className='contributer'>
-        <img 
-			className='contributerImg'
-			src={imgSrc}
-			alt="contributer image"
-		/>
-		<div className='detail'>
+import React from "react";
+import "./Contributer.scss";
+import { data } from "../db";
 
-			<h1>{name}</h1>
-			<p>{location}</p>
-			<button><a href={linkToProfile} target='blank'>Profile</a></button>
-		</div>
-    </div>
-  )
-}
-
-export default Contributer
+export const Contributer = () => {
+	return (
+		<>
+			{data.map((res) => {
+				return (
+					<div className="contributer" key={res.id}>
+						<img
+							className="contributerImg"
+							src={res.avatar_url}
+							alt={res.login}
+						/>
+						<div className="detail">
+							<h1>{res.login}</h1>
+							<button>
+								<a href={res.html_url} target="blank">
+									Profile
+								</a>
+							</button>
+						</div>
+					</div>
+				);
+			})}
+		</>
+	);
+};

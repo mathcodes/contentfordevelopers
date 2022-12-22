@@ -1,4 +1,4 @@
-[
+export const data = [
   {
     "login": "mathcodes",
     "id": 17928947,
