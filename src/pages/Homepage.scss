@@ -2,7 +2,7 @@
 
 .homepage {
     padding: 0 1%;
-}
+  }
 
 .siteDesc{
     min-height: 400px;
@@ -13,10 +13,10 @@
     background: rgba(29, 60, 221, 0.15);
     padding: 5% 5%;
     font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
-    hr{
+    
+    hr {
         margin: 20px 0;
-    }
-
+     }
 }
 .cards{
     display: flex;
