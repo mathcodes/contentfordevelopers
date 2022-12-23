@@ -1,15 +1,15 @@
 import React from "react";
-import "./Contributer.scss";
-import { data } from "../db";
+import "./Contributor.scss";
+import { data } from '../../data/db'
 
-export const Contributer = () => {
+export const Contributor = () => {
 	return (
 		<>
 			{data.map((res) => {
 				return (
-					<div className="contributer" key={res.id}>
+					<div className="contributor" key={res.id}>
 						<img
-							className="contributerImg"
+							className="contributorImg"
 							src={res.avatar_url}
 							alt={res.login}
 						/>

@@ -1,0 +1,62 @@
+@import '../../sass/abstract/variable';
+
+.contributor{
+    margin: 15px 0px;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    border: 1px solid black;
+    // width: 25.5rem; // results in unwanted horizontal scroll bar
+
+    @include mobile-l {
+        // width: 17.5rem;
+        flex-direction: column;
+    }
+
+    @include mobile-s {
+        width: 15rem;
+    }
+
+    img{
+        border-radius: 50%;
+        height: 100px;
+        width:100px;
+        margin:10px;
+    }
+    .detail{
+        @include mobile-l {
+            text-align: center;
+        }
+
+        // prevent long name to overflow box
+        h1{
+            width: 200px;
+            word-wrap: break-word;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+        }
+        button{
+            background-color: #439A97;
+            color: white;
+            padding: 5px 15px;
+            outline: none;
+            border: none;
+            border-radius: 6px;
+           @include mobile-l {
+                margin: 5% 0;
+           }
+        }
+
+        button:hover{
+            transform: scale(1.04);
+        }
+    }
+}

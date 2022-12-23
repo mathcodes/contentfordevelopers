@@ -1,8 +1,7 @@
-// generate an array of objects using the directories in '/Leetcode" with the following structure
-[
+export const leetCodeData = [
   {
     'id': 1,
-    'name': '1. Two Sum',
+    'title': '1. Two Sum',
     'link': 'https://leetcode.com/problems/two-sum/',
     'difficulty': 'Easy',
     'solved': true,
@@ -10,7 +9,7 @@
   },
   {
     'id': 2,
-    'name': '2. Add Two Numbers',
+    'title': '2. Add Two Numbers',
     'link': 'https://leetcode.com/problems/add-two-numbers/',
     'difficulty': 'Medium',
     'solved': true,
@@ -18,7 +17,7 @@
   },
   {
     'id': 3,
-    'name': '3. Longest Substring Without Repeating Characters',
+    'title': '3. Longest Substring Without Repeating Characters',
     'link': 'https://leetcode.com/problems/longest-substring-without-repeating-characters/',
     'difficulty': 'Medium',
     'solved': true,
@@ -26,7 +25,7 @@
   },
   {
     'id': 4,
-    'name': '4. Median of Two Sorted Arrays',
+    'title': '4. Median of Two Sorted Arrays',
     'link': 'https://leetcode.com/problems/median-of-two-sorted-arrays/',
     'difficulty': 'Hard',
     'solved': true,
@@ -34,7 +33,7 @@
   },
   {
     'id': 5,
-    'name': '5. Longest Palindromic Substring',
+    'title': '5. Longest Palindromic Substring',
     'link': 'https://leetcode.com/problems/longest-palindromic-substring/',
     'difficulty': 'Medium',
     'solved': true,
@@ -42,7 +41,7 @@
   },
   {
     'id': 6,
-    'name': '6. ZigZag Conversion',
+    'title': '6. ZigZag Conversion',
     'link': 'https://leetcode.com/problems/zigzag-conversion/',
     'difficulty': 'Medium',
     'solved': true,
@@ -50,7 +49,7 @@
   },
   {
     'id': 7,
-    'name': '7. Reverse Integer',
+    'title': '7. Reverse Integer',
     'link': 'https://leetcode.com/problems/reverse-integer/',
     'difficulty': 'Easy',
     'solved': true,
@@ -58,7 +57,7 @@
   },
   {
     'id': 8,
-    'name': '8. String to Integer (atoi)',
+    'title': '8. String to Integer (atoi)',
     'link': 'https://leetcode.com/problems/string-to-integer-atoi/',
     'difficulty': 'Medium',
     'solved': true,
@@ -66,7 +65,7 @@
   },
   {
     'id': 9,
-    'name': '9. Palindrome Number',
+    'title': '9. Palindrome Number',
     'link': 'https://leetcode.com/problems/palindrome-number/',
     'difficulty': 'Easy',
     'solved': true,
@@ -74,7 +73,7 @@
   },
   {
     'id': 1,
-    'name': '1. Regular Expression Matching',
+    'title': '1. Regular Expression Matching',
     'link': 'https://leetcode.com/problems/regular-expression-matching/',
     'difficulty': 'Hard',
     'solved': true,
@@ -82,7 +81,7 @@
   },
   {
     'id': 11,
-    'name': '11. Container With Most Water',
+    'title': '11. Container With Most Water',
     'link': 'https://leetcode.com/problems/container-with-most-water/',
     'difficulty': 'Medium',
     'solved': true,
@@ -90,7 +89,7 @@
   },
   {
     'id': 12,
-    'name': '12. Integer to Roman',
+    'title': '12. Integer to Roman',
     'link': 'https://leetcode.com/problems/integer-to-roman/',
     'difficulty': 'Medium',
     'solved': true,
@@ -98,7 +97,7 @@
   },
   {
     'id': 13,
-    'name': '13. Roman to Integer',
+    'title': '13. Roman to Integer',
     'link': 'https://leetcode.com/problems/roman-to-integer/',
     'difficulty': 'Easy',
     'solved': true,
@@ -106,7 +105,7 @@
   },
   {
     'id': 14,
-    'name': '14. Longest Common Prefix',
+    'title': '14. Longest Common Prefix',
     'link': 'https://leetcode.com/problems/longest-common-prefix/',
     'difficulty': 'Easy',
     'solved': true,
@@ -114,7 +113,7 @@
   },
   {
     'id': 15,
-    'name': '15. 3Sum',
+    'title': '15. 3Sum',
     'link': 'https://leetcode.com/problems/3sum/',
     'difficulty': 'Medium',
     'solved': true,
@@ -122,7 +121,7 @@
   },
   {
     'id': 16,
-    'name': '16. 3Sum Closest',
+    'title': '16. 3Sum Closest',
     'link': 'https://leetcode.com/problems/3sum-closest/',
     'difficulty': 'Medium',
     'solved': true,
@@ -130,7 +129,7 @@
   },
   {
     'id': 17,
-    'name': '17. Letter Combinations of a Phone Number',
+    'title': '17. Letter Combinations of a Phone Number',
     'link': 'https://leetcode.com/problems/letter-combinations-of-a-phone-number/',
     'difficulty': 'Medium',
     'solved': false,
@@ -138,7 +137,7 @@
   },
   {
     'id': 18,
-    'name': '18. 4Sum',
+    'title': '18. 4Sum',
     'link': 'https://leetcode.com/problems/4sum/',
     'difficulty': 'Medium',
     'solved': false,
@@ -146,7 +145,7 @@
   },
   {
     'id': 19,
-    'name': '19. Remove Nth Node From End of List',
+    'title': '19. Remove Nth Node From End of List',
     'link': 'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
     'difficulty': 'Medium',
     'solved': false,
@@ -154,7 +153,7 @@
   },
   {
     'id': 20,
-    'name': '20. Valid Parentheses',
+    'title': '20. Valid Parentheses',
     'link': 'https://leetcode.com/problems/valid-parentheses/',
     'difficulty': 'Easy',
     'solved': false,
@@ -162,7 +161,7 @@
   },
   {
     'id': 21,
-    'name': '21. Merge Two Sorted Lists',
+    'title': '21. Merge Two Sorted Lists',
     'link': 'https://leetcode.com/problems/merge-two-sorted-lists/',
     'difficulty': 'Easy',
     'solved': false,
@@ -170,7 +169,7 @@
   },
   {
     'id': 22,
-    'name': '22. Generate Parentheses',
+    'title': '22. Generate Parentheses',
     'link': 'https://leetcode.com/problems/generate-parentheses/',
     'difficulty': 'Medium',
     'solved': false,
@@ -178,7 +177,7 @@
   },
   {
     'id': 23,
-    'name': '23. Merge k Sorted Lists',
+    'title': '23. Merge k Sorted Lists',
     'link': 'https://leetcode.com/problems/merge-k-sorted-lists/',
     'difficulty': 'Hard',
     'solved': false,
@@ -186,7 +185,7 @@
   },
   {
     'id': 24,
-    'name': '24. Swap Nodes in Pairs',
+    'title': '24. Swap Nodes in Pairs',
     'link': 'https://leetcode.com/problems/swap-nodes-in-pairs/',
     'difficulty': 'Medium',
     'solved': false,
@@ -194,7 +193,7 @@
   },
   {
     'id': 25,
-    'name': '25. Reverse Nodes in k-Group',
+    'title': '25. Reverse Nodes in k-Group',
     'link': 'https://leetcode.com/problems/reverse-nodes-in-k-group/',
     'difficulty': 'Hard',
     'solved': false,
@@ -202,7 +201,7 @@
   },
   {
     'id': 26,
-    'name': '26. Remove Duplicates from Sorted Array',
+    'title': '26. Remove Duplicates from Sorted Array',
     'link': 'https://leetcode.com/problems/remove-duplicates-from-sorted-array/',
     'difficulty': 'Easy',
     'solved': false,
@@ -210,7 +209,7 @@
   },
   {
     'id': 27,
-    'name': '27. Remove Element',
+    'title': '27. Remove Element',
     'link': 'https://leetcode.com/problems/remove-element/',
     'difficulty': 'Easy',
     'solved': false,
@@ -218,7 +217,7 @@
   },
   {
     'id': 28 ,
-    'name': '28. Implement strStr()',
+    'title': '28. Implement strStr()',
     'link': 'https://leetcode.com/problems/implement-strstr/',
     'difficulty': 'Easy',
     'solved': false,
@@ -226,7 +225,7 @@
   },
   {
     'id': 29,
-    'name': '29. Divide Two Integers',
+    'title': '29. Divide Two Integers',
     'link': 'https://leetcode.com/problems/divide-two-integers/',
     'difficulty': 'Medium',
     'solved': false,
@@ -234,7 +233,7 @@
   },
   {
     'id': 30,
-    'name': '30. Substring with Concatenation of All Words',
+    'title': '30. Substring with Concatenation of All Words',
     'link': 'https://leetcode.com/problems/substring-with-concatenation-of-all-words/',
     'difficulty': 'Hard',
     'solved': false,
@@ -242,7 +241,7 @@
   },
   {
     'id': 31,
-    'name': '31. Next Permutation',
+    'title': '31. Next Permutation',
     'link': 'https://leetcode.com/problems/next-permutation/',
     'difficulty': 'Medium',
     'solved': false,
@@ -250,7 +249,7 @@
   },
   {
     'id': 32,
-    'name': '32. Longest Valid Parentheses',
+    'title': '32. Longest Valid Parentheses',
     'link': 'https://leetcode.com/problems/longest-valid-parentheses/',
     'difficulty': 'Hard',
     'solved': false,
@@ -258,7 +257,7 @@
   },
   {
     'id': 33,
-    'name': '33. Search in Rotated Sorted Array',
+    'title': '33. Search in Rotated Sorted Array',
     'link': 'https://leetcode.com/problems/search-in-rotated-sorted-array/',
     'difficulty': 'Medium',
     'solved': false,
@@ -266,7 +265,7 @@
   },
   {
     'id': 34,
-    'name': '34. Find First and Last Position of Element in Sorted Array',
+    'title': '34. Find First and Last Position of Element in Sorted Array',
     'link': 'https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/',
     'difficulty': 'Medium',
     'solved': false,
@@ -274,7 +273,7 @@
   },
   {
     'id': 35,
-    'name': '35. Search Insert Position',
+    'title': '35. Search Insert Position',
     'link': 'https://leetcode.com/problems/search-insert-position/',
     'difficulty': 'Easy',
     'solved': false,
@@ -282,7 +281,7 @@
   },
   {
     'id': 36,
-    'name': '36. Valid Sudoku',
+    'title': '36. Valid Sudoku',
     'link': 'https://leetcode.com/problems/valid-sudoku/',
     'difficulty': 'Medium',
     'solved': false,
@@ -290,7 +289,7 @@
   },
   {
     'id': 37,
-    'name': '37. Sudoku Solver',
+    'title': '37. Sudoku Solver',
     'link': 'https://leetcode.com/problems/sudoku-solver/',
     'difficulty': 'Hard',
     'solved': false,
@@ -298,7 +297,7 @@
   },
   {
     'id': 38,
-    'name': '38. Count and Say',
+    'title': '38. Count and Say',
     'link': 'https://leetcode.com/problems/count-and-say/',
     'difficulty': 'Easy',
     'solved': false,
@@ -306,7 +305,7 @@
   },
   {
     'id': 39,
-    'name': '39. Combination Sum',
+    'title': '39. Combination Sum',
     'link': 'https://leetcode.com/problems/combination-sum/',
     'difficulty': 'Medium',
     'solved': false,
@@ -314,7 +313,7 @@
   },
   {
     'id': 40,
-    'name': '40. Combination Sum II',
+    'title': '40. Combination Sum II',
     'link': 'https://leetcode.com/problems/combination-sum-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -322,7 +321,7 @@
   },
   {
     'id': 41,
-    'name': '41. First Missing Positive',
+    'title': '41. First Missing Positive',
     'link': 'https://leetcode.com/problems/first-missing-positive/',
     'difficulty': 'Hard',
     'solved': false,
@@ -330,7 +329,7 @@
   },
   {
     'id': 42,
-    'name': '42. Trapping Rain Water',
+    'title': '42. Trapping Rain Water',
     'link': 'https://leetcode.com/problems/trapping-rain-water/',
     'difficulty': 'Hard',
     'solved': false,
@@ -338,7 +337,7 @@
   },
   {
     'id': 43,
-    'name': '43. Multiply Strings',
+    'title': '43. Multiply Strings',
     'link': 'https://leetcode.com/problems/multiply-strings/',
     'difficulty': 'Medium',
     'solved': false,
@@ -346,7 +345,7 @@
   },
   {
     'id': 44,
-    'name': '44. Wildcard Matching',
+    'title': '44. Wildcard Matching',
     'link': 'https://leetcode.com/problems/wildcard-matching/',
     'difficulty': 'Hard',
     'solved': false,
@@ -354,7 +353,7 @@
   },
   {
     'id': 45,
-    'name': '45. Jump Game II',
+    'title': '45. Jump Game II',
     'link': 'https://leetcode.com/problems/jump-game-ii/',
     'difficulty': 'Hard',
     'solved': false,
@@ -362,7 +361,7 @@
   },
   {
     'id': 46,
-    'name': '46. Permutations',
+    'title': '46. Permutations',
     'link': 'https://leetcode.com/problems/permutations/',
     'difficulty': 'Medium',
     'solved': false,
@@ -370,7 +369,7 @@
   },
   {
     'id': 47,
-    'name': '47. Permutations II',
+    'title': '47. Permutations II',
     'link': 'https://leetcode.com/problems/permutations-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -378,7 +377,7 @@
   },
   {
     'id': 48,
-    'name': '48. Rotate Image',
+    'title': '48. Rotate Image',
     'link': 'https://leetcode.com/problems/rotate-image/',
     'difficulty': 'Medium',
     'solved': false,
@@ -386,7 +385,7 @@
   },
   {
     'id': 49,
-    'name': '49. Group Anagrams',
+    'title': '49. Group Anagrams',
     'link': 'https://leetcode.com/problems/group-anagrams/',
     'difficulty': 'Medium',
     'solved': false,
@@ -394,7 +393,7 @@
   },
   {
     'id': 50,
-    'name': '50. Pow(x, n)',
+    'title': '50. Pow(x, n)',
     'link': 'https://leetcode.com/problems/powx-n/',
     'difficulty': 'Medium',
     'solved': false,
@@ -402,7 +401,7 @@
   },
   {
     'id': 51,
-    'name': '51. N-Queens',
+    'title': '51. N-Queens',
     'link': 'https://leetcode.com/problems/n-queens/',
     'difficulty': 'Hard',
     'solved': false,
@@ -410,7 +409,7 @@
   },
   {
     'id': 52,
-    'name': '52. N-Queens II',
+    'title': '52. N-Queens II',
     'link': 'https://leetcode.com/problems/n-queens-ii/',
     'difficulty': 'Hard',
     'solved': false,
@@ -418,7 +417,7 @@
   },
   {
     'id': 53,
-    'name': '53. Maximum Subarray',
+    'title': '53. Maximum Subarray',
     'link': 'https://leetcode.com/problems/maximum-subarray/',
     'difficulty': 'Easy',
     'solved': false,
@@ -426,7 +425,7 @@
   },
   {
     'id': 54,
-    'name': '54. Spiral Matrix',
+    'title': '54. Spiral Matrix',
     'link': 'https://leetcode.com/problems/spiral-matrix/',
     'difficulty': 'Medium',
     'solved': false,
@@ -434,7 +433,7 @@
   },
   {
     'id': 55,
-    'name': '55. Jump Game',
+    'title': '55. Jump Game',
     'link': 'https://leetcode.com/problems/jump-game/',
     'difficulty': 'Medium',
     'solved': false,
@@ -442,7 +441,7 @@
   },
   {
     'id': 56,
-    'name': '56. Merge Intervals',
+    'title': '56. Merge Intervals',
     'link': 'https://leetcode.com/problems/merge-intervals/',
     'difficulty': 'Medium',
     'solved': false,
@@ -450,7 +449,7 @@
   },
   {
     'id': 57,
-    'name': '57. Insert Interval',
+    'title': '57. Insert Interval',
     'link': 'https://leetcode.com/problems/insert-interval/',
     'difficulty': 'Hard',
     'solved': false,
@@ -458,7 +457,7 @@
   },
   {
     'id': 58,
-    'name': '58. Length of Last Word',
+    'title': '58. Length of Last Word',
     'link': 'https://leetcode.com/problems/length-of-last-word/',
     'difficulty': 'Easy',
     'solved': false,
@@ -466,7 +465,7 @@
   },
   {
     'id': 59,
-    'name': '59. Spiral Matrix II',
+    'title': '59. Spiral Matrix II',
     'link': 'https://leetcode.com/problems/spiral-matrix-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -474,7 +473,7 @@
   },
   {
     'id': 60,
-    'name': '60. Permutation Sequence',
+    'title': '60. Permutation Sequence',
     'link': 'https://leetcode.com/problems/permutation-sequence/',
     'difficulty': 'Medium',
     'solved': false,
@@ -482,7 +481,7 @@
   },
   {
     'id': 61,
-    'name': '61. Rotate List',
+    'title': '61. Rotate List',
     'link': 'https://leetcode.com/problems/rotate-list/',
     'difficulty': 'Medium',
     'solved': false,
@@ -490,7 +489,7 @@
   },
   {
     'id': 62,
-    'name': '62. Unique Paths',
+    'title': '62. Unique Paths',
     'link': 'https://leetcode.com/problems/unique-paths/',
     'difficulty': 'Medium',
     'solved': false,
@@ -498,7 +497,7 @@
   },
   {
     'id': 63,
-    'name': '63. Unique Paths II',
+    'title': '63. Unique Paths II',
     'link': 'https://leetcode.com/problems/unique-paths-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -506,7 +505,7 @@
   },
   {
     'id': 64,
-    'name': '64. Minimum Path Sum',
+    'title': '64. Minimum Path Sum',
     'link': 'https://leetcode.com/problems/minimum-path-sum/',
     'difficulty': 'Medium',
     'solved': false,
@@ -514,7 +513,7 @@
   },
   {
     'id': 65,
-    'name': '65. Valid Number',
+    'title': '65. Valid Number',
     'link': 'https://leetcode.com/problems/valid-number/',
     'difficulty': 'Hard',
     'solved': false,
@@ -522,7 +521,7 @@
   },
   {
     'id': 66,
-    'name': '66. Plus One',
+    'title': '66. Plus One',
     'link': 'https://leetcode.com/problems/plus-one/',
     'difficulty': 'Easy',
     'solved': false,
@@ -530,7 +529,7 @@
   },
   {
     'id': 67,
-    'name': '67. Add Binary',
+    'title': '67. Add Binary',
     'link': 'https://leetcode.com/problems/add-binary/',
     'difficulty': 'Easy',
     'solved': false,
@@ -538,7 +537,7 @@
   },
   {
     'id': 68,
-    'name': '68. Text Justification',
+    'title': '68. Text Justification',
     'link': 'https://leetcode.com/problems/text-justification/',
     'difficulty': 'Hard',
     'solved': false,
@@ -546,7 +545,7 @@
   },
   {
     'id': 69,
-    'name': '69. Sqrt(x)',
+    'title': '69. Sqrt(x)',
     'link': 'https://leetcode.com/problems/sqrtx/',
     'difficulty': 'Easy',
     'solved': false,
@@ -554,7 +553,7 @@
   },
   {
     'id': 70,
-    'name': '70. Climbing Stairs',
+    'title': '70. Climbing Stairs',
     'link': 'https://leetcode.com/problems/climbing-stairs/',
     'difficulty': 'Easy',
     'solved': false,
@@ -562,7 +561,7 @@
   },
   {
     'id': 71,
-    'name': '71. Simplify Path',
+    'title': '71. Simplify Path',
     'link': 'https://leetcode.com/problems/simplify-path/',
     'difficulty': 'Medium',
     'solved': false,
@@ -570,7 +569,7 @@
   },
   {
     'id': 72,
-    'name': '72. Edit Distance',
+    'title': '72. Edit Distance',
     'link': 'https://leetcode.com/problems/edit-distance/',
     'difficulty': 'Hard',
     'solved': false,
@@ -578,7 +577,7 @@
   },
   {
     'id': 73,
-    'name': '73. Set Matrix Zeroes',
+    'title': '73. Set Matrix Zeroes',
     'link': 'https://leetcode.com/problems/set-matrix-zeroes/',
     'difficulty': 'Medium',
     'solved': false,
@@ -586,7 +585,7 @@
   },
   {
     'id': 74,
-    'name': '74. Search a 2D Matrix',
+    'title': '74. Search a 2D Matrix',
     'link': 'https://leetcode.com/problems/search-a-2d-matrix/',
     'difficulty': 'Medium',
     'solved': false,
@@ -594,7 +593,7 @@
   },
   {
     'id': 75,
-    'name': '75. Sort Colors',
+    'title': '75. Sort Colors',
     'link': 'https://leetcode.com/problems/sort-colors/',
     'difficulty': 'Medium',
     'solved': false,
@@ -602,7 +601,7 @@
   },
   {
     'id': 76,
-    'name': '76. Minimum Window Substring',
+    'title': '76. Minimum Window Substring',
     'link': 'https://leetcode.com/problems/minimum-window-substring/',
     'difficulty': 'Hard',
     'solved': false,
@@ -610,7 +609,7 @@
   },
   {
     'id': 77,
-    'name': '77. Combinations',
+    'title': '77. Combinations',
     'link': 'https://leetcode.com/problems/combinations/',
     'difficulty': 'Medium',
     'solved': false,
@@ -618,7 +617,7 @@
   },
   {
     'id': 78,
-    'name': '78. Subsets',
+    'title': '78. Subsets',
     'link': 'https://leetcode.com/problems/subsets/',
     'difficulty': 'Medium',
     'solved': false,
@@ -626,7 +625,7 @@
   },
   {
     'id': 79,
-    'name': '79. Word Search',
+    'title': '79. Word Search',
     'link': 'https://leetcode.com/problems/word-search/',
     'difficulty': 'Medium',
     'solved': false,
@@ -634,7 +633,7 @@
   },
   {
     'id': 80,
-    'name': '80. Remove Duplicates from Sorted Array II',
+    'title': '80. Remove Duplicates from Sorted Array II',
     'link': 'https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -642,7 +641,7 @@
   },
   {
     'id': 81,
-    'name': '81. Search in Rotated Sorted Array II',
+    'title': '81. Search in Rotated Sorted Array II',
     'link': 'https://leetcode.com/problems/search-in-rotated-sorted-array-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -650,7 +649,7 @@
   },
   {
     'id': 82,
-    'name': '82. Remove Duplicates from Sorted List II',
+    'title': '82. Remove Duplicates from Sorted List II',
     'link': 'https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -658,7 +657,7 @@
   },
   {
     'id': 83,
-    'name': '83. Remove Duplicates from Sorted List',
+    'title': '83. Remove Duplicates from Sorted List',
     'link': 'https://leetcode.com/problems/remove-duplicates-from-sorted-list/',
     'difficulty': 'Easy',
     'solved': false,
@@ -666,7 +665,7 @@
   },
   {
     'id': 84,
-    'name': '84. Largest Rectangle in Histogram',
+    'title': '84. Largest Rectangle in Histogram',
     'link': 'https://leetcode.com/problems/largest-rectangle-in-histogram/',
     'difficulty': 'Hard',
     'solved': false,
@@ -674,7 +673,7 @@
   },
   {
     'id': 85,
-    'name': '85. Maximal Rectangle',
+    'title': '85. Maximal Rectangle',
     'link': 'https://leetcode.com/problems/maximal-rectangle/',
     'difficulty': 'Hard',
     'solved': false,
@@ -682,7 +681,7 @@
   },
   {
     'id': 86,
-    'name': '86. Partition List',
+    'title': '86. Partition List',
     'link': 'https://leetcode.com/problems/partition-list/',
     'difficulty': 'Medium',
     'solved': false,
@@ -690,7 +689,7 @@
   },
   {
     'id': 87,
-    'name': '87. Scramble String',
+    'title': '87. Scramble String',
     'link': 'https://leetcode.com/problems/scramble-string/',
     'difficulty': 'Hard',
     'solved': false,
@@ -698,7 +697,7 @@
   },
   {
     'id': 88,
-    'name': '88. Merge Sorted Array',
+    'title': '88. Merge Sorted Array',
     'link': 'https://leetcode.com/problems/merge-sorted-array/',
     'difficulty': 'Easy',
     'solved': false,
@@ -706,7 +705,7 @@
   },
   {
     'id': 89,
-    'name': '89. Gray Code',
+    'title': '89. Gray Code',
     'link': 'https://leetcode.com/problems/gray-code/',
     'difficulty': 'Medium',
     'solved': false,
@@ -714,7 +713,7 @@
   },
   {
     'id': 90,
-    'name': '90. Subsets II',
+    'title': '90. Subsets II',
     'link': 'https://leetcode.com/problems/subsets-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -722,7 +721,7 @@
   },
   {
     'id': 91,
-    'name': '91. Decode Ways',
+    'title': '91. Decode Ways',
     'link': 'https://leetcode.com/problems/decode-ways/',
     'difficulty': 'Medium',
     'solved': false,
@@ -730,7 +729,7 @@
   },
   {
     'id': 92,
-    'name': '92. Reverse Linked List II',
+    'title': '92. Reverse Linked List II',
     'link': 'https://leetcode.com/problems/reverse-linked-list-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -738,7 +737,7 @@
   },
   {
     'id': 93,
-    'name': '93. Restore IP Addresses',
+    'title': '93. Restore IP Addresses',
     'link': 'https://leetcode.com/problems/restore-ip-addresses/',
     'difficulty': 'Medium',
     'solved': false,
@@ -746,7 +745,7 @@
   },
   {
     'id': 94,
-    'name': '94. Binary Tree Inorder Traversal',
+    'title': '94. Binary Tree Inorder Traversal',
     'link': 'https://leetcode.com/problems/binary-tree-inorder-traversal/',
     'difficulty': 'Medium',
     'solved': false,
@@ -754,7 +753,7 @@
   },
   {
     'id': 95,
-    'name': '95. Unique Binary Search Trees II',
+    'title': '95. Unique Binary Search Trees II',
     'link': 'https://leetcode.com/problems/unique-binary-search-trees-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -762,7 +761,7 @@
   },
   {
     'id': 96,
-    'name': '96. Unique Binary Search Trees',
+    'title': '96. Unique Binary Search Trees',
     'link': 'https://leetcode.com/problems/unique-binary-search-trees/',
     'difficulty': 'Medium',
     'solved': false,
@@ -770,7 +769,7 @@
   },
   {
     'id': 97,
-    'name': '97. Interleaving String',
+    'title': '97. Interleaving String',
     'link': 'https://leetcode.com/problems/interleaving-string/',
     'difficulty': 'Hard',
     'solved': false,
@@ -778,7 +777,7 @@
   },
   {
     'id': 98,
-    'name': '98. Validate Binary Search Tree',
+    'title': '98. Validate Binary Search Tree',
     'link': 'https://leetcode.com/problems/validate-binary-search-tree/',
     'difficulty': 'Medium',
     'solved': false,
@@ -786,7 +785,7 @@
   },
   {
     'id': 99,
-    'name': '99. Recover Binary Search Tree',
+    'title': '99. Recover Binary Search Tree',
     'link': 'https://leetcode.com/problems/recover-binary-search-tree/',
     'difficulty': 'Hard',
     'solved': false,
@@ -794,7 +793,7 @@
   },
   {
     'id': 100,
-    'name': '100. Same Tree',
+    'title': '100. Same Tree',
     'link': 'https://leetcode.com/problems/same-tree/',
     'difficulty': 'Easy',
     'solved': false,
@@ -802,7 +801,7 @@
   },
   {
     'id': 101,
-    'name': '11. Symmetric Tree',
+    'title': '11. Symmetric Tree',
     'link': 'https://leetcode.com/problems/symmetric-tree/',
     'difficulty': 'Easy',
     'solved': false,
@@ -810,7 +809,7 @@
   },
   {
     'id': 102,
-    'name': '12. Binary Tree Level Order Traversal',
+    'title': '12. Binary Tree Level Order Traversal',
     'link': 'https://leetcode.com/problems/binary-tree-level-order-traversal/',
     'difficulty': 'Medium',
     'solved': false,
@@ -818,7 +817,7 @@
   },
   {
     'id': 103,
-    'name': '103. Binary Tree Zigzag Level Order Traversal',
+    'title': '103. Binary Tree Zigzag Level Order Traversal',
     'link': 'https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/',
     'difficulty': 'Medium',
     'solved': false,
@@ -826,7 +825,7 @@
   },
   {
     'id': 104,
-    'name': '104. Maximum Depth of Binary Tree',
+    'title': '104. Maximum Depth of Binary Tree',
     'link': 'https://leetcode.com/problems/maximum-depth-of-binary-tree/',
     'difficulty': 'Easy',
     'solved': false,
@@ -834,7 +833,7 @@
   },
   {
     'id': 105,
-    'name': '105. Construct Binary Tree from Preorder and Inorder Traversal',
+    'title': '105. Construct Binary Tree from Preorder and Inorder Traversal',
     'link': 'https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/',
     'difficulty': 'Medium',
     'solved': false,
@@ -842,7 +841,7 @@
   },
   {
     'id': 106,
-    'name': '106. Construct Binary Tree from Inorder and Postorder Traversal',
+    'title': '106. Construct Binary Tree from Inorder and Postorder Traversal',
     'link': 'https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/',
     'difficulty': 'Medium',
     'solved': false,
@@ -850,7 +849,7 @@
   },
   {
     'id': 107,
-    'name': '107. Binary Tree Level Order Traversal II',
+    'title': '107. Binary Tree Level Order Traversal II',
     'link': 'https://leetcode.com/problems/binary-tree-level-order-traversal-ii/',
     'difficulty': 'Easy',
     'solved': false,
@@ -858,7 +857,7 @@
   },
   {
     'id': 108,
-    'name': '108. Convert Sorted Array to Binary Search Tree',
+    'title': '108. Convert Sorted Array to Binary Search Tree',
     'link': 'https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/',
     'difficulty': 'Easy',
     'solved': false,
@@ -866,7 +865,7 @@
   },
   {
     'id': 109,
-    'name': '109. Convert Sorted List to Binary Search Tree',
+    'title': '109. Convert Sorted List to Binary Search Tree',
     'link': 'https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/',
     'difficulty': 'Medium',
     'solved': false,
@@ -874,7 +873,7 @@
   },
   {
     'id': 110,
-    'name': '110. Balanced Binary Tree',
+    'title': '110. Balanced Binary Tree',
     'link': 'https://leetcode.com/problems/balanced-binary-tree/',
     'difficulty': 'Easy',
     'solved': false,
@@ -882,7 +881,7 @@
   },
   {
     'id': 111,
-    'name': '111. Minimum Depth of Binary Tree',
+    'title': '111. Minimum Depth of Binary Tree',
     'link': 'https://leetcode.com/problems/minimum-depth-of-binary-tree/',
     'difficulty': 'Easy',
     'solved': false,
@@ -890,7 +889,7 @@
   },
   {
     'id': 112,
-    'name': '112. Path Sum',
+    'title': '112. Path Sum',
     'link': 'https://leetcode.com/problems/path-sum/',
     'difficulty': 'Easy',
     'solved': false,
@@ -898,7 +897,7 @@
   },
   {
     'id': 113,
-    'name': '113. Path Sum II',
+    'title': '113. Path Sum II',
     'link': 'https://leetcode.com/problems/path-sum-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -906,7 +905,7 @@
   },
   {
     'id': 114,
-    'name': '114. Flatten Binary Tree to Linked List',
+    'title': '114. Flatten Binary Tree to Linked List',
     'link': 'https://leetcode.com/problems/flatten-binary-tree-to-linked-list/',
     'difficulty': 'Medium',
     'solved': false,
@@ -914,7 +913,7 @@
   },
   {
     'id': 115,
-    'name': '115. Distinct Subsequences',
+    'title': '115. Distinct Subsequences',
     'link': 'https://leetcode.com/problems/distinct-subsequences/',
     'difficulty': 'Hard',
     'solved': false,
@@ -922,7 +921,7 @@
   },
   {
     'id': 116,
-    'name': '116. Populating Next Right Pointers in Each Node',
+    'title': '116. Populating Next Right Pointers in Each Node',
     'link': 'https://leetcode.com/problems/populating-next-right-pointers-in-each-node/',
     'difficulty': 'Medium',
     'solved': false,
@@ -930,7 +929,7 @@
   },
   {
     'id': 117,
-    'name': '117. Populating Next Right Pointers in Each Node II',
+    'title': '117. Populating Next Right Pointers in Each Node II',
     'link': 'https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/',
     'difficulty': 'Hard',
     'solved': false,
@@ -938,7 +937,7 @@
   },
   {
     'id': 118,
-    'name': '118. Pascal\'s Triangle',
+    'title': '118. Pascal\'s Triangle',
     'link': 'https://leetcode.com/problems/pascals-triangle/',
     'difficulty': 'Easy',
     'solved': false,
@@ -946,7 +945,7 @@
   },
   {
     'id': 119,
-    'name': '119. Pascal\'s Triangle II',
+    'title': '119. Pascal\'s Triangle II',
     'link': 'https://leetcode.com/problems/pascals-triangle-ii/',
     'difficulty': 'Easy',
     'solved': false,
@@ -954,7 +953,7 @@
   },
   {
     'id': 120,
-    'name': '120. Triangle',
+    'title': '120. Triangle',
     'link': 'https://leetcode.com/problems/triangle/',
     'difficulty': 'Medium',
     'solved': false,
@@ -962,7 +961,7 @@
   },
   {
     'id': 121,
-    'name': '121. Best Time to Buy and Sell Stock',
+    'title': '121. Best Time to Buy and Sell Stock',
     'link': 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
     'difficulty': 'Easy',
     'solved': false,
@@ -970,7 +969,7 @@
   },
   {
     'id': 122,
-    'name': '122. Best Time to Buy and Sell Stock II',
+    'title': '122. Best Time to Buy and Sell Stock II',
     'link': 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/',
     'difficulty': 'Easy',
     'solved': false,
@@ -978,7 +977,7 @@
   },
   {
     'id': 123,
-    'name': '123. Best Time to Buy and Sell Stock III',
+    'title': '123. Best Time to Buy and Sell Stock III',
     'link': 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/',
     'difficulty': 'Hard',
     'solved': false,
@@ -986,7 +985,7 @@
   },
   {
     'id': 124,
-    'name': '124. Binary Tree Maximum Path Sum',
+    'title': '124. Binary Tree Maximum Path Sum',
     'link': 'https://leetcode.com/problems/binary-tree-maximum-path-sum/',
     'difficulty': 'Hard',
     'solved': false,
@@ -994,7 +993,7 @@
   },
   {
     'id': 125,
-    'name': '125. Valid Palindrome',
+    'title': '125. Valid Palindrome',
     'link': 'https://leetcode.com/problems/valid-palindrome/',
     'difficulty': 'Easy',
     'solved': false,
@@ -1002,7 +1001,7 @@
   },
   {
     'id': 126,
-    'name': '126. Word Ladder II',
+    'title': '126. Word Ladder II',
     'link': 'https://leetcode.com/problems/word-ladder-ii/',
     'difficulty': 'Hard',
     'solved': false,
@@ -1010,7 +1009,7 @@
   },
   {
     'id': 127,
-    'name': '127. Word Ladder',
+    'title': '127. Word Ladder',
     'link': 'https://leetcode.com/problems/word-ladder/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1018,7 +1017,7 @@
   },
   {
     'id': 128,
-    'name': '128. Longest Consecutive Sequence',
+    'title': '128. Longest Consecutive Sequence',
     'link': 'https://leetcode.com/problems/longest-consecutive-sequence/',
     'difficulty': 'Hard',
     'solved': false,
@@ -1026,7 +1025,7 @@
   },
   {
     'id': 129,
-    'name': '129. Sum Root to Leaf Numbers',
+    'title': '129. Sum Root to Leaf Numbers',
     'link': 'https://leetcode.com/problems/sum-root-to-leaf-numbers/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1034,7 +1033,7 @@
   },
   {
     'id': 130,
-    'name': '130. Surrounded Regions',
+    'title': '130. Surrounded Regions',
     'link': 'https://leetcode.com/problems/surrounded-regions/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1042,7 +1041,7 @@
   },
   {
     'id': 131,
-    'name': '131. Palindrome Partitioning',
+    'title': '131. Palindrome Partitioning',
     'link': 'https://leetcode.com/problems/palindrome-partitioning/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1050,7 +1049,7 @@
   },
   {
     'id': 132,
-    'name': '132. Palindrome Partitioning II',
+    'title': '132. Palindrome Partitioning II',
     'link': 'https://leetcode.com/problems/palindrome-partitioning-ii/',
     'difficulty': 'Hard',
     'solved': false,
@@ -1058,7 +1057,7 @@
   },
   {
     'id': 133,
-    'name': '133. Clone Graph',
+    'title': '133. Clone Graph',
     'link': 'https://leetcode.com/problems/clone-graph/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1066,7 +1065,7 @@
   },
   {
     'id': 134,
-    'name': '134. Gas Station',
+    'title': '134. Gas Station',
     'link': 'https://leetcode.com/problems/gas-station/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1074,7 +1073,7 @@
   },
   {
     'id': 135,
-    'name': '135. Candy',
+    'title': '135. Candy',
     'link': 'https://leetcode.com/problems/candy/',
     'difficulty': 'Hard',
     'solved': false,
@@ -1082,7 +1081,7 @@
   },
   {
     'id': 136,
-    'name': '136. Single Number',
+    'title': '136. Single Number',
     'link': 'https://leetcode.com/problems/single-number/',
     'difficulty': 'Easy',
     'solved': false,
@@ -1090,7 +1089,7 @@
   },
   {
     'id': 137,
-    'name': '137. Single Number II',
+    'title': '137. Single Number II',
     'link': 'https://leetcode.com/problems/single-number-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1098,7 +1097,7 @@
   },
   {
     'id': 138,
-    'name': '138. Copy List with Random Pointer',
+    'title': '138. Copy List with Random Pointer',
     'link': 'https://leetcode.com/problems/copy-list-with-random-pointer/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1106,7 +1105,7 @@
   },
   {
     'id': 139,
-    'name': '139. Word Break',
+    'title': '139. Word Break',
     'link': 'https://leetcode.com/problems/word-break/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1114,7 +1113,7 @@
   },
   {
     'id': 140,
-    'name': '140. Word Break II',
+    'title': '140. Word Break II',
     'link': 'https://leetcode.com/problems/word-break-ii/',
     'difficulty': 'Hard',
     'solved': false,
@@ -1122,7 +1121,7 @@
   },
   {
     'id': 141,
-    'name': '141. Linked List Cycle',
+    'title': '141. Linked List Cycle',
     'link': 'https://leetcode.com/problems/linked-list-cycle/',
     'difficulty': 'Easy',
     'solved': false,
@@ -1130,7 +1129,7 @@
   },
   {
     'id': 142,
-    'name': '142. Linked List Cycle II',
+    'title': '142. Linked List Cycle II',
     'link': 'https://leetcode.com/problems/linked-list-cycle-ii/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1138,7 +1137,7 @@
   },
   {
     'id': 143,
-    'name': '143. Reorder List',
+    'title': '143. Reorder List',
     'link': 'https://leetcode.com/problems/reorder-list/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1146,7 +1145,7 @@
   },
   {
     'id': 144,
-    'name': '144. Binary Tree Preorder Traversal',
+    'title': '144. Binary Tree Preorder Traversal',
     'link': 'https://leetcode.com/problems/binary-tree-preorder-traversal/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1154,7 +1153,7 @@
   },
   {
     'id': 145,
-    'name': '145. Binary Tree Postorder Traversal',
+    'title': '145. Binary Tree Postorder Traversal',
     'link': 'https://leetcode.com/problems/binary-tree-postorder-traversal/',
     'difficulty': 'Hard',
     'solved': false,
@@ -1162,7 +1161,7 @@
   },
   {
     'id': 146,
-    'name': '146. LRU Cache',
+    'title': '146. LRU Cache',
     'link': 'https://leetcode.com/problems/lru-cache/',
     'difficulty': 'Hard',
     'solved': false,
@@ -1170,7 +1169,7 @@
   },
   {
     'id': 147,
-    'name': '147. Insertion Sort List',
+    'title': '147. Insertion Sort List',
     'link': 'https://leetcode.com/problems/insertion-sort-list/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1178,7 +1177,7 @@
   },
   {
     'id': 148,
-    'name': '148. Sort List',
+    'title': '148. Sort List',
     'link': 'https://leetcode.com/problems/sort-list/',
     'difficulty': 'Medium',
     'solved': false,
@@ -1186,7 +1185,7 @@
   },
   {
     'id': 150,
-    'name': '150. Evaluate Reverse Polish Notation',
+    'title': '150. Evaluate Reverse Polish Notation',
     'link': 'https://leetcode.com/problems/evaluate-reverse-polish-notation/',
     'difficulty': 'Medium',
     'solved': false,

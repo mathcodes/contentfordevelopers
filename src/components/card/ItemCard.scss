@@ -1,6 +1,6 @@
-@import '../sass/abstract/variable';
+@import '../../sass/abstract/variable';
 
-.contributer{
+.item{
     margin: 15px 0px;
     padding: 10px;
     border-radius: 6px;
@@ -34,7 +34,7 @@
 
         // prevent long name to overflow box
         h1{
-            width: 200px;
+            
             word-wrap: break-word;
         }
 
@@ -59,4 +59,26 @@
             transform: scale(1.04);
         }
     }
+}
+
+.IndividualItemCard{
+    margin: 2rem;
+    padding: 1rem;
+    background-color:"#333";
+    width: 20%;
+    height: 30%;
+}
+a{
+    text-decoration: none;
+    color: #333 ;
+    font-weight: 700;
+}
+
+.itemCardTitle{
+    height: 8rem;
+    width: 100%;
+}
+
+.itemCard2ndRow{
+    width: 100%;
 }

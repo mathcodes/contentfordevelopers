@@ -1,4 +1,4 @@
-.contributer {
+.contributor {
   margin: 15px 0px;
   padding: 10px;
   border-radius: 6px;
@@ -11,33 +11,33 @@
   width: 25.5rem;
 }
 @media screen and (max-width: 480px) {
-  .contributer {
+  .contributor {
     width: 17.5rem;
     flex-direction: column;
   }
 }
 @media screen and (max-width: 320px) {
-  .contributer {
+  .contributor {
     width: 15rem;
   }
 }
-.contributer img {
+.contributor img {
   border-radius: 50%;
   height: 100px;
   width: 100px;
   margin: 10px;
 }
 @media screen and (max-width: 480px) {
-  .contributer .detail {
+  .contributor .detail {
     text-align: center;
   }
 }
-.contributer .detail a {
+.contributor .detail a {
   text-decoration: none;
   color: white;
   font-weight: 700;
 }
-.contributer .detail button {
+.contributor .detail button {
   background-color: #439A97;
   color: white;
   padding: 5px 15px;
@@ -46,10 +46,10 @@
   border-radius: 6px;
 }
 @media screen and (max-width: 480px) {
-  .contributer .detail button {
+  .contributor .detail button {
     margin: 5% 0;
   }
 }
-.contributer .detail button:hover {
+.contributor .detail button:hover {
   transform: scale(1.04);
-}/*# sourceMappingURL=Contributer.css.map */
+}/*# sourceMappingURL=Contributor.css.map */
