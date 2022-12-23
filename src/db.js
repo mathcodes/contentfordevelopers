@@ -125,6 +125,7 @@ export const subject = [
     "name": "LeetCode",
     "problems": 0,
     "logo": "./assets/Images/LeetCode_logo_black.png",
+    "homepage": "https://leetcode.com/"
   },
   {
     "name": "HackerRank",
@@ -150,5 +151,7 @@ export const subject = [
     "name": "Notes and Resources",
     "problems": 0,
     "logo": "./assets/Images/notesAndResources.jpg",
-  }
+    "homepage": "#" 
+  },
+
 ]
