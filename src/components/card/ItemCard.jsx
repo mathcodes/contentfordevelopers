@@ -39,7 +39,15 @@ const ItemCard = () => {
           <Card className="IndividualItemCard">
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <Item className="itemCardTitle"><h2>{item.title}</h2></Item>
+                <Item className="itemCardTitle">
+                  <h2>{item.title}</h2>
+                  <div className="tagWrapper">
+                  {item.tags.map((t) =>
+                  
+                  <div className="tag">{t}</div>)}
+                  </div>
+                </Item>
+              
               </Grid>
               <Grid item xs={5}>
                 <Item className="itemCard2ndRow"><a href={item.link} target="blank">
@@ -49,8 +57,7 @@ const ItemCard = () => {
 
               </Grid>
               <Grid item xs={7} >
-                <Item  className="itemCard2ndRow">{item.tags.map((t) =>
-                  <li>{t}</li>)}</Item>
+                
               </Grid>
             </Grid>
           </Card>
