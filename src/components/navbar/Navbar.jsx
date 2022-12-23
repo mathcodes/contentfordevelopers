@@ -12,6 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import {image} from '../../data/images'
+import { lightBlue } from '@mui/material/colors';
+
+console.log(image[0].CforDLogo)
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -39,7 +43,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img src={image[0].CforDLogo} style={{width: `10%`, margin: `1rem`}}/>
           <Typography
             variant="h6"
             noWrap
@@ -67,7 +71,7 @@ function ResponsiveAppBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon  color="white"/>
             </IconButton>
             <Menu
               id="menu-appbar"
