@@ -1,4 +1,4 @@
-[
+export const data = [
   {
     "login": "mathcodes",
     "id": 17928947,
@@ -109,6 +109,13 @@
     "id": 19795313,
     "avatar_url": "https://avatars.githubusercontent.com/u/19795313?v=4",
     "html_url": "https://github.com/xcelr8",
+    "contributions": 1
+  },
+  {
+    "login": "jackz070",
+    "id": 95173354,
+    "avatar_url": "https://avatars.githubusercontent.com/u/95173354?v=4",
+    "html_url": "https://github.com/jackz070",
     "contributions": 1
   }
 ]
