@@ -13,7 +13,7 @@ A pattern used when given an `array` or `linked list`, we need to perform a requ
 
 <details>
 <summary>
-<span style="font-size:1.5rem;">Longest substring with ‘K’ distinct characters (medium)
+<span style="font-size:1.5rem;">Longest substring with ‘K’ distinct characters (<span style="color:green;"><a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/">medium</a></span>)
 </span>
 </summary>
 
