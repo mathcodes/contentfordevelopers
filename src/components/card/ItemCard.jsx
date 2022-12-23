@@ -38,6 +38,7 @@ const ItemCard = () => {
         return (
           <Card className="IndividualItemCard">
             <Grid container spacing={2}>
+              
               <Grid item xs={12}>
                 <Item className="itemCardTitle">
                   <h2>{item.title}</h2>
@@ -47,18 +48,16 @@ const ItemCard = () => {
                   <div className="tag">{t}</div>)}
                   </div>
                 </Item>
-              
               </Grid>
-              <Grid item xs={5}>
-                <Item className="itemCard2ndRow"><a href={item.link} target="blank">
+              <Grid item >
+                <div className="bottomItemCard">
+                <Item  className="itemCard2ndRow"><a href={item.link} target="blank">
                   Original
                 </a></Item>
                 <Item  className="itemCard2ndRow" style={{ color: cellColor(itemDifficulty) }}>{item.difficulty}</Item>
-
+             </div>
               </Grid>
-              <Grid item xs={7} >
-                
-              </Grid>
+     
             </Grid>
           </Card>
         );
