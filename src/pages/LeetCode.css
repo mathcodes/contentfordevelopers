@@ -1,10 +1,19 @@
-.header {
+.itemCard {
+  padding: 0 1%;
+}
+
+.banner {
   min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background: rgba(29, 60, 221, 0.15);
+  padding: 5% 5%;
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+}
+.banner hr {
+  margin: 20px 0;
 }
 
 .cards {
@@ -14,11 +23,7 @@
   flex-wrap: wrap;
 }
 
-.footer {
-  padding: 20px;
-}
-
-.platform_wrapper {
+.item_wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -81,4 +86,6 @@
   .contributor_section .contributors_wrapper {
     width: 17.4rem;
   }
-}/*# sourceMappingURL=Homepage.css.map */
+}
+
+/*# sourceMappingURL=LeetCode.css.map */

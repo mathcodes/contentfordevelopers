@@ -1,3 +1,7 @@
+.homepage {
+  padding: 0 1%;
+}
+
 .siteDesc {
   min-height: 400px;
   display: flex;
@@ -5,6 +9,11 @@
   justify-content: center;
   flex-direction: column;
   background: rgba(29, 60, 221, 0.15);
+  padding: 5% 5%;
+  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
+}
+.siteDesc hr {
+  margin: 20px 0;
 }
 
 .cards {
@@ -12,10 +21,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.footer {
-  padding: 20px;
 }
 
 .platform_wrapper {
@@ -81,4 +86,6 @@
   .contributor_section .contributors_wrapper {
     width: 17.4rem;
   }
-}/*# sourceMappingURL=Homepage.css.map */
+}
+
+/*# sourceMappingURL=Homepage.css.map */
