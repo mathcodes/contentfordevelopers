@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ItemCard.scss";
 import { leetCodeData } from '../../data/leetCode'
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import {Paper, Grid, Card} from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({

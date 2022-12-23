@@ -4,11 +4,13 @@ import { Contributor } from "../components/contributor/Contributor";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/navbar/Navbar";
 import PlatformCard from "../components/card/PlatformCard";
+import Header from "../components/header/Header";
 import "./Homepage.scss";
 
 function Homepage() {
   return (
     <div  className='homepage'>
+        <Header/>
         <NavBar />
         <div className='siteDesc'>
           <h2>
