@@ -14,10 +14,10 @@ function LeetCode() {
 		<div className='leetCode'>
 			<NavBar/>
 			<div className='banner'>
-				<h2>
+				<h1>
 					LeetCode Problems
 					<hr />
-				</h2>
+				</h1>
 				<h3>Choose the problem you'd like to explore!</h3>
 			</div>
 			
