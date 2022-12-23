@@ -92,8 +92,8 @@ export const data = [
   },
   {
     "login": "aniqatc",
-    "id": 93758699,
-    "avatar_url": "https://avatars.githubusercontent.com/u/93758699?v=4",
+    "id": 9058699,
+    "avatar_url": "https://avatars.githubusercontent.com/u/9058699?v=4",
     "html_url": "https://github.com/aniqatc",
     "contributions": 1
   },
@@ -117,5 +117,38 @@ export const data = [
     "avatar_url": "https://avatars.githubusercontent.com/u/95173354?v=4",
     "html_url": "https://github.com/jackz070",
     "contributions": 1
+  }
+]
+
+export const subject = [
+  {
+    "name": "LeetCode",
+    "problems": 0,
+    "logo": "./assets/Images/LeetCode_logo_black.png",
+  },
+  {
+    "name": "HackerRank",
+    "problems": 0,
+    "logo": "./assets/Images/hackerrank_logo.png",
+  },
+  {
+    "name": "CodeWars",
+    "problems": 0,
+    "logo": "./assets/Images/codewars_logo.svg",
+  },
+  {
+    "name": "Frontend Interview Problems",
+    "problems": 0,
+    "logo": "./assets/Images/Front_end_developer_logo.png",
+  },
+  {
+    "name": "Data Structures & Algorithm",
+    "problems": 0,
+    "logo": "./assets/Images/LeetCode_logo_black.png",
+  },
+  {
+    "name": "Notes and Resources",
+    "problems": 0,
+    "logo": "./assets/Images/notesAndResources.jpg",
   }
 ]

@@ -1,1 +1,10 @@
-{"version":3,"sources":["Card.scss","Card.css"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,aAAA;EACA,oCAAA;EACA,UAAA;EAOA,mBAAA;EAEA,yCAAA;EACA,kBAAA;ACNJ","file":"Card.css"}
+{
+  "version": 3,
+  "sources": [
+    "Card.scss",
+    "Card.css"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACI,WAAA;EACA,aAAA;EACA,oCAAA;EACA,UAAA;EAOA,mBAAA;EAEA,yCAAA;EACA,kBAAA;ACNJ",
+  "file": "Card.css"
+}
