@@ -1,4 +1,113 @@
-.footer{
-    background-color: rgb(63, 63, 63);
-    color: white;
+@import "../../sass/abstract/variable";
+
+.footer {
+  background-color: #272822;
+  color: white;
+}
+
+.footer_container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 8rem;
+  padding-top: 2rem;
+
+  @include tablet {
+    padding: 0 4rem;
+  }
+  @include mobile-l {
+    padding: 0 1rem;
+  }
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 4rem;
+
+  flex-direction: row;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.footer_top-box {
+  line-height: 2rem;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+
+  h4 {
+    font-weight: 700;
+
+    line-height: 1rem;
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    list-style: none;
+    font-size: 0.8rem;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+
+    a {
+      color: white;
+      font-weight: 300;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(0.8);
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+.footer_bottom {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+
+  .footer_bottom-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 0.65rem;
+
+      margin: 0 1rem;
+
+      color: white;
+    }
+  }
+
+  .footer_bottom-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
 }
