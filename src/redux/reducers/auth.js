@@ -4,13 +4,17 @@ const initialState={
     error:null,
     isAuthenticated:false,
     isAuthenticating:false,
-
+    statusText:null,
 }
 const authSlice = createSlice({
     name:'auth',
     initialState,
     reducers:{
-        
+        loginRequest:(state,action)=>{
+            state.isAuthenticating=true
+            state.isAuthenticated=false
+            state.user=action.payload
+        }
     }
 })
 

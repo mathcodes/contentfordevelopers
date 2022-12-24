@@ -126,15 +126,3 @@ a{
 .difficultyItem, .originalItem{
     position: relative;
 }
-
-.itemCardTitle:hover{
-    background:#232323;
-    color:aliceblue;
-    cursor:crosshair;
-}
-
-.itemCardTitle:hover .tag{
-      background:aliceblue;
-    color:#232323;
-  
-}

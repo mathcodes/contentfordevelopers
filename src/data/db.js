@@ -119,39 +119,3 @@ export const data = [
     "contributions": 1
   }
 ]
-
-export const subject = [
-  {
-    "name": "LeetCode",
-    "problems": 0,
-    "logo": "./assets/Images/LeetCode_logo_black.png",
-    "homepage": "https://leetcode.com/"
-  },
-  {
-    "name": "HackerRank",
-    "problems": 0,
-    "logo": "./assets/Images/hackerrank_logo.png",
-  },
-  {
-    "name": "CodeWars",
-    "problems": 0,
-    "logo": "./assets/Images/codewars_logo.svg",
-  },
-  {
-    "name": "Frontend Interview Problems",
-    "problems": 0,
-    "logo": "./assets/Images/Front_end_developer_logo.png",
-  },
-  {
-    "name": "Data Structures & Algorithm",
-    "problems": 0,
-    "logo": "./assets/Images/LeetCode_logo_black.png",
-  },
-  {
-    "name": "Notes and Resources",
-    "problems": 0,
-    "logo": "./assets/Images/notesAndResources.jpg",
-    "homepage": "#" 
-  },
-
-]
