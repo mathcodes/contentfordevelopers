@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import "./ItemCard.scss";
 import { leetCodeData } from '../../data/leetCode'
 import { styled } from '@mui/material/styles';
@@ -42,38 +43,31 @@ const style = {
   p: 4,
 };
 
-let itemDifficulty = leetCodeData[0].difficulty
-console.log(itemDifficulty)
-function cellColor(itemDifficulty) {
-  switch (itemDifficulty) {
-    case 'Easy':
-      return 'orange';
-    case 'Medium':
-      return 'orange'
-    case 'Hard':
-      return 'red'
-    default:
-      return 'black'
-  }
-}
+
 
 const ItemCard = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+ 
+ 
   return (
     <>
 
       {leetCodeData.map((item) => {
-
         return (
-          <Card onClick={handleOpen} className="IndividualItemCard">
+          <Card className="IndividualItemCard">
 
             <Grid container spacing={2}>
 
               <Grid item xs={12}>
-                <Item className="itemCardTitle">
+                <Link 
+                  to={{
+                    pathname: `/leetcode/${item.id}`,
+                    state: {
+                      item: item
+                    }
+                  }}
+
+                >
+                  <Item className="itemCardTitle">
                   <h2>{item.title}</h2>
                   <div className="tagWrapper">
                     {item.tags.map((t) =>
@@ -81,6 +75,7 @@ const ItemCard = () => {
                       <div className="tag">{t}</div>)}
                   </div>
                 </Item>
+                </Link>
               </Grid>
               <Grid item xs={12}>
                 <div className="bottomItemCard">
@@ -116,7 +111,7 @@ const ItemCard = () => {
               </Grid>
 
             </Grid>
-            <Modal
+            {/* <Modal
               style={{
                 margin: '3rem',
               }}
@@ -151,7 +146,7 @@ const ItemCard = () => {
 
                 </Grid>
               </Box>
-            </Modal>
+            </Modal> */}
           </Card>
 
         );

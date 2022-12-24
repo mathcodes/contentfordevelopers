@@ -6,35 +6,36 @@ import NavBar from "../components/navbar/Navbar";
 import PlatformCard from "../components/card/PlatformCard";
 import Header from "../components/header/Header";
 import "./Homepage.scss";
+import {subject} from '../data/subject'
 
 function Homepage() {
-  return (
-    <div  className='homepage'>
-        <Header/>
-        <NavBar />
-        <div className='siteDesc'>
-          <h2>
-					  Welcome to ContentForDevelopers! This is an open-source project aimed at providing learning tools for developers that cover a wide range of learning styles. The devoted team behind this project have all been through and continue to perservere through learning new content, technology, updates, languages, frameworks, problem-solving strategies, frontend & backend archtiecture, and so much more. Now we are all giving back to the community in the most helpful way we can think of: providing FREE, UP-TO-DATE, and DIVERSE methods to learn the skills needed to make it in this industry!
-				    <hr/>
-				    Want to join the team?!? Anyone can contribute by visiting the GitHub Repo! We would love to have you on board and welcome all levels of experience. Jon makes sure to keep a handful of 'good first issue' options available, so give it a shot, and if you're new, we offer assistance to walk you through the process. Become a contributor TODAY and start becoming part of the community! 
-			    </h2>
-           
-        </div>
-        {/* <div className='cards'>
-
-            <Cards name={"Leetcode"}/>
-            <Cards name={"HackerRank"}/>
-            <Cards name={"CodeWars"}/>
-            <Cards name={"Data Structure & Algorithms"}/>
-            <Cards name={"Notes & Resources"}/> 
-        </div> */}
+    return (
+        <div className='homepage'>
+            <Header />
+            <NavBar />
+            <div className='siteDesc'>
+                <h2>
+                    Welcome to ContentForDevelopers! This is an open-source project aimed at providing learning tools for developers that cover a wide range of learning styles. The devoted team behind this project have all been through and continue to perservere through learning new content, technology, updates, languages, frameworks, problem-solving strategies, frontend & backend archtiecture, and so much more. Now we are all giving back to the community in the most helpful way we can think of: providing FREE, UP-TO-DATE, and DIVERSE methods to learn the skills needed to make it in this industry!
+                    <hr />
+                    Want to join the team?!? Anyone can contribute by visiting the GitHub Repo! We would love to have you on board and welcome all levels of experience. Jon makes sure to keep a handful of 'good first issue' options available, so give it a shot, and if you're new, we offer assistance to walk you through the process. Become a contributor TODAY and start becoming part of the community!
+                </h2>
+            </div>
+        // a more efficient way to do this would be to map over an array of objects
+            // and then render the PlatformCard component with the appropriate props
+            // for each object in the array, as shown here:
             <div className="platform_wrapper">
+                {{ subject }.map((item) => (
+                    console.log(subject),
+                    <PlatformCard title={item.title} href={item.href} />
+                ))}
+            </div>
+            {/* <div className="platform_wrapper">
                 <PlatformCard title="Leetcode" href='/leetcode'/>
-                <PlatformCard title="HackerRank" href='/hackerrank'/>
+                <PlatformCard title="HackerRank" href='/itempage'/>
                 <PlatformCard title="CodeWars" href='/codewars'/>
                 <PlatformCard title="Data Structure & Algorithm" href='/dsa'/>
                 <PlatformCard title="Notes and Resources" href='/notesandresources'/>
-            </div>
+            </div> */}
 
             <section className="contributor_section">
                 <div className="desc">

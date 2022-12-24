@@ -1,5 +1,6 @@
 import Homepage from './pages/Homepage';
 import LeetCode from './pages/LeetCode';
+import ItemPage from './pages/ItemPage';
 // import Navbar from './components/navbar/Navbar';
 import Header from './components/header/Header';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/leetcode" element={<LeetCode/>} />
+          <Route path="/itempage" element={<ItemPage/>} />
           {/* <Route path="/hackerrank" element={<HackerRank/>} />
           <Route path="/codewars" element={<CodeWars/>} />
           <Route path="/dsa" element={<DSA/>} />
