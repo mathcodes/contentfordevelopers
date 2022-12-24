@@ -43,11 +43,8 @@ const style = {
   p: 4,
 };
 
-
-
 const ItemCard = () => {
- 
- 
+
   return (
     <>
 
@@ -58,23 +55,14 @@ const ItemCard = () => {
             <Grid container spacing={2}>
 
               <Grid item xs={12}>
-                <Link 
-                  to={{
-                    pathname: `/leetcode/${item.id}`,
-                    state: {
-                      item: item
-                    }
-                  }}
-
-                >
+                <Link to={{pathname: `/leetcode/${item.id}`,}}>
                   <Item className="itemCardTitle">
-                  <h2>{item.title}</h2>
-                  <div className="tagWrapper">
-                    {item.tags.map((t) =>
-
-                      <div className="tag">{t}</div>)}
-                  </div>
-                </Item>
+                    <h2>{item.title}</h2>
+                    <div className="tagWrapper">
+                      {item.tags.map((t) =>
+                        <div className="tag">{t}</div>)}
+                    </div>
+                  </Item>
                 </Link>
               </Grid>
               <Grid item xs={12}>

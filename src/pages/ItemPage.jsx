@@ -1,118 +1,50 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
-import Footer from "../components/footer/Footer";
-import NavBar from "../components/navbar/Navbar";
-import PlatformCard from "../components/card/PlatformCard";
-import Header from "../components/header/Header";
+import React from 'react';
+import {Route, Link, Routes, useParams} from 'react-router-dom';
+// import { styled } from '@mui/material/styles';
+// import Box from '@mui/material/Box';
+// import Paper from '@mui/material/Paper';
+// import Grid from '@mui/material/Unstable_Grid2';
+// import Footer from "../components/footer/Footer";
+// import NavBar from "../components/navbar/Navbar";
+// import PlatformCard from "../components/card/PlatformCard";
+// import Header from "../components/header/Header";
+import { leetCodeData } from "../data/leetCode";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+ 
+
 
 export default function ItemPage() {
+  let idValue = useParams();
+  console.log(idValue);
+ console.log(idValue.id);
+ let localData = leetCodeData[idValue.id-1];
+ console.log(localData)
+ let ItemAsnwer = `../assets/LeetCode/${localData.title}.png`;
+  console.log(ItemAsnwer);
+  // WRITE A function that return js file in   folder containing the same name as the title of the problem:
+  let ItemAnswer = `../assets/LeetCode/${localData.title}.js`;
+
+ 
+
+
   return (
-    <div  className='homepage'>
-        <Header/>
-        <NavBar />
-    <Box sx={{ flexGrow: 12 }}>
-      <Grid container spacing={2}>
-        <Grid xs={12} md={5} lg={4}>
-          <Item>Email subscribe section</Item>
-        </Grid>
-        <Grid container xs={12} md={7} lg={8} spacing={4}>
-          <Grid xs={6} lg={3}>
-            <Item>
-              <Box
-                id="category-a"
-                sx={{ fontSize: '12px', textTransform: 'uppercase' }}
-              >
-                Category A
-              </Box>
-              <Box component="ul" aria-labelledby="category-a" sx={{ pl: 2 }}>
-                <li>Link 1.1</li>
-                <li>Link 1.2</li>
-                <li>Link 1.3</li>
-              </Box>
-            </Item>
-          </Grid>
-          <Grid xs={6} lg={3}>
-            <Item>
-              <Box
-                id="category-b"
-                sx={{ fontSize: '12px', textTransform: 'uppercase' }}
-              >
-                Category B
-              </Box>
-              <Box component="ul" aria-labelledby="category-b" sx={{ pl: 2 }}>
-                <li>Link 2.1</li>
-                <li>Link 2.2</li>
-                <li>Link 2.3</li>
-              </Box>
-            </Item>
-          </Grid>
-          <Grid xs={6} lg={3}>
-            <Item>
-              <Box
-                id="category-c"
-                sx={{ fontSize: '12px', textTransform: 'uppercase' }}
-              >
-                Category C
-              </Box>
-              <Box component="ul" aria-labelledby="category-c" sx={{ pl: 2 }}>
-                <li>Link 3.1</li>
-                <li>Link 3.2</li>
-                <li>Link 3.3</li>
-              </Box>
-            </Item>
-          </Grid>
-          <Grid xs={6} lg={3}>
-            <Item>
-              <Box
-                id="category-d"
-                sx={{ fontSize: '12px', textTransform: 'uppercase' }}
-              >
-                Category D
-              </Box>
-              <Box component="ul" aria-labelledby="category-d" sx={{ pl: 2 }}>
-                <li>Link 4.1</li>
-                <li>Link 4.2</li>
-                <li>Link 4.3</li>
-              </Box>
-            </Item>
-          </Grid>
-        </Grid>
-        <Grid
-          xs={12}
-          container
-          justifyContent="space-between"
-          alignItems="center"
-          flexDirection={{ xs: 'column', sm: 'row' }}
-          sx={{ fontSize: '12px' }}
-        >
-          <Grid sx={{ order: { xs: 2, sm: 1 } }}>
-            <Item>© Copyright</Item>
-          </Grid>
-          <Grid container columnSpacing={1} sx={{ order: { xs: 1, sm: 2 } }}>
-            <Grid>
-              <Item>Link A</Item>
-            </Grid>
-            <Grid>
-              <Item>Link B</Item>
-            </Grid>
-            <Grid>
-              <Item>Link C</Item>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Box>
+  
+    <div>
+      {ItemAnswer}
+      <h1> 
+        {localData.title}
+      </h1>
+      <p>
+        {localData.difficulty}
+        {localData.tags}
+      </p>
+       
     </div>
   );
 }
+// 'id': 1,
+// 'title': '1. Two Sum',
+// 'link': 'https://leetcode.com/problems/two-sum/',
+// 'difficulty': 'Easy',
+// 'solved': true,
+// 'tags': ['Array', 'Hash Table']

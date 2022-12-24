@@ -20,22 +20,14 @@ function Homepage() {
                     Want to join the team?!? Anyone can contribute by visiting the GitHub Repo! We would love to have you on board and welcome all levels of experience. Jon makes sure to keep a handful of 'good first issue' options available, so give it a shot, and if you're new, we offer assistance to walk you through the process. Become a contributor TODAY and start becoming part of the community!
                 </h2>
             </div>
-        // a more efficient way to do this would be to map over an array of objects
-            // and then render the PlatformCard component with the appropriate props
-            // for each object in the array, as shown here:
+
             <div className="platform_wrapper">
-                {{ subject }.map((item) => (
-                    console.log(subject),
-                    <PlatformCard title={item.title} href={item.href} />
-                ))}
-            </div>
-            {/* <div className="platform_wrapper">
                 <PlatformCard title="Leetcode" href='/leetcode'/>
                 <PlatformCard title="HackerRank" href='/itempage'/>
                 <PlatformCard title="CodeWars" href='/codewars'/>
                 <PlatformCard title="Data Structure & Algorithm" href='/dsa'/>
                 <PlatformCard title="Notes and Resources" href='/notesandresources'/>
-            </div> */}
+            </div>
 
             <section className="contributor_section">
                 <div className="desc">

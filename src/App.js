@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/leetcode" element={<LeetCode/>} />
+          <Route path="/leetcode/:id" element={<ItemPage />} />
           <Route path="/itempage" element={<ItemPage/>} />
           {/* <Route path="/hackerrank" element={<HackerRank/>} />
           <Route path="/codewars" element={<CodeWars/>} />
