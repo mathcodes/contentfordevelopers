@@ -1,3 +1,9 @@
+<h1> Contributing to Content For Developers Open-Source Project </h1>
+
+Welcome to this growing project of contributors and content and synergy with the common goal or expanding the threshold of learning to code. With a focus on psychological development and adult learning, this diverse group of developers, engineers, educators, and other experts come together to provide ANYONE the tools they need to learn to code. We are not alone either! We there are other teams around the world with the same focus and understanding in the importance of education, and we are ready to join forces to help build the future of technology today while keep anyone who wants to be, in the loop. 
+
+Join the Discord Server [here](https://discord.gg/82WShCrjnV).
+
 <h2>Guidelines on Reporting New Issues</h2>
 If you find an issue and want to report it, GREAT! THANKS! Please include the following when reporting the issue:
  - Title and description of the issue
@@ -53,5 +59,11 @@ For example, for <a href="https://github.com/mathcodes/lc_hr_cw/issues/60">this<
 feat-bug_correction
 ```
 or something similar starting with `feat-`.
+
+That will do the trick at this stage of development. Let me conclude this guide by emphasizing my efforts to make myself accessible, and listen to advice, be ciriticized if I'm messing up, don't hold back, but maintian respectful, professional attitudes at all times. Speak up! Submit a PR!!! I bet I'll accept it!
+
+Thanks for reading and expressing interest in our journey to bettering the education of developers!
+
+-[Jon Christie](https://twitter.com/jcircle9)
 
 
