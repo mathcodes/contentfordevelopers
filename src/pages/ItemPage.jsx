@@ -8,43 +8,29 @@ import {Route, Link, Routes, useParams} from 'react-router-dom';
 // import NavBar from "../components/navbar/Navbar";
 // import PlatformCard from "../components/card/PlatformCard";
 // import Header from "../components/header/Header";
-import { leetCodeData } from "../data/leetCode";
-
- 
-
+import { LeetCodeSolutions } from "../data/solutionLC";
+ import "./ItemPage.scss";
 
 export default function ItemPage() {
+
   let idValue = useParams();
-  console.log(idValue);
- console.log(idValue.id);
- let localData = leetCodeData[idValue.id-1];
- console.log(localData)
- let ItemAsnwer = `../assets/LeetCode/${localData.title}.png`;
-  console.log(ItemAsnwer);
-  // WRITE A function that return js file in   folder containing the same name as the title of the problem:
-  let ItemAnswer = `../assets/LeetCode/${localData.title}.js`;
-
- 
-
-
+  let id = idValue.id;
+  console.log(id);
+  let tit = LeetCodeSolutions[id];    
+  console.log(tit)
+   // return JSX that renders data from the array
   return (
-  
-    <div>
-      {ItemAnswer}
-      <h1> 
-        {localData.title}
-      </h1>
-      <p>
-        {localData.difficulty}
-        {localData.tags}
-      </p>
-       
+    <div className="ItemPage">
+      <h1>{ LeetCodeSolutions[id].title }</h1>
+      <p>Time Complexity: { LeetCodeSolutions[id].Time_Complexity }</p>
+      <p>Space_Complexity: { LeetCodeSolutions[id].Space_Complexity }</p>
+      <hr/>
+      <hr/>
+
+      <code>
+        { LeetCodeSolutions[id].javascript }
+      </code>
+      <p>{ LeetCodeSolutions[id].solution }</p>
     </div>
   );
 }
-// 'id': 1,
-// 'title': '1. Two Sum',
-// 'link': 'https://leetcode.com/problems/two-sum/',
-// 'difficulty': 'Easy',
-// 'solved': true,
-// 'tags': ['Array', 'Hash Table']
