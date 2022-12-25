@@ -1,7 +1,7 @@
 @import '../sass/abstract/variable';
 
 .itemPage {
-    padding: 0 1%;
+    margin: 0 5%;
   }
 
 .siteDesc{
@@ -96,4 +96,11 @@
             width: 17.4rem;
         }
     }
+}
+
+.container {
+    margin: 0 auto;
+    background: rgb(114, 157, 144);
+    height: 100vh;
+    padding: 0 10%;
 }
