@@ -13,12 +13,13 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import {image} from '../../data/images'
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { lightBlue } from '@mui/material/colors';
 
 console.log(image[0].CforDLogo)
 
-const pages = ['___', '___', '___'];
-const settings = ['LeetCode', 'HackerRank', 'CodeWars', 'Data Structures and Algorithms', 'Notes and Resources'];
+const pages = ['LeetCode', 'HackerRank', 'CodeWars', 'DSA'];
+const settings = ['Contribute', 'About', 'Contact'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -27,6 +28,7 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -98,8 +100,8 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
+          <GitHubIcon sx={{ display: { xs: 'flex', md: 'none' } }} />
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -115,13 +117,14 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
-          </Typography>
+            
+          </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
+                href={`/${page}`}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}

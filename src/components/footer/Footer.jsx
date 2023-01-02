@@ -30,7 +30,7 @@ function Footer() {
           <ul>
             <li>
               <a href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md">
-                Contributing.md
+                Contributing
               </a>
             </li>
             <li>
