@@ -17,8 +17,8 @@ import { lightBlue } from '@mui/material/colors';
 
 console.log(image[0].CforDLogo)
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['___', '___', '___'];
+const settings = ['LeetCode', 'HackerRank', 'CodeWars', 'Data Structures and Algorithms', 'Notes and Resources'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

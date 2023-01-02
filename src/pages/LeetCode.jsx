@@ -32,7 +32,6 @@ export default function Leetcode() {
 		<div className='leetCode'>
 			<NavBar />
 
-
 			<div className='banner'>
 				<h1>
 					LeetCode Problems
