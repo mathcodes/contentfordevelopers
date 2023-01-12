@@ -1,7 +1,7 @@
 .platform-card{
     margin: 1rem;
-    width:25rem;
-    height:12rem;
+    width: 10rem;
+    height:4rem;
     position:relative;
     border: 1px solid rgb(241, 239, 239);
     display: flex;
@@ -33,10 +33,13 @@
         z-index: 1;
     }
     .title{
-        font-size: 30px;
+        // font-size: ;
         position: relative;
         z-index: 2;
-        // font-family: 'Fira Code', monospace;
+        font-family: 'Fira Code', monospace;
+        text-decoration: none;
         text-align: center;
+        color: black;
     }
+
 }

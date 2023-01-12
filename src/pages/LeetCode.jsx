@@ -1,33 +1,96 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import { styled } from '@mui/material/styles';
+import { yellow, red, green } from '@mui/material/colors';
 import { Contributor } from "../components/contributor/Contributor";
 import Footer from "../components/footer/Footer";
-import ItemCard from "../components/card/ItemCard";
+import Table from "../components/table/Table";
 import NavBar from "../components/navbar/Navbar";
+import { leetCodeData } from '../data/leetCode';
+import LinkIcon from '@mui/icons-material/Link';
 import "./LeetCode.scss";
 
-
-
-
 export default function Leetcode() {
-	const [open, setOpen] = React.useState(false);
-	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
 
-	 const style = {
-		position: 'absolute',
-		top: '50%',
-		left: '50%',
-		transform: 'translate(-50%, -50%)',
-		width: 400,
-		bgcolor: 'background.paper',
-		border: '2px solid #000',
-		boxShadow: 24,
-		p: 4,
+
+	// setup variable to conditionally choose MUI colors for 'green', 'yellow', or 'red' based on difficulty
+	const diffColor = (diff) => {
+		if (diff === 'Easy') {
+			//return MUI theme color for green
+			return green[900]
+		} else if (diff === 'Medium') {
+			return yellow[800]
+		} else if (diff === 'Hard') {
+			return red[900]
+		}
 	};
+
+	const ColorButton = styled(Button)(({ theme, id }) => ({
+		color: diffColor(leetCodeData[id - 1].difficulty),
+		backgroundColor: theme.palette.grey[50],
+		'&:hover': {
+			color: theme.palette.getContrastText(`${diffColor(leetCodeData[id - 1].difficulty)
+				}`),
+			backgroundColor: diffColor(leetCodeData[id - 1].difficulty),
+		},
+	}));
+
+	const columns = [
+		{ field: 'id', headerName: '#', width: 5 },
+		{ field: 'title', headerName: 'Title', width: 200 },
+		{ field: 'tags', headerName: 'Tags', width: 300 },
+		{
+			field: 'difficulty',
+			headerName: 'Difficulty',
+			type: 'text',
+			width: 130,
+			renderCell: (cellValues) => {
+				return (
+					<ColorButton
+						variant="contained"
+						id={cellValues.id}
+					>
+						{leetCodeData[cellValues.id - 1].difficulty}
+					</ColorButton>
+				);
+			}
+		},
+		{
+			field: 'originalLink',
+			headerName: <LinkIcon />,
+			type: 'text',
+			width: 130,
+			renderCell: (cellValues) => {
+				return (
+					<Button
+						variant="contained"
+						color="primary"
+
+						href={`./LeetCode/${cellValues.id}`}
+					>
+						<LinkIcon />
+					</Button>
+				);
+			}
+		},
+	];
+
+	const rows = [];
+
+	leetCodeData.map((item) => {
+		return (
+			rows.push(
+				{
+					id: `${item.id}`,
+					title: `${item.title}`,
+					tags: `${item.tags.map((t) => t )}`,
+					difficulty: `${item.difficulty}`,
+					link: `${item.link}`,
+				},
+			)
+		)
+	})
+
 	return (
 		<div className='leetCode'>
 			<NavBar />
@@ -39,33 +102,14 @@ export default function Leetcode() {
 				</h1>
 				<h3>Choose the problem you'd like to explore!</h3>
 			</div>
-			<div>
-			 
-				<Modal
-					open={open}
-					onClose={handleClose}
-					aria-labelledby="modal-modal-title"
-					aria-describedby="modal-modal-description"
-				>
-					<Box sx={style}>
-						<Typography id="modal-modal-title" variant="h6" component="h2">
-							Text in a modal
-						</Typography>
-						<Typography id="modal-modal-description" sx={{ mt: 2 }}>
-							Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-						</Typography>
-					</Box>
-				</Modal>
-			</div>
-			<div className="item_wrapper">
-				<ItemCard onclick={handleOpen} />
 
+			<div className="item_wrapper">
+				<Table rows={rows} columns={columns} />
 			</div>
 
 			<section className="contributor_section">
 				<div className="desc">
-					<h1>Our Contributors</h1>
-					<h3>Who constantly try to make the website better</h3>
+					<p>Contributors</p>
 				</div>
 
 				<div className="contributors_wrapper">

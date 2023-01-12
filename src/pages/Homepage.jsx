@@ -6,13 +6,13 @@ import NavBar from "../components/navbar/Navbar";
 import PlatformCard from "../components/card/PlatformCard";
 import Header from "../components/header/Header";
 import "./Homepage.scss";
-import {subject} from '../data/subject'
 
 function Homepage() {
     return (
         <div className='homepage'>
             <Header />
             <NavBar />
+
             <div className='siteDesc'>
                 <p>
                     Welcome to ContentForDevelopers! This is an open-source project aimed at providing learning tools for developers that cover a wide range of learning styles. The devoted team behind this project have all been through and continue to perservere through learning new content, technology, updates, languages, frameworks, problem-solving strategies, frontend & backend archtiecture, and so much more. Now we are all giving back to the community in the most helpful way we can think of: providing FREE, UP-TO-DATE, and DIVERSE methods to learn the skills needed to make it in this industry!
@@ -25,14 +25,13 @@ function Homepage() {
                 <PlatformCard title="Leetcode" href='/leetcode'/>
                 <PlatformCard title="HackerRank" href='/itempage'/>
                 <PlatformCard title="CodeWars" href='/codewars'/>
-                <PlatformCard title="Data Structure & Algorithm" href='/dsa'/>
+                <PlatformCard title="Data Structures & Algorithms" href='/dsa'/>
                 <PlatformCard title="Notes and Resources" href='/notesandresources'/>
             </div>
 
             <section className="contributor_section">
                 <div className="desc">
-                    <h1>Our Contributors</h1>
-                    <h3>Who constantly try to make the website better</h3>
+                    <h1>Contributors</h1>
                 </div>
 
                 <div className="contributors_wrapper">

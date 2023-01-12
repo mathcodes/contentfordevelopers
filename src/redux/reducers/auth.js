@@ -21,5 +21,10 @@ const authSlice = createSlice({
 export default authSlice.reducer
 
 export const {
+    loginRequest,
 
 } = authSlice.actions
+
+
+
+

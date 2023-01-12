@@ -8,7 +8,7 @@ function PlatformCard({ title, src, href }) {
           src={src}
           alt=""
         />
-        <h2 className='title'>{title}</h2>
+        <p className='title'>{title}</p>
       </div>
     </a>
   )

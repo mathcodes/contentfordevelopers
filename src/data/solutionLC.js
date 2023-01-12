@@ -8,7 +8,7 @@ export const LeetCodeSolutions = [{
   "c++": "class Solution {\r \ \  public:\r \ \  vector<int> twoSum(vector<int>& nums, int target) {\r \ \  unordered_map<int, int> map;\r \ \  for (int i = 0; i < nums.size(); i++) {\r \ \  int complement = target - nums[i];\r \ \  if (map.find(complement) != map.end()) {\r \ \  return { map[complement], i };\r \ \  }\r \ \  map[nums[i]] = i;\r \ \  }\r \ \  throw runtime_error(\"No two sum solution\");\r \ \  }\r \ \ };",
   'Time_Complexity': "O(n)",
   'Space_Complexity': "O(n)",
-  'image':'../assets/LeetCode/0001.TwoSum/1.twoSum.png'
+  'image':'https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0001.TwoSum/1.twoSum.png'
 },
 {
   "id": 2,

@@ -72,7 +72,7 @@ export const leetCodeData = [
     'tags': ['Math']
   },
   {
-    'id': 1,
+    'id': 10,
     'title': '1. Regular Expression Matching',
     'link': 'https://leetcode.com/problems/regular-expression-matching/',
     'difficulty': 'Hard',
@@ -1184,11 +1184,172 @@ export const leetCodeData = [
     'tags': ['Linked List', 'Sort', 'Divide and Conquer']
   },
   {
+    'id': 149,
+    'title': '149. Max Points on a Line',
+    'link': 'https://leetcode.com/problems/max-points-on-a-line/',
+    'difficulty': 'Hard',
+    'solved': false,
+    'tags': ['Hash Table', 'Math']
+  },
+  {
     'id': 150,
     'title': '150. Evaluate Reverse Polish Notation',
     'link': 'https://leetcode.com/problems/evaluate-reverse-polish-notation/',
     'difficulty': 'Medium',
     'solved': false,
     'tags': ['Stack']
+  },
+  {
+    'id': 151,
+    'title': '151. Reverse Words in a String',
+    'link': 'https://leetcode.com/problems/reverse-words-in-a-string/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['String']
+  },
+  {
+    'id': 152,
+    'title': '152. Maximum Product Subarray',
+    'link': 'https://leetcode.com/problems/maximum-product-subarray/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['Array', 'Dynamic Programming']
+  },
+  {
+    'id': 153,
+    'title': '153. Find Minimum in Rotated Sorted Array',
+    'link': 'https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['Array', 'Binary Search']
+  },
+  {
+    'id': 154,
+    'title': '154. Find Minimum in Rotated Sorted Array II',
+    'link': 'https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/',
+    'difficulty': 'Hard',
+    'solved': false,
+    'tags': ['Array', 'Binary Search']
+  },
+  {
+    'id': 155,
+    'title': '155. Min Stack',
+    'link': 'https://leetcode.com/problems/min-stack/',
+    'difficulty': 'Easy',
+    'solved': false,
+    'tags': ['Stack', 'Design']
+  },
+  {
+    'id': 156,
+    'title': '156. Binary Tree Upside Down',
+    'link': 'https://leetcode.com/problems/binary-tree-upside-down/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['Tree']
+  },
+  {
+    'id': 157,
+    'title': '157. Read N Characters Given Read4',
+    'link': 'https://leetcode.com/problems/read-n-characters-given-read4/',
+    'difficulty': 'Easy',
+    'solved': false,
+    'tags': ['String', 'Two Pointers']
+  },
+  {
+    'id': 158,
+    'title': '158. Read N Characters Given Read4 II - Call multiple times',
+    'link': 'https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/',
+    'difficulty': 'Hard',
+    'solved': false,
+    'tags': ['String', 'Design']
+  },
+  {
+    'id': 159,
+    'title': '159. Longest Substring with At Most Two Distinct Characters',
+    'link': 'https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/',
+    'difficulty': 'Hard',
+    'solved': false,
+    'tags': ['Hash Table', 'String', 'Two Pointers']
+  },
+  {
+    'id': 160,
+    'title': '160. Intersection of Two Linked Lists',
+    'link': 'https://leetcode.com/problems/intersection-of-two-linked-lists/',
+    'difficulty': 'Easy',
+    'solved': false,
+    'tags': ['Linked List']
+  },
+  {
+    'id': 161,
+    'title': '161. One Edit Distance',
+    'link': 'https://leetcode.com/problems/one-edit-distance/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['String']
+  },
+  {
+    'id': 162,
+    'title': '162. Find Peak Element',
+    'link': 'https://leetcode.com/problems/find-peak-element/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['Array', 'Binary Search']
+  },
+  {
+    'id': 163,
+    'title': '163. Missing Ranges',
+    'link': 'https://leetcode.com/problems/missing-ranges/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['Array']
+  },
+  {
+    'id': 164,
+    'title': '164. Maximum Gap',
+    'link': 'https://leetcode.com/problems/maximum-gap/',
+    'difficulty': 'Hard',
+    'solved': false,
+    'tags': ['Sort']
+  },
+  {
+    'id': 165,
+    'title': '165. Compare Version Numbers',
+    'link': 'https://leetcode.com/problems/compare-version-numbers/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['String']
+  },
+
+  {
+    'id': 197,
+    'title': '197. Rising Temperature',
+    'link': 'https://leetcode.com/problems/rising-temperature/',
+    'difficulty': 'Easy',
+    'solved': false,
+    'tags': ['SQL']
+  },
+  {
+    'id': 198,
+    'title': '198. House Robber',
+    'link': 'https://leetcode.com/problems/house-robber/',
+    'difficulty': 'Easy',
+    'solved': false,
+    'tags': ['Dynamic Programming']
+  },
+  {
+    'id': 199,
+    'title': '199. Binary Tree Right Side View',
+    'link': 'https://leetcode.com/problems/binary-tree-right-side-view/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['Tree', 'Depth-first Search', 'Breadth-first Search']
+  },
+  {
+    'id': 200,
+    'title': '200. Number of Islands',
+    'link': 'https://leetcode.com/problems/number-of-islands/',
+    'difficulty': 'Medium',
+    'solved': false,
+    'tags': ['Graph', 'Depth-first Search', 'Breadth-first Search', 'Union Find']
   }
 ]

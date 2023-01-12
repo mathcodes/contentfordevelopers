@@ -5,7 +5,7 @@
   }
 
 .banner{
-    min-height: 400px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,13 +20,14 @@
 }
 .cards{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .item_wrapper{
-    display: flex;
+    // display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -92,3 +93,16 @@
         }
     }
 }
+
+.tag{
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+    background:#333;
+    color: white;
+    padding: .2rem;
+    margin: .1rem;
+    
+}
+ 
+
