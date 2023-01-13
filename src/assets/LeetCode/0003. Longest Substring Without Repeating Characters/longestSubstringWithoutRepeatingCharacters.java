@@ -1,18 +1,18 @@
-class Solution {
-  public int lengthOfLongestSubstring(String s) {
-      int n = s.length(), ans = 0;
-      Map<Character, Integer> map = new HashMap<>();
+// class Solution {
+//   public int lengthOfLongestSubstring(String s) {
+//       int n = s.length(), ans = 0;
+//       Map<Character, Integer> map = new HashMap<>();
 
-      for (int j = 0, i = 0; j < n; j++) {
-          if (map.containsKey(s.charAt(j))) {
-              i = Math.max(map.get(s.charAt(j)), i);
-          }
-          ans = Math.max(ans, j - i + 1);
-          map.put(s.charAt(j), j + 1);
-      }
-      return ans;
-  }
-}
+//       for (int j = 0, i = 0; j < n; j++) {
+//           if (map.containsKey(s.charAt(j))) {
+//               i = Math.max(map.get(s.charAt(j)), i);
+//           }
+//           ans = Math.max(ans, j - i + 1);
+//           map.put(s.charAt(j), j + 1);
+//       }
+//       return ans;
+//   }
+// }
 // This code is a Java solution to the problem of finding the length of the longest substring without repeating characters.
 
 // It uses a sliding window approach, keeping track of the start and end index of the current substring using two pointers i and j. The HashMap is used to store the last index of each character in the current substring.
