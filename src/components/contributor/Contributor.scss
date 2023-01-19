@@ -5,15 +5,12 @@
     padding: 10px;
     border-radius: 6px;
     display: flex;
-    // justify-content: center;
     align-items: center;
     flex-direction: row;
     background-color: white;
     border: 1px solid black;
-    // width: 25.5rem; // results in unwanted horizontal scroll bar
 
     @include mobile-l {
-        // width: 17.5rem;
         flex-direction: column;
     }
 
@@ -31,8 +28,6 @@
         @include mobile-l {
             text-align: center;
         }
-
-        // prevent long name to overflow box
         h1{
             width: 200px;
             word-wrap: break-word;
