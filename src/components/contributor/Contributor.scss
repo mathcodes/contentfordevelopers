@@ -1,14 +1,14 @@
 @import '../../sass/abstract/variable';
 
-.contributor{
-    margin: 15px 0px;
+.contributor {
+    // margin: 15px 0px;
     padding: 10px;
     border-radius: 6px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-    background-color: white;
-    border: 1px solid black;
+    // background-color: white;
+    // border: 1px solid black;
 
     @include mobile-l {
         flex-direction: column;
@@ -18,40 +18,49 @@
         width: 15rem;
     }
 
-    img{
+    img {
         border-radius: 50%;
         height: 100px;
-        width:100px;
-        margin:10px;
+        width: 100px;
+        margin: 10px;
     }
-    .detail{
+
+    .detail {
         @include mobile-l {
             text-align: center;
         }
-        h1{
+
+        h1 {
             width: 200px;
+            text-align: center;
+            font-size: small;
             word-wrap: break-word;
+            color: white;
         }
 
-        a{
+        a {
             text-decoration: none;
             color: white;
             font-weight: 700;
         }
-        button{
+
+        button {
+            display: none;
             background-color: #439A97;
             color: white;
             padding: 5px 15px;
             outline: none;
             border: none;
             border-radius: 6px;
-           @include mobile-l {
+
+            @include mobile-l {
                 margin: 5% 0;
-           }
+            }
         }
 
-        button:hover{
-            transform: scale(1.04);
-        }
+    }
+
+    img:hover {
+        transform: scale(1.04);
     }
 }
