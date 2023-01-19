@@ -86,9 +86,11 @@
 
 
     .contributors_wrapper {
-        display: inline-grid;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         box-sizing: border-box;
-        grid-template-columns: auto auto auto auto;
+        // grid-template-columns: auto auto auto auto;
         background-color: #181d31;
         padding: 20px;
         height: 32rem;
