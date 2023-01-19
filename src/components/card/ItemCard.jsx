@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import "./ItemCard.scss";
 import { leetCodeData } from '../../data/leetCode'
 import { styled } from '@mui/material/styles';
-// import Box from '@mui/material/Box';
 import { Paper, Grid, Card } from '@mui/material';
 import LinkIcon from '@mui/icons-material/Link';
 import "../../pages/LeetCode.css"

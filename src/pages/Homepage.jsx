@@ -1,5 +1,4 @@
 import React from "react";
-// import Cards from '../components/Card'
 import { Contributor } from "../components/contributor/Contributor";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/navbar/Navbar";
