@@ -1,7 +1,6 @@
 import React from 'react'
 
-//This is a component that serves as a main element of our landing page
-
+//This is a component that serves as a main element of the landing page, right under the navbar
 const Hero = () => {
   return (
     <div className='max-w-4xl mx-auto flex flex-col items-center justify-center lg:p-20 py-16 px-10 gap-6 leading-7'>

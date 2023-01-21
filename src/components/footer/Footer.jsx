@@ -3,8 +3,8 @@ import placeholderLogo from "../../assets/Images/jCircle.png";
 
 function Footer() {
   return (
-    <div className="max-w-full flex flex-col pt-8">
-      <div className="flex lg:gap-40 md:gap-28 gap-8 md:flex-row flex-col justify-between mx-auto">
+    <footer className="max-w-full flex flex-col pt-8 bg-slate-300">
+      <div className="flex lg:gap-40 md:gap-16 gap-8 md:flex-row flex-col justify-between mx-auto">
         <div className="leading-9 md:block flex flex-col items-center">
           <h4 className="font-bold leading-4 uppercase mb-6">Resources</h4>
           <ul className="md:text-left text-center">
@@ -68,7 +68,7 @@ function Footer() {
           <a href="#" className="hover:brightness-75 transition-all duration-300">Contact Us</a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 
