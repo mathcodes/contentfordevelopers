@@ -3,7 +3,8 @@ import './PlatformCard.scss'
 function PlatformCard({ title, src, href }) {
   return (
     <a href={href}>
-      <div className='platform-card'>
+      {/* <div className='platform-card'> */}
+      <div className="m-4 w-40 h-16 text-center relative border-solid border-4 flex justify-center items-center bg-white rounded-lg">
         <img
           src={src}
           alt=""
