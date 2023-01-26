@@ -2,12 +2,12 @@ import Homepage from "./pages/Homepage";
 import LeetCode from "./pages/LeetCode";
 import ItemPage from "./pages/ItemPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NewNavbar from "./components/navbar/NewNavbar";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <div className="max-w-full">
-      <NewNavbar />
+      <Navbar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />

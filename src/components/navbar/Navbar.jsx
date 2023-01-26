@@ -1,169 +1,69 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import {image} from '../../data/images'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { lightBlue } from '@mui/material/colors';
+import React, { useState } from "react";
+import { image } from "../../data/images";
 
-console.log(image[0].CforDLogo)
+const pages = ["LeetCode", "HackerRank", "CodeWars", "DSA"];
 
-const pages = ['LeetCode', 'HackerRank', 'CodeWars', 'DSA'];
-const settings = ['Contribute', 'About', 'Contact'];
+const settings = ["Contribute", "About", "Contact"];
 
-function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
+const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <img src={image[0].CforDLogo} style={{width: `10%`, margin: `1rem`}}/>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'calibri, sans-serif',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            CONTENT FOR DEVELOPERS
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon  color="white"/>
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <GitHubIcon sx={{ display: { xs: 'flex', md: 'none' } }} />
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            
-          </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+    <header className="w-[100vw] bg-[#1976d2] text-white static z-50">
+      <div className="max-w-[1440px] w-full py-4 lg:px-12 md:px-8 px-2 flex items-center justify-between mx-auto">
+        <div className="flex items-center w-fit ">
+          <a href="/" className="flex items-center max-w-xl">
+            <img src={image[0].CforDLogo} className="w-2/12" />
+            <h6 className="lg:text-2xl sm:text-xl text-md font-bold tracking-widest md:ml-4 ml-2 whitespace-nowrap">
+              CONTENT FOR DEVELOPERS
+            </h6>
+          </a>
+          <div className="lg:block hidden">
             {pages.map((page) => (
-              <Button
+              <a
                 key={page}
-                onClick={handleCloseNavMenu}
+                className="ml-4 uppercase cursor-pointer hover:underline"
                 href={`/${page}`}
-                sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
-              </Button>
+              </a>
             ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <MenuIcon />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+          </div>
+        </div>
+        <div className="relative">
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            className="text-3xl leading-none"
+          >
+            ☰
+          </button>
+          {showMenu ? (
+            <div className="absolute top-12 right-4 bg-white rounded-md divide-y-2 px-2">
+              <div className="flex flex-col justify-center items-center gap-2">
+                {pages.map((page) => (
+                  <a
+                    className="text-black w-full text-center px-4 py-1 first-of-type:mt-2 last-of-type:mb-2 hover:bg-gray-200 cursor-pointer lg:hidden block"
+                    href={`/${page}`}
+                  >
+                    {page}
+                  </a>
+                ))}
+              </div>
+              <div className="flex flex-col justify-center items-center gap-2">
+                {settings.map((setting) => (
+                  <a
+                    className="text-black w-full text-center px-4 py-1 first-of-type:mt-2 last-of-type:mb-2 hover:bg-gray-200 cursor-pointer"
+                    href={`/${setting}`}
+                  >
+                    {setting}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </header>
   );
-}
-export default ResponsiveAppBar;
+};
+
+export default Navbar;
