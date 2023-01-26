@@ -27,7 +27,7 @@ Like most repos, follow these steps to install the repo on your local machine:
 - Clone it to your local machine:
 
 ```bash
-git clone https://github.com/mathcodes/lc_hr_cw.git
+git clone https://github.com/mathcodes/contentfordevelopers.git
 ```
 
 ## Contributing

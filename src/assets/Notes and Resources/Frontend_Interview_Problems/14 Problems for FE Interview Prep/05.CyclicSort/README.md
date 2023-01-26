@@ -26,7 +26,7 @@ Given an array nums containing n distinct numbers in the range [0, n], return th
 function findMissingNum (arr) {
 
   let i = 0;
-  while(i<arr.length){
+  while(i < arr.length){
     // swap the elements
     const currEl = arr[i];
     // 'currEl != i' so we dont increment i if we are in the right place
