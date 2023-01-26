@@ -16,6 +16,12 @@ export default function ItemPage() {
     `${LeetCodeSolutions[id].javascript}`
   );
   useEffect(() => {
+    let sH = document.getElementById('showHideDiagram')
+    if (!LeetCodeSolutions[id].image) {
+      sH.style.display = 'none';
+    } else {
+      sH.style.display = 'block';
+    }
     if (textRef.current) {
       const obj = new SelectionText(textRef.current);
       console.log("obj:", obj);
@@ -41,22 +47,22 @@ export default function ItemPage() {
   })
 
   return (
-    <div class="container mx-auto">
+    <div class="container mx-auto" data-color-mode="dark">
 
-      <div class="grid grid-cols-3 xs:grid-col-1 gap-4 text-white bg-gray-900 p-6">
-        <h1>{LeetCodeSolutions[id].title}</h1>
-        <p>Time Complexity: {LeetCodeSolutions[id].Time_Complexity}</p>
-        <p>Space Complexity: {LeetCodeSolutions[id].Space_Complexity}</p>
+      <div class="grid xs:grid-cols-1 sm:grid-cols-5 gap-4 text-white bg-gray-900">
+        <h1 class="sm:col-span-3 xs:col-span-1 p-6">{LeetCodeSolutions[id].title}</h1>
+        <p class="bg-blue-300 p-6 ">Time Complexity:<br/>{LeetCodeSolutions[id].Time_Complexity}</p>
+        <p class="bg-blue-500 p-6">Space Complexity: <br/>{LeetCodeSolutions[id].Space_Complexity}</p>
       </div>
 
       <div class="grid grid-cols-2 gap-4">
         <div data-color-mode="dark">
-          <button id="toggle" onClick={onClick} bg-gray-900>Light</button>
           <h3>Javascript</h3>
+          <button id="toggle" onClick={onClick} className="bg-gray-900">Light</button>
           <HighlightComponent code={code}/>
         </div>
-        <div>
-          <button id="button" onClick={showHide}>Show/Hide Image</button>
+        <div id="showHideDiagram">
+          <button id="button" onClick={showHide}>Show Diagram</button>
           <img id="image" src={LeetCodeSolutions[id].image} alt="img" width="50%" />
         </div>
       </div>
