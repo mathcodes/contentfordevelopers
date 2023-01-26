@@ -117,5 +117,12 @@ export const data = [
     "avatar_url": "https://avatars.githubusercontent.com/u/95173354?v=4",
     "html_url": "https://github.com/jackz070",
     "contributions": 1
+  },
+  {
+    "login": "Jayaditya",
+    "id": 107139663,
+    "avatar_url": "https://avatars.githubusercontent.com/u/107139663?v=4",
+    "html_url": 	"https://github.com/Jayaditya-Contributor",
+    "contributions": 1
   }
 ]
