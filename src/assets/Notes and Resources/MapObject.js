@@ -67,3 +67,4 @@ console.log(iterator3.next().value);
 
 console.log(iterator3.next().value);
 // expected output: 2
+

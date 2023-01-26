@@ -14,18 +14,49 @@ export const LeetCodeSolutions = [{
   "id": 2,
   "title": "Add Two Numbers",
   "content": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.\r \ \  You may assume the two numbers do not contain any leading zero, except the number 0 itself.\r \ \  Example:\r \ \  Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)\r \ \  Output: 7 -> 0 -> 8\r \ \  Explanation: 342 + 465 = 807.",
-  "javascript": "var addTwoNumbers = function(l1, l2) {\r \ \  let dummyHead = new ListNode(0);\r \ \  let p = l1, q = l2, curr = dummyHead;\r \ \  let carry = 0;\r \ \  while (p != null || q != null) {\r \ \  let x = (p != null) ? p.val : 0;\r \ \  let y = (q != null) ? q.val : 0;\r \ \  let sum = carry + x + y;\r \ \  carry = Math.floor(sum / 10);\r \ \  curr.next = new ListNode(sum % 10);\r \ \  curr = curr.next;\r \ \  if (p != null) p = p.next;\r \ \  if (q != null) q = q.next;\r \ \  }\r \ \  if (carry > 0) {\r \ \  curr.next = new ListNode(carry);\r \ \  }\r \ \  return dummyHead.next;\r \ \ };",
+  "javascript": `var addTwoNumbers = function (l1, l2) {
+    let dummyHead = new ListNode(0);
+    let p = l1, q = l2, curr = dummyHead;
+    let carry = 0;
+    while (p != null || q != null) {
+      let x = (p != null) ? p.val : 0;
+      let y = (q != null) ? q.val : 0;
+      let sum = carry + x + y;
+      carry = Math.floor(sum / 10);
+      curr.next = new ListNode(sum % 10);
+      curr = curr.next;
+      if (p != null) p = p.next;
+      if (q != null) q = q.next;
+    }
+    if (carry > 0) {
+      curr.next = new ListNode(carry);
+    }
+    return dummyHead.next;
+  };`,
   "python": "class Solution:\r \ \  def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:\r \ \  dummyHead = ListNode(0)\r \ \  p = l1\r \ \  q = l2\r \ \  curr = dummyHead\r \ \  carry = 0\r \ \  while p or q:\r \ \  x = p.val if p else 0\r \ \  y = q.val if q else 0\r \ \  sum = carry + x + y\r \ \  carry = sum // 10\r \ \  curr.next = ListNode(sum % 10)\r \ \  curr = curr.next\r \ \  if p:\r \ \  p = p.next\r \ \  if q:\r \ \  q = q.next\r \ \  if carry > 0:\r \ \  curr.next = ListNode(carry)\r \ \  return dummyHead.next",
   "java": "class Solution {\r \ \  public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\r \ \  ListNode dummyHead = new ListNode(0);\r \ \  ListNode p = l1, q = l2, curr = dummyHead;\r \ \  int carry = 0;\r \ \  while (p != null || q != null) {\r \ \  int x = (p != null) ? p.val : 0;\r \ \  int y = (q != null) ? q.val : 0;\r \ \  int sum = carry + x + y;\r \ \  carry = sum / 10;\r \ \  curr.next = new ListNode(sum % 10);\r \ \  curr = curr.next;\r \ \  if (p != null) p = p.next;\r \ \  if (q != null) q = q.next;\r \ \  }\r \ \  if (carry > 0) {\r \ \  curr.next = new ListNode(carry);\r \ \  }\r \ \  return dummyHead.next;\r \ \  }\r \ \ }",
   "c++": "class Solution {\r \ \  public:\r \ \  ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\r \ \  ListNode* dummyHead = new ListNode(0);\r \ \  ListNode* p = l1, * q = l2, * curr = dummyHead;\r \ \  int carry = 0;\r \ \  while (p != nullptr || q != nullptr) {\r \ \  int x = (p != nullptr) ? p->val : 0;\r \ \  int y = (q != nullptr) ? q->val : 0;\r \ \  int sum = carry + x + y;\r \ \  carry = sum / 10;\r \ \  curr->next = new ListNode(sum % 10);\r \ \  curr = curr->next;\r \ \  if (p != nullptr) p = p->next;\r \ \  if (q != nullptr) q = q->next;\r \ \  }\r \ \  if (carry > 0) {\r \ \  curr->next = new ListNode(carry);\r \ \  }\r \ \  return dummyHead->next;\r \ \  }\r \ \ };",
   'Time_Complexity': "O(max(m,n))",
   'Space_Complexity': "O(max(m,n))",
 },
+
 {
   "id": 3,
   "title": "Longest Substring Without Repeating Characters",
   "content": "Given a string, find the length of the longest substring without repeating characters.",
-  "javascript": "var lengthOfLongestSubstring = function(s) {\r \ \  let n = s.length;\r \ \  let ans = 0;\r \ \  let map = new Map();\r \ \  for (let j = 0, i = 0; j < n; j++) {\r \ \  if (map.has(s[j])) {\r \ \  i = Math.max(map.get(s[j]), i);\r \ \  }\r \ \  ans = Math.max(ans, j - i + 1);\r \ \  map.set(s[j], j + 1);\r \ \  }\r \ \  return ans;\r \ \ };",
+  "javascript": `var lengthOfLongestSubstring = function (s) {
+    let n = s.length;
+    let ans = 0;
+    let map = new Map();
+    for (let j = 0, i = 0; j < n; j++) {
+      if (map.has(s[j])) {
+        i = Math.max(map.get(s[j]), i);
+      }
+      ans = Math.max(ans, j - i + 1);
+      map.set(s[j], j + 1);
+    }
+    return ans;
+  };`,
   "python": "class Solution:\r \ \  def lengthOfLongestSubstring(self, s: str) -> int:\r \ \  n = len(s)\r \ \  ans = 0\r \ \  i = 0\r \ \  j = 0\r \ \  map = {}\r \ \  while j < n:\r \ \  if s[j] in map:\r \ \  i = max(map[s[j]], i)\r \ \  ans = max(ans, j - i + 1)\r \ \  map[s[j]] = j + 1\r \ \  j += 1\r \ \  return ans",
   "java": "class Solution {\r \ \  public int lengthOfLongestSubstring(String s) {\r \ \  int n = s.length(), ans = 0;\r \ \  Map<Character, Integer> map = new HashMap<>();\r \ \  for (int j = 0, i = 0; j < n; j++) {\r \ \  if (map.containsKey(s.charAt(j))) {\r \ \  i = Math.max(map.get(s.charAt(j)), i);\r \ \  }\r \ \  ans = Math.max(ans, j - i + 1);\r \ \  map.put(s.charAt(j), j + 1);\r \ \  }\r \ \  return ans;\r \ \  }\r \ \ }",
   "c++": "class Solution {\r \ \  public:\r \ \  int lengthOfLongestSubstring(string s) {\r \ \  int n = s.length(), ans = 0;\r \ \  unordered_map<char, int> map;\r \ \  for (int j = 0, i = 0; j < n; j++) {\r \ \  if (map.find(s[j]) != map.end()) {\r \ \  i = max(map[s[j]], i);\r \ \  }\r \ \  ans = max(ans, j - i + 1);\r \ \  map[s[j]] = j + 1;\r \ \  }\r \ \  return ans;\r \ \  }\r \ \ };",
