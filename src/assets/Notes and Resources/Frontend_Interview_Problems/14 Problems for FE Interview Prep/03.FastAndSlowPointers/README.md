@@ -5,18 +5,18 @@
 • This approach is quite useful when dealing with `cyclic linked lists` or `arrays`.
 • The algorithm proves that the two pointers are bound to meet. The fast pointer should catch the slow pointer once both the pointers are in a cyclic loop.
 
-# ID the Fast and Slow pattern
+### ID the Fast and Slow pattern
 
 • `loop in a linked list or array`
 • need to know the `position` of a `certain element` 
 • or the overall `length` of the `linked list`.
 • when you’re trying to determine if a `linked list` is a `palindrome`.
 
-# Examples of Fast and Slow Pattern problems:
+### Examples of Fast and Slow Pattern problems:
 
 <details>
 <summary>
-<span style="font-size:1.5rem;">Leetcode # 141. Linked List Cycle</span>
+<span style="font-size:2rem; color:green;">Leetcode # 141. Linked List Cycle</span>
 </summary>
 
    - one more variable, `sum` of two indices LEFT and RIGHT
@@ -56,7 +56,7 @@ var hasCycle = function(head) {
 
 <details>
 <summary>
-<span style="font-size:1.5rem;">Leetcode #234: Palindrome Linked List (medium)</span>
+<span style="font-size:2rem; color:green;">Palindrome Linked List (medium)</span>
 </summary>
 
 ```js
@@ -128,7 +128,7 @@ var isPalindrome = function(head) {
 
 <details>
 <summary>
-<span style="font-size:1.5rem;">Cycle in a Circular Array (hard)</span>
+<span style="font-size:2rem; color:green;">Cycle in a Circular Array (hard)</span>
 </summary>
 
 DETAILS HERE

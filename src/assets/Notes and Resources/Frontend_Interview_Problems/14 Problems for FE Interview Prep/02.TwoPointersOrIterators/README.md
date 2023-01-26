@@ -2,11 +2,11 @@
 
 These problems include situations where you want to iterate through the data structure from the left and the right side at the same time until one or both of the pointers result in a condition.
 
-# Most useful when dealing with `Sorted arrays` (or `Linked Lists`) 
+### Most useful when dealing with `Sorted arrays` (or `Linked Lists`) 
 • need to find a set of elements that fulfill certain constraints
 • set of elements in the array is a pair, a triplet, or even a subarray
 
-# Examples of Two Pointer or Iterator Problems:
+### Examples of Two Pointer or Iterator Problems:
 
 <details>
 <summary>
