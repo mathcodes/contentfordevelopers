@@ -1,169 +1,288 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import {image} from '../../data/images'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { lightBlue } from '@mui/material/colors';
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import {HiMenu, HiBell, HiX } from 'react-icons/hi'
+import { FaGithub } from 'react-icons/fa'
 
-console.log(image[0].CforDLogo)
-
-const pages = ['LeetCode', 'HackerRank', 'CodeWars', 'DSA'];
-const settings = ['Contribute', 'About', 'Contact'];
-
-function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-  return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <img src={image[0].CforDLogo} style={{width: `10%`, margin: `1rem`}}/>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'calibri, sans-serif',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            CONTENT FOR DEVELOPERS
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon  color="white"/>
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <GitHubIcon sx={{ display: { xs: 'flex', md: 'none' } }} />
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            
-          </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                href={`/${page}`}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <MenuIcon />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
 }
-export default ResponsiveAppBar;
+
+export default function NavBar() {
+  return (
+    <Disclosure as="nav" className="bg-gray-800">
+      {({ open }) => (
+        <>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 items-center justify-between">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <img
+                    className="block h-8 w-auto lg:hidden"
+                    src="/CforD.png"
+                    alt="Your Company"
+                  />
+                  <img
+                    className="hidden h-8 w-auto lg:block"
+                    src="/CforD.png"
+                    alt="Your Company"
+                  />
+                </div>
+                <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4">
+                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                    <a href="/" className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">
+                      Content For Developers
+                    </a>
+                    <a
+                      href="/leetcode"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      LeetCode
+                    </a>
+                    <a
+                      href="/codewars"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      CodeWars
+                    </a>
+                    <a
+                      href="/hackerrank"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      HackerRank
+                    </a>
+                    <a
+                      href="/notes"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      Notes & Resources
+                    </a>
+                    
+                  </div>
+                </div>
+              </div>
+              <div className="hidden sm:ml-6 sm:block">
+                <div className="flex items-center">
+                  <button
+                    type="button"
+                    className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none"
+                  >
+                    <span className="sr-only">View notifications</span>
+                    <a href="https://github.com/mathcodes/contentfordevelopers">
+                      <FaGithub className="h-6 w-6" aria-hidden="true" />
+                    </a>
+                  </button>
+
+                  {/* Profile dropdown */}
+                  <Menu as="div" className="relative ml-3">
+                    <div>
+                      <Menu.Button 
+                    className="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none"
+                    >
+                       <HiMenu />
+                      </Menu.Button>
+                    </div>
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="#"
+                              className={classNames(
+                                active ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700'
+                              )}
+                            >
+                              Home
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="leetcode"
+                              className={classNames(
+                                active ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700'
+                              )}
+                            >
+                              LeetCode
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="/codewars"
+                              className={classNames(
+                                active ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700'
+                              )}
+                            >
+                              CodeWars
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="/hackerrank"
+                              className={classNames(
+                                active ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700'
+                              )}
+                            >
+                              HackerRank
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="notes"
+                              className={classNames(
+                                active ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700'
+                              )}
+                            >
+                              Notes & Resources
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
+                              className={classNames(
+                                active ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700'
+                              )}
+                            >
+                              Contribute
+                            </a>
+                          )}
+                        </Menu.Item>
+                      </Menu.Items>
+                    </Transition>
+                  </Menu>
+                </div>
+              </div>
+              <div className="-mr-2 flex sm:hidden">
+                {/* Mobile menu button */}
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <HiX className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <HiMenu className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pt-2 pb-3">
+              {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+              >
+                Dashboard
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                Team
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                Projects
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                Calendar
+              </Disclosure.Button>
+            </div>
+            <div className="border-t border-gray-700 pt-4 pb-3">
+              <div className="flex items-center px-5">
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-10 w-10 rounded-full"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </div>
+                <div className="ml-3">
+                  <div className="text-base font-medium text-white">Tom Cook</div>
+                  <div className="text-sm font-medium text-gray-400">tom@example.com</div>
+                </div>
+                <button
+                  type="button"
+                  className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <span className="sr-only">Contribute to GitHub</span>
+                  <FaGithub className="h-6 w-6" aria-hidden="true" />
+                </button>
+              </div>
+              <div className="mt-3 space-y-1 px-2">
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                >
+                  LeetCode
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                >
+                  CodeWars
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                >
+                  HackerRank
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                >
+                  Notes & Resources
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                >
+                  Contribute
+                </Disclosure.Button>
+              </div>
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  )
+}
