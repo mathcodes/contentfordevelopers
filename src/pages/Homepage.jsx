@@ -8,8 +8,6 @@ import ContributorSection from "../components/homepage/contributorSection/Contri
 function Homepage() {
     return (
         <div>
-            {/* <Header /> */}
-            <NavBar />
             <Hero/>
             <PlatformList/>
             <ContributorSection/>

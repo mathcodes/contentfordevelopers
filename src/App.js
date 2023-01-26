@@ -2,15 +2,14 @@ import Homepage from './pages/Homepage';
 import LeetCode from './pages/LeetCode';
 import ItemPage from './pages/ItemPage';
 // import Navbar from './components/navbar/Navbar';
-import Header from './components/header/Header';
+import Navbar from "./components/navbar/Navbar"
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
   return (
     <div className="max-w-full">
-      <Header />
+      <Navbar/>
       <BrowserRouter>
-			  {/* <Navbar/> */}
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/leetcode" element={<LeetCode/>} />
