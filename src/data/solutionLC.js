@@ -82,7 +82,8 @@ export const LeetCodeSolutions = [{
   "java": "class Solution {\r \ \  public String longestPalindrome(String s) {\r \ \  int start = 0;\r \ \  int end = 0;\r \ \  for (int i = 0; i < s.length(); i++) {\r \ \  int len1 = expandAroundCenter(s, i, i);\r \ \  int len2 = expandAroundCenter(s, i, i + 1);\r \ \  int len = Math.max(len1, len2);\r \ \  if (len > end - start) {\r \ \  start = i - (len - 1) / 2;\r \ \  end = i + len / 2;\r \ \  }\r \ \  }\r \ \  return s.substring(start, end + 1);\r \ \  }\r \ \  private int expandAroundCenter(String s, int left, int right) {\r \ \  int L = left;\r \ \  int R = right;\r \ \  while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {\r \ \  L--;\r \ \  R++;\r \ \  }\r \ \  return R - L - 1;\r \ \  }\r \ \ }",
   "c++": "class Solution {\r \ \  public:\r \ \  string longestPalindrome(string s) {\r \ \  int start = 0;\r \ \  int end = 0;\r \ \  for (int i = 0; i < s.length(); i++) {\r \ \  int len1 = expandAroundCenter(s, i, i);\r \ \  int len2 = expandAroundCenter(s, i, i + 1);\r \ \  int len = max(len1, len2);\r \ \  if (len > end - start) {\r \ \  start = i - (len - 1) / 2;\r \ \  end = i + len / 2;\r \ \  }\r \ \  }\r \ \  return s.substr(start, end - start + 1);\r \ \  }\r \ \  private:\r \ \  int expandAroundCenter(string s, int left, int right) {\r \ \  int L = left;\r \ \  int R = right;\r \ \  while (L >= 0 && R < s.length() && s[L] == s[R]) {\r \ \  L--;\r \ \  R++;\r \ \  }\r \ \  return R - L - 1;\r \ \  }\r \ \ };",
   "Time_Complexity": "O(n^2)",
-  "Space_Complexity": "O(1)"
+  "Space_Complexity": "O(1)",
+  "image": "https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0005.%20Longest%20Palindromic%20Substring/longestPalindrome.png"
 },
 {
   "id": 6,
