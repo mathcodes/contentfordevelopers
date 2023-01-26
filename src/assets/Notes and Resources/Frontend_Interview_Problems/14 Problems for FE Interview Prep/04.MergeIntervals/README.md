@@ -5,23 +5,23 @@
 
 The pattern works like this: Given two intervals (‘a’ and ‘b’), there will be six different ways the two intervals can relate to each other:
 
+<img src="./04.MergeIntervals.png" width="30%"/>
 
+Understanding and recognizing these six cases will help you help you solve a wide range of problems from `inserting intervals` to `optimizing interval merges`.
 
-Understanding and recognizing these six cases will help you help you solve a wide range of problems from 
-
-• inserting intervals to 
-• optimizing interval merges
-
-ID the Merge Intervals technique
+### ID the Merge Intervals technique
 • produce a list with only mutually exclusive intervals
 • If you hear the term “overlapping intervals”.
 
 
-Examples of Merge interval problem patterns
-• Intervals Intersection (medium)
+### Examples of Merge interval problem patterns
+
+<details>
+<summary>
+<span style="font-size:2rem; color:green;">Intervals Intersection (medium)</span>
+</summary>
 
 ```js
-
 var intervalIntersection = function(A, B) {
 
 const getIntersection = (a, b) => {
@@ -87,4 +87,17 @@ const getIntersection = (a, b) => {
 }
 ```
 
-• Maximum CPU Load (hard
+
+</details>
+
+
+<details>
+<summary>
+<span style="font-size:2rem; color:green;">Maximum CPU Load (hard)</span>
+</summary>
+
+Coming Soon ...
+
+
+
+</details>
