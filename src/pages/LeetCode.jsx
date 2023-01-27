@@ -9,11 +9,8 @@ import NavBar from "../components/navbar/Navbar";
 import { leetCodeData } from '../data/leetCode';
 import LinkIcon from '@mui/icons-material/Link';
 import "./LeetCode.scss";
-import ContributorSection from '../components/homepage/contributorSection/ContributorSection';
 
 export default function Leetcode() {
-
-
 	// setup variable to conditionally choose MUI colors for 'green', 'yellow', or 'red' based on difficulty
 	const diffColor = (diff) => {
 		if (diff === 'Easy') {
@@ -107,7 +104,6 @@ export default function Leetcode() {
 			<div className="item_wrapper">
 				<Table rows={rows} columns={columns} />
 			</div>
-			<ContributorSection/>
 			<Footer />
 		</div>
 	);

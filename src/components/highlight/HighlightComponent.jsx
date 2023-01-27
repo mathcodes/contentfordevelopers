@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/nightOwl";
+import dracula from 'prism-react-renderer/themes/dracula';
 
 // const exampleCode = `
 // import React, { useState } from "react";
@@ -44,7 +45,7 @@ const LineContent = styled.span`
 `;
 
 const HighlightComponent = ({code}) => (
-  <Highlight {...defaultProps} theme={theme} code={code} language="jsx">
+  <Highlight {...defaultProps} theme={dracula} code={code} language="jsx">
     {({ className, style, tokens, getLineProps, getTokenProps }) => (
       <Pre className={className} style={style}>
         {tokens.map((line, i) => (

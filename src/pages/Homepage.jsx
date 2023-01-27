@@ -7,7 +7,7 @@ import ContributorSection from "../components/homepage/contributorSection/Contri
 
 function Homepage() {
     return (
-        <div>
+        <div className="container mx-auto">
             {/* <Header /> */}
             <NavBar />
             <Hero/>

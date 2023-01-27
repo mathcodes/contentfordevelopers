@@ -7,7 +7,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="max-w-full">
+    <div className="max-w-full bg-gradient-to-r from-blue to-platinum">
       <Header />
       <BrowserRouter>
 			  {/* <Navbar/> */}

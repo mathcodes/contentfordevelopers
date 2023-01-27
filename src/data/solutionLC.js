@@ -155,5 +155,70 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.`
   "c++": "class Solution {\r \ \  public:\r \ \  bool isPalindrome(int x) {\r \ \  if (x < 0) {\r \ \  return false;\r \ \  }\r \ \  int rev = 0;\r \ \  int num = x;\r \ \  while (num > 0) {\r \ \  rev = rev * 10 + num % 10;\r \ \  num /= 10;\r \ \  }\r \ \  return rev == x;\r \ \  }\r \ \ };",
   "Time_Complexity": "O(log(x))",
   "Space_Complexity": "O(1)",
-}
+},
+{
+  "id": 10,
+  "title": "Coming Soon",
+  "content": `Content Coming Soon`
+  ,
+  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "Time_Complexity": "O(soo(n))",
+  "Space_Complexity": "O(soo(n))",
+},
+{
+  "id": 11,
+  "title": "Coming Soon",
+  "content": `Content Coming Soon`
+  ,
+  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "Time_Complexity": "O(soo(n))",
+  "Space_Complexity": "O(soo(n))",
+},
+{
+  "id": 12,
+  "title": "Coming Soon",
+  "content": `Content Coming Soon`
+  ,
+  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "Time_Complexity": "O(soo(n))",
+  "Space_Complexity": "O(soo(n))",
+},
+{
+  "id": 13,
+  "title": "Coming Soon",
+  "content": `Content Coming Soon`
+  ,
+  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "Time_Complexity": "O(soo(n))",
+  "Space_Complexity": "O(soo(n))",
+},
+{
+  "id": 14,
+  "title": "Coming Soon",
+  "content": `Content Coming Soon`
+  ,
+  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "Time_Complexity": "O(soo(n))",
+  "Space_Complexity": "O(soo(n))",
+},
+{
+  "id": 15,
+  "title": "Coming Soon",
+  "content": `Content Coming Soon`,
+  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
+  "Time_Complexity": "O(soo(n))",
+  "Space_Complexity": "O(soo(n))",
+},
 ]

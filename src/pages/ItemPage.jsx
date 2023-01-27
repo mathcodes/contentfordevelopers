@@ -34,59 +34,47 @@ export default function ItemPage() {
 
   const showHide = (() => {
     let image = document.getElementById('image');
-    let button = document.getElementById('button');
     if (image.style.display === 'none') {
       image.style.display = 'block';
-      button.innerHTML = 'Hide Diagram';
     } else {
       image.style.display = 'none';
-      button.innerHTML = 'Show Diagram';
     }
   })
 
   return (
     <>
-
       <div className="container mx-auto" data-color-mode="dark">
         <NavBar />
-        <div className="grid xs:grid-cols-1 sm:grid-cols-5 text-white bg-blue ">
+        <div className="grid xs:grid-cols-1 sm:grid-cols-5 dark:text-white dark:bg-black bg-white text-blue">
           <h1 className="sm:col-span-3 xs:col-span-1 p-2 flex justify-center">{LeetCodeSolutions[id].title}</h1>
           <p className="bg-blue-300 p-2 text-xs flex justify-center">Time Complexity:<br />{LeetCodeSolutions[id].Time_Complexity}</p>
           <p className="bg-blue-500 p-2 text-xs flex justify-center">Space Complexity: <br />{LeetCodeSolutions[id].Space_Complexity}</p>
         </div>
-
-        <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-4 bg-platinum p-3">
-         
-
+        <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-4 dark:bg-blue dark:text-platinum text-blue bg-platinum p-3">
           <div className="leading-10">
-          <h1 className="text-2xl">Description</h1>
+            <h1 className="text-2xl">Description</h1>
             {content}
-            <hr/>
+            <hr />
             <div className="flex mx-2 mt-2 gap-2">
               <BsFilm />
               <BsFillImageFill />
             </div>
           </div>
           <div>
-          <h1 className="text-2xl">Javascript Solution</h1>
+            <h1 className="text-2xl">Javascript Solution</h1>
             <HighlightComponent code={javascript} />
           </div>
-          <div className="mb-12">
+          <div className="mb-12 min-h-500">
             <h1 className="text-2xl">Video Solution</h1>
-             
             <ReactPlayer url={LeetCodeSolutions[id].video} width="100%" height="100%" />
-            
           </div>
           <div id="showHideDiagram">
             <button className="text-2xl" id="button" onClick={showHide}>Diagram</button>
             <a href={LeetCodeSolutions[id].image}><img id="image" src={LeetCodeSolutions[id].image} alt="img" width="50%" /></a>
           </div>
-          <div>Hey</div>
-
-
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

@@ -89,16 +89,16 @@ const navigation = {
 
 export default function Example() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="dark:bg-blue dark:text-white bg-white" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-2 sm:pt-1 lg:px-8 lg:pt-4">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <img
               className="h-7"
-              src="/CforD.png"
+              src="/CforD2.png"
               alt="Company name"
             />
             <p className="text-sm leading-6 text-gray-600">

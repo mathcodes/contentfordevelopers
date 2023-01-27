@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import {HiMenu, HiBell, HiX } from 'react-icons/hi'
+import { HiMenu, HiBell, HiX } from 'react-icons/hi'
+import { CgDarkMode } from 'react-icons/cg'
 import { FaGithub } from 'react-icons/fa'
 
 function classNames(...classes) {
@@ -8,8 +9,24 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
+
+  const onClick = () => {
+    // set switch for dark mode
+    let body = document.body;
+    console.log(body);
+    if (body.classList.contains('dark')) {
+      body.classList.remove('dark');
+      body.classList.add('light');
+      document.documentElement.classList.remove('dark')
+    } else {
+      body.classList.remove('light');
+      body.classList.add('dark');
+      document.documentElement.classList.add('dark')
+    }
+  }
   return (
-    <Disclosure as="nav" className="bg-black text-white ">
+    <div className="container mx-auto">
+    <Disclosure as="nav" className="bg-platinum dark:bg-blue dark:text-white text-black">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -18,19 +35,18 @@ export default function NavBar() {
                 <div className="flex-shrink-0">
                   <img
                     className="block h-8 w-auto lg:hidden"
-                    src="/CforD.png"
+                    src="/CforD2.png"
                     alt="Your Company"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
-                    src="/CforD.png"
+                    src="/CforD2.png"
                     alt="Your Company"
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden sm:ml-6 lg:block">
                   <div className="flex space-x-4 ">
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a href="/" className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white hover:text-accent">
+                    <a href="/" className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-black dark:text-white hover:text-accent">
                       Content For Developers
                     </a>
                     <a
@@ -57,12 +73,16 @@ export default function NavBar() {
                     >
                       Notes & Resources
                     </a>
-                    
+
                   </div>
                 </div>
               </div>
+              
               <div className="hidden sm:ml-6 sm:block">
-                <div className="flex items-center">
+                <div className="flex items-center ">
+                  <button onClick={onClick}>
+                    <CgDarkMode className="h-6 w-6" aria-hidden="true" />
+                  </button>
                   <button
                     type="button"
                     className="rounded-full bg-gray-800 p-1 text-black hover:text-white focus:outline-none"
@@ -76,10 +96,10 @@ export default function NavBar() {
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <div>
-                      <Menu.Button 
-                    className="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none"
-                    >
-                       <HiMenu />
+                      <Menu.Button
+                        className="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none"
+                      >
+                        <HiMenu />
                       </Menu.Button>
                     </div>
                     <Transition
@@ -91,14 +111,14 @@ export default function NavBar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-black text-black dark:text-white  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
                             <a
                               href="#"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-black hover:text-accent'
+                                'block px-4 py-2 text-sm hover:text-accent'
                               )}
                             >
                               Home
@@ -111,7 +131,7 @@ export default function NavBar() {
                               href="leetcode"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-black hover:text-accent'
+                                'block px-4 py-2 text-sm hover:text-accent'
                               )}
                             >
                               LeetCode
@@ -124,7 +144,7 @@ export default function NavBar() {
                               href="/codewars"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-black hover:text-accent'
+                                'block px-4 py-2 text-sm hover:text-accent'
                               )}
                             >
                               CodeWars
@@ -137,7 +157,7 @@ export default function NavBar() {
                               href="/hackerrank"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-black hover:text-accent'
+                                'block px-4 py-2 text-sm hover:text-accent'
                               )}
                             >
                               HackerRank
@@ -150,7 +170,7 @@ export default function NavBar() {
                               href="notes"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-black hover:text-accent'
+                                'block px-4 py-2 text-sm hover:text-accent'
                               )}
                             >
                               Notes & Resources
@@ -163,7 +183,7 @@ export default function NavBar() {
                               href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-black hover:text-accent'
+                                'block px-4 py-2 text-sm hover:text-accent'
                               )}
                             >
                               Contribute
@@ -222,12 +242,15 @@ export default function NavBar() {
               </Disclosure.Button>
             </div>
             <div className="border-t border-gray-700 pt-4 pb-3">
-              <div className="flex items-center px-5">
-                
+              <div className="inline-flex items-end px-5">
+              <button onClick={onClick} className="ml-auto p-1 flex-shrink-0 hover:text-accent" >
+                    <CgDarkMode className="h-6 w-6" aria-hidden="true" />
+                  </button>
                 <button
                   type="button"
-                  className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-accent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
+                  
                   <span className="sr-only">Contribute to GitHub</span>
                   <FaGithub className="h-6 w-6" aria-hidden="true" />
                 </button>
@@ -236,35 +259,35 @@ export default function NavBar() {
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                  className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
                 >
                   LeetCode
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                  className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
                 >
                   CodeWars
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                  className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
                 >
                   HackerRank
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                  className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue dark:bg-gray-700 hover:text-accent"
                 >
                   Notes & Resources
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                  className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
                 >
                   Contribute
                 </Disclosure.Button>
@@ -274,5 +297,6 @@ export default function NavBar() {
         </>
       )}
     </Disclosure>
+    </div>
   )
 }
