@@ -2,7 +2,10 @@ import React, { useEffect } from "react";
 import { Container, Grid } from "@mui/material";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/navbar/Navbar";
-
+import ReactPlayer from 'react-player'
+import { HiVideoCamera } from 'react-icons/hi'
+import { BsFillImageFill, BsFilm } from 'react-icons/bs'
+import { TbMovie } from 'react-icons/tb'
 import CodeEditor, { SelectionText } from "@uiw/react-textarea-code-editor";
 import { useParams } from 'react-router-dom';
 import { LeetCodeSolutions } from "../data/solutionLC";
@@ -43,35 +46,47 @@ export default function ItemPage() {
 
   return (
     <>
-    <NavBar />
-    <div class="container mx-auto" data-color-mode="dark">
-      <div class="grid xs:grid-cols-1 sm:grid-cols-5 text-white bg-gray-900 ">
-        <h1 class="sm:col-span-3 xs:col-span-1 p-2 flex justify-center">{LeetCodeSolutions[id].title}</h1>
-        <p class="bg-blue-300 p-2 text-xs flex justify-center">Time Complexity:<br />{LeetCodeSolutions[id].Time_Complexity}</p>
-        <p class="bg-blue-500 p-2 text-xs flex justify-center">Space Complexity: <br />{LeetCodeSolutions[id].Space_Complexity}</p>
-      </div>
 
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <h3>Description</h3>
+      <div className="container mx-auto" data-color-mode="dark">
+        <NavBar />
+        <div className="grid xs:grid-cols-1 sm:grid-cols-5 text-white bg-blue ">
+          <h1 className="sm:col-span-3 xs:col-span-1 p-2 flex justify-center">{LeetCodeSolutions[id].title}</h1>
+          <p className="bg-blue-300 p-2 text-xs flex justify-center">Time Complexity:<br />{LeetCodeSolutions[id].Time_Complexity}</p>
+          <p className="bg-blue-500 p-2 text-xs flex justify-center">Space Complexity: <br />{LeetCodeSolutions[id].Space_Complexity}</p>
+        </div>
+
+        <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-4 bg-platinum p-3">
+         
+
+          <div className="leading-10">
+          <h1 className="text-2xl">Description</h1>
+            {content}
+            <hr/>
+            <div className="flex mx-2 mt-2 gap-2">
+              <BsFilm />
+              <BsFillImageFill />
+            </div>
+          </div>
+          <div>
+          <h1 className="text-2xl">Javascript Solution</h1>
+            <HighlightComponent code={javascript} />
+          </div>
+          <div className="mb-12">
+            <h1 className="text-2xl">Video Solution</h1>
+             
+            <ReactPlayer url={LeetCodeSolutions[id].video} width="100%" height="100%" />
+            
+          </div>
+          <div id="showHideDiagram">
+            <button className="text-2xl" id="button" onClick={showHide}>Diagram</button>
+            <a href={LeetCodeSolutions[id].image}><img id="image" src={LeetCodeSolutions[id].image} alt="img" width="50%" /></a>
+          </div>
+          <div>Hey</div>
+
 
         </div>
-        <div>
-          <h3>Javascript Solution</h3>
-        </div>
-        <div>
-          {content}
-        </div>
-        <div>
-          <HighlightComponent code={javascript} />
-        </div>
-        <div id="showHideDiagram">
-          <button id="button" onClick={showHide}>Show Diagram</button>
-          <a href={LeetCodeSolutions[id].image}><img id="image" src={LeetCodeSolutions[id].image} alt="img" width="50%" /></a>
-        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 }

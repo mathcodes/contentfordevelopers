@@ -9,7 +9,7 @@ function classNames(...classes) {
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-black text-white ">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -28,32 +28,32 @@ export default function NavBar() {
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 ">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a href="/" className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">
+                    <a href="/" className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white hover:text-accent">
                       Content For Developers
                     </a>
                     <a
                       href="/leetcode"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
                     >
                       LeetCode
                     </a>
                     <a
                       href="/codewars"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
                     >
                       CodeWars
                     </a>
                     <a
                       href="/hackerrank"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
                     >
                       HackerRank
                     </a>
                     <a
                       href="/notes"
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
                     >
                       Notes & Resources
                     </a>
@@ -65,7 +65,7 @@ export default function NavBar() {
                 <div className="flex items-center">
                   <button
                     type="button"
-                    className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none"
+                    className="rounded-full bg-gray-800 p-1 text-black hover:text-white focus:outline-none"
                   >
                     <span className="sr-only">View notifications</span>
                     <a href="https://github.com/mathcodes/contentfordevelopers">
@@ -98,7 +98,7 @@ export default function NavBar() {
                               href="#"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700'
+                                'block px-4 py-2 text-sm text-black hover:text-accent'
                               )}
                             >
                               Home
@@ -111,7 +111,7 @@ export default function NavBar() {
                               href="leetcode"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700'
+                                'block px-4 py-2 text-sm text-black hover:text-accent'
                               )}
                             >
                               LeetCode
@@ -124,7 +124,7 @@ export default function NavBar() {
                               href="/codewars"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700'
+                                'block px-4 py-2 text-sm text-black hover:text-accent'
                               )}
                             >
                               CodeWars
@@ -137,7 +137,7 @@ export default function NavBar() {
                               href="/hackerrank"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700'
+                                'block px-4 py-2 text-sm text-black hover:text-accent'
                               )}
                             >
                               HackerRank
@@ -150,7 +150,7 @@ export default function NavBar() {
                               href="notes"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700'
+                                'block px-4 py-2 text-sm text-black hover:text-accent'
                               )}
                             >
                               Notes & Resources
@@ -163,7 +163,7 @@ export default function NavBar() {
                               href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700'
+                                'block px-4 py-2 text-sm text-black hover:text-accent'
                               )}
                             >
                               Contribute
@@ -223,17 +223,7 @@ export default function NavBar() {
             </div>
             <div className="border-t border-gray-700 pt-4 pb-3">
               <div className="flex items-center px-5">
-                <div className="flex-shrink-0">
-                  <img
-                    className="h-10 w-10 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
-                </div>
-                <div className="ml-3">
-                  <div className="text-base font-medium text-white">Tom Cook</div>
-                  <div className="text-sm font-medium text-gray-400">tom@example.com</div>
-                </div>
+                
                 <button
                   type="button"
                   className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"

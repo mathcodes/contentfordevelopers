@@ -8,7 +8,8 @@ export const LeetCodeSolutions = [{
   "c++": "class Solution {\r \ \  public:\r \ \  vector<int> twoSum(vector<int>& nums, int target) {\r \ \  unordered_map<int, int> map;\r \ \  for (int i = 0; i < nums.size(); i++) {\r \ \  int complement = target - nums[i];\r \ \  if (map.find(complement) != map.end()) {\r \ \  return { map[complement], i };\r \ \  }\r \ \  map[nums[i]] = i;\r \ \  }\r \ \  throw runtime_error(\"No two sum solution\");\r \ \  }\r \ \ };",
   'Time_Complexity': "O(n)",
   'Space_Complexity': "O(n)",
-  'image':'https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0001.TwoSum/1.twoSum.png'
+  'image':'https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0001.TwoSum/1.twoSum.png',
+  'video':'https://www.youtube.com/watch?v=_EDDhOtvH1Y'
 },
 {
   "id": 2,
@@ -83,7 +84,7 @@ export const LeetCodeSolutions = [{
   "c++": "class Solution {\r \ \  public:\r \ \  string longestPalindrome(string s) {\r \ \  int start = 0;\r \ \  int end = 0;\r \ \  for (int i = 0; i < s.length(); i++) {\r \ \  int len1 = expandAroundCenter(s, i, i);\r \ \  int len2 = expandAroundCenter(s, i, i + 1);\r \ \  int len = max(len1, len2);\r \ \  if (len > end - start) {\r \ \  start = i - (len - 1) / 2;\r \ \  end = i + len / 2;\r \ \  }\r \ \  }\r \ \  return s.substr(start, end - start + 1);\r \ \  }\r \ \  private:\r \ \  int expandAroundCenter(string s, int left, int right) {\r \ \  int L = left;\r \ \  int R = right;\r \ \  while (L >= 0 && R < s.length() && s[L] == s[R]) {\r \ \  L--;\r \ \  R++;\r \ \  }\r \ \  return R - L - 1;\r \ \  }\r \ \ };",
   "Time_Complexity": "O(n^2)",
   "Space_Complexity": "O(1)",
-  "image": "https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0005.%20Longest%20Palindromic%20Substring/longestPalindrome.png"
+  "image": "https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0005.%20Longest%20Palindromic%20Substring/longestPalindromeLG.png",
 },
 {
   "id": 6,

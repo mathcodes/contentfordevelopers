@@ -21,6 +21,7 @@
     "react-icons": "^4.7.1",
     "react-markdown": "^8.0.4",
     "react-modal": "^3.16.1",
+    "react-player": "^2.11.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
