@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /notes
+.prettierrc.js
 # testing 
 
 
