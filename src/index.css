@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .hero-bg {
+    background: linear-gradient(
+        45deg,
+        transparent 49%,
+        #14213d 49% 51%,
+        transparent 51%
+      ),
+      linear-gradient(-45deg, transparent 49%, #14213d 49% 51%, transparent 51%);
+    background-size: 3em 3em;
+    opacity: 15%;
+  }
+  .dark .hero-bg {
+    background: linear-gradient(
+        45deg,
+        transparent 49%,
+        #ffffff 49% 51%,
+        transparent 51%
+      ),
+      linear-gradient(-45deg, transparent 49%, #ffffff 49% 51%, transparent 51%);
+    background-size: 3em 3em;
+    opacity: 15%;
+  }
+
+  .gradientText {
+    @apply text-[rgba(0,0,0,0)];
+    @apply bg-clip-text;
+    @apply bg-gradient-to-r;
+    @apply from-accent;
+    @apply to-accent2;
+  }
+}
