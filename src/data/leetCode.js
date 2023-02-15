@@ -1351,5 +1351,14 @@ export const leetCodeData = [
     'difficulty': 'Medium',
     'solved': false,
     'tags': ['Graph', 'Depth-first Search', 'Breadth-first Search', 'Union Find']
-  }
+  },
+  {
+    'id': 1000000,
+    'title': 'LeetCode',
+    'link': "https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/Images/LeetCode_logo_black.png",
+    'difficulty': 'leetcode/',
+    'solved': true,
+    'tags': ['Array', 'Hash_Table']
+  },
+
 ]

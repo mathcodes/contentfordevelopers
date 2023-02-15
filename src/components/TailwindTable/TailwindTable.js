@@ -1,4 +1,5 @@
 import { image } from '../../data/images.js';
+import { LogoLink } from '../logoLink/LogoLInk.js';
 
 // {
 //   'id': 1,
@@ -16,6 +17,22 @@ function classNames(...classes) {
 }
 
 export default function TailwindTable( {data}) {
+  const link = [{
+    "leetCodeLink": "leetcode/",
+    "leetCodeLogo": "https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/Images/LeetCode_logo_black.png",
+    "codeWarsLink": "codewars/",
+    "codeWarsLogo": "https://www.codewars.com/packs/assets/logo.61192cf7.svg",
+  }]
+
+  let c = link[0].leetCodeLink
+  let d = link[0].codeWarsLink
+  let i = data.id
+  let e = [c,i].join("")
+
+  console.log(c)
+  console.log(d)
+  console.log(e)
+  console.log(i)
   return (
     <div className="px-6 lg:px-8">
 
@@ -64,10 +81,7 @@ export default function TailwindTable( {data}) {
                     {data.title}
                   </div>
                   <div className="mt-1 flex flex-col text-gray-500 sm:block lg:">
-                    {/* <span className={classNames(
-                    data.difficulty === 'Easy' ? 'text-[#222] bg-accent rounded-md px-1' : 'medium' ? 'text-blue' : 'hard' ? 'text-red-500' : 'text-gray-500')}>
-                      {data.difficulty}
-                    </span> */}
+
 
                   </div>
                   {dataIdx !== 0 ? <div className="absolute right-0 left-6 -top-px h-px bg-gray-200" /> : null}
@@ -87,9 +101,7 @@ export default function TailwindTable( {data}) {
                     ' px-3 py-3.5 text-sm text-gray-500 lg:table-cell'
                   )}
                 >
-                  <a href={data.link}>
-                    <img src={image[0].leetCodeLogo} alt="LeetCode Logo" className=" w-16" />
-                 </a>
+                <LogoLink link={link.leetCodeLink + data.link} image={image[0].leetCodeLogo} />
                 </td>
 
                 <td
@@ -117,7 +129,7 @@ export default function TailwindTable( {data}) {
                     className="inline-flex items-center rounded-md border border-platinum-300 bg-accent2 px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-accent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30"
                     disabled={data.isCurrent}
                   >
-                    <a href={data.id}>
+                    <a href={(`${c}${data.id}`)}>
                     Select
                     </a>
                     <span className="sr-only">, {data.title}</span>
