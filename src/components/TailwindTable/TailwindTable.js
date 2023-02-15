@@ -1,4 +1,3 @@
-import { leetCodeData } from '../../data/leetCode.js';
 import { image } from '../../data/images.js';
 
 // {
@@ -9,14 +8,14 @@ import { image } from '../../data/images.js';
 //   'solved': true,
 //   'tags': ['Array', 'Hash Table']
 // },
-let data = leetCodeData;
+
 
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function TailwindTable() {
+export default function TailwindTable( {data}) {
   return (
     <div className="px-6 lg:px-8">
 

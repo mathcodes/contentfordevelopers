@@ -1,5 +1,6 @@
 import Homepage from "./pages/Homepage";
 import LeetCode from "./pages/LeetCode";
+import CodeWars from "./pages/CodeWars";
 import ItemPage from "./pages/ItemPage";
 // import Navbar from './components/navbar/Navbar';
 import Header from "./components/header/Header";
@@ -15,7 +16,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/leetcode" element={<LeetCode />} />
           <Route path="/leetcode/:id" element={<ItemPage />} />
-          <Route path="/itempage" element={<ItemPage />} />
+          <Route path="/codewars" element={<CodeWars />} />
           {/* <Route path="/hackerrank" element={<HackerRank/>} />
           <Route path="/codewars" element={<CodeWars/>} />
           <Route path="/dsa" element={<DSA/>} />

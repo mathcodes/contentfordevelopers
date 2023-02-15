@@ -8,7 +8,7 @@ import Table from "../components/table/Table";
 import NavBar from "../components/navbar/Navbar";
 import { leetCodeData } from '../data/leetCode';
 import LinkIcon from '@mui/icons-material/Link';
-import "./pages.scss";
+import "./LeetCode.scss";
 import TailwindTable from '../components/TailwindTable/TailwindTable';
 
 export default function Leetcode() {
@@ -33,7 +33,7 @@ export default function Leetcode() {
 			</div>
 
 			<div className=" text-blue dark:text-white" text-white>
-				<TailwindTable data={leetCodeData}/>
+				<TailwindTable />
 			</div>
 			<Footer />
 		</div>
