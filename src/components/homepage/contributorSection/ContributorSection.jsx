@@ -1,22 +1,35 @@
 import React from "react";
 import { data } from "../../../data/db";
 import { Contributor } from "../../contributor/Contributor";
+import Slider from "react-slick";
 
 //This is a component that appears on homepage to show contributors
+
 const ContributorSection = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear"
+  };
   return (
-    <section className="px-2 py-8 flex flex-col items-center mt-6">
-      <h4 className="gradientText font-bold text-2xl tracking-wide">
-        Contributors
-      </h4>
-      <div className="p-[2px] my-6 rounded-lg bg-gradient-to-r from-accent to-accent2 shadow-lg ">
-        <div className="flex flex-wrap justify-center py-6 px-2 max-w-3xl bg-white dark:bg-blue dark:text-platinum text-blue rounded-lg">
-          {data.map((res) => (
-            <Contributor res={res} key={res.id} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="Contributors   grid grid-rows-2 place-content-center py-28 bg-white dark:bg-blue dark:text-platinum text-blue ">
+
+       <p className="Contributors__heading    gradientText font-bold text-2xl tracking-wide text-center">Contributors</p>
+       
+       <div className="Carousel__Container    bg-gradient-to-r from-accent to-accent2 rounded-lg -mt-6 md:-mt-10">
+       <Slider {...settings} className="Contributors__Carousel   w-80 py-3 md:w-[700px]">
+       {data.map((res) => (
+          <Contributor res={res} key={res.id} />
+        ))}
+       </Slider>
+       </div>
+
+    </div>
   );
 };
 
