@@ -37,8 +37,10 @@ export const CodeWarsSolutions = [
 
           fib[i % 2] = (fib[0] + fib[1]) % 10
         return fib[n % 2]`,
-     'Time Complexity': 'O(n)',
-      'Space Complexity': 'O(1)'
+     'Time_Complexity': 'O(n)',
+      'Space_Complexity': 'O(1)',
+      'video':'https://www.youtube.com/watch?v=lL1zuKdzbsM&feature=youtu.be'
+
     },
     {
       'id': 2,
@@ -80,9 +82,10 @@ export const CodeWarsSolutions = [
         for num in count:
           if count[num] % 2 != 0: return num
         return -1`,
-      'Time Complexity': 'O(n)',
-      'Space Complexity': 'O(n)'
+      'Time_Complexity': 'O(n)',
+      'Space_Complexity': 'O(n)',
     },
+
 
 ]
 

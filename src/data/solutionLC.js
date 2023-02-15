@@ -40,6 +40,7 @@ export const LeetCodeSolutions = [
   "c++": "class Solution {\r \ \  public:\r \ \  ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\r \ \  ListNode* dummyHead = new ListNode(0);\r \ \  ListNode* p = l1, * q = l2, * curr = dummyHead;\r \ \  int carry = 0;\r \ \  while (p != nullptr || q != nullptr) {\r \ \  int x = (p != nullptr) ? p->val : 0;\r \ \  int y = (q != nullptr) ? q->val : 0;\r \ \  int sum = carry + x + y;\r \ \  carry = sum / 10;\r \ \  curr->next = new ListNode(sum % 10);\r \ \  curr = curr->next;\r \ \  if (p != nullptr) p = p->next;\r \ \  if (q != nullptr) q = q->next;\r \ \  }\r \ \  if (carry > 0) {\r \ \  curr->next = new ListNode(carry);\r \ \  }\r \ \  return dummyHead->next;\r \ \  }\r \ \ };",
   'Time_Complexity': "O(max(m,n))",
   'Space_Complexity': "O(max(m,n))",
+  'image':'https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0002.AddTwoNumbers/1.addTwoNumbers.png',
 },
 
 {
