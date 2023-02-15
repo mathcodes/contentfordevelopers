@@ -20,11 +20,11 @@ export default function TailwindTable() {
   return (
     <div className="px-6 lg:px-8">
 
-      <div className="-mx-6 mt-10 ring-1 ring-gray-300 sm:mx-0 sm:rounded-lg">
-        <table className="min-w-full divide-y divide-gray-300">
+      <div className="-mx-6 mt-10 ring-1 ring-gray-300 sm:mx-0 sm:rounded-lg  w-full h-full overflow-y-scroll overflow-scroll rounded-b-lg">
+        <table className="min-w-full divide-y divide-gray-300 ">
           <thead>
-            <tr>
-              <th scope="col" className="py-3.5 pl-6 pr-3 text-left text-sm font-semibold text-gray-900">
+            <tr className="overflow-scroll">
+              <th scope="col" className="py-3.5 pl-6 pr-3 text-left text-sm font-semibold text-gray-900 overflow-scroll">
                 Problem
               </th>
               <th
@@ -39,25 +39,20 @@ export default function TailwindTable() {
               >
                 Site
               </th>
-              <th
-                scope="col"
-                className=" px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell"
-              >
-                Storage
-              </th>
               <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                 Tags
               </th>
-              <th scope="col" className="relative py-3.5 pl-3 pr-6">
+              <th scope="col" className=" py-3.5 pl-3 pr-6 text-sm font-semibold text-gray-900">
                 <span className="sr-only">Select</span>
+                Learn
               </th>
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="overflow-scroll">
             {/* TABLE BODY STARTS WITH MAPPING 'data' */}
             {data.map((data, dataIdx) => (
-              <tr key={data.id}>
+              <tr key={data.id} className="overflow-scroll">
 
                 {/* Problem Title Column */}
                 <td
@@ -97,14 +92,7 @@ export default function TailwindTable() {
                     <img src={image[0].leetCodeLogo} alt="LeetCode Logo" className=" w-16" />
                  </a>
                 </td>
-                <td
-                  className={classNames(
-                    dataIdx === 0 ? '' : 'border-t border-gray-200',
-                    ' px-3 py-3.5 text-sm text-gray-500 lg:table-cell'
-                  )}
-                >
-                  {data.storage}
-                </td>
+
                 <td
                   className={classNames(
                     dataIdx === 0 ? '' : 'border-t border-gray-200',
@@ -127,10 +115,13 @@ export default function TailwindTable() {
                 >
                   <button
                     type="button"
-                    className="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30"
+                    className="inline-flex items-center rounded-md border border-platinum-300 bg-accent2 px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-accent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30"
                     disabled={data.isCurrent}
                   >
-                    Select<span className="sr-only">, {data.title}</span>
+                    <a href={data.id}>
+                    Select
+                    </a>
+                    <span className="sr-only">, {data.title}</span>
                   </button>
                   {dataIdx !== 0 ? <div className="absolute right-6 left-0 -top-px h-px bg-gray-200" /> : null}
                 </td>
