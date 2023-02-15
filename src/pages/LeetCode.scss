@@ -5,15 +5,8 @@
   }
 
   .banner{
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgba(29, 60, 221, 0.15);
-    padding: 5% 5%;
     font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
-    
+
     hr {
         margin: 20px 0;
      }
@@ -22,5 +15,5 @@
 
 
 
- 
+
 

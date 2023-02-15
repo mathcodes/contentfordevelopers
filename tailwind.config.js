@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+let rc =Math.floor(Math.random() * 16777215).toString(16)
+console.log(rc)
+
+
 module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx}"],
@@ -24,6 +29,7 @@ module.exports = {
       accent3: "#0489b2ff",
       platinum: "#e5e5e5ff",
       white: "#ffffffff",
+      lcyellow: "#f79f1bff",
     },
   },
   plugins: [],

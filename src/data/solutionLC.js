@@ -1,4 +1,5 @@
-export const LeetCodeSolutions = [{
+export const LeetCodeSolutions = [
+  {
   "id": 1,
   "title": "Two Sum",
   "content": "Given an array of integers, return indices of the two numbers such that\r they add up to a specific target.\r \ \  You may assume that each input would have exactly one solution, and you may not use the same element twice.\r \ \  Example:\r \ \  Given nums = [2, 7, 11, 15], target = 9,\r \ \  Because nums[0] + nums[1] = 2 + 7 = 9,\r \ \  return [0, 1].",
@@ -109,7 +110,7 @@ export const LeetCodeSolutions = [{
 {
   "id": 8,
   "title": "String to Integer (atoi)",
-  "content": `Implement atoi which converts a string to an integer.  
+  "content": `Implement atoi which converts a string to an integer.
 
 The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
 
@@ -157,68 +158,293 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.`
   "Space_Complexity": "O(1)",
 },
 {
-  "id": 10,
-  "title": "Coming Soon",
-  "content": `Content Coming Soon`
-  ,
-  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "Time_Complexity": "O(soo(n))",
-  "Space_Complexity": "O(soo(n))",
+  "id": 58,
+  "title": "Length of Last Word",
+  "content": 'Given a string s consists of upper/lower-case alphabets and empty space characters \' \', return the length of last word in the string.',
+  "javascript": "var lengthOfLastWord = function(s) {\r \ \  let count = 0;\r \ \  for (let i = s.length - 1; i >= 0; i--) {\r \ \  if (s[i] === ' ') {\r \ \  if (count > 0) {\r \ \  return count;\r \ \  }\r \ \  } else {\r \ \  count++;\r \ \  }\r \ \  }\r \ \  return count;\r \ \  };",
+  "java": "class Solution {\r \ \  public int lengthOfLastWord(String s) {\r \ \  int count = 0;\r \ \  for (int i = s.length() - 1; i >= 0; i--) {\r \ \  if (s.charAt(i) == ' ') {\r \ \  if (count > 0) {\r \ \  return count;\r \ \  }\r \ \  } else {\r \ \  count++;\r \ \  }\r \ \  }\r \ \  return count;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  int lengthOfLastWord(string s) {\r \ \  int count = 0;\r \ \  for (int i = s.length() - 1; i >= 0; i--) {\r \ \  if (s[i] == ' ') {\r \ \  if (count > 0) {\r \ \  return count;\r \ \  }\r \ \  } else {\r \ \  count++;\r \ \  }\r \ \  }\r \ \  return count;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n)",
+  "Space_Complexity": "O(1)",
 },
 {
-  "id": 11,
-  "title": "Coming Soon",
-  "content": `Content Coming Soon`
-  ,
-  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "Time_Complexity": "O(soo(n))",
-  "Space_Complexity": "O(soo(n))",
+  "id": 53,
+  "title": "Maximum Subarray",
+  "content": `Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+  "javascript": '
+
+const maxSubArray = (nums) => {
+  let solution = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+
+    console.log("nums[i]: ", nums[i]);
+    nums[i] = Math.max(nums[i], nums[i] + nums[i-1]);
+    console.log("nums[i]: ", nums[i]);
+
+    console.log("solution ", solution);
+    solution = Math.max(solution, nums[i]);
+    console.log("solution ", solution);
+  }
+  return solution;
+}
+
+maxSubArray([100, -2, 3, -3, 0, 9, -8, 2])
+',
+  "java": "class Solution {\r \ \  public int maxSubArray(int[] nums) {\r \ \  int solution = nums[0];\r \ \  for (int i = 1; i < nums.length; i++) {\r \ \  nums[i] = Math.max(nums[i], nums[i] + nums[i-1]);\r \ \  solution = Math.max(solution, nums[i]);\r \ \  }\r \ \  return solution;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  int maxSubArray(vector<int>& nums) {\r \ \  int solution = nums[0];\r \ \  for (int i = 1; i < nums.size(); i++) {\r \ \  nums[i] = max(nums[i], nums[i] + nums[i-1]);\r \ \  solution = max(solution, nums[i]);\r \ \  }\r \ \  return solution;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n)",
+  "Space_Complexity": "O(1)"
 },
 {
-  "id": 12,
-  "title": "Coming Soon",
-  "content": `Content Coming Soon`
-  ,
-  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "Time_Complexity": "O(soo(n))",
-  "Space_Complexity": "O(soo(n))",
+  "id": 54,
+  "title": "Spiral Matrix",
+  "content": "Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+  "javascript": "var spiralOrder = function(matrix) {\r \ \  if (matrix.length === 0) {\r \ \  return [];\r \ \  }\r \ \  let result = [];\r \ \  let rowBegin = 0;\r \ \  let rowEnd = matrix.length - 1;\r \ \  let colBegin = 0;\r \ \  let colEnd = matrix[0].length - 1;\r \ \  while (rowBegin <= rowEnd && colBegin <= colEnd) {\r \ \  for (let i = colBegin; i <= colEnd; i++) {\r \ \  result.push(matrix[rowBegin][i]);\r \ \  }\r \ \  rowBegin++;\r \ \  for (let i = rowBegin; i <= rowEnd; i++) {\r \ \  result.push(matrix[i][colEnd]);\r \ \  }\r \ \  colEnd--;\r \ \  if (rowBegin <= rowEnd) {\r \ \  for (let i = colEnd; i >= colBegin; i--) {\r \ \  result.push(matrix[rowEnd][i]);\r \ \  }\r \ \  }\r \ \  rowEnd--;\r \ \  if (colBegin <= colEnd) {\r \ \  for (let i = rowEnd; i >= rowBegin; i--) {\r \ \  result.push(matrix[i][colBegin]);\r \ \  }\r \ \  }\r \ \  colBegin++;\r \ \  }\r \ \  return result;\r \ \  };",
+  "java": "class Solution {\r \ \  public List<Integer> spiralOrder(int[][] matrix) {\r \ \  List<Integer> result = new ArrayList<>();\r \ \  if (matrix.length == 0) {\r \ \  return result;\r \ \  }\r \ \  int rowBegin = 0;\r \ \  int rowEnd = matrix.length - 1;\r \ \  int colBegin = 0;\r \ \  int colEnd = matrix[0].length - 1;\r \ \  while (rowBegin <= rowEnd && colBegin <= colEnd) {\r \ \  for (int i = colBegin; i <= colEnd; i++) {\r \ \  result.add(matrix[rowBegin][i]);\r \ \  }\r \ \  rowBegin++;\r \ \  for (int i = rowBegin; i <= rowEnd; i++) {\r \ \  result.add(matrix[i][colEnd]);\r \ \  }\r \ \  colEnd--;\r \ \  if (rowBegin <= rowEnd) {\r \ \  for (int i = colEnd; i >= colBegin; i--) {\r \ \  result.add(matrix[rowEnd][i]);\r \ \  }\r \ \  }\r \ \  rowEnd--;\r \ \  if (colBegin <= colEnd) {\r \ \  for (int i = rowEnd; i >= rowBegin; i--) {\r \ \  result.add(matrix[i][colBegin]);\r \ \  }\r \ \  }\r \ \  colBegin++;\r \ \  }\r \ \  return result;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  vector<int> spiralOrder(vector<vector<int>>& matrix) {\r \ \  vector<int> result;\r \ \  if (matrix.size() == 0) {\r \ \  return result;\r \ \  }\r \ \  int rowBegin = 0;\r \ \  int rowEnd = matrix.size() - 1;\r \ \  int colBegin = 0;\r \ \  int colEnd = matrix[0].size() - 1;\r \ \  while (rowBegin <= rowEnd && colBegin <= colEnd) {\r \ \  for (int i = colBegin; i <= colEnd; i++) {\r \ \  result.push_back(matrix[rowBegin][i]);\r \ \  }\r \ \  rowBegin++;\r \ \  for (int i = rowBegin; i <= rowEnd; i++) {\r \ \  result.push_back(matrix[i][colEnd]);\r \ \  }\r \ \  colEnd--;\r \ \  if (rowBegin <= rowEnd) {\r \ \  for (int i = colEnd; i >= colBegin; i--) {\r \ \  result.push_back(matrix[rowEnd][i]);\r \ \  }\r \ \  }\r \ \  rowEnd--;\r \ \  if (colBegin <= colEnd) {\r \ \  for (int i = rowEnd; i >= rowBegin; i--) {\r \ \  result.push_back(matrix[i][colBegin]);\r \ \  }\r \ \  }\r \ \  colBegin++;\r \ \  }\r \ \  return result;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(m*n)",
+  "Space_Complexity": "O(1)"
+
+},
+
+{
+  "id": 55,
+  "title": "Jump Game",
+  "content": "Given an array of non-negative integers, you are initially positioned at the first index of the array.
+  "javascript": "var canJump = function(nums) {\r \ \  let max = 0;\r \ \  for (let i = 0; i < nums.length; i++) {\r \ \  if (i > max) {\r \ \  return false;\r \ \  }\r \ \  max = Math.max(max, i + nums[i]);\r \ \  }\r \ \  return true;\r \ \  };",
+  "java": "class Solution {\r \ \  public boolean canJump(int[] nums) {\r \ \  int max = 0;\r \ \  for (int i = 0; i < nums.length; i++) {\r \ \  if (i > max) {\r \ \  return false;\r \ \  }\r \ \  max = Math.max(max, i + nums[i]);\r \ \  }\r \ \  return true;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  bool canJump(vector<int>& nums) {\r \ \  int max = 0;\r \ \  for (int i = 0; i < nums.size(); i++) {\r \ \  if (i > max) {\r \ \  return false;\r \ \  }\r \ \  max = max(max, i + nums[i]);\r \ \  }\r \ \  return true;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n)",
+  "Space_Complexity": "O(1)"
 },
 {
-  "id": 13,
-  "title": "Coming Soon",
-  "content": `Content Coming Soon`
-  ,
-  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "Time_Complexity": "O(soo(n))",
-  "Space_Complexity": "O(soo(n))",
+  "id": 56,
+  "title": "Merge Intervals",
+  "content": "Given a collection of intervals, merge all overlapping intervals.
+  "javascript": "var merge = function(intervals) {\r \ \  if (intervals.length <= 1) {\r \ \  return intervals;\r \ \  }\r \ \  intervals.sort((a, b) => a[0] - b[0]);\r \ \  let result = [];\r \ \  let prev = intervals[0];\r \ \  for (let i = 1; i < intervals.length; i++) {\r \ \  let curr = intervals[i];\r \ \  if (prev[1] >= curr[0]) {\r \ \  prev[1] = Math.max(prev[1], curr[1]);\r \ \  } else {\r \ \  result.push(prev);\r \ \  prev = curr;\r \ \  }\r \ \  }\r \ \  result.push(prev);\r \ \  return result;\r \ \  };",
+  "java": "class Solution {\r \ \  public List<Interval> merge(List<Interval> intervals) {\r \ \  if (intervals.size() <= 1) {\r \ \  return intervals;\r \ \  }\r \ \  Collections.sort(intervals, (a, b) -> Integer.compare(a.start, b.start));\r \ \  List<Interval> result = new ArrayList<>();\r \ \  Interval prev = intervals.get(0);\r \ \  for (int i = 1; i < intervals.size(); i++) {\r \ \  Interval curr = intervals.get(i);\r \ \  if (prev.end >= curr.start) {\r \ \  prev.end = Math.max(prev.end, curr.end);\r \ \  } else {\r \ \  result.add(prev);\r \ \  prev = curr;\r \ \  }\r \ \  }\r \ \  result.add(prev);\r \ \  return result;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  vector<Interval> merge(vector<Interval>& intervals) {\r \ \  if (intervals.size() <= 1) {\r \ \  return intervals;\r \ \  }\r \ \  sort(intervals.begin(), intervals.end(), [](Interval a, Interval b) {\r \ \  return a.start < b.start;\r \ \  });\r \ \  vector<Interval> result;\r \ \  Interval prev = intervals[0];\r \ \  for (int i = 1; i < intervals.size(); i++) {\r \ \  Interval curr = intervals[i];\r \ \  if (prev.end >= curr.start) {\r \ \  prev.end = max(prev.end, curr.end);\r \ \  } else {\r \ \  result.push_back(prev);\r \ \  prev = curr;\r \ \  }\r \ \  }\r \ \  result.push_back(prev);\r \ \  return result;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(nlogn)",
+  "Space_Complexity": "O(1)"
 },
 {
-  "id": 14,
-  "title": "Coming Soon",
-  "content": `Content Coming Soon`
-  ,
-  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "Time_Complexity": "O(soo(n))",
-  "Space_Complexity": "O(soo(n))",
+  "id": 57,
+  "title": "Insert Interval",
+  "content": "Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
+  "javascript": "var insert = function(intervals, newInterval) {\r \ \  let result = [];\r \ \  let i = 0;\r \ \  while (i < intervals.length && intervals[i][1] < newInterval[0]) {\r \ \  result.push(intervals[i]);\r \ \  i++;\r \ \  }\r \ \  while (i < intervals.length && intervals[i][0] <= newInterval[1]) {\r \ \  newInterval[0] = Math.min(newInterval[0], intervals[i][0]);\r \ \  newInterval[1] = Math.max(newInterval[1], intervals[i][1]);\r \ \  i++;\r \ \  }\r \ \  result.push(newInterval);\r \ \  while (i < intervals.length) {\r \ \  result.push(intervals[i]);\r \ \  i++;\r \ \  }\r \ \  return result;\r \ \  };",
+  "java": "class Solution {\r \ \  public List<Interval> insert(List<Interval> intervals, Interval newInterval) {\r \ \  List<Interval> result = new ArrayList<>();\r \ \  int i = 0;\r \ \  while (i < intervals.size() && intervals.get(i).end < newInterval.start) {\r \ \  result.add(intervals.get(i));\r \ \  i++;\r \ \  }\r \ \  while (i < intervals.size() && intervals.get(i).start <= newInterval.end) {\r \ \  newInterval.start = Math.min(newInterval.start, intervals.get(i).start);\r \ \  newInterval.end = Math.max(newInterval.end, intervals.get(i).end);\r \ \  i++;\r \ \  }\r \ \  result.add(newInterval);\r \ \  while (i < intervals.size()) {\r \ \  result.add(intervals.get(i));\r \ \  i++;\r \ \  }\r \ \  return result;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {\r \ \  vector<Interval> result;\r \ \  int i = 0;\r \ \  while (i < intervals.size() && intervals[i].end < newInterval.start) {\r \ \  result.push_back(intervals[i]);\r \ \  i++;\r \ \  }\r \ \  while (i < intervals.size() && intervals[i].start <= newInterval.end) {\r \ \  newInterval.start = min(newInterval.start, intervals[i].start);\r \ \  newInterval.end = max(newInterval.end, intervals[i].end);\r \ \  i++;\r \ \  }\r \ \  result.push_back(newInterval);\r \ \  while (i < intervals.size()) {\r \ \  result.push_back(intervals[i]);\r \ \  i++;\r \ \  }\r \ \  return result;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n)",
+  "Space_Complexity": "O(1)"
 },
 {
-  "id": 15,
-  "title": "Coming Soon",
-  "content": `Content Coming Soon`,
-  "javascript": "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "java":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "c++":  "const comingSoon = () => {\r \ \  console.log('Coming Soon');\r \ \  };",
-  "Time_Complexity": "O(soo(n))",
-  "Space_Complexity": "O(soo(n))",
+  "id": 58,
+  "title": "Length of Last Word",
+  "content": "Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
+  "javascript": "var lengthOfLastWord = function(s) {\r \ \  let count = 0;\r \ \  for (let i = s.length - 1; i >= 0; i--) {\r \ \  if (s[i] === ' ' && count > 0) {\r \ \  break;\r \ \  } else if (s[i] !== ' ') {\r \ \  count++;\r \ \  }\r \ \  }\r \ \  return count;\r \ \  };",
+  "java": "class Solution {\r \ \  public int lengthOfLastWord(String s) {\r \ \  int count = 0;\r \ \  for (int i = s.length() - 1; i >= 0; i--) {\r \ \  if (s.charAt(i) == ' ' && count > 0) {\r \ \  break;\r \ \  } else if (s.charAt(i) != ' ') {\r \ \  count++;\r \ \  }\r \ \  }\r \ \  return count;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  int lengthOfLastWord(string s) {\r \ \  int count = 0;\r \ \  for (int i = s.length() - 1; i >= 0; i--) {\r \ \  if (s[i] == ' ' && count > 0) {\r \ \  break;\r \ \  } else if (s[i] != ' ') {\r \ \  count++;\r \ \  }\r \ \  }\r \ \  return count;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n)",
+  "Space_Complexity": "O(1)"
 },
+{
+  "id": 59,
+  "title": "Spiral Matrix II",
+  "content": "Given a positive integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.
+  "javascript": "var generateMatrix = function(n) {\r \ \  let result = new Array(n).fill(0).map(() => new Array(n).fill(0));\r \ \  let startRow = 0;\r \ \  let endRow = n - 1;\r \ \  let startCol = 0;\r \ \  let endCol = n - 1;\r \ \  let count = 1;\r \ \  while (startRow <= endRow && startCol <= endCol) {\r \ \  for (let i = startCol; i <= endCol; i++) {\r \ \  result[startRow][i] = count;\r \ \  count++;\r \ \  }\r \ \  startRow++;\r \ \  for (let i = startRow; i <= endRow; i++) {\r \ \  result[i][endCol] = count;\r \ \  count++;\r \ \  }\r \ \  endCol--;\r \ \  for (let i = endCol; i >= startCol; i--) {\r \ \  result[endRow][i] = count;\r \ \  count++;\r \ \  }\r \ \  endRow--;\r \ \  for (let i = endRow; i >= startRow; i--) {\r \ \  result[i][startCol] = count;\r \ \  count++;\r \ \  }\r \ \  startCol++;\r \ \  }\r \ \  return result;\r \ \  };",
+  "java": "class Solution {\r \ \  public int[][] generateMatrix(int n) {\r \ \  int[][] result = new int[n][n];\r \ \  int startRow = 0;\r \ \  int endRow = n - 1;\r \ \  int startCol = 0;\r \ \  int endCol = n - 1;\r \ \  int count = 1;\r \ \  while (startRow <= endRow && startCol <= endCol) {\r \ \  for (int i = startCol; i <= endCol; i++) {\r \ \  result[startRow][i] = count;\r \ \  count++;\r \ \  }\r \ \  startRow++;\r \ \  for (int i = startRow; i <= endRow; i++) {\r \ \  result[i][endCol] = count;\r \ \  count++;\r \ \  }\r \ \  endCol--;\r \ \  for (int i = endCol; i >= startCol; i--) {\r \ \  result[endRow][i] = count;\r \ \  count++;\r \ \  }\r \ \  endRow--;\r \ \  for (int i = endRow; i >= startRow; i--) {\r \ \  result[i][startCol] = count;\r \ \  count++;\r \ \  }\r \ \  startCol++;\r \ \  }\r \ \  return result;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  vector<vector<int>> generateMatrix(int n) {\r \ \  vector<vector<int>> result(n, vector<int>(n, 0));\r \ \  int startRow = 0;\r \ \  int endRow = n - 1;\r \ \  int startCol = 0;\r \ \  int endCol = n - 1;\r \ \  int count = 1;\r \ \  while (startRow <= endRow && startCol <= endCol) {\r \ \  for (int i = startCol; i <= endCol; i++) {\r \ \  result[startRow][i] = count;\r \ \  count++;\r \ \  }\r \ \  startRow++;\r \ \  for (int i = startRow; i <= endRow; i++) {\r \ \  result[i][endCol] = count;\r \ \  count++;\r \ \  }\r \ \  endCol--;\r \ \  for (int i = endCol; i >= startCol; i--) {\r \ \  result[endRow][i] = count;\r \ \  count++;\r \ \  }\r \ \  endRow--;\r \ \  for (int i = endRow; i >= startRow; i--) {\r \ \  result[i][startCol] = count;\r \ \  count++;\r \ \  }\r \ \  startCol++;\r \ \  }\r \ \  return result;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n^2)",
+  "Space_Complexity": "O(n^2)"
+},
+{
+  "id": 60,
+  "title": "Permutation Sequence",
+  "content": "The set [1,2,3,...,n] contains a total of n! unique permutations.
+  "javascript": "var getPermutation = function(n, k) {\r \ \  let result = '';\r \ \  let nums = [];\r \ \  let factorial = 1;\r \ \  for (let i = 1; i <= n; i++) {\r \ \  nums.push(i);\r \ \  factorial *= i;\r \ \  }\r \ \  k--;\r \ \  for (let i = 1; i <= n; i++) {\r \ \  factorial = factorial / (n - i);\r \ \  let index = Math.floor(k / factorial);\r \ \  result += nums[index];\r \ \  nums.splice(index, 1);\r \ \  k = k % factorial;\r \ \  }\r \ \  return result;\r \ \  };",
+  "java": "class Solution {\r \ \  public String getPermutation(int n, int k) {\r \ \  String result = '';\r \ \  List<Integer> nums = new ArrayList<>();\r \ \  int factorial = 1;\r \ \  for (int i = 1; i <= n; i++) {\r \ \  nums.add(i);\r \ \  factorial *= i;\r \ \  }\r \ \  k--;\r \ \  for (int i = 1; i <= n; i++) {\r \ \  factorial = factorial / (n - i);\r \ \  int index = k / factorial;\r \ \  result += nums.get(index);\r \ \  nums.remove(index);\r \ \  k = k % factorial;\r \ \  }\r \ \  return result;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  string getPermutation(int n, int k) {\r \ \  string result = '';\r \ \  vector<int> nums;\r \ \  int factorial = 1;\r \ \  for (int i = 1; i <= n; i++) {\r \ \  nums.push_back(i);\r \ \  factorial *= i;\r \ \  }\r \ \  k--;\r \ \  for (int i = 1; i <= n; i++) {\r \ \  factorial = factorial / (n - i);\r \ \  int index = k / factorial;\r \ \  result += to_string(nums[index]);\r \ \  nums.erase(nums.begin() + index);\r \ \  k = k % factorial;\r \ \  }\r \ \  return result;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n)",
+  "Space_Complexity": "O(n)"
+},
+{
+  "id": 61,
+  "title": "Rotate List",
+  "content": "Given a linked list, rotate the list to the right by k places, where k is non-negative.
+  "javascript": "var rotateRight = function(head, k) {\r \ \  if (!head || !head.next) return head;\r \ \  let length = 1;\r \ \  let tail = head;\r \ \  while (tail.next) {\r \ \  tail = tail.next;\r \ \  length++;\r \ \  }\r \ \  tail.next = head;\r \ \  k = k % length;\r \ \  let newTail = head;\r \ \  for (let i = 0; i < length - k - 1; i++) {\r \ \  newTail = newTail.next;\r \ \  }\r \ \  let newHead = newTail.next;\r \ \  newTail.next = null;\r \ \  return newHead;\r \ \  };",
+  "java": "class Solution {\r \ \  public ListNode rotateRight(ListNode head, int k) {\r \ \  if (head == null || head.next == null) return head;\r \ \  int length = 1;\r \ \  ListNode tail = head;\r \ \  while (tail.next != null) {\r \ \  tail = tail.next;\r \ \  length++;\r \ \  }\r \ \  tail.next = head;\r \ \  k = k % length;\r \ \  ListNode newTail = head;\r \ \  for (int i = 0; i < length - k - 1; i++) {\r \ \  newTail = newTail.next;\r \ \  }\r \ \  ListNode newHead = newTail.next;\r \ \  newTail.next = null;\r \ \  return newHead;\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  ListNode* rotateRight(ListNode* head, int k) {\r \ \  if (!head || !head->next) return head;\r \ \  int length = 1;\r \ \  ListNode* tail = head;\r \ \  while (tail->next) {\r \ \  tail = tail->next;\r \ \  length++;\r \ \  }\r \ \  tail->next = head;\r \ \  k = k % length;\r \ \  ListNode* newTail = head;\r \ \  for (int i = 0; i < length - k - 1; i++) {\r \ \  newTail = newTail->next;\r \ \  }\r \ \  ListNode* newHead = newTail->next;\r \ \  newTail->next = NULL;\r \ \  return newHead;\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n)",
+  "Space_Complexity": "O(1)"
+},
+{
+  "id": 62,
+  "title": "Unique Paths",
+  "content": "A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+  "javascript": "var uniquePaths = function(m, n) {\r \ \  let dp = new Array(m).fill(0).map(() => new Array(n).fill(0));\r \ \  for (let i = 0; i < m; i++) {\r \ \  dp[i][0] = 1;\r \ \  }\r \ \  for (let j = 0; j < n; j++) {\r \ \  dp[0][j] = 1;\r \ \  }\r \ \  for (let i = 1; i < m; i++) {\r \ \  for (let j = 1; j < n; j++) {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  };",
+  "java": "class Solution {\r \ \  public int uniquePaths(int m, int n) {\r \ \  int[][] dp = new int[m][n];\r \ \  for (int i = 0; i < m; i++) {\r \ \  dp[i][0] = 1;\r \ \  }\r \ \  for (int j = 0; j < n; j++) {\r \ \  dp[0][j] = 1;\r \ \  }\r \ \  for (int i = 1; i < m; i++) {\r \ \  for (int j = 1; j < n; j++) {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  int uniquePaths(int m, int n) {\r \ \  vector<vector<int>> dp(m, vector<int>(n, 0));\r \ \  for (int i = 0; i < m; i++) {\r \ \  dp[i][0] = 1;\r \ \  }\r \ \  for (int j = 0; j < n; j++) {\r \ \  dp[0][j] = 1;\r \ \  }\r \ \  for (int i = 1; i < m; i++) {\r \ \  for (int j = 1; j < n; j++) {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(mn)",
+  "Space_Complexity": "O(mn)"
+},
+
+{
+  "id": 63,
+  "title": "Unique Paths II",
+  "content": "A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+  "javascript": "var uniquePathsWithObstacles = function(obstacleGrid) {\r \ \  let m = obstacleGrid.length;\r \ \  let n = obstacleGrid[0].length;\r \ \  let dp = new Array(m).fill(0).map(() => new Array(n).fill(0));\r \ \  for (let i = 0; i < m; i++) {\r \ \  if (obstacleGrid[i][0] === 1) break;\r \ \  dp[i][0] = 1;\r \ \  }\r \ \  for (let j = 0; j < n; j++) {\r \ \  if (obstacleGrid[0][j] === 1) break;\r \ \  dp[0][j] = 1;\r \ \  }\r \ \  for (let i = 1; i < m; i++) {\r \ \  for (let j = 1; j < n; j++) {\r \ \  if (obstacleGrid[i][j] === 1) {\r \ \  dp[i][j] = 0;\r \ \  } else {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  };",
+  "java": "class Solution {\r \ \  public int uniquePathsWithObstacles(int[][] obstacleGrid) {\r \ \  int m = obstacleGrid.length;\r \ \  int n = obstacleGrid[0].length;\r \ \  int[][] dp = new int[m][n];\r \ \  for (int i = 0; i < m; i++) {\r \ \  if (obstacleGrid[i][0] == 1) break;\r \ \  dp[i][0] = 1;\r \ \  }\r \ \  for (int j = 0; j < n; j++) {\r \ \  if (obstacleGrid[0][j] == 1) break;\r \ \  dp[0][j] = 1;\r \ \  }\r \ \  for (int i = 1; i < m; i++) {\r \ \  for (int j = 1; j < n; j++) {\r \ \  if (obstacleGrid[i][j] == 1) {\r \ \  dp[i][j] = 0;\r \ \  } else {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  }\r \ \ }",
+  "c++": "class Solution {\r \ \  public:\r \ \  int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {\r \ \  int m = obstacleGrid.size();\r \ \  int n = obstacleGrid[0].size();\r \ \  vector<vector<int>> dp(m, vector<int>(n, 0));\r \ \  for (int i = 0; i < m; i++) {\r \ \  if (obstacleGrid[i][0] == 1) break;\r \ \  dp[i][0] = 1;\r \ \  }\r \ \  for (int j = 0; j < n; j++) {\r \ \  if (obstacleGrid[0][j] == 1) break;\r \ \  dp[0][j] = 1;\r \ \  }\r \ \  for (int i = 1; i < m; i++) {\r \ \  for (int j = 1; j < n; j++) {\r \ \  if (obstacleGrid[i][j] == 1) {\r \ \  dp[i][j] = 0;\r \ \  } else {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(mn)",
+  "Space_Complexity": "O(mn)"
+},
+{
+  "id": 64,
+  "title": "Minimum Path Sum",
+  "content": "Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
+
+  "javascript": "var minPathSum = function(grid) {\r \ \  let m = grid.length;\r \ \  let n = grid[0].length;\r \ \  let dp = new Array(m).fill(0).map(() => new Array(n).fill(0));\r \ \  dp[0][0] = grid[0][0];\r \ \  for (let i = 1; i < m; i++) {\r \ \  dp[i][0] = dp[i - 1][0] + grid[i][0];\r \ \  }\r \ \  for (let j = 1; j < n; j++) {\r \ \  dp[0][j] = dp[0][j - 1] + grid[0][j];\r \ \  }\r \ \  for (let i = 1; i < m; i++) {\r \ \  for (let j = 1; j < n; j++) {\r \ \  dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  };",
+  "java": "class Solution {\r \ \  public int minPathSum(int[][] grid) {\r \ \  int m = grid.length;\r \ \  int n = grid[0].length;\r \ \  int[][] dp = new int[m][n];\r \ \  dp[0][0] = grid[0][0];\r \ \  for (int i = 1; i < m; i++) {\r \ \  dp[i][0] = dp[i - 1][0] + grid[i][0];\r \ \  }\r \ \  for (int j = 1; j < n; j++) {\r \ \  dp[0][j] = dp[0][j - 1] + grid[0][j];\r \ \  }\r \ \  for (int i = 1; i < m; i++) {\r \ \  for (int j = 1; j < n; j++) {\r \ \  dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  }\r \ \ }",
+
+  "c++": "class Solution {\r \ \  public:\r \ \  int minPathSum(vector<vector<int>>& grid) {\r \ \  int m = grid.size();\r \ \  int n = grid[0].size();\r \ \  vector<vector<int>> dp(m, vector<int>(n, 0));\r \ \  dp[0][0] = grid[0][0];\r \ \  for (int i = 1; i < m; i++) {\r \ \  dp[i][0] = dp[i - 1][0] + grid[i][0];\r \ \  }\r \ \  for (int j = 1; j < n; j++) {\r \ \  dp[0][j] = dp[0][j - 1] + grid[0][j];\r \ \  }\r \ \  for (int i = 1; i < m; i++) {\r \ \  for (int j = 1; j < n; j++) {\r \ \  dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(mn)",
+  "Space_Complexity": "O(mn)"
+},
+
+{
+  "id": 70,
+  "title": "Climbing Stairs",
+  "content": "You are climbing a stair case. It takes n steps to reach to the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+Note: Given n will be a positive integer.
+
+
+  "javascript": "var climbStairs = function(n) {\r \ \  let dp = new Array(n + 1).fill(0);\r \ \  dp[0] = 1;\r \ \  dp[1] = 1;\r \ \  for (let i = 2; i <= n; i++) {\r \ \  dp[i] = dp[i - 1] + dp[i - 2];\r \ \  }\r \ \  return dp[n];\r \ \  };",
+  "java": "class Solution {\r \ \  public int climbStairs(int n) {\r \ \  int[] dp = new int[n + 1];\r \ \  dp[0] = 1;\r \ \  dp[1] = 1;\r \ \  for (int i = 2; i <= n; i++) {\r \ \  dp[i] = dp[i - 1] + dp[i - 2];\r \ \  }\r \ \  return dp[n];\r \ \  }\r \ \ }",
+
+
+  "c++": "class Solution {\r \ \  public:\r \ \  int climbStairs(int n) {\r \ \  vector<int> dp(n + 1, 0);\r \ \  dp[0] = 1;\r \ \  dp[1] = 1;\r \ \  for (int i = 2; i <= n; i++) {\r \ \  dp[i] = dp[i - 1] + dp[i - 2];\r \ \  }\r \ \  return dp[n];\r \ \  }\r \ \ };",
+  "Time_Complexity": "O(n)",
+  "Space_Complexity": "O(n)"
+
+},
+{
+
+  "id": 72,
+  "title": "Edit Distance",
+
+  "content": "Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+
+You have the following 3 operations permitted on a word:
+
+Insert a character
+Delete a character
+
+Replace a character
+
+Example 1:
+
+Input: word1 = \"horse\", word2 = \"ros\"
+Output: 3
+Explanation:
+horse -> rorse (replace 'h' with 'r')
+rorse -> rose (remove 'r')
+rose -> ros (remove 'e')
+
+Example 2:
+
+Input: word1 = \"intention\", word2 = \"execution\"
+Output: 5
+Explanation:
+intention -> inention (remove 't')
+inention -> enention (replace 'i' with 'e')
+enention -> exention (replace 'n' with 'x')
+exention -> exection (replace 'n' with 'c')
+",
+
+
+"javascript":
+
+"var minDistance = function(word1, word2) {\r \ \  let m = word1.length;\r \ \  let n = word2.length;\r \ \  let dp = new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0));\r \ \  for (let i = 0; i <= m; i++) {\r \ \  dp[i][0] = i;\r \ \  }\r \ \  for (let j = 0; j <= n; j++) {\r \ \  dp[0][j] = j;\r \ \  }\r \ \  for (let i = 1; i <= m; i++) {\r \ \  for (let j = 1; j <= n; j++) {\r \ \  if (word1[i - 1] === word2[j - 1]) {\r \ \  dp[i][j] = dp[i - 1][j - 1];\r \ \  } else {\r \ \  dp[i][j] = Math.min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1]) + 1;\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m][n];\r \ \  };",
+
+"java": "class Solution {\r \ \  public int minDistance(String word1, String word2) {\r \ \  int m = word1.length();\r \ \  int n = word2.length();\r \ \  int[][] dp = new int[m + 1][n + 1];\r \ \  for (int i = 0; i <= m; i++) {\r \ \  dp[i][0] = i;\r \ \  }\r \ \  for (int j = 0; j <= n; j++) {\r \ \  dp[0][j] = j;\r \ \  }\r \ \  for (int i = 1; i <= m; i++) {\r \ \  for (int j = 1; j <= n; j++) {\r \ \  if (word1.charAt(i - 1) == word2.charAt(j - 1)) {\r \ \  dp[i][j] = dp[i - 1][j - 1];\r \ \  } else {\r \ \  dp[i][j] = Math.min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1]) + 1;\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m][n];\r \ \  }\r \ \ }",
+
+"c++": "class Solution {\r \ \  public:\r \ \  int minDistance(string word1, string word2) {\r \ \  int m = word1.size();\r \ \  int n = word2.size();\r \ \  vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));\r \ \  for (int i = 0; i <= m; i++) {\r \ \  dp[i][0] = i;\r \ \  }\r \ \  for (int j = 0; j <= n; j++) {\r \ \  dp[0][j] = j;\r \ \  }\r \ \  for (int i = 1; i <= m; i++) {\r \ \  for (int j = 1; j <= n; j++) {\r \ \  if (word1[i - 1] == word2[j - 1]) {\r \ \  dp[i][j] = dp[i - 1][j - 1];\r \ \  } else {\r \ \  dp[i][j] = min(dp[i - 1][j - 1], min(dp[i - 1][j], dp[i][j - 1])) + 1;\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m][n];\r \ \  }\r \ \ };",
+
+"Time_Complexity": "O(mn)",
+"Space_Complexity": "O(mn)"
+
+},
+{
+
+  "id": 73,
+  "title": "Unique Paths II",
+
+  "content": "A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+
+Now consider if some obstacles are added to the grids. How many unique paths would there be?
+
+An obstacle and space is marked as 1 and 0 respectively in the grid.
+
+Example 1:
+
+Input: obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
+Output: 2
+Explanation:
+There is one obstacle in the middle of the 3x3 grid above.
+There are two ways to reach the bottom-right corner:
+1. Right -> Right -> Down -> Down
+2. Down -> Down -> Right -> Right
+
+Example 2:
+
+Input: obstacleGrid = [[0,1],[0,0]]
+Output: 1
+",
+
+"javascript":
+
+"var uniquePathsWithObstacles = function(obstacleGrid) {\r \ \  let m = obstacleGrid.length;\r \ \  let n = obstacleGrid[0].length;\r \ \  let dp = new Array(m).fill(0).map(() => new Array(n).fill(0));\r \ \  for (let i = 0; i < m; i++) {\r \ \  if (obstacleGrid[i][0] === 0) {\r \ \  dp[i][0] = 1;\r \ \  } else {\r \ \  break;\r \ \  }\r \ \  }\r \ \  for (let j = 0; j < n; j++) {\r \ \  if (obstacleGrid[0][j] === 0) {\r \ \  dp[0][j] = 1;\r \ \  } else {\r \ \  break;\r \ \  }\r \ \  }\r \ \  for (let i = 1; i < m; i++) {\r \ \  for (let j = 1; j < n; j++) {\r \ \  if (obstacleGrid[i][j] === 0) {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  };",
+
+"python": "class Solution:\r \ \  def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:\r \ \  m = len(obstacleGrid)\r \ \  n = len(obstacleGrid[0])\r \ \  dp = [[0] * n for _ in range(m)]\r \ \  for i in range(m):\r \ \  if obstacleGrid[i][0] == 0:\r \ \  dp[i][0] = 1\r \ \  else:\r \ \  break\r \ \  for j in range(n):\r \ \  if obstacleGrid[0][j] == 0:\r \ \  dp[0][j] = 1\r \ \  else:\r \ \  break\r \ \  for i in range(1, m):\r \ \  for j in range(1, n):\r \ \  if obstacleGrid[i][j] == 0:\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1]\r \ \  return dp[m - 1][n - 1]",
+"c++": "class Solution {\r \ \  public:\r \ \  int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {\r \ \  int m = obstacleGrid.size();\r \ \  int n = obstacleGrid[0].size();\r \ \  vector<vector<int>> dp(m, vector<int>(n, 0));\r \ \  for (int i = 0; i < m; i++) {\r \ \  if (obstacleGrid[i][0] == 0) {\r \ \  dp[i][0] = 1;\r \ \  } else {\r \ \  break;\r \ \  }\r \ \  }\r \ \  for (int j = 0; j < n; j++) {\r \ \  if (obstacleGrid[0][j] == 0) {\r \ \  dp[0][j] = 1;\r \ \  } else {\r \ \  break;\r \ \  }\r \ \  }\r \ \  for (int i = 1; i < m; i++) {\r \ \  for (int j = 1; j < n; j++) {\r \ \  if (obstacleGrid[i][j] == 0) {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  }\r \ \ };",
+"java": "class Solution {\r \ \  public int uniquePathsWithObstacles(int[][] obstacleGrid) {\r \ \  int m = obstacleGrid.length;\r \ \  int n = obstacleGrid[0].length;\r \ \  int[][] dp = new int[m][n];\r \ \  for (int i = 0; i < m; i++) {\r \ \  if (obstacleGrid[i][0] == 0) {\r \ \  dp[i][0] = 1;\r \ \  } else {\r \ \  break;\r \ \  }\r \ \  }\r \ \  for (int j = 0; j < n; j++) {\r \ \  if (obstacleGrid[0][j] == 0) {\r \ \  dp[0][j] = 1;\r \ \  } else {\r \ \  break;\r \ \  }\r \ \  }\r \ \  for (int i = 1; i < m; i++) {\r \ \  for (int j = 1; j < n; j++) {\r \ \  if (obstacleGrid[i][j] == 0) {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1];\r \ \  }\r \ \ }",
+"ruby": "def unique_path_with_obstacles(obstacle_grid)\r \ \  m = obstacle_grid.length\r \ \  n = obstacle_grid[0].length\r \ \  dp = Array.new(m) { Array.new(n, 0) }\r \ \  for i in 0...m\r \ \  if obstacle_grid[i][0] == 0\r \ \  dp[i][0] = 1\r \ \  else\r \ \  break\r \ \  end\r \ \  end\r \ \  for j in 0...n\r \ \  if obstacle_grid[0][j] == 0\r \ \  dp[0][j] = 1\r \ \  else\r \ \  break\r \ \  end\r \ \  end\r \ \  for i in 1...m\r \ \  for j in 1...n\r \ \  if obstacle_grid[i][j] == 0\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1]\r \ \  end\r \ \  end\r \ \  end\r \ \  dp[m - 1][n - 1]\r \ \  end",
+"swift": "class Solution {\r \ \  func uniquePathsWithObstacles(_ obstacleGrid: [[Int]]) -> Int {\r \ \  let m = obstacleGrid.count\r \ \  let n = obstacleGrid[0].count\r \ \  var dp = Array(repeating: Array(repeating: 0, count: n), count: m)\r \ \  for i in 0..<m {\r \ \  if obstacleGrid[i][0] == 0 {\r \ \  dp[i][0] = 1\r \ \  } else {\r \ \  break\r \ \  }\r \ \  }\r \ \  for j in 0..<n {\r \ \  if obstacleGrid[0][j] == 0 {\r \ \  dp[0][j] = 1\r \ \  } else {\r \ \  break\r \ \  }\r \ \  }\r \ \  for i in 1..<m {\r \ \  for j in 1..<n {\r \ \  if obstacleGrid[i][j] == 0 {\r \ \  dp[i][j] = dp[i - 1][j] + dp[i][j - 1]\r \ \  }\r \ \  }\r \ \  }\r \ \  return dp[m - 1][n - 1]\r \ \  }\r \ \ }",
+Time Complexity: O(mn) Space Complexity: O(mn)
+
+},
+
+{
+
+    "id": "75",
+    "title": "Sort Colors",
+    "content": "Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white and blue.\r \ \ Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.\r \ \ Note:\r \ \ You are not suppose to use the library's sort function for this problem.\r \ \ click to show follow up.\r \ \ Follow up:\r \ \ A rather straight forward solution is a two-pass algorithm using counting sort.\r \ \ First, iterate the array counting number of 0's, 1's, and 2's, then overwrite array with total number of 0's, then 1's and followed by 2's.\r \ \ Could you come up with an one-pass algorithm using only constant space?",
+
+    "difficulty": "Medium",
+    "javascript":
+"var sortColors = function(nums) {\r \ \  let i = 0;\r \ \  let j = 0;\r \ \  let k = nums.length - 1;\r \ \  while (j <= k) {\r \ \  if (nums[j] === 0) {\r \ \  swap(nums, i, j);\r \ \  i++;\r \ \  j++;\r \ \  } else if (nums[j] === 1) {\r \ \  j++;\r \ \  } else {\r \ \  swap(nums, j, k);\r \ \  k--;\r \ \  }\r \ \  }\r \ \  function swap(nums, i, j) {\r \ \  let temp = nums[i];\r \ \  nums[i] = nums[j];\r \ \  nums[j] = temp;\r \ \  }\r \ \  }",
+"python": "def sort_colors(nums):\r \ \  i = 0\r \ \  j = 0\r \ \  k = len(nums) - 1\r \ \  while j <= k:\r \ \  if nums[j] == 0:\r \ \  nums[i], nums[j] = nums[j], nums[i]\r \ \  i += 1\r \ \  j += 1\r \ \  elif nums[j] == 1:\r \ \  j += 1\r \ \  else:\r \ \  nums[j], nums[k] = nums[k], nums[j]\r \ \  k -= 1",
+"java"
+: "public class Solution {\r \ \  public void sortColors(int[] nums) {\r \ \  int i = 0;\r \ \  int j = 0;\r \ \  int k = nums.length - 1;\r \ \  while (j <= k) {\r \ \  if (nums[j] == 0) {\r \ \  swap(nums, i, j);\r \ \  i++;\r \ \  j++;\r \ \  } else if (nums[j] == 1) {\r \ \  j++;\r \ \  } else {\r \ \  swap(nums, j, k);\r \ \  k--;\r \ \  }\r \ \  }\r \ \  }\r \ \  private void swap(int[] nums, int i, int j) {\r \ \  int temp = nums[i];\r \ \  nums[i] = nums[j];\r \ \  nums[j] = temp;\r \ \  }\r \ \ }",
+"c++":
+"void sortColors(vector<int>& nums) {\r \ \  int i = 0;\r \ \  int j = 0;\r \ \  int k = nums.size() - 1;\r \ \  while (j <= k) {\r \ \  if (nums[j] == 0) {\r \ \  swap(nums, i, j);\r \ \  i++;\r \ \  j++;\r \ \  } else if (nums[j] == 1) {\r \ \  j++;\r \ \  } else {\r \ \  swap(nums, j, k);\r \ \  k--;\r \ \  }\r \ \  }\r \ \  }\r \ \  void swap(vector<int>& nums, int i, int j) {\r \ \  int temp = nums[i];\r \ \  nums[i] = nums[j];\r \ \  nums[j] = temp;\r \ \  }",
+Time Complexity: O(n) Space Complexity: O(1)
+
+},
+
+{
+  "id": "76",
+  "title": "Minimum Window Substring",
+  "content": "Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).\r \ \ For example,\r \ \ S = \"ADOBECODEBANC\"\r \ \ T = \"ABC\"\r \ \ Minimum window is \"BANC\".\r \ \ Note:\r \ \ If there is no such window in S that covers all characters in T, return the emtpy string \"\".\r \ \ If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.",
+  "difficulty": "Hard",
+  "javascript": "var minWindow = function(s, t) {\r \ \  let map = {};\r \ \  for (let i = 0; i < t.length; i++) {\r \ \  if (map[t[i]] === undefined) {\r \ \  map[t[i]] = 1;\r \ \  } else {\r \ \  map[t[i]]++;\r \ \  }\r \ \  }\r \ \  let count = t.length;\r \ \  let start = 0;\r \ \  let end = 0;\r \ \  let min = Number.MAX_VALUE;\r \ \  let minStart = 0;\r \ \  while (end < s.length) {\r \ \  if (map[s[end]] !== undefined) {\r \ \  map[s[end]]--;\r \ \  if (map[s[end]] >= 0) {\r \ \  count--;\r \ \  }\r \ \  }\r \ \  while (count === 0) {\r \ \  if (end - start + 1 < min) {\r \ \  min = end - start + 1;\r \ \  minStart = start;\r \ \  }\r \ \  if (map[s[start]] !== undefined) {\r \ \  map[s[start]]++;\r \ \  if (map[s[start]] > 0) {\r \ \  count++;\r \ \  }\r \ \  }\r \ \  start++;\r \ \  }\r \ \  end++;\r \ \  }\r \ \  if (min === Number.MAX_VALUE) {\r \ \  return \"\";\r \ \  }\r \ \  return s.substring(minStart, minStart + min);\r \ \  }",
+  "python": "def min_window(s, t):\r \ \  map = {}\r \ \  for i in range(len(t)):\r \ \  if t[i] not in map:\r \ \  map[t[i]] = 1\r \ \  else:\r \ \  map[t[i]] += 1\r \ \  count = len(t)\r \ \  start = 0\r \ \  end = 0\r \ \  min = float('inf')\r \ \  min_start = 0\r \ \  while end < len(s):\r \ \  if s[end] in map:\r \ \  map[s[end]] -= 1\r \ \  if map[s[end]] >= 0:\r \ \  count -= 1\r \ \  while count == 0:\r \ \  if end - start + 1 < min:\r \ \  min = end - start + 1\r \ \  min_start = start\r \ \  if s[start] in map:\r \ \  map[s[start]] += 1\r \ \  if map[s[start]] > 0:\r \ \  count += 1\r \ \  start += 1\r \ \  end += 1\r \ \  if min == float('inf'):\r \ \  return \"\"\r \ \  return s[min_start:min_start + min]",
+  Time Complexity: O(n) Space Complexity: O(n)`
+}
 ]

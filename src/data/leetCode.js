@@ -5,7 +5,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/two-sum/',
     'difficulty': 'Easy',
     'solved': true,
-    'tags': ['Array', 'Hash Table']
+    'tags': ['Array', 'Hash_Table']
   },
   {
     'id': 2,
@@ -13,7 +13,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/add-two-numbers/',
     'difficulty': 'Medium',
     'solved': true,
-    'tags': ['Linked List', 'Math']
+    'tags': ['Linked_List', 'Math']
   },
   {
     'id': 3,
@@ -21,7 +21,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/longest-substring-without-repeating-characters/',
     'difficulty': 'Medium',
     'solved': true,
-    'tags': ['Hash Table', 'Two Pointers', 'String', 'Sliding Window']
+    'tags': ['Hash_Table', 'Two_Pointers', 'String', 'Sliding_Window']
   },
   {
     'id': 4,
@@ -29,7 +29,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/median-of-two-sorted-arrays/',
     'difficulty': 'Hard',
     'solved': true,
-    'tags': ['Array', 'Binary Search', 'Divide and Conquer']
+    'tags': ['Array', 'Binary_Search', 'Divide and Conquer']
   },
   {
     'id': 5,
@@ -37,7 +37,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/longest-palindromic-substring/',
     'difficulty': 'Medium',
     'solved': true,
-    'tags': ['String', 'Dynamic Programming']
+    'tags': ['String', 'Dynamic_Programming']
   },
   {
     'id': 6,
@@ -77,7 +77,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/regular-expression-matching/',
     'difficulty': 'Hard',
     'solved': true,
-    'tags': ['String', 'Dynamic Programming', 'Backtracking']
+    'tags': ['String', 'Dynamic_Programming', 'Backtracking']
   },
   {
     'id': 11,
@@ -85,7 +85,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/container-with-most-water/',
     'difficulty': 'Medium',
     'solved': true,
-    'tags': ['Array', 'Two Pointers']
+    'tags': ['Array', 'Two_Pointers']
   },
   {
     'id': 12,
@@ -117,7 +117,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/3sum/',
     'difficulty': 'Medium',
     'solved': true,
-    'tags': ['Array', 'Two Pointers']
+    'tags': ['Array', 'Two_Pointers']
   },
   {
     'id': 16,
@@ -125,7 +125,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/3sum-closest/',
     'difficulty': 'Medium',
     'solved': true,
-    'tags': ['Array', 'Two Pointers']
+    'tags': ['Array', 'Two_Pointers']
   },
   {
     'id': 17,
@@ -141,7 +141,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/4sum/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Hash Table', 'Two Pointers']
+    'tags': ['Array', 'Hash_Table', 'Two_Pointers']
   },
   {
     'id': 19,
@@ -149,7 +149,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List', 'Two Pointers']
+    'tags': ['Linked_List', 'Two_Pointers']
   },
   {
     'id': 20,
@@ -165,7 +165,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/merge-two-sorted-lists/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Linked List']
+    'tags': ['Linked_List']
   },
   {
     'id': 22,
@@ -181,7 +181,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/merge-k-sorted-lists/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Linked List', 'Divide and Conquer', 'Heap']
+    'tags': ['Linked_List', 'Divide and Conquer', 'Heap']
   },
   {
     'id': 24,
@@ -189,7 +189,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/swap-nodes-in-pairs/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List']
+    'tags': ['Linked_List']
   },
   {
     'id': 25,
@@ -197,7 +197,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/reverse-nodes-in-k-group/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Linked List']
+    'tags': ['Linked_List']
   },
   {
     'id': 26,
@@ -205,7 +205,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/remove-duplicates-from-sorted-array/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Array', 'Two Pointers']
+    'tags': ['Array', 'Two_Pointers']
   },
   {
     'id': 27,
@@ -213,15 +213,15 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/remove-element/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Array', 'Two Pointers']
+    'tags': ['Array', 'Two_Pointers']
   },
   {
-    'id': 28 ,
+    'id': 28,
     'title': '28. Implement strStr()',
     'link': 'https://leetcode.com/problems/implement-strstr/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Two Pointers', 'String']
+    'tags': ['Two_Pointers', 'String']
   },
   {
     'id': 29,
@@ -229,7 +229,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/divide-two-integers/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Math', 'Binary Search']
+    'tags': ['Math', 'Binary_Search']
   },
   {
     'id': 30,
@@ -237,7 +237,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/substring-with-concatenation-of-all-words/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Hash Table', 'Two Pointers', 'String']
+    'tags': ['Hash_Table', 'Two_Pointers', 'String']
   },
   {
     'id': 31,
@@ -253,7 +253,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/longest-valid-parentheses/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['String', 'Dynamic Programming']
+    'tags': ['String', 'Dynamic_Programming']
   },
   {
     'id': 33,
@@ -261,7 +261,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/search-in-rotated-sorted-array/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Binary Search']
+    'tags': ['Array', 'Binary_Search']
   },
   {
     'id': 34,
@@ -269,7 +269,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Binary Search']
+    'tags': ['Array', 'Binary_Search']
   },
   {
     'id': 35,
@@ -277,7 +277,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/search-insert-position/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Array', 'Binary Search']
+    'tags': ['Array', 'Binary_Search']
   },
   {
     'id': 36,
@@ -285,7 +285,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/valid-sudoku/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Hash Table', 'Array']
+    'tags': ['Hash_Table', 'Array']
   },
   {
     'id': 37,
@@ -293,7 +293,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/sudoku-solver/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Backtracking', 'Hash Table']
+    'tags': ['Backtracking', 'Hash_Table']
   },
   {
     'id': 38,
@@ -333,7 +333,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/trapping-rain-water/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Array', 'Two Pointers', 'Stack']
+    'tags': ['Array', 'Two_Pointers', 'Stack']
   },
   {
     'id': 43,
@@ -349,7 +349,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/wildcard-matching/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['String', 'Dynamic Programming', 'Backtracking', 'Greedy']
+    'tags': ['String', 'Dynamic_Programming', 'Backtracking', 'Greedy']
   },
   {
     'id': 45,
@@ -389,7 +389,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/group-anagrams/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Hash Table', 'String']
+    'tags': ['Hash_Table', 'String']
   },
   {
     'id': 50,
@@ -397,7 +397,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/powx-n/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Math', 'Binary Search']
+    'tags': ['Math', 'Binary_Search']
   },
   {
     'id': 51,
@@ -421,7 +421,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/maximum-subarray/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Array', 'Divide and Conquer', 'Dynamic Programming']
+    'tags': ['Array', 'Divide and Conquer', 'Dynamic_Programming']
   },
   {
     'id': 54,
@@ -485,7 +485,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/rotate-list/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List', 'Two Pointers']
+    'tags': ['Linked_List', 'Two_Pointers']
   },
   {
     'id': 62,
@@ -493,7 +493,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/unique-paths/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 63,
@@ -501,7 +501,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/unique-paths-ii/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 64,
@@ -509,7 +509,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/minimum-path-sum/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 65,
@@ -549,7 +549,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/sqrtx/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Binary Search', 'Math']
+    'tags': ['Binary_Search', 'Math']
   },
   {
     'id': 70,
@@ -557,7 +557,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/climbing-stairs/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Dynamic Programming']
+    'tags': ['Dynamic_Programming']
   },
   {
     'id': 71,
@@ -573,7 +573,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/edit-distance/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['String', 'Dynamic Programming']
+    'tags': ['String', 'Dynamic_Programming']
   },
   {
     'id': 73,
@@ -589,7 +589,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/search-a-2d-matrix/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Binary Search']
+    'tags': ['Array', 'Binary_Search']
   },
   {
     'id': 75,
@@ -597,7 +597,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/sort-colors/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Two Pointers', 'Sort']
+    'tags': ['Array', 'Two_Pointers', 'Sort']
   },
   {
     'id': 76,
@@ -605,7 +605,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/minimum-window-substring/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Hash Table', 'Two Pointers', 'String', 'Sliding Window']
+    'tags': ['Hash_Table', 'Two_Pointers', 'String', 'Sliding_Window']
   },
   {
     'id': 77,
@@ -637,7 +637,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Two Pointers']
+    'tags': ['Array', 'Two_Pointers']
   },
   {
     'id': 81,
@@ -645,7 +645,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/search-in-rotated-sorted-array-ii/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Binary Search']
+    'tags': ['Array', 'Binary_Search']
   },
   {
     'id': 82,
@@ -653,7 +653,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List']
+    'tags': ['Linked_List']
   },
   {
     'id': 83,
@@ -661,7 +661,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/remove-duplicates-from-sorted-list/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Linked List']
+    'tags': ['Linked_List']
   },
   {
     'id': 84,
@@ -677,7 +677,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/maximal-rectangle/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Array', 'Hash Table', 'Stack', 'Dynamic Programming']
+    'tags': ['Array', 'Hash_Table', 'Stack', 'Dynamic_Programming']
   },
   {
     'id': 86,
@@ -685,7 +685,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/partition-list/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List', 'Two Pointers']
+    'tags': ['Linked_List', 'Two_Pointers']
   },
   {
     'id': 87,
@@ -693,7 +693,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/scramble-string/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['String', 'Dynamic Programming', 'Backtracking']
+    'tags': ['String', 'Dynamic_Programming', 'Backtracking']
   },
   {
     'id': 88,
@@ -701,7 +701,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/merge-sorted-array/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Array', 'Two Pointers']
+    'tags': ['Array', 'Two_Pointers']
   },
   {
     'id': 89,
@@ -725,15 +725,15 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/decode-ways/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['String', 'Dynamic Programming']
+    'tags': ['String', 'Dynamic_Programming']
   },
   {
     'id': 92,
-    'title': '92. Reverse Linked List II',
+    'title': '92. Reverse Linked_List II',
     'link': 'https://leetcode.com/problems/reverse-linked-list-ii/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List']
+    'tags': ['Linked_List']
   },
   {
     'id': 93,
@@ -749,23 +749,23 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/binary-tree-inorder-traversal/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Hash Table', 'Stack', 'Tree']
+    'tags': ['Hash_Table', 'Stack', 'Tree']
   },
   {
     'id': 95,
-    'title': '95. Unique Binary Search Trees II',
+    'title': '95. Unique Binary_Search Trees II',
     'link': 'https://leetcode.com/problems/unique-binary-search-trees-ii/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Tree', 'Dynamic Programming']
+    'tags': ['Tree', 'Dynamic_Programming']
   },
   {
     'id': 96,
-    'title': '96. Unique Binary Search Trees',
+    'title': '96. Unique Binary_Search Trees',
     'link': 'https://leetcode.com/problems/unique-binary-search-trees/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Tree', 'Dynamic Programming']
+    'tags': ['Tree', 'Dynamic_Programming']
   },
   {
     'id': 97,
@@ -773,11 +773,11 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/interleaving-string/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['String', 'Dynamic Programming']
+    'tags': ['String', 'Dynamic_Programming']
   },
   {
     'id': 98,
-    'title': '98. Validate Binary Search Tree',
+    'title': '98. Validate Binary_Search Tree',
     'link': 'https://leetcode.com/problems/validate-binary-search-tree/',
     'difficulty': 'Medium',
     'solved': false,
@@ -785,7 +785,7 @@ export const leetCodeData = [
   },
   {
     'id': 99,
-    'title': '99. Recover Binary Search Tree',
+    'title': '99. Recover Binary_Search Tree',
     'link': 'https://leetcode.com/problems/recover-binary-search-tree/',
     'difficulty': 'Hard',
     'solved': false,
@@ -857,7 +857,7 @@ export const leetCodeData = [
   },
   {
     'id': 108,
-    'title': '108. Convert Sorted Array to Binary Search Tree',
+    'title': '108. Convert Sorted Array to Binary_Search Tree',
     'link': 'https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/',
     'difficulty': 'Easy',
     'solved': false,
@@ -865,11 +865,11 @@ export const leetCodeData = [
   },
   {
     'id': 109,
-    'title': '109. Convert Sorted List to Binary Search Tree',
+    'title': '109. Convert Sorted List to Binary_Search Tree',
     'link': 'https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List', 'Tree', 'Depth-first Search']
+    'tags': ['Linked_List', 'Tree', 'Depth-first Search']
   },
   {
     'id': 110,
@@ -905,7 +905,7 @@ export const leetCodeData = [
   },
   {
     'id': 114,
-    'title': '114. Flatten Binary Tree to Linked List',
+    'title': '114. Flatten Binary Tree to Linked_List',
     'link': 'https://leetcode.com/problems/flatten-binary-tree-to-linked-list/',
     'difficulty': 'Medium',
     'solved': false,
@@ -917,7 +917,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/distinct-subsequences/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['String', 'Dynamic Programming']
+    'tags': ['String', 'Dynamic_Programming']
   },
   {
     'id': 116,
@@ -957,7 +957,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/triangle/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 121,
@@ -965,7 +965,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 122,
@@ -981,7 +981,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 124,
@@ -997,7 +997,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/valid-palindrome/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Two Pointers', 'String']
+    'tags': ['Two_Pointers', 'String']
   },
   {
     'id': 126,
@@ -1005,7 +1005,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/word-ladder-ii/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 127,
@@ -1013,7 +1013,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/word-ladder/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 128,
@@ -1053,7 +1053,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/palindrome-partitioning-ii/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['String', 'Dynamic Programming']
+    'tags': ['String', 'Dynamic_Programming']
   },
   {
     'id': 133,
@@ -1101,7 +1101,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/copy-list-with-random-pointer/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Hash Table', 'Linked List']
+    'tags': ['Hash_Table', 'Linked_List']
   },
   {
     'id': 139,
@@ -1109,7 +1109,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/word-break/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Dynamic Programming']
+    'tags': ['Dynamic_Programming']
   },
   {
     'id': 140,
@@ -1117,23 +1117,23 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/word-break-ii/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Dynamic Programming', 'Backtracking']
+    'tags': ['Dynamic_Programming', 'Backtracking']
   },
   {
     'id': 141,
-    'title': '141. Linked List Cycle',
+    'title': '141. Linked_List Cycle',
     'link': 'https://leetcode.com/problems/linked-list-cycle/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Linked List', 'Two Pointers']
+    'tags': ['Linked_List', 'Two_Pointers']
   },
   {
     'id': 142,
-    'title': '142. Linked List Cycle II',
+    'title': '142. Linked_List Cycle II',
     'link': 'https://leetcode.com/problems/linked-list-cycle-ii/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List', 'Two Pointers']
+    'tags': ['Linked_List', 'Two_Pointers']
   },
   {
     'id': 143,
@@ -1141,7 +1141,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/reorder-list/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List']
+    'tags': ['Linked_List']
   },
   {
     'id': 144,
@@ -1173,7 +1173,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/insertion-sort-list/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List', 'Sort']
+    'tags': ['Linked_List', 'Sort']
   },
   {
     'id': 148,
@@ -1181,7 +1181,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/sort-list/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Linked List', 'Sort', 'Divide and Conquer']
+    'tags': ['Linked_List', 'Sort', 'Divide and Conquer']
   },
   {
     'id': 149,
@@ -1189,7 +1189,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/max-points-on-a-line/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Hash Table', 'Math']
+    'tags': ['Hash_Table', 'Math']
   },
   {
     'id': 150,
@@ -1213,7 +1213,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/maximum-product-subarray/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Dynamic Programming']
+    'tags': ['Array', 'Dynamic_Programming']
   },
   {
     'id': 153,
@@ -1221,7 +1221,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Binary Search']
+    'tags': ['Array', 'Binary_Search']
   },
   {
     'id': 154,
@@ -1229,7 +1229,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Array', 'Binary Search']
+    'tags': ['Array', 'Binary_Search']
   },
   {
     'id': 155,
@@ -1253,7 +1253,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/read-n-characters-given-read4/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['String', 'Two Pointers']
+    'tags': ['String', 'Two_Pointers']
   },
   {
     'id': 158,
@@ -1269,15 +1269,15 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/',
     'difficulty': 'Hard',
     'solved': false,
-    'tags': ['Hash Table', 'String', 'Two Pointers']
+    'tags': ['Hash_Table', 'String', 'Two_Pointers']
   },
   {
     'id': 160,
-    'title': '160. Intersection of Two Linked Lists',
+    'title': '160. Intersection of Two Linked_Lists',
     'link': 'https://leetcode.com/problems/intersection-of-two-linked-lists/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Linked List']
+    'tags': ['Linked_List']
   },
   {
     'id': 161,
@@ -1293,7 +1293,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/find-peak-element/',
     'difficulty': 'Medium',
     'solved': false,
-    'tags': ['Array', 'Binary Search']
+    'tags': ['Array', 'Binary_Search']
   },
   {
     'id': 163,
@@ -1334,7 +1334,7 @@ export const leetCodeData = [
     'link': 'https://leetcode.com/problems/house-robber/',
     'difficulty': 'Easy',
     'solved': false,
-    'tags': ['Dynamic Programming']
+    'tags': ['Dynamic_Programming']
   },
   {
     'id': 199,

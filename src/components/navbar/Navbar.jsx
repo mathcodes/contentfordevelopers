@@ -271,35 +271,35 @@ export default function NavBar() {
                 <div className="mt-3 space-y-1 px-2">
                   <Disclosure.Button
                     as="a"
-                    href="#"
+                    href="/leetcode"
                     className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
                   >
                     LeetCode
                   </Disclosure.Button>
                   <Disclosure.Button
                     as="a"
-                    href="#"
+                    href="/codewars"
                     className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
                   >
                     CodeWars
                   </Disclosure.Button>
                   <Disclosure.Button
                     as="a"
-                    href="#"
+                    href="/hackerrank"
                     className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
                   >
                     HackerRank
                   </Disclosure.Button>
                   <Disclosure.Button
                     as="a"
-                    href="#"
+                    href="/notes"
                     className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue dark:bg-gray-700 hover:text-accent"
                   >
                     Notes & Resources
                   </Disclosure.Button>
                   <Disclosure.Button
                     as="a"
-                    href="#"
+                    href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
                     className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
                   >
                     Contribute
