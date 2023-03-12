@@ -11,7 +11,7 @@ const Contribute = () => {
           </h4>
           <p className="text-lg">
             Anyone can contribute by visiting the{" "}
-            <a className="underline hover:text-accent transition-all duration-300 cursor-pointer tracking-wide  ">
+            <a className="underline hover:text-accent transition-all duration-300 cursor-pointer tracking-wide  " href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md">
               GitHub Repo!
             </a>{" "}
             We would love to have you on board and welcome all levels of

@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { HiMenu, HiBell, HiX } from "react-icons/hi";
 import { CgDarkMode } from "react-icons/cg";
@@ -133,7 +133,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="leetcode"
+                                href="/leetcode" 
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
