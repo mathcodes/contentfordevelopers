@@ -24,8 +24,8 @@ const Hero = () => {
           <ColoredButton text="Learn" variant="main" href="#platform-list" />
           <ColoredButton
             text="Contribute"
-            variant="secondary"
-            href="#contribute"
+            variant="secondary" href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
+            
           />
         </div>
       </div>
