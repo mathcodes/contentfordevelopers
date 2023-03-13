@@ -124,5 +124,12 @@ export const data = [
     "avatar_url": "https://avatars.githubusercontent.com/u/107139663?v=4",
     "html_url": 	"https://github.com/Jayaditya-Contributor",
     "contributions": 1
+  },
+  {
+    "login": "flexzy2011",
+    "id": 112817528,
+    "avatar_url": "https://avatars.githubusercontent.com/u/112817528?v=4",
+    "html_url":   "https://github.com/flexzy2011",
+    "contributions": 1
   }
 ]
