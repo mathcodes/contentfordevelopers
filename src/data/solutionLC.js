@@ -16,25 +16,75 @@ export const LeetCodeSolutions = [
   "id": 2,
   "title": "Add Two Numbers",
   "content": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.\r \ \  You may assume the two numbers do not contain any leading zero, except the number 0 itself.\r \ \  Example:\r \ \  Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)\r \ \  Output: 7 -> 0 -> 8\r \ \  Explanation: 342 + 465 = 807.",
-  "javascript": `var addTwoNumbers = function (l1, l2) {
-    let dummyHead = new ListNode(0);
-    let p = l1, q = l2, curr = dummyHead;
-    let carry = 0;
-    while (p != null || q != null) {
-      let x = (p != null) ? p.val : 0;
-      let y = (q != null) ? q.val : 0;
-      let sum = carry + x + y;
-      carry = Math.floor(sum / 10);
-      curr.next = new ListNode(sum % 10);
-      curr = curr.next;
-      if (p != null) p = p.next;
-      if (q != null) q = q.next;
+  "javascript": `var addTwoNumbers = function(l1, l2) {
+
+    let array1 = []
+    let array2 = []
+
+    while(l1!==null){
+        array1.push(l1.val)
+        l1 = l1.next
     }
-    if (carry > 0) {
-      curr.next = new ListNode(carry);
+
+    while(l2!==null){
+        array2.push(l2.val)
+        l2 = l2.next
     }
-    return dummyHead.next;
-  };`,
+
+    let num1 = array1.reverse().join('')
+    let num2 = array2.reverse().join('')
+
+
+    let resNumber = BigInt(num1) + BigInt(num2)
+    let arr3 = String(resNumber).split('').reverse()
+
+    let newHead = new ListNode('')
+    let newPointer = newHead
+
+    for(let i=0;i<arr3.length;i++){
+        let node = new ListNode(arr3[i])
+        newPointer.next=node
+        newPointer = node
+    }
+
+    return newHead.next
+
+  };
+
+
+// The current implementation of the function has a time complexity of O(n + m + k), where n is the length of l1, m is the length of l2, and k is the length of the result list. The space complexity is O(n + m + k) as well, due to the use of the two arrays and the result list.
+
+// To optimize for time and space, we can avoid using the two arrays to store the values of l1 and l2, and instead add the corresponding values directly while iterating through the linked lists. This would reduce the space complexity to O(k), where k is the length of the result list, and the time complexity to O(max(n, m) + k), which is better than the original implementation.
+
+// Here's an optimized implementation:
+
+var addTwoNumbers = function(l1, l2) {
+    let carry = 0
+    let newHead = new ListNode('')
+    let newPointer = newHead
+
+    while(l1 || l2 || carry) {
+      let val1 = l1 ? l1.val : 0
+      let val2 = l2 ? l2.val : 0
+      let sum = val1 + val2 + carry
+
+      carry = sum > 9 ? 1 : 0
+      let digit = sum % 10
+
+      let newNode = new ListNode(digit)
+      newPointer.next = newNode
+      newPointer = newNode
+
+      l1 = l1 ? l1.next : null
+      l2 = l2 ? l2.next : null
+    }
+
+    return newHead.next
+  }
+
+
+//   In this implementation, we use a single while loop to iterate through both l1 and l2 simultaneously, adding the corresponding values and keeping track of the carry. We create the new nodes and add them to the result list as we go. This way, we don't need to store the values of l1 and l2 separately in arrays, and can directly add them to the result list.
+`,
   "python": "class Solution:\r \ \  def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:\r \ \  dummyHead = ListNode(0)\r \ \  p = l1\r \ \  q = l2\r \ \  curr = dummyHead\r \ \  carry = 0\r \ \  while p or q:\r \ \  x = p.val if p else 0\r \ \  y = q.val if q else 0\r \ \  sum = carry + x + y\r \ \  carry = sum // 10\r \ \  curr.next = ListNode(sum % 10)\r \ \  curr = curr.next\r \ \  if p:\r \ \  p = p.next\r \ \  if q:\r \ \  q = q.next\r \ \  if carry > 0:\r \ \  curr.next = ListNode(carry)\r \ \  return dummyHead.next",
   "java": "class Solution {\r \ \  public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\r \ \  ListNode dummyHead = new ListNode(0);\r \ \  ListNode p = l1, q = l2, curr = dummyHead;\r \ \  int carry = 0;\r \ \  while (p != null || q != null) {\r \ \  int x = (p != null) ? p.val : 0;\r \ \  int y = (q != null) ? q.val : 0;\r \ \  int sum = carry + x + y;\r \ \  carry = sum / 10;\r \ \  curr.next = new ListNode(sum % 10);\r \ \  curr = curr.next;\r \ \  if (p != null) p = p.next;\r \ \  if (q != null) q = q.next;\r \ \  }\r \ \  if (carry > 0) {\r \ \  curr.next = new ListNode(carry);\r \ \  }\r \ \  return dummyHead.next;\r \ \  }\r \ \ }",
   "c++": "class Solution {\r \ \  public:\r \ \  ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\r \ \  ListNode* dummyHead = new ListNode(0);\r \ \  ListNode* p = l1, * q = l2, * curr = dummyHead;\r \ \  int carry = 0;\r \ \  while (p != nullptr || q != nullptr) {\r \ \  int x = (p != nullptr) ? p->val : 0;\r \ \  int y = (q != nullptr) ? q->val : 0;\r \ \  int sum = carry + x + y;\r \ \  carry = sum / 10;\r \ \  curr->next = new ListNode(sum % 10);\r \ \  curr = curr->next;\r \ \  if (p != nullptr) p = p->next;\r \ \  if (q != nullptr) q = q->next;\r \ \  }\r \ \  if (carry > 0) {\r \ \  curr->next = new ListNode(carry);\r \ \  }\r \ \  return dummyHead->next;\r \ \  }\r \ \ };",
