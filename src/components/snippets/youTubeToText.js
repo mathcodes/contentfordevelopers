@@ -26,7 +26,7 @@ function YouTubeToText({
           <h2 className="mb-2 text-xl font-bold text-gray-800 dark:text-white">
             YouTube Transcription Styler
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-black dark:text-white dark:text-gray-400">
             Paste your text below and click "Convert" to see the results:
           </p>
         </div>
@@ -49,7 +49,14 @@ function YouTubeToText({
             >
               Convert
             </button>
-            <div className="relative">
+
+            <button
+              onClick={clearOutputText}
+              className="px-4 py-2 ml-2 text-sm text-white transition-all duration-500 bg-gray-500 border border-gray-500 rounded-lg sm:text-lg hover:bg-gray-600"
+            >
+              Clear Output
+            </button>
+            <div className="relative ">
               <button
                 onClick={handleCopy}
                 className="p-2 text-white bg-gray-800 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"
@@ -57,17 +64,11 @@ function YouTubeToText({
                 <FiCopy />
               </button>
               {tooltipVisible && (
-                <div className="absolute top-0 px-2 py-1 text-white bg-gray-800 rounded shadow right-full">
+                <div className="absolute top-0 px-2 py-1 text-white bg-gray-800 rounded shadow left-full">
                   Copied!
                 </div>
               )}
             </div>
-            <button
-              onClick={clearOutputText}
-              className="px-4 py-2 ml-2 text-sm text-white transition-all duration-500 bg-gray-500 border border-gray-500 rounded-lg sm:text-lg hover:bg-gray-600"
-            >
-              Clear Output
-            </button>
           </div>
           <div>
             <label htmlFor="output-text" className="block mb-2 font-bold text-gray-700 dark:text-white">
