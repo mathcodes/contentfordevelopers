@@ -14,7 +14,7 @@ function Homepage() {
       {/* <Header /> */}
       <NavBar />
       <Hero />
-      <TopicsGrid />
+      {/* <TopicsGrid /> */}
       <Learn />
       <Contribute />
       <Footer />
