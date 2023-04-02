@@ -6,6 +6,7 @@ import PlatformList from "../components/homepage/platformList/PlatformList";
 import ContributorSection from "../components/homepage/contributorSection/ContributorSection";
 import Learn from "../components/homepage/Learn";
 import Contribute from "../components/homepage/Contribute";
+import TopicsGrid from "../components/TopicsGrid/TopicsGrid";
 
 function Homepage() {
   return (
@@ -13,6 +14,7 @@ function Homepage() {
       {/* <Header /> */}
       <NavBar />
       <Hero />
+      <TopicsGrid />
       <Learn />
       <Contribute />
       <Footer />

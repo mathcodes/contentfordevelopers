@@ -20,6 +20,7 @@ function App() {
           <Route path="/snippets" element={<Snippets />} />
           <Route path="/itempageLC" element={<ItemPage sol="lc" />} />
           <Route path="/itempageCW" element={<ItemPage sol="cw" />} />
+          <Route path="/itempageHR" element={<ItemPage sol="cw" />} />
           {/* <Route path="/hackerrank" element={<HackerRank/>} />
           <Route path="/codewars" element={<CodeWars/>} />
           <Route path="/dsa" element={<DSA/>} />

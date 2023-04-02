@@ -16,7 +16,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function TailwindTable( {data}) {
+export default function TailwindTable({ data }) {
   const link = [{
     "leetCodeLink": "leetcode/",
     "leetCodeLogo": "https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/Images/LeetCode_logo_black.png",
@@ -27,7 +27,7 @@ export default function TailwindTable( {data}) {
   let c = link[0].leetCodeLink
   let d = link[0].codeWarsLink
   let i = data.id
-  let e = [c,i].join("")
+  let e = [c, i].join("")
 
   console.log(c)
   console.log(d)
@@ -36,7 +36,7 @@ export default function TailwindTable( {data}) {
   return (
     <div className="px-6 lg:px-8">
 
-      <div className="-mx-6 mt-10 ring-1 ring-gray-300 sm:mx-0 sm:rounded-lg  w-full h-full overflow-y-scroll overflow-scroll rounded-b-lg">
+      <div className="w-full h-full mt-10 -mx-6 overflow-scroll overflow-y-scroll rounded-b-lg ring-1 ring-gray-300 sm:mx-0 sm:rounded-lg">
         <table className="min-w-full divide-y divide-gray-300 ">
           <thead>
             <tr className="overflow-scroll">
@@ -80,11 +80,11 @@ export default function TailwindTable( {data}) {
                   <div className="font-medium text-gray-900">
                     {data.title}
                   </div>
-                  <div className="mt-1 flex flex-col text-gray-500 sm:block lg:">
+                  <div className="flex flex-col mt-1 text-gray-500 sm:block lg:">
 
 
                   </div>
-                  {dataIdx !== 0 ? <div className="absolute right-0 left-6 -top-px h-px bg-gray-200" /> : null}
+                  {dataIdx !== 0 ? <div className="absolute right-0 h-px bg-gray-200 left-6 -top-px" /> : null}
                 </td>
                 {/* Difficulty Column */}
                 <td
@@ -101,7 +101,7 @@ export default function TailwindTable( {data}) {
                     ' px-3 py-3.5 text-sm text-gray-500 lg:table-cell'
                   )}
                 >
-                <LogoLink link={link.leetCodeLink + data.link} image={image[0].leetCodeLogo} />
+                  <LogoLink link={link.leetCodeLink + data.link} image={image[0].leetCodeLogo} />
                 </td>
 
                 <td
@@ -111,12 +111,12 @@ export default function TailwindTable( {data}) {
                   )}
                 >
                   <div className="flex flex-wrap">
-                  {data.tags.map((tag) => (
-                    <span className='text-[#222] bg-accent rounded-md m-2 px-1'>
+                    {data.tags.map((tag) => (
+                      <span className='text-[#222] bg-accent rounded-md m-2 px-1'>
 
-                      {tag}
-                    </span>),)}
-</div>
+                        {tag}
+                      </span>),)}
+                  </div>
                 </td>
                 <td
                   className={classNames(
@@ -126,20 +126,143 @@ export default function TailwindTable( {data}) {
                 >
                   <button
                     type="button"
-                    className="inline-flex items-center rounded-md border border-platinum-300 bg-accent2 px-3 py-2 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-accent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30"
+                    className="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-700 border rounded-md shadow-sm border-platinum-300 bg-accent2 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30"
                     disabled={data.isCurrent}
                   >
                     <a href={(`${c}${data.id}`)}>
-                    Select
+                      Select
                     </a>
                     <span className="sr-only">, {data.title}</span>
                   </button>
-                  {dataIdx !== 0 ? <div className="absolute right-6 left-0 -top-px h-px bg-gray-200" /> : null}
+                  {dataIdx !== 0 ? <div className="absolute left-0 h-px bg-gray-200 right-6 -top-px" /> : null}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
+            <div class="px-4 py-2">
+              <h2 class="text-lg font-bold mb-2">Resume and Cover Letter Writing</h2>
+              <p class="text-gray-600">Tips and tricks on crafting an effective resume and cover letter for a developer position, including common mistakes to avoid and best practices to follow.</p>
+              <div class="mt-4 flex justify-end">
+                <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
+                <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

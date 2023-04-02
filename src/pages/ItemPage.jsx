@@ -12,9 +12,13 @@ import { LeetCodeSolutions } from "../data/solutionLC";
 import { CodeWarsSolutions } from "../data/solutionCW";
 import HighlightComponent from "../components/highlight/HighlightComponent";
 
-export default function ItemPage({sol}) {
+export default function ItemPage({ sol }) {
 
-  let data = sol === 'lc' ? LeetCodeSolutions : CodeWarsSolutions;
+  let data = sol === 'lc'
+    ?
+    LeetCodeSolutions
+    :
+    CodeWarsSolutions;
 
   let idValue = useParams();
   let id = idValue.id - 1;
@@ -48,17 +52,17 @@ export default function ItemPage({sol}) {
     <>
       <div className="container mx-auto" data-color-mode="dark">
         <NavBar />
-        <div className="grid xs:grid-cols-1 sm:grid-cols-5 dark:text-white dark:bg-black bg-white text-blue">
-          <h1 className="sm:col-span-3 xs:col-span-1 p-2 flex justify-center">{data[id].title}</h1>
-          <p className="bg-blue-300 p-2 text-xs flex justify-center">Time Complexity:<br />{data[id].Time_Complexity}</p>
-          <p className="bg-blue-500 p-2 text-xs flex justify-center">Space Complexity: <br />{data[id].Space_Complexity}</p>
+        <div className="grid bg-white xs:grid-cols-1 sm:grid-cols-5 dark:text-white dark:bg-black text-blue">
+          <h1 className="flex justify-center p-2 sm:col-span-3 xs:col-span-1">{data[id].title}</h1>
+          <p className="flex justify-center p-2 text-xs bg-blue-300">Time Complexity:<br />{data[id].Time_Complexity}</p>
+          <p className="flex justify-center p-2 text-xs bg-blue-500">Space Complexity: <br />{data[id].Space_Complexity}</p>
         </div>
-        <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-4 dark:bg-blue dark:text-platinum text-blue bg-platinum p-3">
+        <div className="grid gap-4 p-3 xs:grid-cols-1 md:grid-cols-2 dark:bg-blue dark:text-platinum text-blue bg-platinum">
           <div className="leading-10">
             <h1 className="text-2xl">Description</h1>
             {content}
             <hr />
-            <div className="flex mx-2 mt-2 gap-2">
+            <div className="flex gap-2 mx-2 mt-2">
               <BsFilm />
               <BsFillImageFill />
             </div>
