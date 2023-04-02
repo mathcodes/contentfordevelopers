@@ -5,7 +5,7 @@ Leetcode, Hackerrank, and Codewars challenges with solutions and a diverse colle
 
 I want to be clear that this is an effort to bring developers together to HELP other developers!!! As issues are created and ideas are brought forth and implemented, keep in mind that... **`Nothing is set in stone`** !!! **`Please chime in, speak up, step up, and make this yours! This is a WE project. Keep an open mind to suggestions, criticisms, and furthermore, maintain an easy-going, friendly atmosphere to harness our open-source project. A place for beginners and veterans to coincide and learn from each other! `** 🙏 🙏 🙏 [Jon](https://twitter.com/thejonchristie)
 
-<img src="https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/public/cfd.png" height="200px"/>
+<img src="https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/public/cfd.png" height="80%" margin="auto"/>
 
 ## Table of Contents
 
