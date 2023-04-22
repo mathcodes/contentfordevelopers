@@ -2,36 +2,35 @@ import React from "react";
 import ColoredButton from "./ColoredButton";
 
 //This is a component that serves as a main element of the landing page, right under the navbar
-const Hero = () => {
+const Hero = ({preTitle, title, description}) => {
   return (
     <section className="relative mx-auto min-h-[40vh] mb-12">
-      <div className="flex flex-col items-center justify-center   dark:text-platinum text-blue z-10 relative sm:py-40 py-28">
-        <div className="lg:px-40 px-6 pb-16 leading-10">
-          <h3 className="text-dynamicHeader tracking-wide leading-tight mb-4">
-            <span className="sm:inline block">Welcome to&nbsp;</span>
+      <div className="relative z-10 flex flex-col items-center justify-center dark:text-platinum text-blue sm:py-40 py-28">
+        <div className="px-6 pb-16 leading-10 lg:px-40">
+          <h3 className="mb-4 leading-tight tracking-wide text-dynamicHeader">
+            <span className="block sm:inline">{preTitle}</span>
             <span className="">
-              <span className="gradientText font-extrabold">
-                ContentForDevelopers!
+              <span className="font-extrabold gradientText">
+                {title}
               </span>
             </span>
           </h3>
-          <p className="sm:text-xl text-lg">
-            An open-source project aimed at providing learning tools for
-            developers that cover a wide range of learning styles.
+          <p className="text-lg sm:text-xl">
+            {description}
           </p>
         </div>
-        <div className="flex justify-center gap-4 max-w-sm">
+        <div className="flex justify-center max-w-sm gap-4">
           <ColoredButton text="Learn" variant="main" href="#platform-list" />
           <ColoredButton
             text="Contribute"
             variant="secondary" href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
-            
+
           />
         </div>
       </div>
 
-      <div className="absolute left-0 top-0 w-full h-full ">
-        <div className="hero-bg w-full h-full" />
+      <div className="absolute top-0 left-0 w-full h-full ">
+        <div className="w-full h-full hero-bg" />
       </div>
     </section>
   );

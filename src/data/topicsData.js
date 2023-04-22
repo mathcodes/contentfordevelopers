@@ -1,3 +1,17 @@
+import { HiCode, HiOutlinePencilAlt } from 'react-icons/hi'
+import { SiDjango } from 'react-icons/si'
+import { TbBugOff, TbPencil } from 'react-icons/tb'
+import { CgPerformance } from 'react-icons/cg'
+import { MdOutlineSecurity } from 'react-icons/md'
+import { FaDatabase } from 'react-icons/fa'
+import { GiArtificialIntelligence } from 'react-icons/gi'
+import { SlCloudUpload } from 'react-icons/sl'
+import { BsClipboardPlus, BsSearch } from 'react-icons/bs'
+import { SiAzuredevops  } from 'react-icons/si'
+import { HiUsers } from 'react-icons/hi'
+import { VscAzureDevops } from 'react-icons/vsc'
+
+
 export const topics = [
   {
     id: 1,
@@ -6,7 +20,8 @@ export const topics = [
     point1: 'Follow the SOLID principles',
     point2: 'Use design patterns such as Singleton and Factory',
     point3: 'Write clean, readable, and self-documenting code',
-    link: 'https://www.toptal.com/software/solid-principles'
+    link: 'https://www.toptal.com/software/solid-principles',
+    icon: HiCode
   },
   {
     id: 2,
@@ -15,7 +30,8 @@ export const topics = [
     point1: 'Learn the basics of the language syntax and data types',
     point2: 'Practice writing simple programs and projects',
     point3: 'Explore advanced concepts such as multithreading and asynchronous programming',
-    link: 'https://www.tutorialspoint.com/index.htm'
+    link: 'https://www.tutorialspoint.com/index.htm',
+    icon: HiOutlinePencilAlt
   },
   {
     id: 3,
@@ -24,7 +40,8 @@ export const topics = [
     point1: 'Learn the basics of the framework or library',
     point2: 'Practice building projects and applications with it',
     point3: 'Explore advanced features and use cases',
-    link: 'https://reactjs.org/docs/getting-started.html'
+    link: 'https://reactjs.org/docs/getting-started.html',
+    icon: SiDjango
   },
   {
     id: 4,
@@ -33,7 +50,8 @@ export const topics = [
     point1: 'Collaborate effectively with team members',
     point2: 'Deliver high-quality software in a timely manner',
     point3: 'Continuously improve processes and workflows',
-    link: 'https://www.atlassian.com/software-development/what-is-devops'
+    link: 'https://www.atlassian.com/software-development/what-is-devops',
+    icon: SiAzuredevops
   },
   {
     id: 5,
@@ -42,7 +60,8 @@ export const topics = [
     point1: 'Use debuggers and logging tools to identify issues',
     point2: 'Practice writing test cases to catch bugs early',
     point3: 'Collaborate with team members to solve complex issues',
-    link: 'https://www.guru99.com/debugging-best-practices.html'
+    link: 'https://www.guru99.com/debugging-best-practices.html',
+    icon: TbBugOff
   },
   {
     id: 6,
@@ -51,7 +70,8 @@ export const topics = [
     point1: 'Use caching and compression techniques to reduce load times',
     point2: 'Optimize database queries and network requests',
     point3: 'Monitor and measure performance regularly to identify bottlenecks',
-    link: 'https://dev.to/suyashpradhan/performance-optimization-techniques-for-web-developers-3da1'
+    link: 'https://dev.to/suyashpradhan/performance-optimization-techniques-for-web-developers-3da1',
+    icon: CgPerformance
   },
   {
     id: 7,
@@ -60,7 +80,8 @@ export const topics = [
     point1: 'Use secure coding practices such as input validation and output encoding',
     point2: 'Encrypt sensitive data using cryptographic algorithms',
     point3: 'Stay up-to-date with security news and trends',
-    link: 'https://www.owasp.org/index.php/Main_Page'
+    link: 'https://www.owasp.org/index.php/Main_Page',
+    icon: MdOutlineSecurity
   },
   {
     id: 8,
@@ -69,7 +90,8 @@ export const topics = [
     point1: 'Design and implement efficient database schemas',
     point2: 'Use SQL or NoSQL query languages to retrieve data',
     point3: 'Analyze and visualize data using tools such as Tableau or Power BI',
-    link: 'https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/databases-sql-and-data-warehouses/'
+    link: 'https://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/databases-sql-and-data-warehouses/',
+    icon: FaDatabase
   },
   {
     id: 9,
@@ -78,7 +100,8 @@ export const topics = [
     point1: 'Understand the basic concepts and techniques of machine learning',
     point2: 'Choose the appropriate algorithms and models for your use case',
     point3: 'Train and test models using data sets',
-    link: 'https://www.coursera.org/courses?query=machine%20learning'
+    link: 'https://www.coursera.org/courses?query=machine%20learning',
+    icon: GiArtificialIntelligence
   },
   {
     id: 10,
@@ -87,7 +110,8 @@ export const topics = [
     point1: 'Understand the basic concepts of cloud computing and IoT',
     point2: 'Develop and deploy applications on cloud platforms such as AWS or Azure',
     point3: 'Build and program IoT devices using platforms such as Raspberry Pi or Arduino',
-    link: 'https://aws.amazon.com/what-is-cloud-computing/'
+    link: 'https://aws.amazon.com/what-is-cloud-computing/',
+    icon: SlCloudUpload
   },
   {
     id: 11,
@@ -96,7 +120,8 @@ export const topics = [
     point1: 'Highlight your relevant experience and skills',
     point2: 'Tailor your resume and cover letter to the specific job you are applying for',
     point3: 'Proofread and edit your resume and cover letter carefully',
-    link: 'https://www.thebalancecareers.com/it-developer-resume-examples-2071452'
+    link: 'https://www.thebalancecareers.com/it-developer-resume-examples-2071452',
+    icon: TbPencil
   },
   {
     id: 12,
@@ -105,7 +130,8 @@ export const topics = [
     point1: 'Create a strong online presence on LinkedIn and other relevant platforms',
     point2: 'Attend industry events and networking opportunities',
     point3: 'Apply for jobs that match your skills and experience',
-    link: 'https://www.monster.com/career-advice/article/job-search-strategies-for-software-developers'
+    link: 'https://www.monster.com/career-advice/article/job-search-strategies-for-software-developers',
+    icon: BsSearch
   },
   {
     id: 13,
@@ -114,7 +140,8 @@ export const topics = [
     point1: 'Research the company and the job position beforehand',
     point2: 'Prepare and practice your responses to common interview questions',
     point3: 'Dress professionally and arrive early to the interview',
-    link: 'https://www.hackerrank.com/interview/interview-preparation-kit'
+    link: 'https://www.hackerrank.com/interview/interview-preparation-kit',
+    icon: HiUsers
   },
   {
     id: 14,
@@ -123,46 +150,40 @@ export const topics = [
     point1: 'Practice coding challenges and algorithms',
     point2: 'Improve problem-solving and critical thinking skills',
     point3: 'Learn how to effectively communicate your thought process',
-    link: 'https://www.interviewcake.com/technical-interview-practice'
+    link: 'https://www.interviewcake.com/technical-interview-practice',
+    icon: BsClipboardPlus
   },
 ];
 
-const interviewPrepTopics = [
-  {
-    id: 1,
-    title: 'Soft Skills',
-    description: 'Resources and advice on developing soft skills such as communication, teamwork, and leadership, which are critical for success in a developer job.',
-    point1: 'Learn effective communication and collaboration strategies',
-    point2: 'Develop leadership and management skills',
-    point3: 'Improve time management and organization skills',
-    link: 'https://blog.hubspot.com/marketing/soft-skills'
-  },
-  {
-    id: 2,
-    title: 'Negotiating Offers',
-    description: 'Strategies for negotiating job offers, including salary, benefits, and other perks.',
-    point1: 'Research salary and compensation benchmarks for your role and experience level',
-    point2: 'Consider non-salary benefits such as healthcare, vacation time, and flexible work arrangements',
-    point3: 'Know your worth and be prepared to negotiate',
-    link: 'https://www.glassdoor.com/blog/how-to-negotiate-your-job-offer/'
-  },
-  {
-    id: 3,
-    title: 'Industry Insights',
-    description: 'Insights into the job market and trends in the tech industry, including emerging technologies and in-demand skills.',
-    point1: 'Stay up-to-date with industry news and trends',
-    point2: 'Learn about emerging technologies and their potential impact on the job market',
-    point3: 'Identify in-demand skills and develop your skills accordingly',
-    link: 'https://www.builtin.com/industry-insights'
-  }
-];
-
-//create a js function that prints the titles to the console in abc order:
-function printTitles() {
-  const allTopics = [...topics, ...interviewPrepTopics];
-  const titles = allTopics.map(topic => topic.title);
-  titles.sort();
-  titles.forEach(title => console.log(title));
-}
-
-printTitles();
+// const interviewPrepTopics = [
+//   {
+//     id: 1,
+//     title: 'Soft Skills',
+//     description: 'Resources and advice on developing soft skills such as communication, teamwork, and leadership, which are critical for success in a developer job.',
+//     point1: 'Learn effective communication and collaboration strategies',
+//     point2: 'Develop leadership and management skills',
+//     point3: 'Improve time management and organization skills',
+//     link: 'https://blog.hubspot.com/marketing/soft-skills',
+//     icon:'
+//   },
+//   {
+//     id: 2,
+//     title: 'Negotiating Offers',
+//     description: 'Strategies for negotiating job offers, including salary, benefits, and other perks.',
+//     point1: 'Research salary and compensation benchmarks for your role and experience level',
+//     point2: 'Consider non-salary benefits such as healthcare, vacation time, and flexible work arrangements',
+//     point3: 'Know your worth and be prepared to negotiate',
+//     link: 'https://www.glassdoor.com/blog/how-to-negotiate-your-job-offer/',
+//     icon:'
+//   },
+//   {
+//     id: 3,
+//     title: 'Industry Insights',
+//     description: 'Insights into the job market and trends in the tech industry, including emerging technologies and in-demand skills.',
+//     point1: 'Stay up-to-date with industry news and trends',
+//     point2: 'Learn about emerging technologies and their potential impact on the job market',
+//     point3: 'Identify in-demand skills and develop your skills accordingly',
+//     link: 'https://www.builtin.com/industry-insights',
+//     icon: SiBitcoincash
+//   }
+// ];

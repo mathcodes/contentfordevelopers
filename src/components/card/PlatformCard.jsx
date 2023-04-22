@@ -1,22 +1,53 @@
-import React from "react";
-import { SiLeetcode } from "react-icons/si";
+import React, { memo, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import { topics } from "../../data/topicsData";
 
-function PlatformCard({ title, src, href }) {
+const PlatformCardList = memo(({ title, href, description, Icon }) => {
+  const location = useLocation();
+  const path = location.pathname;
+  const iconRef = useRef();
+
   return (
     <a href={href}>
-      {/* <div className='platform-card'> */}
-      <div className="p-[2px] m-6 rounded-xl bg-gradient-to-r from-accent to-accent2 shadow-lg ">
-        <div className="p-6 w-52 h-44 text-center relative flex flex-col  items-center bg-white dark:bg-blue justify-between rounded-lg hover:scale-95 hover:shadow-sm transition-all duration-200 group">
-          <SiLeetcode className="w-12 h-12 group-hover:scale-110 transition-all duration-300 delay-100" />
-          <div className="flex-1 flex items-end ">
-            <p className="text-lg leading-tight tracking-wide group-hover:scale-105 transition-all duration-200 delay-50">
-              {title}
+      <div className="p-2 m-6 rounded-lg z-1 bg-gradient-to-r from-accent to-accent2 shadow-l">
+        <div className="flex justify-end p-6 text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
+          <Icon
+          color="#999"
+          className="w-12 h-12 transition duration-1000 ease-in-out fill-current delay-50 hover:text-blue-700 hover:fill-current group-hover:scale-110" />
+          <div className="absolute top-0 items-end flex-1 ">
+            <p className="relative top-0 hidden p-1 m-6 text-green-500 transition-all duration-200 rounded-lg opacity-0 shadow-l group-hover:scale-105 group-hover:block group-hover:opacity-100 delay-50 tooltip">
+
+              <p className="absolute top-0 left-0 p-2 text-xs leading-tight text-gray-700 transition duration-1000 bg-white border rounded-lg shadow-lg z-5 group-hover:left-20 group-hover:scale-105 delay-50 dark:bg-blue ">
+                {title}
+              </p>
             </p>
+
           </div>
         </div>
       </div>
     </a>
   );
+});
+
+function PlatformCard() {
+
+  return (
+    <div className="grid justify-center grid-cols-1 mt-8 sm:grid-cols-2 md:grid-cols-4 ">
+      {topics.map((topic, index) => (
+        <React.Fragment key={topic.id}>
+
+          <PlatformCardList
+            title={topic.title}
+            href={topic.link}
+            description={topic.description}
+            Icon={topic.icon}
+          />
+
+        </React.Fragment>
+      ))}
+    </div>
+  );
+
 }
 
 export default PlatformCard;

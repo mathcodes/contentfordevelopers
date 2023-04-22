@@ -13,12 +13,7 @@ function Homepage() {
     <div className="container mx-auto">
       {/* <Header /> */}
       <NavBar />
-      <Hero
-        title= "ContentForDevelopers!"
-        preTitle='Welcome to&nbsp;'
-        description="An open-source project aimed at providing learning tools for
-        developers that cover a wide range of learning styles."
-      />
+      <Hero />
       {/* <TopicsGrid /> */}
       <Learn />
       <Contribute />
