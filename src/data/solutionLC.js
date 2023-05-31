@@ -128,6 +128,17 @@ var addTwoNumbers = function(l1, l2) {
   "Space_Complexity": "O(1)"
 },
 {
+  "id": 4,
+  "title": "Median of Two Sorted Arrays",
+  "content": "There are two sorted arrays nums1 and nums2 of size m and n respectively.\r \ \  Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).\r \ \  You may assume nums1 and nums2 cannot be both empty.\r \ \  Example 1:\r \ \  nums1 = [1, 3]\r \ \  nums2 = [2]\r \ \  The median is 2.0\r \ \  Example 2:\r \ \  nums1 = [1, 2]\r \ \  nums2 = [3, 4]\r \ \  The median is (2 + 3)/2 = 2.5",
+  "javascript": "var findMedianSortedArrays = function(nums1, nums2) {\r \ \  const merged = [...nums1, ...nums2].sort((a, b) => a - b);\r \ \  const mid = Math.floor(merged.length / 2);\r \ \  return merged.length % 2 === 0 ? (merged[mid] + merged[mid - 1]) / 2 : merged[mid];\r };",
+  "python": "class Solution:\r \ \  def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:\r \ \  merged = sorted(nums1 + nums2)\r \ \  mid = len(merged) // 2\r \ \  return (merged[mid] + merged[~mid]) / 2",
+  "Time_Complexity": "O(m+n log(m+n))",
+  "Space_Complexity": "O(m+n)",
+  "image": "https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0004.MedianofTwoSortedArrays/1.medianOfTwoSortedArrays.png",
+  "video": "https://www.youtube.com/watch?v=LPFhl65R7ww"
+},
+{
   "id": 5,
   "title": "Longest Palindromic Substring",
   "content": "Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.",

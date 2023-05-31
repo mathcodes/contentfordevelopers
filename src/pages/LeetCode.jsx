@@ -1,26 +1,43 @@
-import * as React from 'react';
+import React from "react";
 import Footer from "../components/footer/Footer";
-import PageHeader from "../components/pageHeader/PageHeader";
 import NavBar from "../components/navbar/Navbar";
-import { leetCodeData } from '../data/leetCode';
-import "./pages.scss";
-import TailwindTable from '../components/TailwindTable/TailwindTable';
+import Hero from "../components/homepage/hero/Hero";
+import TopicsGrid from "../components/TopicsGrid/TopicsGrid";
+import { leetCodeData } from "../data/leetCode";
+import TailwindTable from "../components/TailwindTable/TailwindTable";
 
-export default function Leetcode() {
+function LeetCode() {
+  return (
+    <div className="container mx-auto">
+      {/* <Header /> */}
+      <NavBar />
+      <Hero
+        title="LeetCode!"
+        preTitle='Data Structures and Algorithms Mastery with '
+        description="Explore different learning styles to master Data Structures and Algorithms!"
+      />
+      {/* <TopicsGrid /> */}
 
-	return (
-		<div className='leetCode text-blue dark:text-white'>
-			<NavBar />
-			<PageHeader
-				title="LeetCode"
-				description="Choose the problem you'd like to explore!"
-				image="https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/Images/LeetCode_logo_black.png"
-			/>
+      <div className=" text-blue dark:text-white" text-white>
+        <TailwindTable data={leetCodeData} />
+      </div>
+      <Footer />
+    </div>
+  );
+}
 
-			<div className=" text-blue dark:text-white" text-white>
-				<TailwindTable data={leetCodeData} />
-			</div>
-			<Footer />
-		</div>
-	);
+export default LeetCode;
+
+
+
+let number = 5;
+
+if (number > 10) {
+
+  console.log("The number is greater than 10");
+
+} else {
+
+  console.log("The number is less than or equal to 10");
+
 }

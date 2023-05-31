@@ -8,18 +8,23 @@ import Learn from "../components/homepage/Learn";
 import Contribute from "../components/homepage/Contribute";
 import TopicsGrid from "../components/TopicsGrid/TopicsGrid";
 
-function Homepage() {
+function ComingSoon() {
   return (
     <div className="container mx-auto">
       {/* <Header /> */}
       <NavBar />
-      <Hero />
-      {/* <TopicsGrid /> */}
-      <Learn />
-      <Contribute />
+      <Hero
+        title= "ContentForDevelopers!"
+        preTitle='Welcome to&nbsp;'
+        description="THIS PART OF THE SITE IS UNDER CONSTRUCTION 🚧!!! THANK YOU FOR YOUR PATIENCE 🙏"
+      />
+
+      <button className="px-4 py-2 font-bold text-white rounded bg-gradient-to-r from-blue to-platinum">
+        <a href="/">Back Home</a>
+      </button>
       <Footer />
     </div>
   );
 }
 
-export default Homepage;
+export default ComingSoon;

@@ -8,7 +8,10 @@ const Hero = ({preTitle, title, description}) => {
       <div className="relative z-10 flex flex-col items-center justify-center dark:text-platinum text-blue sm:py-40 py-28">
         <div className="px-6 pb-16 leading-10 lg:px-40">
           <h3 className="mb-4 leading-tight tracking-wide text-dynamicHeader">
-            <span className="block sm:inline">{preTitle}</span>
+            <p>
+            <span className="block text-xl sm:inline">{preTitle}</span>
+
+            </p>
             <span className="">
               <span className="font-extrabold gradientText">
                 {title}
@@ -20,12 +23,7 @@ const Hero = ({preTitle, title, description}) => {
           </p>
         </div>
         <div className="flex justify-center max-w-sm gap-4">
-          <ColoredButton text="Learn" variant="main" href="#platform-list" />
-          <ColoredButton
-            text="Contribute"
-            variant="secondary" href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
 
-          />
         </div>
       </div>
 

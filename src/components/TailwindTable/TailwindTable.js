@@ -140,7 +140,7 @@ export default function TailwindTable({ data }) {
             ))}
           </tbody>
         </table>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {/* <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <div class="bg-white rounded-lg shadow-lg overflow-hidden">
             <img src="placeholder.jpg" alt="Resume and Cover Letter Writing" />
             <div class="px-4 py-2">
@@ -262,7 +262,7 @@ export default function TailwindTable({ data }) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
