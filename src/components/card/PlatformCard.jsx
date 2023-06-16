@@ -8,7 +8,7 @@ const PlatformCardList = memo(({ title, href, description, Icon }) => {
   const iconRef = useRef();
 
   return (
-    <a href={href}>
+    <a href={href} className="flex">
       <div className="p-2 m-6 rounded-lg z-1 bg-gradient-to-r from-accent to-accent2 shadow-l">
         <div className="flex justify-end p-6 text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
           <Icon
@@ -32,7 +32,8 @@ const PlatformCardList = memo(({ title, href, description, Icon }) => {
 function PlatformCard() {
 
   return (
-    <div className="grid justify-center grid-cols-1 mt-8 sm:grid-cols-2 md:grid-cols-4 ">
+    // <div className="grid justify-center grid-cols-1 mt-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+    <div className="flex flex-wrap">
       {topics.map((topic, index) => (
         <React.Fragment key={topic.id}>
 
