@@ -1,4 +1,4 @@
- import { Fragment } from "react";
+import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { HiMenu, HiBell, HiX } from "react-icons/hi";
 import { CgDarkMode } from "react-icons/cg";
@@ -51,7 +51,7 @@ export default function NavBar() {
                       >
                         Content For Developers
                       </a>
-                      <a
+                      {/* <a
                         href="/leetcode"
                         className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
                       >
@@ -74,7 +74,7 @@ export default function NavBar() {
                         className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
                       >
                         Notes & Resources
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function NavBar() {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                        <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-black text-black dark:text-white  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Items className="absolute z-100 right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-black text-black dark:text-white  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <Menu.Item>
                             {({ active }) => (
                               <a
@@ -133,52 +133,78 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/leetcode" 
+                                href="./codingluminary"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
                                 )}
                               >
-                                LeetCode
+                                Coding Luminary
                               </a>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/codewars"
+                                href="/codingconventions"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
                                 )}
                               >
-                                CodeWars
+                                Coding Conventions
                               </a>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/hackerrank"
+                                href="/frameworksandlibraries"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
                                 )}
                               >
-                                HackerRank
+                                Frameworks & Libraries
                               </a>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="notes"
+                                href="accessibilityandwcagcompliance"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
                                 )}
                               >
-                                Notes & Resources
+                                Accessibility & WCAG Compliance
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="aiandthefuture"
+                                className={classNames(
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm hover:text-accent"
+                                )}
+                              >
+                                AI & The Future
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="dsa"
+                                className={classNames(
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm hover:text-accent"
+                                )}
+                              >
+                                DSA
                               </a>
                             )}
                           </Menu.Item>

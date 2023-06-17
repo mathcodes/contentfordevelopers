@@ -28,7 +28,7 @@ export default function Leetcode() {
 			note: added the yellow from LeetCode logo to config 'lcyellow: "#f79f1bff"'*/}
 				<div className='flex  flex-row   py-5 px-0'><h1 className='text-8xl justify-center hover:text-lcyellow'>L</h1><h1 className='text-8xl justify-center hover:text-accent2'>e</h1><h1 className='text-8xl justify-center hover:text-accent'>e</h1><h1 className='text-8xl justify-center hover:text-accent2'>t</h1><h1 className='text-8xl justify-center hover:text-lcyellow'>C</h1><h1 className='text-8xl justify-center hover:text-accent2'>o</h1><h1 className='text-8xl justify-center hover:text-lcyellow'>d</h1><h1 className='text-8xl justify-center hover:text-accent2'>e</h1></div>
 
-					<h3>Choose the problem you'd like to explore!</h3>
+					<h3>Under Construction!!</h3>
 				</div>
 			</div>
 

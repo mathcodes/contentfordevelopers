@@ -3,7 +3,7 @@ import Footer from "../components/footer/Footer";
 import PageHeader from "../components/pageHeader/PageHeader";
 import NavBar from "../components/navbar/Navbar";
 import { leetCodeData } from '../data/leetCode';
-import "./pages.scss";
+import "./pages.css";
 import TailwindTable from '../components/TailwindTable/TailwindTable';
 
 export default function Leetcode() {
@@ -13,7 +13,7 @@ export default function Leetcode() {
 			<NavBar />
 			<PageHeader
 				title="LeetCode"
-				description="Choose the problem you'd like to explore!"
+				description="Under Construction!!"
 				image="https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/Images/LeetCode_logo_black.png"
 			/>
 
