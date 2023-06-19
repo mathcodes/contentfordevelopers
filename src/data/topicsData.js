@@ -17,12 +17,12 @@ import { FaClipboardCheck } from 'react-icons/fa'
 export const topics = [
   {
     id: 0,
-    title: "Coding Luminary",
+    title: "Developer's Library",
     description: "Resources for learning HTML, CSS, JavaScript, React, Angular, Typescript.... you name it. It's all here, or coming with your help!",
     point1: "Consider this to be your Citadel, Enclave, Symposium, Refuge.",
     point2: "A place to learn, grow, and share. Your Pinnacle, Arcanum, your Confluence.",
-    point3: "Your Coding Luminary.",
-    link: "/codingluminary",
+    point3: "Your Developer's Library.",
+    link: "/DevelopersLibrary",
     icon: GiGraduateCap
   },
   {
@@ -137,11 +137,11 @@ export const topics = [
   // },
   // {
   //   id: 0,
-  //   title: "Coding Luminary",
+  //   title: "Developer's Library",
   //   description: "Resources for learning HTML, CSS, JavaScript, React, Angular, Typescript.... you name it. It's all here, or coming with your help!",
   //   point1: "Consider this to be your Citadel, Enclave, Symposium, Refuge.",
   //   point2: "A place to learn, grow, and share. Your Pinnacle, Arcanum, your Confluence.",
-  //   point3: "Your Coding Luminary.",
+  //   point3: "Your Developer's Library.",
   //   link: "https://www.youtube.com/watch?v=3qJWd2bqW2A",
   // },
 

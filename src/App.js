@@ -5,7 +5,7 @@ import ItemPage from "./pages/ItemPage";
 import Snippets from "./pages/Snippets";
 // import Navbar from './components/navbar/Navbar';
 import Header from "./components/header/Header";
-import CodingLuminary from "./pages/CodingLuminary";
+import DevelopersLibrary from "./pages/DevelopersLibrary";
 import DSA from "./pages/DSA";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {topics} from "./data/topicsData";
@@ -24,9 +24,9 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/leetcode" element={<LeetCode />} />
           <Route path="/leetcode/:id" element={<ItemPage />} />
-          <Route path="/codingluminary"
+          <Route path="/DevelopersLibrary"
           element={
-          <CodingLuminary
+          <DevelopersLibrary
             title={topics[0].title}
             description={topics[0].description}
             point1={topics[0].point1}

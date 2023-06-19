@@ -133,13 +133,13 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="./codingluminary"
+                                href="./DevelopersLibrary"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
                                 )}
                               >
-                                Coding Luminary
+                                Developer's Library
                               </a>
                             )}
                           </Menu.Item>
