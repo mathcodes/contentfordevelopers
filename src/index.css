@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 /* Carousel CSS */
-@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 @layer base {
@@ -38,4 +38,16 @@
     @apply from-accent;
     @apply to-accent2;
   }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width:80%;
+  }
+}
+
+@media (min-width: 768px) {
+.container {
+    max-width: 80%;
+}
 }

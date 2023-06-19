@@ -8,9 +8,9 @@ const PlatformCardList = memo(({ title, href, description, Icon }) => {
   const iconRef = useRef();
 
   return (
-    <a href={href} className="flex">
-      <div className="p-2 m-6 rounded-lg z-1 bg-gradient-to-r from-accent to-accent2 shadow-l">
-        <div className="flex justify-end p-6 text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
+    <a href={href} className="flex justify-center items-center">
+      <div className="p-2 m-4 rounded-lg z-1 bg-gradient-to-r from-accent to-accent2 shadow-l">
+        <div className="flex p-6 text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
           <Icon
           color="#999"
           className="w-12 h-12 transition duration-1000 ease-in-out fill-current delay-50 hover:text-blue-700 hover:fill-current group-hover:scale-110" />
