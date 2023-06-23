@@ -2,7 +2,6 @@
 Check out the table of contents below to learn how to contribute to CD's docs:
 - [Purpose of this style]
 - [Target Audience]
-- [Documentation Principles]
 - 🌎 [Inclusive Language](inclusive-language)
 - 📝 [Grammar & Punctuation](grammar-and-punctuation)
 - 🤔 [Clarity](clarity)
