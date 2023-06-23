@@ -1,7 +1,8 @@
-# About this guide 👋
-
-Welcome to our style guide! We created this guide for the contributors to ensure that the content in our repository is communicated effectively and inclusively. This guide is divided into four sections:
-
+# Welcome to our style guide! 👋
+Check out the table of contents below to learn how to contribute to CD's docs:
+- [Purpose of this style]
+- [Target Audience]
+- [Documentation Principles]
 - 🌎 [Inclusive Language](inclusive-language)
 - 📝 [Grammar & Punctuation](grammar-and-punctuation)
 - 🤔 [Clarity](clarity)
