@@ -1,7 +1,6 @@
-# About this guide 👋
-
-Welcome to our style guide! We created this guide for the contributors to ensure that the content in our repository is communicated effectively and inclusively. This guide is divided into four sections:
-
+# Welcome to our Style Guide! 👋
+Like most things in life, this style guide is a work in progress! If you have any questions or suggestions, please make a new issue and let us know. Curious to learn more? Check out the sections in the table of contents below:
+- 🤔 [Purpose of our Style Guide]
 - 🌎 [Inclusive Language](inclusive-language)
 - 📝 [Grammar & Punctuation](grammar-and-punctuation)
 - 🤔 [Clarity](clarity)

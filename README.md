@@ -54,7 +54,7 @@ An example of [Python Tutor](www.pythontutor.com) doing what it does best:
 
 I use <a href="https://app.diagrams.net/" style="color:#d35400; font-weight:900">app.diagrams.net</a> to make charts and visuals. It is a free diagram creator 👍
 
-<img src="./src/assets/LeetCode/0001.%20Two%20Sum/1.twoSum.png" height="200px"/> <img src="./src/assets/LeetCode/0004.%20Median%20of%20Two%20Sorted%20Arrays/4.MedianOfTwoSortedArrays.drawio.png" height="200px"/>
+<img src="https://github.com/mathcodes/contentfordevelopers/blob/main/src/assets/5.DSA/LeetCode/0001.TwoSum/1.twoSum.png" height="200px"/> 
 
 ### Why contribute to this repo?
 
