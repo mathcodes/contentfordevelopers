@@ -1,409 +1,196 @@
-# Two Pointers or Iterators
+## Two Pointers or Iterators
 
-These problems include situations where you want to iterate through the data structure from the left and the right side at the same time until one or both of the pointers result in a condition.
+The Two Pointers pattern involves using two pointers or iterators that traverse through the data structure together until one or both of the pointers fulfill a certain condition. This pattern is commonly used when searching for pairs in a sorted array or linked list, where each element needs to be compared with other elements.
 
-### Most useful when dealing with `Sorted arrays` (or `Linked Lists`) 
-• need to find a set of elements that fulfill certain constraints
-• set of elements in the array is a pair, a triplet, or even a subarray
+By using two pointers, you can avoid the inefficiency of continuously looping back through the array to find the answer. With a single iterator, the time and space complexity would be O(n²) in the worst case scenario.
 
-### Examples of Two Pointer or Iterator Problems:
+The Two Pointers pattern allows for a more efficient solution with better time and space complexity.
 
-<details>
-<summary>
-<span style="font-size:2rem; color:green;">Squaring a sorted array (easy)</span>
-</summary>
+### Identifying the Two Pointers Method
 
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">SETUP VARIABLES</span>
-</summary>
+A problem that can be solved using the Two Pointers pattern typically involves sorted arrays or linked lists. The goal is usually to find a set of elements that satisfy certain constraints. This set can be a pair, a triplet, or even a subarray.
 
-- `result` is new array with same length all 0s
-- `LEFT` is 0
-- `RIGHT` is last index
-- `resultIndex` = last index
-```js
-var sortedSquares = function (nums) {
-  //SETUP VARAIBLES
-  let LEFT = 0;
-  let RIGHT = nums.length - 1;
-  let resultIndex = nums.length - 1;
-  const result = new Array(nums.length).fill(0);
+Some common problems that can be solved using the Two Pointers method include:
 
-  ...
-```
+- Squaring a sorted array
+- Finding triplets that sum to zero
+- Comparing strings that contain backspaces
 
-</details>
+Using the Two Pointers method can lead to optimized solutions with improved time and space complexity.
 
 <details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">WHILE LOOP</span>
-</summary>
+<summary><strong>Squaring a Sorted Array</strong></summary>
 
-- condition is `LEFT` <= `RIGHT`
-- setup two variables for *squared values* of `LEFT` and `RIGHT`, `leftVal` and `rightVal`, using `Math.pow()`
-```js
-...
+Given a sorted array of integers, the task is to square each element of the array and return the new sorted array. The Two Pointers method can be applied to solve this problem more efficiently.
 
-  while(LEFT <= RIGHT) {
-    leftVal = Math.pow(nums[LEFT], 2);
-    rightVal = Math.pow(nums[RIGHT], 2);
+```javascript
+/**
+ * Squaring a Sorted Array
+ * @param {number[]} nums - Sorted array of integers
+ * @returns {number[]} - New sorted array with squared elements
+ */
+const squareSortedArray = function(nums) {
+  const n = nums.length;   // Get the length of the input array
+  let left = 0;   // Initialize the left pointer
+  let right = n - 1;   // Initialize the right pointer
+  let result = Array(n);   // Array to store the squared elements
 
-    ...
-```
+  // Iterate from the end of the result array
+  for (let i = n - 1; i >= 0; i--) {
 
-</details>
+    const leftSquare = nums[left] ** 2;   // Square the element at the left pointer
+    const rightSquare = nums[right] ** 2;   // Square the element at the right pointer
 
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">IF-ELSE STATEMENT</span>
-</summary>
-
-- used to compare values of current `leftVal` and `rightVal`. 
-- Add larger of the two to the `result` at `resultIndex`
-
-```js
-    ...
-
-    if(leftVal < rightVal) {
-      result[resultIndex] = rightVal;
-      RIGHT --
-    } else { 
-      result[resultIndex] = leftVal;
-      LEFT ++
-    }
-    ...
-```
-
-</details>
-
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">RETURN</span>
-</summary>
-
- - Decrement the `resultIndex` and return `result`
-
-```js
-      ...
-    resultIndex--;
-    }
-  return result
-}
-
-```
-
-
-</details>
-
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">COMPLETE</span>
-</summary>
-
-```js
-var sortedSquares = function(nums) {
-  // SETUP VARIABLES 
-  // result array with same length, all zeros
-  const result = new Array(nums.length).fill(0);
-  let RIGHT = nums.length - 1;
-  let LEFT = 0;
-  let resultIndex = nums.length - 1;
-
-  // WHILE LOOP
-  // check while left is <= right we have to check which is bigger
-  // the set values for leftVal and rightVal = the squared values
-  while (LEFT <= RIGHT) {
-    let leftVal = Math.pow(nums[LEFT], 2);
-    let rightVal = Math.pow(nums[RIGHT], 2);
-    // IF ELSE STATEMENT 
-    // Then as long as leftVal < rightVal, the resultIndex = rightVal, 
-    // otherwise = leftVal
-    if (leftVal < rightVal) {
-      result[resultIndex] = rightVal;
-      RIGHT--;
+    // Compare the squared elements and assign the larger value to the result array
+    if (leftSquare > rightSquare) {
+      result[i] = leftSquare;   // Assign the left squared element to the result array
+      left++;   // Move the left pointer to the right
     } else {
-      result[resultIndex] = leftVal;
-      LEFT++;
-    }
-    // decremeent resultIndex and return
-    resultIndex--;
-  }
-  // RETURN 
-  return result;
-}
-```
-
-</details>
-
-</details>
-
-<details>
-<summary>
-<span style="font-size:2rem; color:green;">Triplets that sum to zero (medium)</span>
-</summary>
-Two methods: 
-
-
-<details>
-<summary>
-<span style="font-size:1.5rem;">BRUTE FORCE</span>
-</summary>
-
-Nested for loops that find all triplets and return one that add to 0.
-
-```js
-var threeSum = function(nums) {
-  result= [];
-  nums = nums.sort((a, b) => a - b )
-
-  for (let i = 0; i < nums.length; i++){
-    if (i > 0 && nums[i] == nums[i-1]) continue;
-    for (let j = i+1; j < nums.length, j++){
-      if (j > i + 1 && nums[j] == nums[j-1]) continue;
-      for (let k = j + 1; k < nums.length, k++){
-        if (k > j + 1 && nums[k] == nums[k-1]) continue;
-        if(nums[1] + nums[j] + nums[k] = 0){
-          result.push([nums[1], nums[j], nums[k]])
-        }
+      result[i] = rightSquare;   // Assign the right squared element to the result array
+      right--;   // Move the right pointer to the left
     }
   }
-  return result
-}
+
+  return result;   // Return the array with the squared elements
+};
+
+// Test the function
+const sortedArray = [-4, -2, -1, 0, 3, 5, 7];
+const squaredArray = squareSortedArray(sortedArray);
+console.log(squaredArray);  // Output: [0, 1, 4, 9, 16, 25, 49]
 ```
 
-</details>
+The `squareSortedArray` function squares each element of the given sorted array using two pointers (`left` and `right`). The pointers move from opposite ends of the array towards the middle, comparing the squares of the elements and storing them in the `result` array in descending order.
 
-<details>
-<summary>
-<span style="font-size:1.5rem;">Two Iterators</span>
-</summary>
-
-<details>
-<summary style="padding-left:1rem;">
-<span style="font-size:1.5rem;">SETUP</span>
-</summary>
-
-Function and two variables, `result` and sorted `nums`
-
-```js
-var threeSum = function(nums) {
-  result= [];
-  nums = nums.sort((a, b) => a - b);
-
-...
-```
+By utilizing the Two Pointers pattern, the function achieves a time complexity of O(n) and a space complexity of O(n), where `n` is the length of the input array.
 
 </details>
 
 <details>
-<summary style="padding-left:1rem;">
-<span style="font-size:1.5rem;">FOR LOOP</span>
-</summary>
- 
-- setup loop and start with if statement to eliminate duplicates
-- three more variables: `TARGET` to make `sum`=0, `LEFT` at one more than `i`, and `RIGHT` at last index of `nums`
+<summary><strong>Finding Triplets that Sum to Zero</strong></summary>
 
-```js
-...
+Given an array of integers, you need to find all unique triplets in the array that sum up to zero.
 
-  for (let i = 0; i < nums.length; i++){
-    if (i > 0 && nums[i] === nums[i-1]) continue;
-    const TARGET = 0 - nums[i];
-    let LEFT = i + 1;
-    let RIGHT = nums.length - 1;
+```javascript
+/**
+ * Finding Triplets that Sum to Zero
+ * @param {number[]} nums - Array of integers
+ * @returns {number[][]} - Array of unique triplets that sum up to zero
+ */
+const threeSum = function(nums) {
+  const result = [];   // Array to store the triplets
+  const n = nums.length;   // Length of the input array
+  nums.sort((a, b) => a - b);   // Sort the input array in ascending order
 
-...
-```
+  // Iterate through the array, skipping the last two elements as we need at least three elements to form a triplet
+  for (let i = 0; i < n - 2; i++) {
 
-</details>
-
-<details>
-<summary style="padding-left:1rem;">
-<span style="font-size:1.5rem;">WHILE LOOP</span>
-</summary>
-
-   - one more variable, `sum` of two indices LEFT and RIGHT
-   - WHILE LOOP with if if-else and else statements for three scenarios
-   - decr / incr bounds OR if equal
-     - push to result, check for duplicates on both sides, incr/decr 
-
-```js
-...
-    while(RIGHT > LEFT) {
-      const sum = nums[LEFT] + nums[RIGHT]
-      if(sum > target) {
-        //eliminate last element and decr RIGHT
-        RIGHT--;
-      } else if (sum < target){
-        // eliminate first element and inc LEFT 
-        LEFT++;
-      } else {
-        // push the results and use while loops to skip duplicates
-        result.push([nums[i], nums[LEFT], nums[RIGHT]]);
-        while(nums[LEFT] === nums[LEFT + 1]) LEFT++;
-        while(nums[RIGHT] === nums[RIGHT + 1]) RIGHT--;
-        LEFT++;
-        RIGHT--;
-      }
-    }
-...
-```
-
-
-</details>
-
-<details>
-<summary style="padding-left:1rem;">
-<span style="font-size:1.5rem;">RETURN</span>
-</summary>
-
-```js
-...
-
-  return result
-}
-```
-
-</details>
-
-<details>
-<summary style="padding-left:1rem;">
-<span style="font-size:1.5rem;">COMPLETE</span>
-</summary>
-
-```js
-var threeSum = function(nums) {
-  result= [];
-  nums = nums.sort((a, b) => a - b);
-
-  for (let i = 0; i < nums.length; i++){
-    if (i > 0 && nums[i] === nums[i-1]) continue;
-    const TARGET = 0 - nums[i];
-    let LEFT = i + 1;
-    let RIGHT = nums.length - 1;
-    // So sum = nums[LEFT] + nums[RIGHT]
-    // Case 1: sum > TARGET
-    // Case 2: sum < TARGET
-    // Case 3: sum = TARGET = solution!
-
-    // Iterate through and eliminate when not equal
-    // start with while loop condition when R > L, otherwise we have less than 2 elements
-    while(RIGHT > LEFT) {
-      const sum = nums[LEFT] + nums[RIGHT]
-      if(sum > target) {
-        //eliminate last element and decr RIGHT
-        RIGHT--;
-      } else if (sum < target){
-        // eliminate first element and inc LEFT 
-        LEFT++;
-      } else {
-        // push the results and use while loops to skip duplicates
-        result.push([nums[i], nums[LEFT], nums[RIGHT]]);
-        while(nums[LEFT] === nums[LEFT + 1]) LEFT++;
-        while(nums[RIGHT] === nums[RIGHT + 1]) RIGHT--;
-        LEFT++;
-        RIGHT--;
-      }
-    }
-  return result
-}
-
-```
-
-
-</details>
-
-</details>
-
-</details>
-
-
-
-
-
-<details>
-<summary>
-<span style="font-size:2rem; color:green;">Comparing strings that contain backspaces (medium)</span>
-</summary>
-
-<details>
-<summary>
-<span style="font-size:2rem;">Iterators Solution</span>
-</summary>
-
-Psuedocode:
-1. Create pointer for `s` and bind it to the length of `s - 1`
-2. Create pointer for `t` and bind it to the length of `t - 1`
-3. WHILE LOOP 
-    - CONDITOIN: `sPointer` OR `tPointer` >= 1
-    - Check if value at `s`[ `sPointer` ] is a hashtag
-      - if it is, create `SKIP` variable and assign it to 2
-      - WHILE LOOP condition: `SKIP` > 0
-        - Decr sPointer and `SKIP` by 1
-        - if current value is `#`
-          - incr `SKIP` by 2
-        - continue
-      - REPEAT FOR `t`
-      - if pointer values != return false, else decr both pointers
-    - Return true
-
-
-```js
-// 1. Create pointer for `s` and bind it to the length of `s - 1`
-// 2. Create pointer for `t` and bind it to the length of `t - 1`
-var backspaceCompare = function(s, t) => {
-  let sPointer = s.length - 1;
-  let tPointer = t.length - 1;
-
-// 3. WHILE LOOP 
-//     - CONDITOIN: sPointer OR tPointer >= 1
-  while(sPointer >= 0 || tPointer >= 0) {
-//     - Check if value at s[ sPointer ] is a hashtag
-//       - if it is, create skip variable and assign it to 2
-    if(s[sPointer] === '#') {
-      let SKIP = 2;
-//       - WHILE LOOP condition: skip > 0
-//         - Decr sPointer and skip by 1
-      while (SKIP > 0) {
-        SKIP--;
-        sPointer--;
-//         - if current value is `#`
-//           - incr skip by 2
-        if(s[sPointer] === '#') {
-          SKIP += 2;
-        }
-      }
-//         - continue
-    continue;
-    }
-    if(t[tPointer] === '#') {
-      let SKIP = 2;
-      while(SKIP > 0){
-        SKIP--;
-        tPointer--;
-        if(t[tPointer] === '#') {
-          skip += 2;
-        }
-      }
+    // Skip the current iteration if the current number is equal to the previous number to avoid duplicates
+    if (i > 0 && nums[i] === nums[i - 1]) {
       continue;
     }
-  //       - if pointer values != return false, else decr both pointers
 
-    if(s[sPointer] != t[tPointer]) {
-      return false; 
+    let left = i + 1;   // Pointer for the element to the right of the current number
+    let right = n - 1;   // Pointer for the element at the end of the array
+
+    // Move the left and right pointers towards each other
+    while (left < right) {
+      const sum = nums[i] + nums[left] + nums[right];   // Calculate the sum of the three elements
+
+      // If the sum is zero, we found a triplet that adds up to zero
+      if (sum === 0) {
+        result.push([nums[i], nums[left], nums[right]]);   // Add the triplet to the result array
+
+        // Skip the elements with the same value to avoid duplicates in the result
+        while (left < right && nums[left] === nums[left + 1]) {
+          left++;
+        }
+
+         // Skip the elements with the same value to avoid duplicates in the result
+        while (left < right && nums[right] === nums[right - 1]) {
+          right--;
+        }
+
+        left++;   // Move the left pointer to the right
+        right--;   // Move the right pointer to the left
+      }
+
+      // If the sum is less than zero, we need a larger element, so we move the left pointer to the right
+      else if (sum < 0) {
+        left++;
+      }
+
+      // If the sum is greater than zero, we need a smaller element, so we move the right pointer to the left
+      else {
+        right--;
+      }
     }
-    sPointer--;
-    tPointer--;
   }
-//     - Return true
-  return true;
-}
+
+  return result;   // Return the array of triplets with a sum of 0
+};
+
+
+// Test the function
+const nums = [-1, 0, 1, 2, -1, -4];
+const triplets = threeSum(nums);
+console.log(triplets);  // Output: [[-1, -1, 2], [-1, 0, 1]]
 ```
 
+
+The `threeSum` function finds unique triplets in the given array `nums` that sum up to zero. It utilizes the Two Pointers pattern to efficiently search for the triplets. The function starts with a sorted array, and with each iteration, it moves two pointers (`left` and `right`) towards the center until it finds a triplet that sums up to zero.
 </details>
 
-</details>
+<details>
+<summary><strong>Comparing Strings that Contain Backspaces</strong></summary>
 
 
+Given two strings `S` and `T`, you need to compare them after processing any backspaces. A backspace character "#" means to remove the previous character.
+
+```javascript
+/**
+ * Comparing Strings that Contain Backspaces
+ * @param {string} S - The first string
+ * @param {string} T - The second string
+ * @returns {boolean} - True if the strings are equal after processing backspaces, False otherwise
+ */
+const backspaceCompare = function(S, T) {
+  function processString(str) {
+    const result = [];
+
+    for (const char of str) {
+      if (char === "#") {
+        result.pop(); // Remove the last element from the result array if the character is a backspace
+      } else {
+        result.push(char); // Push the character into the result array if it is not a backspace
+      }
+    }
+    return result.join("");   // Join the characters in the array to form the final processed string
+  }
+
+  const processedS = processString(S);   // Process the string S
+  const processedT = processString(T);   // Process the string T
+
+  return processedS === processedT;   // Compare the processed strings for equality
+};
+
+// Test the function
+const S = "ab#c";
+const T = "ad#c";
+console.log(backspaceCompare(S, T));  // Output: true
+
+const X = "ab##";
+const Y = "c#d#";
+console.log(backspaceCompare(X, Y));  // Output: true
+
+const P = "a##c";
+const Q = "#a#c";
+console.log(backspaceCompare(P, Q));  // Output: true
+
+const M = "a#c";
+const N = "b";
+console.log(backspaceCompare(M, N));  // Output: false
+```
+
+The `backspaceCompare` function compares two strings `S` and `T` after processing backspaces. It iterates through each string, processes the backspaces, and stores the resulting strings. Finally, it compares the processed strings to determine if they are equal.
 </details>

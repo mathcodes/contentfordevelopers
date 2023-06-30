@@ -33,7 +33,8 @@ function PlatformCard() {
 
   return (
     // <div className="grid justify-center grid-cols-1 mt-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
-    <div className="flex flex-wrap">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 space--between">
+
       {topics.map((topic, index) => (
         <React.Fragment key={topic.id}>
 

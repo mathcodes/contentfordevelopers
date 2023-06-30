@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.items-start {
+  align-items: inherit;
+}
 /* Carousel CSS */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";

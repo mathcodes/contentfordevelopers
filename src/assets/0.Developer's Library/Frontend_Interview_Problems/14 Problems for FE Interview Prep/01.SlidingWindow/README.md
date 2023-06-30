@@ -1,208 +1,356 @@
 # Sliding Window
 
-A pattern used when given an `array` or `linked list`. Used when we need to perform a required operation on a specific window size. 
+This pattern is used when given an array or linked list, and it helps when we need to perform a required operation on a specific window size.
 
-<img src="./slidingwindow.png" />
+![Sliding Window](./slidingwindow.png)
 
-# To identify the Sliding Window:
-- Input is a linear data structure (array, linked list, or a string)
-- Goal is to find the longest/shortest subarray, substring, or desired value
+## Identifying the Sliding Window
+- The input is a linear data structure, such as an array, linked list, or string.
+- The goal is to find the longest/shortest subarray, substring, or desired value.
 
-# Problems that can be solved using the Sliding Window:
+## Problems that can be solved using the Sliding Window:
 
 <details>
-<summary>
-<span style="font-size:1.5rem;">Maximum sum subarray of size ‘K’ (easy)
-</span>
-</summary>
+<summary><strong>Maximum sum subarray of size 'K' (Easy)</strong></summary>
 
-```js
-function maxSumSubarray(arr, num) {
-  // variables
-  let maxSum = 0
-  let maxTemporarySum = 0
-  
-  // edge cases
-  if (arr.length < num) return null
+```python
+def maxSumSubarray(arr, num):
+  # Variables
+  maxSum = 0
+  maxTemporarySum = 0
 
-  // first loop
-  for (let i = 0; i < num; i++) {
-    maxSum += arr[i]
-  }
+  # Edge cases
+  if arr.length < num:
+      return None
 
-  // store the first sum
+  # First loop
+  for i in range(num):
+      maxSum += arr[i]
+
+  # Store the first sum
   maxTemporarySum = maxSum
 
-  // second loop
-  for (let i = num; i < arr.length; i++) {
-    maxTemporarySum += - arr[i - num] + arr[i]
-    maxSum = Math.max(maxSum, maxTemporarySum)
-  }
+  # Second loop
+  for i in range(num, len(arr)):
+      maxTemporarySum += - arr[i - num] + arr[i]
+      maxSum = max(maxSum, maxTemporarySum)
 
-  // return the max sum
+  # Return the maximum sum
   return maxSum
-}
 
-console.log(maxSumSubarray([1, 2, 5, 2, 8, 1, 5], 2)) // 10
-console.log(maxSumSubarray([1, 2, 5, 2, 8, 1, 5], 4)) // 17
-console.log(maxSumSubarray([4, 2, 1, 6], 1)) // 6
-console.log(maxSumSubarray([4, 2, 1, 6, 2], 4)) // 13
+print(maxSumSubarray([1, 2, 5, 2, 8, 1, 5], 2))  # 10
+print(maxSumSubarray([1, 2, 5, 2, 8, 1, 5], 4))  # 17
+print(maxSumSubarray([4, 2, 1, 6], 1))          # 6
+print(maxSumSubarray([4, 2, 1, 6, 2], 4))       # 13
 
-// Time Complexity: O(n)
-// Space Complexity: O(1)
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 ```
 
+
+Consider the diagram for further understanding:
+```
+Input:
+        +---+---+---+---+---+---+---+---+---+---+
+Array:  | 2 | 1 | 5 | 1 | 3 | 2 | 1 | 7 | 9 | 1 |
+        +---+---+---+---+---+---+---+---+---+---+
+
+K: 4
+
+Output:
+          +---+---+---+---+
+Subarray: | 5 | 1 | 3 | 2 |
+          +---+---+---+---+
+
+Steps:
+1. Initialize sum, maxSum
+2. Calculate initial window sum
+3. Slide the window, updating window sum
+4. Check if current window sum is greater than maxSum
+5. Update maxSum if necessary
+6. Slide the window until the end of the array
+
+Details:
+1.
+         +---+---+---+---+---+---+---+---+---+---+
+Array:   | 2 | 1 | 5 | 1 | 3 | 2 | 1 | 7 | 9 | 1 |
+         +---+---+---+---+---+---+---+---+---+---+
+sum: 0, maxSum: 0
+
+2.
+         +---+---+
+Window:  | 2 | 1 |
+         +---+---+
+sum: 3, maxSum: 3
+
+3.
+         +---+---+---+---+
+Window:  | 2 | 1 | 5 | 1 |
+         +---+---+---+---+
+sum: 9, maxSum: 9
+
+4.
+         +---+---+---+---+
+Window:  | 2 | 1 | 5 | 1 |
+         +---+---+---+---+
+sum: 9, maxSum: 9
+
+5.
+         +---+---+---+---+
+Window:  | 1 | 5 | 1 | 3 |
+         +---+---+---+---+
+sum: 10, maxSum: 10
+
+6.
+         +---+---+---+---+
+Window:  | 5 | 1 | 3 | 2 |
+         +---+---+---+---+
+sum: 11, maxSum: 11
+
+Final:
+          +---+---+---+---+
+Subarray: | 5 | 1 | 3 | 2 |
+          +---+---+---+---+
+
+
+```
 </details>
-
- 
-
 <details>
-<summary>
-<span style="font-size:2rem; color:green;">Longest substring with ‘K’ distinct characters (<a href="https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/">medium</a>)</span>
-</summary>
+<summary><strong>Longest substring with 'K' distinct characters (Medium)</strong></summary>
 
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">SETUP VARIABLES</span>
-</summary>
-
-```js
+```javascript
 var lengthOfLongestSubstringKDistinct = function(s, k) {
-  // SETUP VARIABLES
+  // Setup Variables
   let START = 0;
   const SOFAR = new Map();
   let MAX = 0;
 
-```
-
-</details>
-
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">FOR LOOP, rightCHAR</span>
-</summary>
-
-```js
-  // ITERATE OVER s, our string, set END = 0
-  for (let END = 0; END < s.length; END++){
-    // pull out our rightCHAR
+  // Iterate over s, our string, and set END = 0
+  for (let END = 0; END < s.length; END++) {
+    // Get rightCHAR
     let rightCHAR = s[END];
 
-```
+    // If rightCHAR is not in SOFAR, set it to 1
+    if (!SOFAR.get(rightCHAR)) {
+      SOFAR.set(rightCHAR, 1);
+    }
+    // If rightCHAR is in SOFAR, increment it by 1
+    else {
+      SOFAR.set(rightCHAR, SOFAR.get(rightCHAR) + 1);
+    }
 
-</details>
-
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">IF-ELSE</span>
-</summary>
-
-```js
-    // if our Map does not contain the rightCHAR, then we want to set it to 1
-    if(!SOFAR.get(rightCHAR)) SOFAR.set(rightCHAR, 1);
-    // if it does contain the rightCHAR, then we want to increment it by 1
-    else SOFAR.set(rightCHAR, SOFAR.get(rightCHAR) + 1);
-```
-
-</details>
-
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">WHILE, leftCHAR</span>
-</summary>
-
-```js
-    while(SOFAR.size > k) {
-      // so lets get our leftCHAR which = s[START]
+    // Calculate maximum window size
+    while (SOFAR.size > k) {
       let leftCHAR = s[START];
 
-```
-
-</details>
-
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">IF ELSE, INCR START</span>
-</summary>
-
-```js
-      //SO IF > 1 leftCHAR we want to decrement (or DELETE) followed by increment our window START
-      if(SOFAR.get(leftCHAR) > 1) SOFAR.set(leftCHAR, SOFAR.get(leftCHAR) - 1);
-      else SOFAR.delete(leftCHAR);
+      if (SOFAR.get(leftCHAR) > 1) {
+        SOFAR.set(leftCHAR, SOFAR.get(leftCHAR) - 1);
+      } else {
+        SOFAR.delete(leftCHAR);
+      }
 
       START++;
     }
-```
 
-</details>
-
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">CALC MAX, RETURN</span>
-</summary>
-
-```js
-    // calculate MAX using Math.max
-    MAX = Math.max(MAX, (END - START) + 1)
+    MAX = Math.max(MAX, (END - START) + 1);
   }
-  // return MAX
-  return MAX;
-}
-```
 
-</details>
-
-<details>
-<summary  style="padding-left:1rem;">
-<span style="font-size:1.5rem;">COMPLETE</span>
-</summary>
-
-```js
-var lengthOfLongestSubstringKDistinct = function(s, k) {
-  // SETUP VARIABLES
-  let START = 0;
-  const SOFAR = new Map();
-  let MAX = 0;
-
-  // ITERATE OVER s, our string, set END = 0
-  for (let END = 0; END < s.length; END++){
-    // pull out our rightCHAR
-    let rightCHAR = s[END];
-
-    // if our Map does not contain the rightCHAR, then we want to set it to 1
-    if(!SOFAR.get(rightCHAR)) SOFAR.set(rightCHAR, 1);
-    // if it does contain the rightCHAR, then we want to increment it by 1
-    else SOFAR.set(rightCHAR, SOFAR.get(rightCHAR) + 1);
-
-    // NOW check the size (# of keys we have in SOFAR) and while it is > k
-    // THEN we have to decrement the START and move it to the right one
-    while(SOFAR.size > k) {
-      // so lets get our leftCHAR which = s[START]
-      let leftCHAR = s[START];
-
-      //SO IF > 1 leftCHAR we want to decrement (or DELETE) followed by increment our window START
-      if(SOFAR.get(leftCHAR) > 1) SOFAR.set(leftCHAR, SOFAR.get(leftCHAR) - 1);
-      else SOFAR.delete(leftCHAR);
-
-      START++;
-    }
-    // calculate MAX using Math.max
-    MAX = Math.max(MAX, (END - START) + 1)
-  }
-  // return MAX
+  // Return the maximum window size
   return MAX;
 }
 
 // Test Cases
-lengthOfLongestSubstringKDistinct('atatrasrafr', 3) // returns 6
-lengthOfLongestSubstringKDistinct('atatrasrafr', 4) // returns 9
+console.log(lengthOfLongestSubstringKDistinct('atatrasrafr', 3));  // Returns 6
+console.log(lengthOfLongestSubstringKDistinct('atatrasrafr', 4));  // Returns 9
+
+// Time Complexity: O(n)
+// Space Complexity: O(k)
+```
+
+Consider the diagram for further understanding:
 
 ```
+1.
+  +---+
+  | a |   |   |   |
+  +---+
+substring window: 'a', K = 1
+
+2.
+  +---+---+---+---+
+  | a | b | c | b |
+  +---+---+---+---+
+substring window: 'abc', K = 3 (maximum valid window)
+
+3.
+  +---+---+---+---+---+---+---+---+---+---+
+  | a | b | c | b | c | a | d | a | e | f |
+  +---+---+---+---+---+---+---+---+---+---+
+substring window: 'abc', K = 3 (maximum valid window)
+
+4.
+  +---+---+---+---+---+---+
+  |   |   | c | a | d | a |
+  +---+---+---+---+---+---+
+substring window: 'cada', K = 3 (maximum valid window)
+
+5.
+  +---+---+
+  | a | d |
+  +---+---+
+substring window: 'ad', K = 2
+
+Final:
+  +---+---+---+---+---+---+
+  | b | c | a | d | a | e |
+  +---+---+---+---+---+---+
+Longest substring with 'K' distinct characters: 'bcadae'
+```
 </details>
+<details>
 
+<summary><strong>String Anagrams (Hard)</strong></summary>
+
+The String Anagrams problem involves finding all anagrams of a given pattern in a given string. An anagram is a rearrangement of the letters of one word or phrase to form a different word or phrase.
+
+To solve this problem, we can use the Sliding Window technique along with a HashMap to track the frequency of characters in the pattern and the sliding window of the input string. We can iterate through the input string using a sliding window of the same size as the pattern and check if the frequency maps match.
+
+Here's the JavaScript solution using the Sliding Window technique and a HashMap:
+
+```javascript
+/**
+ * String Anagrams
+ * @param {string} str - The input string
+ * @param {string} pattern - The pattern string
+ * @returns {number[]} - Array of starting indices of anagrams in the string
+ */
+const findAnagrams = function(str, pattern) {
+  const resultIndices = [];   // Array to store the starting indices of anagrams
+  const charFrequency = {};   // Object to store the frequency of characters in the pattern
+
+  let matched = 0;   // Counter for matched characters
+  let windowStart = 0;   // Start of the sliding window
+
+  // Iterate through the pattern to track the frequency of characters
+  for (let i = 0; i < pattern.length; i++) {
+    const char = pattern[i];   // Get the current character from the pattern
+
+    if (!(char in charFrequency)) {
+      charFrequency[char] = 0;   // If the character is not in the frequency object, initialize its count to zero
+    }
+
+    charFrequency[char] += 1;   // Increment the frequency count of the character
+  }
+
+  // Slide the window through the input string
+  for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
+    const rightChar = str[windowEnd];   // Get the current character from the input string
+
+    // Update the frequency count and matched counter
+    if (rightChar in charFrequency) {
+      charFrequency[rightChar] -= 1;   // Decrement the frequency count of the character
+
+      if (charFrequency[rightChar] === 0) {
+        matched += 1;   // If the frequency count becomes zero, a character is matched
+      }
+    }
+
+    // Check if all characters are matched and add the start index to the result array
+    if (matched === Object.keys(charFrequency).length) {
+      resultIndices.push(windowStart);
+    }
+
+    // Slide the window by moving the start index and updating the frequency count and matched counter
+    if (windowEnd >= pattern.length - 1) {
+      const leftChar = str[windowStart];   // Get the character at the start index
+      windowStart += 1;   // Move the start index to the right
+
+      if (leftChar in charFrequency) {
+        // Update the frequency count and matched counter for the character at the start index
+        if (charFrequency[leftChar] === 0) {
+          matched -= 1;   // If the frequency count becomes zero, a character is unmatched
+        }
+        charFrequency[leftChar] += 1;   // Increment the frequency count of the character
+      }
+    }
+  }
+
+  return resultIndices;   // Return the array of starting indices of anagrams
+};
+
+
+// Test the function
+const str = "ppqp";
+const pattern = "pq";
+const anagramIndices = findAnagrams(str, pattern);
+console.log(anagramIndices);  // Output: [1, 2]
+
+
+
+```
+
+Consider the diagram for further understanding:
+```
+Input:
+         +---+---+---+---+---+---+---+---+---+---+
+String:  | p | p | q | p | a | b | c | q | a | b |
+         +---+---+---+---+---+---+---+---+---+---+
+
+Pattern: "pq"
+
+Output:
+          +---+---+
+Anagrams: | p | q |
+          +---+---+
+
+Steps:
+1. Initialize frequency map for the pattern
+2. Slide the window through the string
+   a. Decrease the frequency of the outgoing character
+   b. Increase the frequency of the incoming character
+   c. Check if the window contains all characters of the pattern
+3. Add anagram start index to the result
+
+Details:
+1.
+         +---+---+---+---+---+---+---+---+---+---+
+Pattern: | p | q |   |   |   |   |   |   |   |   |
+         +---+---+---+---+---+---+---+---+---+---+
+Map: { p: 1, q: 1 }
+
+2a.
+         +---+---+---+---+---+---+---+---+---+---+
+Window:  | p | p |   |   |   |   |   |   |   |   |
+         +---+---+---+---+---+---+---+---+---+---+
+Map: { p: 0, q: 1 }
+
+2b.
+         +---+---+---+---+---+---+---+---+---+---+
+Window:  | p | p | q |   |   |   |   |   |   |   |
+         +---+---+---+---+---+---+---+---+---+---+
+Map: { p: 0, q: 0 }
+
+2c.
+         +---+---+---+---+---+---+---+---+---+---+
+Window:  | p | p | q |   |   |   |   |   |   |   |
+         +---+---+---+---+---+---+---+---+---+---+
+Map: { p: 0, q: 0 } -> Anagram found!
+
+3.
+         +---+---+---+---+---+---+---+---+---+---+
+Window:  |   | p | q | p | a | b | c | q | a | b |
+         +---+---+---+---+---+---+---+---+---+---+
+Map: { p: 0, q: 0 } -> Anagram found!
+
+4.
+         +---+---+---+---+---+---+---+---+---+---+
+Window:  |   |   | p | q | p | a | b | c | q | a |
+         +---+---+---+---+---+---+---+---+---+---+
+Map: { p: 1, q: 0 }
+
+Final:
+          +---+---+
+Anagrams: | p | q |
+          +---+---+
+```
 </details>
-
-
-
-
-- String anagrams (hard)
