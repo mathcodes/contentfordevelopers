@@ -1,4 +1,9 @@
-import * as React from 'react';
+import React from 'react';
+import mdxPages from '../components/mdxpages/mdxPages.mdx';
+import MDXContent from '../components/mdxpages/mdxContent.mdx'; // Import the MDX file
+import Grid from '../components/grid/Grid';
+
+
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import { yellow, red, green } from '@mui/material/colors';
@@ -12,7 +17,7 @@ import "./pages.css";
 import TailwindTable from '../components/TailwindTable/TailwindTable';
 import { GiGraduateCap } from 'react-icons/gi';
 
-export default function PageTemplate({ title, description, icon, point1, point2, point3, link }) {
+export default function PageTemplate({ cards, title, description, icon, point1, point2, point3, link }) {
 
 	return (
 
@@ -41,6 +46,9 @@ export default function PageTemplate({ title, description, icon, point1, point2,
                 <h3 className="px-6">Under Construction!!</h3>
             </div>
         </div>
+        <h1 className="text-2xl font-semibold mb-4 p-5">Topics</h1>
+        <Grid data={cards} link={link}/>
+
     </div>
     <Footer />
 </div>

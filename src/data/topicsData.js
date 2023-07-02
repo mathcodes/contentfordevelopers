@@ -19,9 +19,9 @@ export const topics = [
     id: 0,
     title: "Developer's Library",
     description: "Resources for learning HTML, CSS, JavaScript, React, Angular, Typescript.... you name it. It's all here, or coming with your help!",
-    point1: "Consider this to be your Citadel, Enclave, Symposium, Refuge.",
-    point2: "A place to learn, grow, and share. Your Pinnacle, Arcanum, your Confluence.",
-    point3: "Your Developer's Library.",
+    point1: "A place for developers to learn and grow",
+    point2: "Share your knowledge, or learn from others",
+    point3: "Be a part of a community and build up that resume",
     link: "/DevelopersLibrary",
     icon: GiGraduateCap
   },

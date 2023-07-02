@@ -2,7 +2,7 @@ import Homepage from "./pages/Homepage";
 import LeetCode from "./pages/LeetCode";
 // import CodeWars from "./pages/CodeWars";
 import ItemPage from "./pages/ItemPage";
-import Snippets from "./pages/Snippets";
+import OnlineTools from "./pages/OnlineTools";
 // import Navbar from './components/navbar/Navbar';
 import Header from "./components/header/Header";
 import DevelopersLibrary from "./pages/DevelopersLibrary";
@@ -90,7 +90,7 @@ function App() {
             icon={topics[5].icon}
             link={topics[5].link}/>}
             />
-          <Route path="/snippets" element={<Snippets />} />
+          <Route path="/OnlineTools" element={<OnlineTools />} />
           <Route path="/itempageLC" element={<ItemPage sol="lc" />} />
           <Route path="/itempageCW" element={<ItemPage sol="cw" />} />
           <Route path="/itempageHR" element={<ItemPage sol="cw" />} />

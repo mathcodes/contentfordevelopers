@@ -1,7 +1,10 @@
-/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.min-h-screen {
+  min-height: auto;
+}
 
 .items-start {
   align-items: inherit;

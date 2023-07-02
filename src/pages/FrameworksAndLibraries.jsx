@@ -13,7 +13,7 @@ import TailwindTable from '../components/TailwindTable/TailwindTable';
 import { VscLibrary } from 'react-icons/vsc';
 
 
-export default function PageTemplate({ title, description, Icon, point1, point2, point3, link }) {
+export default function FrameworksAndLibraries({ title, description, Icon, point1, point2, point3, link }) {
 
 	return (
 

@@ -1,49 +1,91 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import { yellow, red, green } from '@mui/material/colors';
-import { Contributor } from "../components/contributor/Contributor";
-import Footer from "../components/footer/Footer";
-import Table from "../components/table/Table";
-import NavBar from "../components/navbar/Navbar";
-import { codeWarsData } from '../data/codeWars.js';
-import LinkIcon from '@mui/icons-material/Link';
-import "./pages.css";
-import TailwindTable from '../components/TailwindTable/TailwindTable';
-import { GiGraduateCap } from 'react-icons/gi';
+import { useState } from 'react';
+import PageTemplate from './PageTemplate';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaYoutube, FaDatabase } from 'react-icons/fa';
+import { BsLayoutWtf, BsStack, BsYoutube } from 'react-icons/bs';
+import FELinks from '../components/links/FELinks';
 
-export default function PageTemplate({ title, description, icon, point1, point2, point3, link }) {
+export default function DevelopersLibrary({ title, description, icon, point1, point2, point3 }) {
+    const [showFELinks, setShowFELinks] = useState(false);
 
-	return (
+    const topic = "Frontend";
+    const link = FELinks;
+    const FEData = [
+        {
+            title: 'Transcriptions To Text',
+            description: "Grab the transcript from, say YouTube, and paste it into this tool to get clean, usable text",
+            icon: BsYoutube,
+            iconColor: "#ff0000",
+        },
+    ]
+    const cards = [
+        {
+            title: 'Frontend',
+            description: "Links to today's best frontend development resources",
+            icon: BsLayoutWtf,
+            iconColor: "#db11a9",
+        },
+        {
+            title: 'Backend',
+            description: "Links to today's best backend development resources",
+            icon: FaDatabase,
+            iconColor: "#5a67ec",
+        },
+        {
+            title: 'HTML',
+            description: "Links to today's best HTML resources",
+            icon: FaHtml5,
+            iconColor: "#dc4a24",
+        },
+        {
+            title: 'CSS',
+            description: "Links to today's best CSS resources",
+            icon: FaCss3,
+            iconColor: "#244bdd",
+        },
+        {
+            title: 'JavaScript',
+            description: "Links to today's best JavaScript resources",
+            icon: FaJs,
+            iconColor: "#e8d44d",
+        },
+        {
+            title: 'React',
+            description: "Links to today's best React resources",
+            icon: FaReact,
+            iconColor: "#61dafb",
+
+        },
+        {
+            title: 'YouTube Tutorials',
+            description: "Links to today's best YouTube tutorials",
+            icon: FaYoutube,
+            iconColor: "#ff0000",
+        },
+        {
+            title: 'Tools',
+            description: "Links to today's best tools",
+            icon: BsStack,
+            iconColor: "#d35400",
+        }
+    ]
 
 
-<div className='leetCode text-blue dark:text-white'>
-    <NavBar />
-    <div className="container mx-auto px-4 sm:px-8 min-h-screen">
-        <div className='flex items-left justify-center flex-col min-h-100 py-5 px-5'>
-            <h1 className="text-3xl font-bold">{title}</h1>
-            <p className="mt-4">{description}</p>
-            <ul className="mt-4 flex flex-col space-y-2">
-                <li>{point1}</li>
-                <li>{point2}</li>
-                <li>{point3}</li>
-            </ul>
-            <a href={link} className="mt-4 text-blue-500 dark:text-blue-300 hover:underline flex items-center space-x-2">
-                <span>Watch now</span>
-                <GiGraduateCap className="text-xl" />
-            </a>
-        </div>
-        <div className="flex px-0">
-            <div className="w-1/3 px-6">
-                <img src="/CforD2.png" alt="LeetCode Logo" className="w-4" />
-            </div>
-            <div className="w-2/3 px-6">
-                <h3 className="px-6">Under Construction!!</h3>
-            </div>
-        </div>
-    </div>
-    <Footer />
-</div>
-
-	);
+return (
+        <>
+            {showFELinks} ? (
+            <>
+                {cards.map((card) => (
+                    <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg shadow-lg p-6 m-4">
+                        <PageTemplate topic={topic} cards={cards} title={title} description={description} icon={icon} point1={point1} point2={point2} point3={point3} link={link} />
+                        <h1 className="text-2xl font-semibold mb-4 p-5">Topics</h1>
+                        <div className={"text-2xl font-semibold mb-4 p-5" + (cards.iconColor)}></div>
+                    </div>
+                ))}
+                    </>
+                ) : (
+                <FELinks data={FEData} color={(cards.iconColor)} />
+                )
+            </>
+            );
 }

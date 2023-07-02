@@ -5,6 +5,7 @@ This pattern is used when given an array or linked list, and it helps when we ne
 ![Sliding Window](./slidingwindow.png)
 
 ## Identifying the Sliding Window
+
 - The input is a linear data structure, such as an array, linked list, or string.
 - The goal is to find the longest/shortest subarray, substring, or desired value.
 
@@ -47,8 +48,8 @@ print(maxSumSubarray([4, 2, 1, 6, 2], 4))       # 13
 # Space Complexity: O(1)
 ```
 
-
 Consider the diagram for further understanding:
+
 ```
 Input:
         +---+---+---+---+---+---+---+---+---+---+
@@ -114,12 +115,13 @@ Subarray: | 5 | 1 | 3 | 2 |
 
 
 ```
+
 </details>
 <details>
 <summary><strong>Longest substring with 'K' distinct characters (Medium)</strong></summary>
 
 ```javascript
-var lengthOfLongestSubstringKDistinct = function(s, k) {
+var lengthOfLongestSubstringKDistinct = function (s, k) {
   // Setup Variables
   let START = 0;
   const SOFAR = new Map();
@@ -152,16 +154,16 @@ var lengthOfLongestSubstringKDistinct = function(s, k) {
       START++;
     }
 
-    MAX = Math.max(MAX, (END - START) + 1);
+    MAX = Math.max(MAX, END - START + 1);
   }
 
   // Return the maximum window size
   return MAX;
-}
+};
 
 // Test Cases
-console.log(lengthOfLongestSubstringKDistinct('atatrasrafr', 3));  // Returns 6
-console.log(lengthOfLongestSubstringKDistinct('atatrasrafr', 4));  // Returns 9
+console.log(lengthOfLongestSubstringKDistinct("atatrasrafr", 3)); // Returns 6
+console.log(lengthOfLongestSubstringKDistinct("atatrasrafr", 4)); // Returns 9
 
 // Time Complexity: O(n)
 // Space Complexity: O(k)
@@ -206,10 +208,13 @@ Final:
   +---+---+---+---+---+---+
 Longest substring with 'K' distinct characters: 'bcadae'
 ```
+
 </details>
 <details>
 
-<summary><strong>String Anagrams (Hard)</strong></summary>
+<summary>
+  <strong>String Anagrams (Hard)</strong>
+</summary>
 
 The String Anagrams problem involves finding all anagrams of a given pattern in a given string. An anagram is a rearrangement of the letters of one word or phrase to form a different word or phrase.
 
@@ -224,34 +229,34 @@ Here's the JavaScript solution using the Sliding Window technique and a HashMap:
  * @param {string} pattern - The pattern string
  * @returns {number[]} - Array of starting indices of anagrams in the string
  */
-const findAnagrams = function(str, pattern) {
-  const resultIndices = [];   // Array to store the starting indices of anagrams
-  const charFrequency = {};   // Object to store the frequency of characters in the pattern
+const findAnagrams = function (str, pattern) {
+  const resultIndices = []; // Array to store the starting indices of anagrams
+  const charFrequency = {}; // Object to store the frequency of characters in the pattern
 
-  let matched = 0;   // Counter for matched characters
-  let windowStart = 0;   // Start of the sliding window
+  let matched = 0; // Counter for matched characters
+  let windowStart = 0; // Start of the sliding window
 
   // Iterate through the pattern to track the frequency of characters
   for (let i = 0; i < pattern.length; i++) {
-    const char = pattern[i];   // Get the current character from the pattern
+    const char = pattern[i]; // Get the current character from the pattern
 
     if (!(char in charFrequency)) {
-      charFrequency[char] = 0;   // If the character is not in the frequency object, initialize its count to zero
+      charFrequency[char] = 0; // If the character is not in the frequency object, initialize its count to zero
     }
 
-    charFrequency[char] += 1;   // Increment the frequency count of the character
+    charFrequency[char] += 1; // Increment the frequency count of the character
   }
 
   // Slide the window through the input string
   for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
-    const rightChar = str[windowEnd];   // Get the current character from the input string
+    const rightChar = str[windowEnd]; // Get the current character from the input string
 
     // Update the frequency count and matched counter
     if (rightChar in charFrequency) {
-      charFrequency[rightChar] -= 1;   // Decrement the frequency count of the character
+      charFrequency[rightChar] -= 1; // Decrement the frequency count of the character
 
       if (charFrequency[rightChar] === 0) {
-        matched += 1;   // If the frequency count becomes zero, a character is matched
+        matched += 1; // If the frequency count becomes zero, a character is matched
       }
     }
 
@@ -262,34 +267,31 @@ const findAnagrams = function(str, pattern) {
 
     // Slide the window by moving the start index and updating the frequency count and matched counter
     if (windowEnd >= pattern.length - 1) {
-      const leftChar = str[windowStart];   // Get the character at the start index
-      windowStart += 1;   // Move the start index to the right
+      const leftChar = str[windowStart]; // Get the character at the start index
+      windowStart += 1; // Move the start index to the right
 
       if (leftChar in charFrequency) {
         // Update the frequency count and matched counter for the character at the start index
         if (charFrequency[leftChar] === 0) {
-          matched -= 1;   // If the frequency count becomes zero, a character is unmatched
+          matched -= 1; // If the frequency count becomes zero, a character is unmatched
         }
-        charFrequency[leftChar] += 1;   // Increment the frequency count of the character
+        charFrequency[leftChar] += 1; // Increment the frequency count of the character
       }
     }
   }
 
-  return resultIndices;   // Return the array of starting indices of anagrams
+  return resultIndices; // Return the array of starting indices of anagrams
 };
-
 
 // Test the function
 const str = "ppqp";
 const pattern = "pq";
 const anagramIndices = findAnagrams(str, pattern);
-console.log(anagramIndices);  // Output: [1, 2]
-
-
-
+console.log(anagramIndices); // Output: [1, 2]
 ```
 
 Consider the diagram for further understanding:
+
 ```
 Input:
          +---+---+---+---+---+---+---+---+---+---+
@@ -353,4 +355,5 @@ Final:
 Anagrams: | p | q |
           +---+---+
 ```
+
 </details>

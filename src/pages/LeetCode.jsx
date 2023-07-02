@@ -6,6 +6,10 @@ import { leetCodeData } from '../data/leetCode';
 import "./pages.css";
 import TailwindTable from '../components/TailwindTable/TailwindTable';
 
+const makeTailWindTableVisible = () => {
+	document.getElementById("tailwindTable").style.display = "block";
+}
+
 export default function Leetcode() {
 
 	return (
@@ -16,8 +20,10 @@ export default function Leetcode() {
 				description="Under Construction!!"
 				image="https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/Images/LeetCode_logo_black.png"
 			/>
-
-			<div className=" text-blue dark:text-white" text-white>
+	<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick={makeTailWindTableVisible}>
+		LeetCode Problem
+	</button>
+			<div className="tailwindTable text-blue dark:text-white" text-white style={{display:'hidden'}}>
 				<TailwindTable data={leetCodeData} />
 			</div>
 			<Footer />
