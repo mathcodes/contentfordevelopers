@@ -1,13 +1,9 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import { yellow, red, green } from '@mui/material/colors';
 import { Contributor } from "../components/contributor/Contributor";
 import Footer from "../components/footer/Footer";
 import Table from "../components/table/Table";
 import NavBar from "../components/navbar/Navbar";
 import { codeWarsData } from '../data/codeWars.js';
-import LinkIcon from '@mui/icons-material/Link';
 import "./pages.css";
 import TailwindTable from '../components/TailwindTable/TailwindTable';
 import { VscLibrary } from 'react-icons/vsc';
