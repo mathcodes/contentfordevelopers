@@ -83,6 +83,11 @@ function YouTubeToText({
             />
           </div>
         </div>
+        <button className="w-full px-4 py-2 text-sm font-bold text-white transition-all duration-500 bg-gray-800 rounded-b-lg hover:bg-gray-700">
+          <a href="/onlinetools" className="text-white">
+            Back to Online Tools
+          </a>
+        </button>
       </div>
     </div>
   );

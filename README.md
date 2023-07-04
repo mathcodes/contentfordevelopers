@@ -9,12 +9,19 @@ I want to be clear that this is an effort to bring developers together to HELP o
 
 ## Table of Contents
 
-- [Instructions](#instructions)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Issues](https://github.com/mathcodes/contentfordevelopers/issues)
-- [Contributors](#contributors)
-- [Summary](#summary)
+- [Content For Developers](#content-for-developers)
+  - [Table of Contents](#table-of-contents)
+  - [Instructions](#instructions)
+  - [Installation](#installation)
+  - [Contributing](#contributing)
+    - [Section 1](#section-1)
+    - [Section 2](#section-2)
+  - [License](#license)
+  - [Examples of Supplementary Learning Materials](#examples-of-supplementary-learning-materials)
+    - [Why contribute to this repo?](#why-contribute-to-this-repo)
+  - [Contributors](#contributors)
+  - [Summary](#summary)
+      - [Why join the team?](#why-join-the-team)
 
 ## Instructions
 
@@ -54,7 +61,7 @@ An example of [Python Tutor](www.pythontutor.com) doing what it does best:
 
 I use <a href="https://app.diagrams.net/" style="color:#d35400; font-weight:900">app.diagrams.net</a> to make charts and visuals. It is a free diagram creator 👍
 
-<img src="https://github.com/mathcodes/contentfordevelopers/blob/main/src/assets/5.DSA/LeetCode/0001.TwoSum/1.twoSum.png" height="200px"/> 
+<img src="https://github.com/mathcodes/contentfordevelopers/blob/main/src/assets/5.DSA/LeetCode/0001.TwoSum/1.twoSum.png" height="200px"/>
 
 ### Why contribute to this repo?
 

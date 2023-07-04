@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>A Server's Host</title>
+</head>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-4">HostBot - Seating System</h1>
+    <form id="partyForm" class="max-w-sm">
+      <div class="mb-4">
+        <label for="partySize" class="block text-gray-700 font-semibold mb-2">Enter party size (1-12):</label>
+        <input type="number" id="partySize" name="partySize" class="border border-gray-300 rounded px-3 py-2 w-full"
+          min="1" max="12" required>
+      </div>
+      <button type="submit"
+        class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded focus:outline-none focus:shadow-outline">Seat
+        Party</button>
+    </form>
+    <div class="container mx-auto px-4 py-8">
+
+      <div id="serverStatsBody" class="mt-8">
+        <table class="table-auto border border-gray-300 rounded">
+          <tbody id="serverStatsBody"></tbody>
+        </table>
+      </div>
+
+      <div id="tablesContainer" class="mt-8"></div>
+    </div>
+
+    <script>
+      class Table {
+        constructor(seats) {
+          this.seats = seats;
+          this.occupied = 0;
+        }
+
+        isAvailable() {
+          return this.occupied < this.seats;
+        }
+
+        occupySeats(n) {
+          if (this.seats - this.occupied >= n) {
+            this.occupied += n;
+          }
+        }
+      }
+
+      class Server {
+        constructor(name, tables) {
+          this.name = name;
+          this.tables = tables.map(t => new Table(t));
+          this.totalGuests = 0;
+          this.totalTips = 0;
+        }
+
+        getGuestCount() {
+          return this.tables.reduce((acc, table) => acc + table.occupied, 0);
+        }
+
+        hasTableFor(n) {
+          return this.tables.some(t => t.seats - t.occupied >= n && t.isAvailable());
+        }
+
+        seatGuests(n) {
+          for (let t of this.tables) {
+            if (t.isAvailable() && t.seats >= n) {
+              t.occupySeats(n);
+              this.totalGuests += n;
+              return true;
+            }
+          }
+          return false;
+        }
+
+        freeTable(n) {
+          for (let t of this.tables) {
+            if (t.occupied === n) {
+              t.occupied = 0;
+              return true;
+            }
+          }
+          return false;
+        }
+      }
+
+      let servers = [
+        new Server('John', [4, 2, 6]),
+        new Server('Jane', [3, 2, 4]),
+        new Server('Jack', [5, 2, 4]),
+        new Server('Jill', [4, 2, 4])
+      ];
+
+      let currentServerIndex = 0;
+
+      function updateServerStats() {
+        const serverStatsBody = document.getElementById('serverStatsBody');
+        serverStatsBody.innerHTML = '';
+
+        servers.forEach((server, index) => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td class="px-4 py-2">${server.name}</td>
+            <td class="px-4 py-2">${server.totalGuests}</td>
+            <td class="px-4 py-2">${server.tables.length}</td>
+            <td class="px-4 py-2">${(server.totalGuests / server.tables.length).toFixed(2)}</td>
+            <td class="px-4 py-2">$${server.totalTips.toFixed(2)}</td>
+          `;
+
+          serverStatsBody.appendChild(row);
+        });
+      }
+
+      function handlePartySizeForm(event) {
+        event.preventDefault();
+
+        const partySizeInput = document.getElementById('partySize');
+        const partySize = parseInt(partySizeInput.value);
+
+        if (isNaN(partySize) || partySize < 1 || partySize > 6) {
+          alert('Invalid party size. Please enter a number between 1 and 6.');
+          return;
+        }
+
+        let tableSeated = false;
+        for (let i = 0; i < servers.length; i++) {
+          const server = servers[currentServerIndex];
+          currentServerIndex = (currentServerIndex + 1) % servers.length;
+
+          if (server.hasTableFor(partySize)) {
+            server.seatGuests(partySize);
+            tableSeated = true;
+            break;
+          }
+        }
+
+        if (tableSeated) {
+          updateServerStats();
+          renderTables();
+        } else {
+          alert('No table available for the party size.');
+        }
+
+        partySizeInput.value = '';
+      }
+
+      function renderTables() {
+        const tablesContainer = document.getElementById('tablesContainer');
+        tablesContainer.innerHTML = '';
+
+        servers.forEach((server, index) => {
+          const serverElement = document.createElement('div');
+          serverElement.classList.add('mb-8');
+
+          const serverHeader = document.createElement('h2');
+          serverHeader.classList.add('text-2xl', 'font-bold', 'mb-4');
+          serverHeader.textContent = `${server.name} - Tables (${server.tables.length})`;
+
+          const tablesHeader = document.createElement('h3');
+          tablesHeader.classList.add('text-xl', 'font-semibold', 'mb-2');
+          tablesHeader.textContent = 'Tables';
+
+          const tablesList = document.createElement('ul');
+          tablesList.classList.add('list-disc', 'pl-4');
+
+          server.tables.forEach((table, tableIndex) => {
+            const tableItem = document.createElement('li');
+            tableItem.textContent = `Table ${tableIndex + 1} (${table.seats} seats)`;
+
+            if (table.isAvailable()) {
+              tableItem.classList.add('text-green-500');
+            } else {
+              tableItem.classList.add('text-red-500');
+            }
+
+            tablesList.appendChild(tableItem);
+          });
+
+          serverElement.appendChild(serverHeader);
+          serverElement.appendChild(tablesHeader);
+          serverElement.appendChild(tablesList);
+
+          tablesContainer.appendChild(serverElement);
+        });
+      }
+
+      document.getElementById('partyForm').addEventListener('submit', handlePartySizeForm);
+      updateServerStats();
+      renderTables();
+    </script>
+  </div>
+</body>
+
+</html>

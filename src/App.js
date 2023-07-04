@@ -90,6 +90,17 @@ function App() {
             icon={topics[5].icon}
             link={topics[5].link}/>}
             />
+          <Route path="/onlinetools"
+          element={
+          <OnlineTools
+            title={topics[6].title}
+            description={topics[6].description}
+            point1={topics[6].point1}
+            point2={topics[6].point2}
+            point3={topics[6].point3}
+            icon={topics[6].icon}
+            link={topics[6].link}/>}
+          />
           <Route path="/OnlineTools" element={<OnlineTools />} />
           <Route path="/itempageLC" element={<ItemPage sol="lc" />} />
           <Route path="/itempageCW" element={<ItemPage sol="cw" />} />
