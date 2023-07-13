@@ -48,12 +48,12 @@
 
 @media (min-width: 1536px) {
   .container {
-    max-width:80%;
+    max-width: 80%;
   }
 }
 
 @media (min-width: 768px) {
-.container {
+  .container {
     max-width: 80%;
-}
+  }
 }

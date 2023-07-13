@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../../../data/db";
+import contributors from "../../../data/contributors.json";
 import { Contributor } from "../../contributor/Contributor";
 import Slider from "react-slick";
 
@@ -23,7 +23,7 @@ const ContributorSection = () => {
        
        <div className="Carousel__Container    bg-gradient-to-r from-accent to-accent2 rounded-lg -mt-6 md:-mt-10">
        <Slider {...settings} className="Contributors__Carousel   w-80 py-3 md:w-[700px]">
-       {data.map((res) => (
+       {contributors.map((res) => (
           <Contributor res={res} key={res.id} />
         ))}
        </Slider>

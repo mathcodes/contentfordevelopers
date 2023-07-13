@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import code from '../../data/solutionLC.js'
 import dracula from "prism-react-renderer/themes/dracula";
 import styled from "styled-components";
 
