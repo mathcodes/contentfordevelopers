@@ -50,6 +50,7 @@ export default function NavBar() {
                         className="rounded-md bg-gray-900 pr-12 py-2  text-sm font-medium text-black dark:text-white hover:text-accent"
                       >
                         Content For Developers
+                       
                       </a>
                       {/* <a
                         href="/leetcode"
@@ -81,7 +82,7 @@ export default function NavBar() {
 
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex items-center ">
-                    <button onClick={onClick}>
+                    <button onClick={onClick} className="p-4">
                       <CgDarkMode
                         className="h-6 w-6 fill-black dark:fill-white"
                         aria-hidden="true"
@@ -89,7 +90,7 @@ export default function NavBar() {
                     </button>
                     <button
                       type="button"
-                      className="rounded-full bg-gray-800 p-1 text-black hover:text-white focus:outline-none"
+                      className="rounded-full bg-gray-800 p-4 text-black hover:text-white focus:outline-none"
                     >
                       <span className="sr-only">View notifications</span>
                       <a href="https://github.com/mathcodes/contentfordevelopers">
@@ -101,7 +102,7 @@ export default function NavBar() {
                     </button>
 
                     {/* Profile dropdown */}
-                    <Menu as="div" className="relative ml-3">
+                    <Menu as="div" className="relative ml-3 p-4">
                       <div>
                         <Menu.Button className="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none">
                           <HiMenu />
