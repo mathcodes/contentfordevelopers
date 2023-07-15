@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Developers Library",
+    "description": "Resources for learning HTML, CSS, JavaScript, React, Angular, Typescript.... you name it. It's all here, or coming with your help!",
+    "points": [
+      "A place for developers to learn and grow",
+      "Share your knowledge, or learn from others",
+      "Be a part of a community and build up that resume"
+    ],
+    "icon": "GiGraduateCap",
+    "courses": [
+      {
+        "title": "Frontend",
+        "description": "Links to today's best frontend development resources",
+        "icon": ""
+      },
+      {
+        "title": "Backend",
+        "description": "Links to today's best backend development resources",
+        "icon": ""
+      },
+      {
+        "title": "HTML",
+        "description": "Links to today's best HTML resources",
+        "icon": ""
+      },
+      {
+        "title": "CSS",
+        "description": "Links to today's best CSS resources",
+        "icon": ""
+      },
+      {
+        "title": "JavaScript",
+        "description": "Links to today's best JavaScript resources",
+        "icon": ""
+      },
+      {
+        "title": "React",
+        "description": "Links to today's best React resources",
+        "icon": ""
+      },
+      {
+        "title": "YouTube Tutorials",
+        "description": "Links to today's best YouTube tutorials",
+        "icon": ""
+      },
+      {
+        "title": "Tools",
+        "description": "Links to today's best tools",
+        "icon": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Coding Conventions",
+    "description": "Best practices and design patterns for writing efficient, maintainable, and scalable code.",
+    "points": [
+      "A place for developers to learn and grow",
+      "Share your knowledge, or learn from others",
+      "Be a part of a community and build up that resume"
+    ],
+    "icon": "HiCode"
+  },
+  {
+    "id": 3,
+    "title": "Frameworks & Libraries",
+    "description": "Resources and tutorials for popular frameworks and libraries such as React, Angular, Vue.js, Django, and Spring.",
+    "points": [
+      "A place for developers to learn and grow",
+      "Share your knowledge, or learn from others",
+      "Be a part of a community and build up that resume"
+    ],
+    "icon": "VscLibrary"
+  },
+  {
+    "id": 4,
+    "title": "Accessibility and WCAG Compliance",
+    "description": "Resources for making your websites and applications accessible to all users, including those with disabilities.",
+    "points": [
+      "A place for developers to learn and grow",
+      "Share your knowledge, or learn from others",
+      "Be a part of a community and build up that resume"
+    ],
+    "icon": "FaClipboardCheck"
+  },
+  {
+    "id": 5,
+    "title": "AI & The Future",
+    "description": "Resources discussing AI and its impact on our future, including ethical issues and concerns.",
+    "points": [
+      "A place for developers to learn and grow",
+      "Share your knowledge, or learn from others",
+      "Be a part of a community and build up that resume"
+    ],
+    "icon": "GiArtificialIntelligence"
+  },
+  {
+    "id": 6,
+    "title": "DSA",
+    "description": "A collection of practice questions from LeetCode to help developers prepare for technical interviews.",
+    "points": [
+      "A place for developers to learn and grow",
+      "Share your knowledge, or learn from others",
+      "Be a part of a community and build up that resume"
+    ],
+    "icon": "GiDatabase"
+  }
+]

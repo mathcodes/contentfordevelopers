@@ -1,6 +1,6 @@
 import * as React from "react";
-import Footer from "../components/footer/Footer";
-import NavBar from "../components/navbar/Navbar";
+import Footer from "../components/Footer";
+import NavBar from "../components/Navbar";
 import { GiGraduateCap } from "react-icons/gi";
 
 export default function CodingConventions({
@@ -33,7 +33,7 @@ export default function CodingConventions({
         </div>
         <div className="flex px-0">
           <div className="w-1/3 px-6">
-            <img src="/CforD2.png" alt="LeetCode Logo" className="w-4" />
+            <img src="/assets/png/c_for_d2.png" alt="" className="w-4" />
           </div>
           <div className="w-2/3 px-6">
             <h3 className="px-6">Under Construction!!</h3>

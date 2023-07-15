@@ -1,5 +1,5 @@
 import React from "react";
-import PlatformList from "./platformList/PlatformList";
+import LearningResources from "../LearningResources";
 
 const Learn = () => {
   return (
@@ -24,7 +24,7 @@ const Learn = () => {
             methods to learn the skills needed to make it in this industry!
           </p>
         </div>
-        <PlatformList />
+        <LearningResources />
       </div>
     </section>
   );

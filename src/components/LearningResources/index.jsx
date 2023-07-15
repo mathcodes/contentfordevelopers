@@ -1,0 +1,51 @@
+import { memo } from "react";
+import loadable from "@loadable/component";
+import resources from "../../data/learning_resources.json";
+
+const ResourceCard = memo(({ id, title, icon }) => {
+  // get the library that the icon belongs to in the react-icons package from the name of the icon.
+  const lib = icon
+    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+    .split(" ")[0]
+    .toLocaleLowerCase();
+  // auto import the react-icons component based on its name in the icon prop.
+  const Icon = loadable(() => import(`react-icons/${lib}/index.js`), {
+    resolveComponent: (element) => element[icon],
+  });
+  console.log(Icon);
+  return (
+    <a href={`/resource/${id}`} className="flex justify-center items-center">
+      <div className="p-2 m-4 rounded-lg z-1 bg-gradient-to-r from-accent to-accent2 shadow-l">
+        <div className="flex p-6 text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
+          <Icon
+            color="#999"
+            className="w-12 h-12 transition duration-1000 ease-in-out fill-current delay-50 hover:text-blue-700 hover:fill-current group-hover:scale-110"
+          />
+          <div className="absolute top-0 items-end flex-1 ">
+            <p className="relative top-0 hidden p-1 m-6 text-green-500 transition-all duration-200 rounded-lg opacity-0 shadow-l group-hover:scale-105 group-hover:block group-hover:opacity-100 delay-50 tooltip">
+              <p className="absolute top-0 left-0 p-2 text-xs leading-tight text-gray-700 transition duration-1000 bg-white border rounded-lg shadow-lg z-5 group-hover:left-20 group-hover:scale-105 delay-50 dark:bg-blue ">
+                {title}
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+});
+
+export default function LearningResources() {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 space--between">
+      {resources.map((resource, index) => (
+        <ResourceCard
+          key={index}
+          id={resource?.id}
+          title={resource?.title}
+          description={resource?.description}
+          icon={resource?.icon}
+        />
+      ))}
+    </div>
+  );
+}

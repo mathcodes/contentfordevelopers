@@ -1,7 +1,7 @@
 import React from "react";
 import contributors from "../../../data/contributors.json";
-import { Contributor } from "../../contributor/Contributor";
 import Slider from "react-slick";
+import Contributor from "../../Contributor";
 
 //This is a component that appears on homepage to show contributors
 
@@ -23,8 +23,8 @@ const ContributorSection = () => {
        
        <div className="Carousel__Container    bg-gradient-to-r from-accent to-accent2 rounded-lg -mt-6 md:-mt-10">
        <Slider {...settings} className="Contributors__Carousel   w-80 py-3 md:w-[700px]">
-       {contributors.map((res) => (
-          <Contributor res={res} key={res.id} />
+       {contributors.map((contributor) => (
+          <Contributor key={contributor?.id} contributor={contributor}  />
         ))}
        </Slider>
        </div>

@@ -1,6 +1,6 @@
-import Footer from "../components/footer/Footer";
+import Footer from "../components/Footer";
 import PageHeader from "../components/pageHeader/PageHeader";
-import NavBar from "../components/navbar/Navbar";
+import NavBar from "../components/Navbar";
 import ProblemSetTable from "../components/ProblemSetTable";
 import leetcode from "../data/leetcode.json";
 
