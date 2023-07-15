@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const navigation = {
   content: [
     { name: 'LeetCode', href: '/leetcode' },
@@ -113,9 +115,9 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.content.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                      <Link to={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

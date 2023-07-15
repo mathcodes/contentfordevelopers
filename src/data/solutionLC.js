@@ -1,17 +1,5 @@
 export const LeetCodeSolutions = [
-  {
-  "id": 1,
-  "title": "Two Sum",
-  "content": "Given an array of integers, return indices of the two numbers such that\r they add up to a specific target.\r \ \  You may assume that each input would have exactly one solution, and you may not use the same element twice.\r \ \  Example:\r \ \  Given nums = [2, 7, 11, 15], target = 9,\r \ \  Because nums[0] + nums[1] = 2 + 7 = 9,\r \ \  return [0, 1].",
-  "javascript": "var twoSum = function(nums, target) {\r \ \  const map = new Map();\r \ \ \ \   for (let i = 0; i < nums.length; i++) {\r \ \ \ \ \ \ \ \ \ const complement = target - nums[i];\r \ \ \ \ \ \ \ \ \ if (map.has(complement)) {\r \ \ \ \ \ \ \ \ \ \ \ return [map.get(complement), i];\r \ \ \ \ \ \ \ \  }\r \ \ \ \ \ \ \ \  map.set(nums[i], i);\r \ \ \ \ \  }\r };",
-  "python": "class Solution:\r \ \  def twoSum(self, nums: List[int], target: int) -> List[int]:\r \ \  map = {}\r \ \  for i in range(len(nums)):\r \ \  complement = target - nums[i]\r \ \  if complement in map:\r \ \  return [map[complement], i]\r \ \  map[nums[i]] = i",
-  "java": "class Solution {\r \ \  public int[] twoSum(int[] nums, int target) {\r \ \  Map<Integer, Integer> map = new HashMap<>();\r \ \  for (int i = 0; i < nums.length; i++) {\r \ \  int complement = target - nums[i];\r \ \  if (map.containsKey(complement)) {\r \ \  return new int[] { map.get(complement), i };\r \ \  }\r \ \  map.put(nums[i], i);\r \ \  }\r \ \  throw new IllegalArgumentException(\"No two sum solution\");\r \ \  }\r \ \ }",
-  "c++": "class Solution {\r \ \  public:\r \ \  vector<int> twoSum(vector<int>& nums, int target) {\r \ \  unordered_map<int, int> map;\r \ \  for (int i = 0; i < nums.size(); i++) {\r \ \  int complement = target - nums[i];\r \ \  if (map.find(complement) != map.end()) {\r \ \  return { map[complement], i };\r \ \  }\r \ \  map[nums[i]] = i;\r \ \  }\r \ \  throw runtime_error(\"No two sum solution\");\r \ \  }\r \ \ };",
-  'Time_Complexity': "O(n)",
-  'Space_Complexity': "O(n)",
-  'image':'https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0001.TwoSum/1.twoSum.png',
-  'video':'https://www.youtube.com/watch?v=_EDDhOtvH1Y'
-},
+  
 {
   "id": 2,
   "title": "Add Two Numbers",

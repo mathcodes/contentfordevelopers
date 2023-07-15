@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
-import { FiCode } from 'react-icons/fi';
+import React, { useState } from "react";
 import { IconContext } from "react-icons";
-
-
 
 export default function Grid({ data, link }) {
   const [showGrid, setShowGrid] = useState(true);
-
   const handleCardClick = () => {
     setShowGrid(false);
   };
-
   return (
     <div>
       {showGrid ? (
@@ -24,7 +19,10 @@ export default function Grid({ data, link }) {
               <div className="flex p-6 h-full text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
                 <div className="p-4 rounded shadow">
                   <IconContext.Provider
-                    value={{ color: item.iconColor, className: "global-class-name" }}
+                    value={{
+                      color: item.iconColor,
+                      className: "global-class-name",
+                    }}
                   >
                     <div className="flex mb-2">
                       <item.icon className="mr-2 w-6 h-6" />
@@ -42,4 +40,4 @@ export default function Grid({ data, link }) {
       )}
     </div>
   );
-};
+}

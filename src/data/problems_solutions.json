@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "title": "1. Last digit of a huge number",
+    "description": "Find the last digit of the nth Fibonacci number.",
+    "javascript": "function lastDigit(n) {\nif (n < 2) return n;\nlet fib = [0, 1];\nfor (let i = 2; i <= n; i++) {\n\tfib[i] = (fib[i - 1] + fib[i - 2]) % 10;\n}\nreturn fib[n];\n}\n",
+    "java": "public class LastDigit {\n\tpublic static int lastDigit(long n) {\n\t\tif (n < 2) return (int) n;\n\t\tint fib[] = {0, 1};\n\t\tfor (int i = 2; i <= n; i++) {\n\t\t\tfib[i % 2] = (fib[0] + fib[1]) % 10;\n\t\t}\n\t\treturn fib[(int) n % 2];\n\t}\n}",
+    "c++": "int lastDigit(long n) {\n\tif (n < 2) return n;\n\tint fib[] = {0, 1};\n\tfor (int i = 2; i <= n; i++) {\n\t\tfib[i % 2] = (fib[0] + fib[1]) % 10;\n\t}\n\treturn fib[n % 2];\n}",
+    "python": "def last_digit(n):\n\tif n < 2: return n\n\tfib = [0, 1]\n\tfor i in range(2, n + 1):\n\t\tfib[i % 2] = (fib[0] + fib[1]) % 10\n\treturn fib[n % 2]\n",
+    "Time_Complexity": "O(n)",
+    "Space_Complexity": "O(1)",
+    "video": "https://www.youtube.com/watch?v=lL1zuKdzbsM&feature=youtu.be"
+  },
+  {
+    "id": 2,
+    "title": "2. Find the odd int",
+    "description": "Given an array, find the int that appears an odd number of times.",
+    "javascript": "function findOdd(A) {\n\tlet count = {};\n\tA.forEach((num) => count[num] = count[num] + 1 || 1);\n\tfor (let num in count) {\n\t\tif (count[num] % 2 !== 0) return Number(num);\n\t}\n}",
+    "java": "public class FindOdd {\n\tpublic static int findIt(int[] A) {\n\t\tMap<Integer, Integer> count = new HashMap<>();\n\t\tfor (int num : A) {\n\t\t\tcount.put(num, count.getOrDefault(num, 0) + 1);\n\t\t}\n\t\tfor (int num : count.keySet()) {\n\t\t\tif (count.get(num) % 2 != 0) return num;\n\t\t}\n\t\treturn -1;\n\t}\n}",
+    "c++": "int findIt(std::vector<int> &A) {\nstd::unordered_map<int, int> count;\nfor (int num : A) {\ncount[num]++;\n}\nfor (auto num : count) {\nif (num.second % 2 != 0) return num.first;\n}\nreturn -1;\n}",
+    "python": "def find_it(seq):\ncount = {}\nfor num in seq:\ncount[num] = count.get(num, 0) + 1\nfor num in count:\nif count[num] % 2 != 0: return num\nreturn -1",
+    "Time_Complexity": "O(n)",
+    "Space_Complexity": "O(n)"
+  }
+]

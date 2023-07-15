@@ -1,26 +1,22 @@
-import Homepage from "./pages/Homepage";
-import LeetCode from "./pages/LeetCode";
-import ItemPage from "./pages/ItemPage";
-import OnlineTools from "./pages/OnlineTools";
-import Header from "./components/header/Header";
+import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LearningResource from "./pages/LearningResource";
+import ProblemSolvingPlatform from "./pages/ProblemSolvingPlatform";
+import leetcode from "./data/leetcode.json";
+import codewars from "./data/codewars.json";
+import ProblemSolution from "./pages/ProblemSolution";
 
 function App() {
   return (
     <div className="max-w-full bg-white dark:bg-blue">
-      <Header />
       <BrowserRouter>
         {/* <Navbar/> */}
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/leetcode" element={<LeetCode />} />
-          <Route path="/leetcode/:id" element={<ItemPage />} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/leetcode" element={<ProblemSolvingPlatform platform={leetcode} />} />
+          <Route path="/codewars" element={<ProblemSolvingPlatform platform={codewars} />} />
+          <Route path="/solution/:id" element={<ProblemSolution />} />
           <Route path="/resource/:id" element={<LearningResource />} />
-          <Route path="/OnlineTools" element={<OnlineTools />} />
-          <Route path="/itempageLC" element={<ItemPage sol="lc" />} />
-          <Route path="/itempageCW" element={<ItemPage sol="cw" />} />
-          <Route path="/itempageHR" element={<ItemPage sol="cw" />} />
         </Routes>
       </BrowserRouter>
     </div>

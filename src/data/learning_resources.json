@@ -9,46 +9,54 @@
       "Be a part of a community and build up that resume"
     ],
     "icon": "GiGraduateCap",
-    "courses": [
+    "stacks": [
       {
         "title": "Frontend",
         "description": "Links to today's best frontend development resources",
-        "icon": ""
+        "icon": "BsLayoutWtf",
+        "color": "#db11a9"
       },
       {
         "title": "Backend",
         "description": "Links to today's best backend development resources",
-        "icon": ""
+        "icon": "FaDatabase",
+        "color": "#5a67ec"
       },
       {
         "title": "HTML",
         "description": "Links to today's best HTML resources",
-        "icon": ""
+        "icon": "FaHtml5",
+        "color": "#dc4a24"
       },
       {
         "title": "CSS",
         "description": "Links to today's best CSS resources",
-        "icon": ""
+        "icon": "FaCss3",
+        "color": "#244bdd"
       },
       {
         "title": "JavaScript",
         "description": "Links to today's best JavaScript resources",
-        "icon": ""
+        "icon": "FaJs",
+        "color": "#e8d44d"
       },
       {
         "title": "React",
         "description": "Links to today's best React resources",
-        "icon": ""
+        "icon": "FaReact",
+        "color": "#61dafb"
       },
       {
         "title": "YouTube Tutorials",
         "description": "Links to today's best YouTube tutorials",
-        "icon": ""
+        "icon": "FaYoutube",
+        "color": "#ff0000"
       },
       {
         "title": "Tools",
         "description": "Links to today's best tools",
-        "icon": ""
+        "icon": "BsStack",
+        "color": "#d35400"
       }
     ]
   },

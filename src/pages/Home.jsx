@@ -4,7 +4,7 @@ import Hero from "../components/homepage/hero/Hero";
 import Learn from "../components/homepage/Learn";
 import Contribute from "../components/homepage/Contribute";
 
-function Homepage() {
+export default function Home() {
   return (
     <div className="container mx-auto">
       <NavBar />
@@ -20,5 +20,3 @@ function Homepage() {
     </div>
   );
 }
-
-export default Homepage;

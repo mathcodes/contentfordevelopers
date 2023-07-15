@@ -1,20 +1,12 @@
 import { memo } from "react";
-import loadable from "@loadable/component";
 import resources from "../../data/learning_resources.json";
+import getReactIconByName from "../../utils/getReactIconByName";
+import { Link } from "react-router-dom";
 
 const ResourceCard = memo(({ id, title, icon }) => {
-  // get the library that the icon belongs to in the react-icons package from the name of the icon.
-  const lib = icon
-    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
-    .split(" ")[0]
-    .toLocaleLowerCase();
-  // auto import the react-icons component based on its name in the icon prop.
-  const Icon = loadable(() => import(`react-icons/${lib}/index.js`), {
-    resolveComponent: (element) => element[icon],
-  });
-  console.log(Icon);
-  return (
-    <a href={`/resource/${id}`} className="flex justify-center items-center">
+  const Icon = getReactIconByName(icon);
+  return (  
+    <Link to={`/resource/${id}`} className="flex justify-center items-center">
       <div className="p-2 m-4 rounded-lg z-1 bg-gradient-to-r from-accent to-accent2 shadow-l">
         <div className="flex p-6 text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
           <Icon
@@ -30,7 +22,7 @@ const ResourceCard = memo(({ id, title, icon }) => {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 });
 

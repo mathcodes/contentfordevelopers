@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { LogoLink } from "../logoLink/LogoLInk.js";
 
 export default function ProblemSetTable({ platformLogo, problems }) {
@@ -76,8 +77,8 @@ export default function ProblemSetTable({ platformLogo, problems }) {
                   }`}
                 >
                   <div className="flex flex-wrap">
-                    {problem?.tags?.map((tag) => (
-                      <span className="text-[#222] bg-accent rounded-md m-2 px-1">
+                    {problem?.tags?.map((tag, index) => (
+                      <span key={index} className="text-[#222] bg-accent rounded-md m-2 px-1">
                         {tag}
                       </span>
                     ))}
@@ -93,7 +94,7 @@ export default function ProblemSetTable({ platformLogo, problems }) {
                     className="inline-flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-700 border rounded-md shadow-sm border-platinum-300 bg-accent2 hover:bg-accent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30"
                     disabled={problem?.isCurrent}
                   >
-                    <a href={`${window.location.pathname}/${problem?.id}`}>Select</a>
+                    <Link to={`${window.location.pathname}/${problem?.id}`}>Select</Link>
                     <span className="sr-only">, {problem?.title}</span>
                   </button>
                 </td>
