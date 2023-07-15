@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { HiMenu, HiBell, HiX } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
 import { CgDarkMode } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 
@@ -12,7 +12,6 @@ export default function NavBar() {
   const onClick = () => {
     // set switch for dark mode
     let body = document.body;
-    console.log(body);
     if (body.classList.contains("dark")) {
       body.classList.remove("dark");
       body.classList.add("light");
@@ -51,30 +50,6 @@ export default function NavBar() {
                       >
                         Content For Developers
                       </a>
-                      {/* <a
-                        href="/leetcode"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        LeetCode
-                      </a>
-                      <a
-                        href="/codewars"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        CodeWars
-                      </a>
-                      <a
-                        href="/hackerrank"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        HackerRank
-                      </a>
-                      <a
-                        href="/notes"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        Notes & Resources
-                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -120,7 +95,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="#"
+                                href="/#"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"

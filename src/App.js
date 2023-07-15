@@ -16,7 +16,7 @@ function App() {
           <Route path="/leetcode" element={<ProblemSolvingPlatform platform={leetcode} />} />
           <Route path="/codewars" element={<ProblemSolvingPlatform platform={codewars} />} />
           <Route path="/solution/:id" element={<ProblemSolution />} />
-          <Route path="/resource/:id" element={<LearningResource />} />
+          <Route path="/source/:id" element={<LearningResource />} />
         </Routes>
       </BrowserRouter>
     </div>
