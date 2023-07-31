@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ResourceCard = memo(({ id, title, icon }) => {
   const Icon = getReactIconByName(icon);
   return (  
-    <Link to={`/resource/${id}`} className="flex justify-center items-center">
+    <Link to={`/source/${id}`} className="flex justify-center items-center">
       <div className="p-2 m-4 rounded-lg z-1 bg-gradient-to-r from-accent to-accent2 shadow-l">
         <div className="flex p-6 text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
           <Icon
