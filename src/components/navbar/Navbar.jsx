@@ -102,7 +102,7 @@ export default function NavBar() {
                     </button>
 
                     {/* Profile dropdown */}
-                    <Menu as="div" className="relative ml-3 p-4">
+                    <Menu as="div" className="relative p-4">
                       <div>
                         <Menu.Button className="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none">
                           <HiMenu />
