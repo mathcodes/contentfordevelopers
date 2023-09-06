@@ -28,7 +28,7 @@ export default function NavBar() {
       <Disclosure as="nav" className=" dark:text-white text-black">
         {({ open }) => (
           <>
-            <div className="mx-auto py-4 max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto py-4  sm:px-6 lg:px-4">
               <div className="flex h-16 items-center justify-between">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
