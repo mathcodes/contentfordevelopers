@@ -8,11 +8,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function NavBar() {
+function NavBar() {
   const onClick = () => {
-    // set switch for dark mode
     let body = document.body;
-    console.log(body);
     if (body.classList.contains("dark")) {
       body.classList.remove("dark");
       body.classList.add("light");
@@ -23,6 +21,7 @@ export default function NavBar() {
       document.documentElement.classList.add("dark");
     }
   };
+  
   return (
     <div className="container mx-auto">
       <Disclosure as="nav" className=" dark:text-white text-black">
@@ -50,31 +49,13 @@ export default function NavBar() {
                         className="rounded-md bg-gray-900 pr-12 py-2  text-sm font-medium text-black dark:text-white hover:text-accent"
                       >
                         Content For Developers
-                       
                       </a>
+                      {/* Uncomment or add more links as necessary */}
                       {/* <a
                         href="/leetcode"
                         className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
                       >
                         LeetCode
-                      </a>
-                      <a
-                        href="/codewars"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        CodeWars
-                      </a>
-                      <a
-                        href="/hackerrank"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        HackerRank
-                      </a>
-                      <a
-                        href="/notes"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        Notes & Resources
                       </a> */}
                     </div>
                   </div>
@@ -101,7 +82,6 @@ export default function NavBar() {
                       </a>
                     </button>
 
-                    {/* Profile dropdown */}
                     <Menu as="div" className="relative p-4">
                       <div>
                         <Menu.Button className="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none">
@@ -121,7 +101,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="#"
+                                href="/"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -134,7 +114,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="./DevelopersLibrary"
+                                href="/developers-library"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -147,7 +127,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/codingconventions"
+                                href="/coding-conventions"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -160,7 +140,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/frameworksandlibraries"
+                                href="/frameworks-libraries"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -173,7 +153,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="accessibilityandwcagcompliance"
+                                href="/accessibility-wcag"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -186,7 +166,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="aiandthefuture"
+                                href="/ai-future"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -199,7 +179,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="dsa"
+                                href="/dsa"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -228,7 +208,6 @@ export default function NavBar() {
                   </div>
                 </div>
                 <div className="-mr-2 flex sm:hidden">
-                  {/* Mobile menu button */}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -243,7 +222,6 @@ export default function NavBar() {
 
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1 px-2 pt-2 pb-3">
-                {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                 <Disclosure.Button
                   as="a"
                   href="#"
@@ -340,3 +318,5 @@ export default function NavBar() {
     </div>
   );
 }
+
+export default NavBar;

@@ -10,7 +10,7 @@ import { yellow, red, green } from '@mui/material/colors';
 import { Contributor } from "../components/contributor/Contributor";
 import Footer from "../components/footer/Footer";
 import Table from "../components/table/Table";
-import NavBar from "../components/navbar/Navbar";
+import NavBar from "../components/navbar/Navbar.jsx";
 import { codeWarsData } from '../data/codeWars.js';
 import LinkIcon from '@mui/icons-material/Link';
 import "./pages.css";

@@ -42,7 +42,7 @@ export const topics = [
     point1: 'Compare and contrast different frameworks and libraries',
     point2: 'Learn today\'s most popular frameworks and libraries',
     point3: 'Explore advanced features and use cases, pros and cons, and more',
-    link: '/frameworksandlibraries',
+    link: '/frameworkslibraries',
     icon: VscLibrary
   },
   {
@@ -52,7 +52,7 @@ export const topics = [
     point1: 'Understand the importance of accessibility and WCAG compliance',
     point2: 'Learn how to make your websites and applications accessible, including sites with AI and machine learning',
     point3: 'Explore accessibility features and tools',
-    link: '/accessibilityandwcag',
+    link: '/accessibilitywcag',
     icon: FaClipboardCheck
   },
   {
@@ -62,7 +62,7 @@ export const topics = [
     point1: 'Understand the basic concepts of AI and machine learning',
     point2: 'Explore the ethical implications of AI and machine learning',
     point3: 'Learn how to use LLMs, AI, and machine learning to solve real-world problems',
-    link: '/aiandthefuture',
+    link: '/aiFuture',
     icon: GiArtificialIntelligence
   },
   {
