@@ -9,15 +9,53 @@ const ContributorSection = () => {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 9,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: "linear"
+    cssEase: "linear",
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+ 
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+ 
+    ],
   };
   return (
-    <div className="Contributors   grid grid-rows-2 place-content-center py-28 bg-white dark:bg-blue dark:text-platinum text-blue ">
+    <div className="Contributors   grid grid-rows-2 place-content-center bg-white dark:bg-blue dark:text-platinum text-blue ">
 
        <p className="Contributors__heading    gradientText font-bold text-2xl tracking-wide text-center">Contributors</p>
        

@@ -11,7 +11,7 @@
 // import accessibilityWCAG from "./pages/accessibilityWCAG";
 // import dsa from "./pages/dsa";
 // import aiFuture from "./pages/aiFuture";
-// import links from ".data/links.json";
+// import links from ".data/link.json";
 
 // function App() {
 //   return (
@@ -47,37 +47,44 @@ import Homepage from "./pages/Homepage";
 import LeetCode from "./pages/LeetCode";
 import ItemPage from "./pages/ItemPage";
 import OnlineTools from "./pages/OnlineTools";
-import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import PageComponent from "./pages/PageComponent";
-import developersLibrary from "./pages/developersLibrary";
-import codingConventions from "./pages/codingConventions";
+import developersLibrary from "./pages/DevelopersLibrary";
+import codingConventions from "./pages/CodingConventions";
+import Contribute from "./components/homepage/Contribute";
+
 import frameworksLibraries from "./pages/frameworksLibraries";
 import accessibilityWCAG from "./pages/accessibilityWCAG";
 import dsa from "./pages/dsa";
 import aiFuture from "./pages/aiFuture";
-import links from './links.json';
+import link from './data/link.json';
 
 function App() {
   return (
-    <div className="max-w-full bg-white dark:bg-blue">
-      <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path={links.home} element={<Homepage />} />
-          <Route path={links.leetcode} element={<LeetCode />} />
-          <Route path={links.leetcodeItem} element={<ItemPage />} />
-          <Route path={links.developersLibrary} element={<PageComponent {...developersLibrary} />} />
-          <Route path={links.codingConventions} element={<PageComponent {...codingConventions} />} />
-          <Route path={links.frameworksLibraries} element={<PageComponent {...frameworksLibraries} />} />
-          <Route path={links.accessibilityWCAG} element={<PageComponent {...accessibilityWCAG} />} />
-          <Route path={links.dsa} element={<PageComponent {...dsa} />} />
-          <Route path={links.aiFuture} element={<PageComponent {...aiFuture} />} />
-          <Route path={links.onlineTools} element={<OnlineTools />} />
-          <Route path={links.itempageLC} element={<ItemPage sol="lc" />} />
-          <Route path={links.itempageCW} element={<ItemPage sol="cw" />} />
-          <Route path={links.itempageHR} element={<ItemPage sol="cw" />} />
-        </Routes>
-      </BrowserRouter>
+    <div className="flex flex-col min-h-screen max-w-full bg-white dark:bg-blue">
+      
+      <main className="flex-grow">
+        <BrowserRouter>
+          <Routes>
+            <Route path={link.home} element={<Homepage />} />
+            <Route path={link.leetcode} element={<LeetCode />} />
+            <Route path={link.leetcodeItem} element={<ItemPage />} />
+            <Route path={link.developersLibrary} element={<PageComponent {...developersLibrary} />} />
+            <Route path={link.codingConventions} element={<PageComponent {...codingConventions} />} />
+            <Route path={link.frameworksLibraries} element={<PageComponent {...frameworksLibraries} />} />
+            <Route path={link.accessibilityWCAG} element={<PageComponent {...accessibilityWCAG} />} />
+            <Route path={link.dsa} element={<PageComponent {...dsa} />} />
+            <Route path={link.aiFuture} element={<PageComponent {...aiFuture} />} />
+            <Route path={link.onlineTools} element={<OnlineTools />} />
+            <Route path={link.itempageLC} element={<ItemPage sol="lc" />} />
+            <Route path={link.itempageCW} element={<ItemPage sol="cw" />} />
+            <Route path={link.itempageHR} element={<ItemPage sol="cw" />} />
+          </Routes>
+        </BrowserRouter>
+      </main>
+      <Contribute />
+
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,20 @@
+{
+  "leetCodeLink": "leetcode/",
+  "leetCodeLogo": "https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/Images/LeetCode_logo_black.png",
+  "codeWarsLink": "codewars/",
+  "codeWarsLogo": "https://www.codewars.com/packs/assets/logo.61192cf7.svg",
+  "home": "/",
+  "leetcodeItem": "/leetcode/:id",
+  "developersLibrary": "/developersLibrary",
+  "codingConventions": "/codingconventions",
+  "frameworksLibraries": "/frameworkslibraries",
+  "accessibilityWCAG": "/accessibilitywcag",
+  "dsa": "/dsa",
+  "aiFuture": "/aifuture",
+  "onlineTools": "/online-tools",
+  "itempageLC": "/itempageLC",
+  "itempageCW": "/itempageCW",
+  "itempageHR": "/itempageHR",
+  "year": "2024"
+}
+

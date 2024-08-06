@@ -2,10 +2,11 @@ import React from "react";
 
 export const Contributor = ({ res }) => {
   return (
-    <div className="p-2 flex flex-col items-center" key={res.id}>
+
+    <div className="p-2 flex flex-col items-center overflow-x-auto space-x-1" key={res.id}>
       <a href={res.html_url} target="blank">
         <img
-          className="rounded-full md:h-24 md:w-24 h-16 w-16 m-1 hover:scale-150 transition-all duration-150"
+          className="rounded-full md:w-10 h-8 w-8 m-1 hover:scale-110 transition-all duration-1000"
           src={res.avatar_url}
           alt={res.login}
         />

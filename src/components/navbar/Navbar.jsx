@@ -114,7 +114,7 @@ function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/developers-library"
+                                href="/developerslibrary"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -127,7 +127,7 @@ function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/coding-conventions"
+                                href="/codingconventions"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -140,7 +140,7 @@ function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/frameworks-libraries"
+                                href="/frameworkslibraries"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -153,7 +153,7 @@ function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/accessibility-wcag"
+                                href="/accessibilitywcag"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -166,7 +166,7 @@ function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="/ai-future"
+                                href="/aifuture"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
