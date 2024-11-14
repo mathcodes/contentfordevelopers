@@ -47,7 +47,7 @@ export default function NavBar() {
                     <div className="flex space-x-4 ">
                       <a
                         href="/"
-                        className="rounded-md bg-gray-900 pr-12 py-2  text-sm font-medium text-black dark:text-white hover:text-accent"
+                        className="rounded-md bg-gray-900 pr-12 py-2 text-lg font-semibold text-black dark:text-white hover:text-accent"
                       >
                         Content For Developers
                        
@@ -81,8 +81,8 @@ export default function NavBar() {
                 </div>
 
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex items-center ">
-                    <button onClick={onClick} className="p-4">
+                  <div className="flex items-center space-x-4">
+                    <button onClick={onClick} className="p-4 hover:scale-105 transition-transform duration-200">
                       <CgDarkMode
                         className="h-6 w-6 fill-black dark:fill-white"
                         aria-hidden="true"
@@ -90,7 +90,7 @@ export default function NavBar() {
                     </button>
                     <button
                       type="button"
-                      className="rounded-full bg-gray-800 p-4 text-black hover:text-white focus:outline-none"
+                      className="rounded-full bg-gray-800 p-4 text-black hover:text-white focus:outline-none hover:scale-105 transition-transform duration-200"
                     >
                       <span className="sr-only">View notifications</span>
                       <a href="https://github.com/mathcodes/contentfordevelopers">
@@ -105,7 +105,7 @@ export default function NavBar() {
                     <Menu as="div" className="relative p-4">
                       <div>
                         <Menu.Button className="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none">
-                          <HiMenu />
+                          <HiMenu className="h-5 w-5"/>
                         </Menu.Button>
                       </div>
                       <Transition
@@ -117,7 +117,7 @@ export default function NavBar() {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                        <Menu.Items className="absolute z-100 right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-black text-black dark:text-white  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-black text-black dark:text-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" style={{ zIndex: 999 }}>
                           <Menu.Item>
                             {({ active }) => (
                               <a
