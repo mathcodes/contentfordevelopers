@@ -49,7 +49,7 @@ export default function DSA({ title, description, Icon, point1, point2, point3, 
             </div>
             <div>
             {cards.map((index) => {
-                <Grid item xs={12} sm={6} md={4} key={index} data={cards} title={title} description={description} />
+                return <Grid item xs={12} sm={6} md={4} key={index} data={cards} title={title} description={description} />;
             })}
             </div>
             <Footer />

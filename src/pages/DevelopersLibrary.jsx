@@ -6,7 +6,7 @@ import { BsLayoutWtf, BsStack, BsYoutube } from 'react-icons/bs';
 import FELinks from '../components/links/FELinks';
 
 export default function DevelopersLibrary({ title, description, icon, point1, point2, point3 }) {
-    const [showFELinks, setShowFELinks] = useState(false);
+    const [showFELinks] = useState(false);
 
     const topic = "Frontend";
     const link = FELinks;

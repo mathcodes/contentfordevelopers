@@ -25,9 +25,6 @@ export default function TailwindTable({ data }) {
   }]
 
   let c = link[0].leetCodeLink
-  let d = link[0].codeWarsLink
-  let i = data.id
-  let e = [c, i].join("")
 
   return (
     <div className="px-6 lg:px-8">
