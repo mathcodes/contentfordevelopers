@@ -145,21 +145,31 @@ Neither of these are valid configuration. They appear to be leftover debugging c
 
 ---
 
-## Fix 8 — Fix CSS Nesting PostCSS Warning
+## Fix 8 — Fix CSS Nesting Warning and Remaining ESLint Warnings
 
 **Branch:** `fix/8-css-nesting`
 **Date:** 2026-04-07
-**Tech:** PostCSS, Tailwind CSS `@layer` nesting, `postcss-nesting`
+**Tech:** PostCSS, `postcss-nesting`, ESLint (`no-unused-vars`, `array-callback-return`)
 
 ### Reason
-The build emits: `Nested CSS was detected, but CSS nesting has not been configured correctly. Please enable a CSS nesting plugin *before* Tailwind in your configuration.`
+Multiple remaining build warnings were identified and resolved:
 
-This occurs because `index.css` uses `@layer base { ... }` with nested CSS rules, which requires a PostCSS nesting plugin (`postcss-nesting`) registered *before* the `tailwindcss` plugin. Without it, nested rules may not compile correctly in all environments.
+1. **CSS nesting warning** — The build emitted: `Nested CSS was detected, but CSS nesting has not been configured correctly.` Root cause was `.banner { hr { ... } }` in `src/pages/pages.css` — invalid CSS nesting without `&` selector. Fixed by un-nesting the rule into flat CSS (`.banner hr { ... }`). Also installed `postcss-nesting` plugin and registered it before `tailwindcss` in PostCSS config as belt-and-suspenders.
+
+2. **`TailwindTable.js` unused variables** — `let d = link[0].codeWarsLink`, `let i = data.id`, and `let e = [c, i].join("")` were assigned but never referenced in rendering. Variable `c` (leetCodeLink) is used; the others were dead code likely left from debugging.
+
+3. **`DSA.jsx` missing map return** — `cards.map((index) => { <Grid .../> })` used a block body `{}` with no `return` statement, so the mapped JSX was silently discarded. Fixed by adding explicit `return`.
+
+4. **`DevelopersLibrary.jsx` unused state setter** — `const [showFELinks, setShowFELinks] = useState(false)` — `setShowFELinks` was never called. `showFELinks` is still used in the JSX; removed the unused setter from the destructuring.
 
 ### Files Changed
 
 - **`postcss.config.js`** — Added `postcss-nesting` plugin before `tailwindcss`
 - **`package.json`** — Added `postcss-nesting` as a dev dependency
+- **`src/pages/pages.css`** — Un-nested `.banner hr {}` from inside `.banner {}` to flat CSS
+- **`src/components/TailwindTable/TailwindTable.js`** — Removed unused variables `d`, `i`, `e`
+- **`src/pages/DSA.jsx`** — Added `return` statement to `cards.map()` arrow function body
+- **`src/pages/DevelopersLibrary.jsx`** — Removed unused `setShowFELinks` from useState destructuring
 
 ---
 
