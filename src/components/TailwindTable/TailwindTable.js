@@ -29,10 +29,6 @@ export default function TailwindTable({ data }) {
   let i = data.id
   let e = [c, i].join("")
 
-  console.log(c)
-  console.log(d)
-  console.log(e)
-  console.log(i)
   return (
     <div className="px-6 lg:px-8">
 

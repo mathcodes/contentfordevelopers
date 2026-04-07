@@ -31,8 +31,7 @@ export default function ItemPage({ sol }) {
       sH.style.display = 'block';
     }
     if (textRef.current) {
-      const obj = new SelectionText(textRef.current);
-      console.log("obj:", obj);
+      new SelectionText(textRef.current);
     }
   }, []);
 

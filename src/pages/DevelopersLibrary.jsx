@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import PageTemplate from './PageTemplate';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaYoutube, FaDatabase } from 'react-icons/fa';
 import { BsLayoutWtf, BsStack, BsYoutube } from 'react-icons/bs';
 import FELinks from '../components/links/FELinks';
 

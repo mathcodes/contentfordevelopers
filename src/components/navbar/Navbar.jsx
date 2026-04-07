@@ -12,7 +12,6 @@ export default function NavBar() {
   const onClick = () => {
     // set switch for dark mode
     let body = document.body;
-    console.log(body);
     if (body.classList.contains("dark")) {
       body.classList.remove("dark");
       body.classList.add("light");

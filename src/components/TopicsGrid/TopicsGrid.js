@@ -13,11 +13,6 @@ export default function TopicsGrid() {
   let i = topics.id
   let e = [c, i].join("")
 
-  console.log(c)
-  console.log(d)
-  console.log(e)
-  console.log(i)
-  console.log(topics)
   return (
     <div className="px-6 lg:px-8">
 

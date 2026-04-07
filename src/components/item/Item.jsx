@@ -14,7 +14,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 let itemDifficulty = leetCodeData[0].difficulty
-console.log(itemDifficulty)
 function cellColor(itemDifficulty) {
   switch (itemDifficulty) {
     case 'Easy':
