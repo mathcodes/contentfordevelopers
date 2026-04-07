@@ -33,7 +33,7 @@ export default function ItemPage({ sol }) {
     if (textRef.current) {
       new SelectionText(textRef.current);
     }
-  }, []);
+  }, [data, id]);
 
   const showHide = (() => {
     let image = document.getElementById('image');
