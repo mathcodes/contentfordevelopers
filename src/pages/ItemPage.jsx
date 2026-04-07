@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
-import { Container, Grid } from "@mui/material";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/navbar/Navbar";
 import ReactPlayer from 'react-player'
-import { HiVideoCamera } from 'react-icons/hi'
 import { BsFillImageFill, BsFilm } from 'react-icons/bs'
-import { TbMovie } from 'react-icons/tb'
-import CodeEditor, { SelectionText } from "@uiw/react-textarea-code-editor";
+import { SelectionText } from "@uiw/react-textarea-code-editor";
 import { useParams } from 'react-router-dom';
 import { LeetCodeSolutions } from "../data/solutionLC";
 import { CodeWarsSolutions } from "../data/solutionCW";

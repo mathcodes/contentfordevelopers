@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FiCode } from 'react-icons/fi';
 import { IconContext } from "react-icons";
 
 

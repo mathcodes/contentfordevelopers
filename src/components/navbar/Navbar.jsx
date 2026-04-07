@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { HiMenu, HiBell, HiX } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
 import { CgDarkMode } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 

@@ -1,20 +1,5 @@
 import { topics }  from '../../data/topicsData'
 
-// {
-//   'id': 1,
-//   'title': '1. Two Sum',
-//   'link': 'https://leetcode.com/problems/two-sum/',
-//   'difficulty': 'Easy',
-//   'solved': true,
-//   'tags': ['Array', 'Hash Table']
-// },
-
-
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function TopicsGrid() {
   const link = [{
     "leetCodeLink": "leetcode/",

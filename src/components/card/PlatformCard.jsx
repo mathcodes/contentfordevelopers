@@ -1,11 +1,9 @@
-import React, { memo, useRef } from "react";
+import React, { memo } from "react";
 import { useLocation } from "react-router-dom";
 import { topics } from "../../data/topicsData";
 
-const PlatformCardList = memo(({ title, href, description, Icon }) => {
-  const location = useLocation();
-  const path = location.pathname;
-  const iconRef = useRef();
+const PlatformCardList = memo(({ title, href, Icon }) => {
+  useLocation();
 
   return (
     <a href={href} className="flex justify-center items-center">
