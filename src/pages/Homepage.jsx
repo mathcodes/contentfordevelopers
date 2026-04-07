@@ -7,18 +7,20 @@ import Contribute from "../components/homepage/Contribute";
 
 function Homepage() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto flex flex-col min-h-screen">
       {/* <Header /> */}
       <NavBar />
-      <Hero
-        title= "ContentForDevelopers!"
-        preTitle='Welcome to&nbsp;'
-        description="An open-source project aimed at providing learning tools for
+      <main className="flex-1">
+        <Hero
+          title= "ContentForDevelopers!"
+          preTitle='Welcome to&nbsp;'
+          description="An open-source project aimed at providing learning tools for
         developers that cover a wide range of learning styles."
-      />
-      {/* <TopicsGrid /> */}
-      <Learn />
-      <Contribute />
+        />
+        {/* <TopicsGrid /> */}
+        <Learn />
+        <Contribute />
+      </main>
       <Footer />
     </div>
   );

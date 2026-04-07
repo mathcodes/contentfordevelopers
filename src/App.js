@@ -13,10 +13,12 @@ import CodingConventions from "./pages/CodingConventions";
 import FrameworksAndLibraries from "./pages/FrameworksAndLibraries";
 import AccessibilityAndWCAGGuidelines from "./pages/AccessibilityAndWCAGGuidelines";
 import AIAndTheFuture from "./pages/AIAndTheFuture";
+import PlaceholderPage from "./pages/PlaceholderPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="max-w-full bg-white dark:bg-blue">
+    <div className="max-w-full flex-1 flex flex-col bg-white dark:bg-blue">
       <Header />
       <BrowserRouter>
         {/* <Navbar/> */}
@@ -94,6 +96,10 @@ function App() {
           <Route path="/itempageLC" element={<ItemPage sol="lc" />} />
           <Route path="/itempageCW" element={<ItemPage sol="cw" />} />
           <Route path="/itempageHR" element={<ItemPage sol="cw" />} />
+          <Route path="/codewars" element={<PlaceholderPage title="CodeWars" />} />
+          <Route path="/hackerrank" element={<PlaceholderPage title="HackerRank" />} />
+          <Route path="/notes" element={<PlaceholderPage title="Notes & Resources" />} />
+          <Route path="*" element={<NotFound />} />
           {/* <Route path="/hackerrank" element={<HackerRank/>} />
           <Route path="/codewars" element={<CodeWars/>} />
           <Route path="/dsa" element={<DSA/>} />

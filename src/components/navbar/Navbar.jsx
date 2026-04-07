@@ -10,16 +10,12 @@ function classNames(...classes) {
 
 export default function NavBar() {
   const onClick = () => {
-    // set switch for dark mode
-    let body = document.body;
-    if (body.classList.contains("dark")) {
-      body.classList.remove("dark");
-      body.classList.add("light");
+    if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
+      localStorage.theme = 'light';
     } else {
-      body.classList.remove("light");
-      body.classList.add("dark");
       document.documentElement.classList.add("dark");
+      localStorage.theme = 'dark';
     }
   };
   return (
@@ -133,7 +129,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="./DevelopersLibrary"
+                                href="/DevelopersLibrary"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -172,7 +168,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="accessibilityandwcagcompliance"
+                                href="/accessibilityandwcagguidelines"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -185,7 +181,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="aiandthefuture"
+                                href="/aiandthefuture"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -198,7 +194,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="dsa"
+                                href="/dsa"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"

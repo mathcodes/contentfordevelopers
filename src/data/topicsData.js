@@ -42,7 +42,7 @@ export const topics = [
     point1: 'Understand the importance of accessibility and WCAG compliance',
     point2: 'Learn how to make your websites and applications accessible, including sites with AI and machine learning',
     point3: 'Explore accessibility features and tools',
-    link: '/accessibilityandwcag',
+    link: '/accessibilityandwcagguidelines',
     icon: FaClipboardCheck
   },
   {

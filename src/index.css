@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.min-h-screen {
-  min-height: auto;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.items-start {
-  align-items: inherit;
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 /* Carousel CSS */
 @import "~slick-carousel/slick/slick.css";

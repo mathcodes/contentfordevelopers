@@ -4,6 +4,14 @@ module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '15%',
+      },
+    },
     extend: {
       fontSize: {
         dynamicHeader: "clamp(1.5rem, 1.1359rem + 1.5534vw, 3rem);",
