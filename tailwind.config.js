@@ -1,8 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-let rc =Math.floor(Math.random() * 16777215).toString(16)
-console.log(rc)
-
 module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx}"],
