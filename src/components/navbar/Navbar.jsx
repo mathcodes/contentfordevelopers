@@ -120,7 +120,7 @@ export default function NavBar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href="#"
+                                href="/"
                                 className={classNames(
                                   active ? "bg-gray-100" : "",
                                   "block px-4 py-2 text-sm hover:text-accent"
@@ -245,31 +245,31 @@ export default function NavBar() {
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/"
                   className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
                 >
-                  Dashboard
+                  Home
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/DevelopersLibrary"
                   className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
-                  Team
+                  Developer's Library
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/codingconventions"
                   className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
-                  Projects
+                  Coding Conventions
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  href="#"
+                  href="/accessibilityandwcagguidelines"
                   className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
-                  Calendar
+                  Accessibility
                 </Disclosure.Button>
               </div>
               <div className="border-t border-gray-700 pt-4 pb-3">

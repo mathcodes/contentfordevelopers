@@ -31,8 +31,8 @@ export default function TopicsGrid() {
                 <li className="text-gray-600">• {topic.point3}</li>
               </ul>
               <div className="mt-4 flex justify-end">
-                <a href="#" className="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</a>
-                <a href="#" className="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</a>
+                <button className="px-4 py-2 bg-blue-500 text-white rounded-lg mr-2">Learn More</button>
+                <button className="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg">Bookmark</button>
               </div>
             </div>
           </div>

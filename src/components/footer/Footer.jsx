@@ -110,7 +110,7 @@ export default function Example() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Content</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4">
                   {navigation.content.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
@@ -122,7 +122,7 @@ export default function Example() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Contribute</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
@@ -136,7 +136,7 @@ export default function Example() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Company</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
@@ -148,7 +148,7 @@ export default function Example() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Open Source</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
