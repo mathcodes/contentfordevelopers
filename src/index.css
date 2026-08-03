@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* Carousel CSS */
+
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
@@ -50,5 +50,51 @@ body {
   }
 }
 
+@layer components {
+  .site-container {
+    @apply max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8;
+  }
 
+  .display {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    @apply font-extrabold leading-tight tracking-tight;
+  }
 
+  .heading-1 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    @apply font-bold leading-tight;
+  }
+
+  .heading-2 {
+    font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+    @apply font-semibold leading-snug;
+  }
+
+  .heading-3 {
+    @apply text-xl font-semibold leading-snug;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.12em];
+  }
+
+  .body-lg {
+    @apply text-lg leading-relaxed;
+  }
+
+  .body {
+    @apply text-base leading-relaxed;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-accent to-accent2 hover:opacity-90 active:scale-95 transition-all duration-200 no-underline;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold border-2 border-accent text-accent hover:bg-accent hover:text-white active:scale-95 transition-all duration-200 no-underline;
+  }
+
+  .card {
+    @apply rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+}

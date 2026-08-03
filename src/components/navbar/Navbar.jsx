@@ -1,337 +1,125 @@
 import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure, Transition } from "@headlessui/react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { CgDarkMode } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Dev Library", href: "/DevelopersLibrary" },
+  { name: "Conventions", href: "/codingconventions" },
+  { name: "Frameworks", href: "/frameworksandlibraries" },
+  { name: "Accessibility", href: "/accessibilityandwcagguidelines" },
+  { name: "DSA", href: "/dsa" },
+  { name: "AI & Future", href: "/aiandthefuture" },
+];
+
+function toggleDark() {
+  if (document.documentElement.classList.contains("dark")) {
+    document.documentElement.classList.remove("dark");
+    localStorage.theme = "light";
+  } else {
+    document.documentElement.classList.add("dark");
+    localStorage.theme = "dark";
+  }
 }
 
 export default function NavBar() {
-  const onClick = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = 'light';
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = 'dark';
-    }
-  };
   return (
-    <div className="container mx-auto">
-      <Disclosure as="nav" className=" dark:text-white text-black">
-        {({ open }) => (
-          <>
-            <div className="mx-auto py-4 sm:px-2 lg:px-1">
-              <div className="flex h-16 items-center justify-between">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0">
-                    <img
-                      className="block h-8 w-auto lg:hidden"
-                      src="/CforD2.png"
-                      alt="Your Company"
-                    />
-                    <img
-                      className="hidden h-8 w-auto lg:block"
-                      src="/CforD2.png"
-                      alt="Your Company"
-                    />
-                  </div>
-                  <div className="hidden sm:ml-6 lg:block">
-                    <div className="flex space-x-4 ">
-                      <a
-                        href="/"
-                        className="rounded-md bg-gray-900 pr-12 py-2 text-lg font-semibold text-black dark:text-white hover:text-accent"
-                      >
-                        Content For Developers
-                       
-                      </a>
-                      {/* <a
-                        href="/leetcode"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        LeetCode
-                      </a>
-                      <a
-                        href="/codewars"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        CodeWars
-                      </a>
-                      <a
-                        href="/hackerrank"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        HackerRank
-                      </a>
-                      <a
-                        href="/notes"
-                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-accent"
-                      >
-                        Notes & Resources
-                      </a> */}
-                    </div>
-                  </div>
-                </div>
+    <Disclosure
+      as="nav"
+      className="sticky top-0 z-40 backdrop-blur-md bg-white/90 dark:bg-blue/90 border-b border-slate-200 dark:border-slate-700"
+    >
+      {({ open }) => (
+        <>
+          <div className="site-container">
+            <div className="flex h-16 items-center justify-between gap-4">
+              {/* Logo */}
+              <a href="/" className="flex-shrink-0 flex items-center gap-2">
+                <img className="h-8 w-auto" src="/CforD2.png" alt="ContentForDevelopers" />
+                <span className="hidden sm:block font-bold text-blue dark:text-white text-sm tracking-wide">
+                  C4D
+                </span>
+              </a>
 
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex items-center space-x-4">
-                    <button onClick={onClick} className="p-4 hover:scale-105 transition-transform duration-200">
-                      <CgDarkMode
-                        className="h-6 w-6 fill-black dark:fill-white"
-                        aria-hidden="true"
-                      />
-                    </button>
-                    <button
-                      type="button"
-                      className="rounded-full bg-gray-800 p-4 text-black hover:text-white focus:outline-none hover:scale-105 transition-transform duration-200"
-                    >
-                      <span className="sr-only">View notifications</span>
-                      <a href="https://github.com/mathcodes/contentfordevelopers">
-                        <FaGithub
-                          className="h-6 w-6 fill-black dark:fill-white"
-                          aria-hidden="true"
-                        />
-                      </a>
-                    </button>
+              {/* Desktop nav links */}
+              <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-150"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
 
-                    {/* Profile dropdown */}
-                    <Menu as="div" className="relative p-4">
-                      <div>
-                        <Menu.Button className="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-black focus:outline-none">
-                          <HiMenu className="h-5 w-5"/>
-                        </Menu.Button>
-                      </div>
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 scale-95"
-                        enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 scale-100"
-                        leaveTo="transform opacity-0 scale-95"
-                      >
-                        <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-black text-black dark:text-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" style={{ zIndex: 999 }}>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="/"
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm hover:text-accent"
-                                )}
-                              >
-                                Home
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="/DevelopersLibrary"
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm hover:text-accent"
-                                )}
-                              >
-                                Developer's Library
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="/codingconventions"
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm hover:text-accent"
-                                )}
-                              >
-                                Coding Conventions
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="/frameworksandlibraries"
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm hover:text-accent"
-                                )}
-                              >
-                                Frameworks & Libraries
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="/accessibilityandwcagguidelines"
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm hover:text-accent"
-                                )}
-                              >
-                                Accessibility & WCAG Compliance
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="/aiandthefuture"
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm hover:text-accent"
-                                )}
-                              >
-                                AI & The Future
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="/dsa"
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm hover:text-accent"
-                                )}
-                              >
-                                DSA
-                              </a>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
-                                className={classNames(
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm hover:text-accent"
-                                )}
-                              >
-                                Contribute
-                              </a>
-                            )}
-                          </Menu.Item>
-                        </Menu.Items>
-                      </Transition>
-                    </Menu>
-                  </div>
-                </div>
-                <div className="-mr-2 flex sm:hidden">
-                  {/* Mobile menu button */}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <HiX className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <HiMenu className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-                </div>
+              {/* Right actions */}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={toggleDark}
+                  className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-150"
+                  aria-label="Toggle dark mode"
+                >
+                  <CgDarkMode className="h-5 w-5" />
+                </button>
+                <a
+                  href="https://github.com/mathcodes/contentfordevelopers"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-150"
+                  aria-label="GitHub repository"
+                >
+                  <FaGithub className="h-5 w-5" />
+                </a>
+
+                {/* Mobile hamburger */}
+                <Disclosure.Button className="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-150">
+                  <span className="sr-only">Open menu</span>
+                  {open ? <HiX className="h-5 w-5" /> : <HiMenu className="h-5 w-5" />}
+                </Disclosure.Button>
               </div>
             </div>
+          </div>
 
-            <Disclosure.Panel className="sm:hidden">
-              <div className="space-y-1 px-2 pt-2 pb-3">
-                {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+          {/* Mobile menu */}
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-150"
+            enterFrom="opacity-0 -translate-y-1"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition ease-in duration-100"
+            leaveFrom="opacity-100 translate-y-0"
+            leaveTo="opacity-0 -translate-y-1"
+          >
+            <Disclosure.Panel className="lg:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-blue">
+              <div className="site-container py-3 space-y-1">
+                {navLinks.map((link) => (
+                  <Disclosure.Button
+                    key={link.name}
+                    as="a"
+                    href={link.href}
+                    className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent dark:hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-150"
+                  >
+                    {link.name}
+                  </Disclosure.Button>
+                ))}
                 <Disclosure.Button
                   as="a"
-                  href="/"
-                  className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                  href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-accent dark:hover:text-accent hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-150"
                 >
-                  Home
+                  Contribute
                 </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="/DevelopersLibrary"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Developer's Library
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="/codingconventions"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Coding Conventions
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="/accessibilityandwcagguidelines"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Accessibility
-                </Disclosure.Button>
-              </div>
-              <div className="border-t border-gray-700 pt-4 pb-3">
-                <div className="inline-flex items-end px-5">
-                  <button
-                    onClick={onClick}
-                    className="ml-auto p-1 flex-shrink-0 hover:text-accent"
-                  >
-                    <CgDarkMode
-                      className="h-6 w-6 fill-black dark:fill-white"
-                      aria-hidden="true"
-                    />
-                  </button>
-                  <button
-                    type="button"
-                    className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-accent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
-                    <span className="sr-only">Contribute to GitHub</span>
-                    <FaGithub
-                      className="h-6 w-6 fill-black dark:fill-white"
-                      aria-hidden="true"
-                    />
-                  </button>
-                </div>
-                <div className="mt-3 space-y-1 px-2">
-                  <Disclosure.Button
-                    as="a"
-                    href="/leetcode"
-                    className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
-                  >
-                    LeetCode
-                  </Disclosure.Button>
-                  <Disclosure.Button
-                    as="a"
-                    href="/codewars"
-                    className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
-                  >
-                    CodeWars
-                  </Disclosure.Button>
-                  <Disclosure.Button
-                    as="a"
-                    href="/hackerrank"
-                    className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
-                  >
-                    HackerRank
-                  </Disclosure.Button>
-                  <Disclosure.Button
-                    as="a"
-                    href="/notes"
-                    className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue dark:bg-gray-700 hover:text-accent"
-                  >
-                    Notes & Resources
-                  </Disclosure.Button>
-                  <Disclosure.Button
-                    as="a"
-                    href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
-                    className="block rounded-md px-3 py-2 text-base font-medium dark:text-white text-blue hover:bg-gray-700 hover:text-accent"
-                  >
-                    Contribute
-                  </Disclosure.Button>
-                </div>
               </div>
             </Disclosure.Panel>
-          </>
-        )}
-      </Disclosure>
-    </div>
+          </Transition>
+        </>
+      )}
+    </Disclosure>
   );
 }
+
