@@ -1,32 +1,41 @@
 import React from "react";
 import ContributorSection from "./contributorSection/ContributorSection";
+import DevEyes from "../DevEyes/DevEyes";
 
 const Contribute = () => {
   return (
-    <section className="relative mx-auto mb-12" id="platform-list">
-      <div className="flex flex-col items-start justify-center lg:px-40 px-6 py-4  gap-6 leading-10 dark:text-platinum text-blue z-10 relative ">
-        <div className="flex flex-col  mx-auto gap-6 max-w-3xl">
-          <h4 className="gradientText font-bold text-2xl tracking-wide mt-4 text-center">
-            Want to join the team?
-          </h4>
-          <p className="text-lg">
-            Anyone can contribute by visiting the{" "}
-            <a className="underline hover:text-accent transition-all duration-300 cursor-pointer tracking-wide  " href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md">
-              GitHub Repo!
-            </a>{" "}
-            We would love to have you on board and welcome all levels of
-            experience.
-          </p>
-          <p className="text-lg">
-            Jon makes sure to keep a handful of 'good first issue' options
-            available, so give it a shot, and if you're new, we offer assistance
-            to walk you through the process.
-          </p>
-          <p className="text-lg">
-            Become a contributor TODAY and start becoming part of the community!
-          </p>
+    <section className="py-16 bg-slate-50 dark:bg-slate-800/40">
+      <div className="site-container">
+        <DevEyes label="Contribute — section" code={`<section className="py-16 bg-slate-50 dark:bg-slate-800/40">\n  <div className="site-container">\n    <h2 className="heading-1">Want to join the team?</h2>\n    <ContributorSection />\n  </div>\n</section>`}>
+          <p className="eyebrow gradientText mb-2">Open Source</p>
+          <h2 className="heading-1 text-blue dark:text-platinum mb-4">Want to join the team?</h2>
+          <div className="body text-slate-600 dark:text-slate-400 max-w-2xl space-y-3 mb-8">
+            <p>
+              Anyone can contribute by visiting the{" "}
+              <a
+                className="underline hover:text-accent transition-colors duration-200"
+                href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub repo.
+              </a>{" "}
+              We welcome all levels of experience.
+            </p>
+            <p>
+              Jon keeps a handful of <em>good first issue</em> options available — give it a shot, and if you're new, we'll walk you through the process.
+            </p>
+          </div>
+          <a
+            className="btn-primary inline-flex mb-10"
+            href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Become a Contributor
+          </a>
           <ContributorSection />
-        </div>
+        </DevEyes>
       </div>
     </section>
   );

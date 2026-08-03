@@ -1,30 +1,26 @@
 import React from "react";
-import PlatformList from "./platformList/PlatformList";
+import PlatformCard from "../card/PlatformCard";
+import DevEyes from "../DevEyes/DevEyes";
 
 const Learn = () => {
   return (
-    <section className="relative mx-auto mb-12" id="platform-list">
-      <div className="flex flex-col items-start justify-center lg:px-40 px-6 py-4  gap-6 leading-10 dark:text-platinum text-blue z-10 relative ">
-        <div className="flex flex-col items-center mx-auto gap-6 max-w-3xl">
-          <h4 className="gradientText font-bold text-2xl tracking-wide mt-4">
-            Want to learn?
-          </h4>
-          <p className="text-lg ">
-            The devoted team behind this project have all been through and
-            continue to perservere through learning new content, technology,
-            updates, languages, frameworks, problem-solving strategies, frontend
-            & backend archtiecture, and so much more.
+    <section className="py-16" id="learn">
+      <div className="site-container">
+        <DevEyes label="Learn — section" code={`<section className="py-16" id="learn">\n  <div className="site-container">\n    <p className="eyebrow">Resources</p>\n    <h2 className="heading-1 mt-2 mb-4">Want to learn?</h2>\n    <PlatformCard />\n  </div>\n</section>`}>
+          <p className="eyebrow gradientText mb-2">Resources</p>
+          <h2 className="heading-1 text-blue dark:text-platinum mb-3">Want to learn?</h2>
+          <p className="body text-slate-600 dark:text-slate-400 max-w-2xl mb-2">
+            The devoted team behind this project have all been through — and continue to push through — learning new content, technology, frameworks, problem-solving strategies, frontend & backend architecture, and so much more.
           </p>
-          <p className="text-lg">
-            Now we are all giving back to the community in the most helpful way
-            we can think of: providing{" "}
-            <span className="gradientText font-bold text-xl">FREE</span>,{" "}
-            <span className="gradientText font-bold text-xl">UP-TO-DATE</span>,
-            and <span className="gradientText font-bold text-xl">DIVERSE</span>{" "}
-            methods to learn the skills needed to make it in this industry!
+          <p className="body text-slate-600 dark:text-slate-400 max-w-2xl mb-10">
+            We're giving back by providing{" "}
+            <span className="gradientText font-bold">FREE</span>,{" "}
+            <span className="gradientText font-bold">UP-TO-DATE</span>, and{" "}
+            <span className="gradientText font-bold">DIVERSE</span>{" "}
+            methods to learn the skills needed to make it in this industry.
           </p>
-        </div>
-        <PlatformList />
+          <PlatformCard />
+        </DevEyes>
       </div>
     </section>
   );

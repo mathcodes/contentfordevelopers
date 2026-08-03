@@ -1,45 +1,53 @@
 import React from 'react';
-import Grid from '../components/grid/Grid';
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/navbar/Navbar";
-import "./pages.css";
-import { GiGraduateCap } from 'react-icons/gi';
 
-export default function PageTemplate({ cards, title, description, icon, point1, point2, point3, link }) {
+export default function PageTemplate({ topic }) {
+  const { title, description, point1, point2, point3, icon: Icon } = topic || {};
 
-	return (
-
-
-<div className='leetCode text-blue dark:text-white'>
-    <NavBar />
-    <div className="container mx-auto px-4 sm:px-8 min-h-screen">
-        <div className='flex items-left justify-center flex-col min-h-100 py-5 px-5'>
-            <h1 className="text-3xl font-bold">{title}</h1>
-            <p className="mt-4">{description}</p>
-            <ul className="mt-4 flex flex-col space-y-2">
-                <li>{point1}</li>
-                <li>{point2}</li>
-                <li>{point3}</li>
+  return (
+    <div className="flex flex-col min-h-screen text-blue dark:text-white">
+      <NavBar />
+      <main className="flex-1">
+        <section className="py-16 bg-slate-50 dark:bg-slate-800/30">
+          <div className="site-container">
+            <div className="flex items-center gap-3 mb-4">
+              {Icon && <Icon className="w-8 h-8 text-accent2" />}
+              <h1 className="heading-1">{title}</h1>
+            </div>
+            <p className="body-lg text-slate-600 dark:text-slate-400 max-w-2xl mb-6">{description}</p>
+            <ul className="space-y-2 mb-8">
+              {[point1, point2, point3].filter(Boolean).map((point, i) => (
+                <li key={i} className="flex items-start gap-2 body text-slate-600 dark:text-slate-400">
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-accent2 flex-shrink-0" />
+                  {point}
+                </li>
+              ))}
             </ul>
-            <a href={link} className="mt-4 text-blue-500 dark:text-blue-300 hover:underline flex items-center space-x-2">
-                <span>Watch now</span>
-                <GiGraduateCap className="text-xl" />
-            </a>
-        </div>
-        <div className="flex px-0">
-            <div className="w-1/3 px-6">
-                <img src="/CforD2.png" alt="LeetCode Logo" className="w-4" />
-            </div>
-            <div className="w-2/3 px-6">
-                <h3 className="px-6">Under Construction!!</h3>
-            </div>
-        </div>
-        <h1 className="text-2xl font-semibold mb-4 p-5">Topics</h1>
-        <Grid data={cards} link={link}/>
+          </div>
+        </section>
 
+        <section className="py-16">
+          <div className="site-container">
+            <div className="rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 p-12 text-center">
+              <p className="eyebrow text-slate-400 mb-2">In Progress</p>
+              <h2 className="heading-2 text-slate-500 dark:text-slate-400">Content Coming Soon</h2>
+              <p className="body text-slate-400 mt-3 max-w-md mx-auto">
+                This section is actively being built. Want to help shape it?
+              </p>
+              <a
+                className="btn-primary mt-6 inline-flex"
+                href="https://github.com/mathcodes/contentfordevelopers/blob/main/CONTRIBUTING.md"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Contribute
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </div>
-    <Footer />
-</div>
-
-	);
+  );
 }

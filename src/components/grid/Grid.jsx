@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { IconContext } from "react-icons";
 
-
-
 export default function Grid({ data, link }) {
   const [showGrid, setShowGrid] = useState(true);
-
-  const handleCardClick = () => {
-    setShowGrid(false);
-  };
 
   return (
     <div>
@@ -17,20 +11,18 @@ export default function Grid({ data, link }) {
           {data.map((item, index) => (
             <div
               key={index}
-              className="p-2 m-4 rounded-lg z-1 bg-gradient-to-r from-accent to-accent2 shadow-l cursor-pointer"
-              onClick={handleCardClick}
+              className="p-0.5 rounded-xl bg-gradient-to-r from-accent to-accent2 cursor-pointer"
+              onClick={() => setShowGrid(false)}
             >
-              <div className="flex p-6 h-full text-center transition-all duration-1000 bg-white rounded-lg dark:bg-blue hover:scale-95 hover:shadow-sm group">
-                <div className="p-4 rounded shadow">
-                  <IconContext.Provider
-                    value={{ color: item.iconColor, className: "global-class-name" }}
-                  >
-                    <div className="flex mb-2">
-                      <item.icon className="mr-2 w-6 h-6" />
-                      <h2 className="text-lg font-semibold">{item.title}</h2>
+              <div className="flex p-6 h-full text-center rounded-xl bg-white dark:bg-blue hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200 group">
+                <div className="p-4">
+                  <IconContext.Provider value={{ color: item.iconColor }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      {item.icon && <item.icon className="w-6 h-6" />}
+                      <h2 className="text-lg font-semibold text-blue dark:text-platinum">{item.title}</h2>
                     </div>
                   </IconContext.Provider>
-                  <p className="text-gray-600">{item.description}</p>
+                  <p className="body text-slate-500 dark:text-slate-400">{item.description}</p>
                 </div>
               </div>
             </div>
@@ -41,4 +33,5 @@ export default function Grid({ data, link }) {
       )}
     </div>
   );
-};
+}
+
