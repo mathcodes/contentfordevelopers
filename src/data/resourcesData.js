@@ -41,10 +41,10 @@ export const resourcesByTopicId = {
       {
         category: 'Best of the Web',
         items: [
-          { title: 'MDN Web Docs', url: 'https://developer.mozilla.org/', icon: SiMdnwebdocs, description: 'Still the best single reference for modern browser behavior, HTML, CSS, and JavaScript.' },
-          { title: 'roadmap.sh', url: 'https://roadmap.sh/', icon: FaChartLine, description: 'A clear, opinionated map of what real developers actually learn across disciplines.' },
-          { title: 'freeCodeCamp', url: 'https://www.freecodecamp.org/', icon: SiFreecodecamp, description: 'A respected community project that balances learning depth with practical hands-on building.' },
-          { title: 'JavaScript.info', url: 'https://javascript.info/', icon: SiJavascript, description: 'One of the strongest deep-dives for understanding how JavaScript really works in practice.' },
+          { title: 'MDN Web Docs', url: 'https://developer.mozilla.org/', icon: SiMdnwebdocs, description: 'The best single reference for browser behavior, HTML, CSS, and JavaScript.' },
+          { title: 'freeCodeCamp', url: 'https://www.freecodecamp.org/', icon: SiFreecodecamp, description: 'A practical, project-first path for learning by doing.' },
+          { title: 'roadmap.sh', url: 'https://roadmap.sh/', icon: FaChartLine, description: 'A sharp map of the modern developer journey across disciplines.' },
+          { title: 'JavaScript.info', url: 'https://javascript.info/', icon: SiJavascript, description: 'A deeper, clearer explanation of how JavaScript really works.' },
         ],
       },
     ],
@@ -77,10 +77,10 @@ export const resourcesByTopicId = {
       {
         category: 'Best of the Web',
         items: [
-          { title: 'Google Style Guides', url: 'https://google.github.io/styleguide/', icon: FaCode, description: 'Still one of the most useful sets of default engineering standards used by major teams.' },
-          { title: 'Refactoring.Guru', url: 'https://refactoring.guru/design-patterns', icon: FaBook, description: 'A favorite resource for learning patterns and code smells in a way that feels practical and visual.' },
-          { title: 'Conventional Commits', url: 'https://www.conventionalcommits.org/', icon: SiGit, description: 'A small convention that dramatically improves team communication and release hygiene.' },
-          { title: 'Google Engineering Practices', url: 'https://google.github.io/eng-practices/review/', icon: FaTools, description: 'A strong, opinionated example of how mature engineering organizations review and ship code.' },
+          { title: 'Google Style Guides', url: 'https://google.github.io/styleguide/', icon: FaCode, description: 'A dependable baseline for readable, consistent code across large teams.' },
+          { title: 'Refactoring.Guru', url: 'https://refactoring.guru/design-patterns', icon: FaBook, description: 'The clearest visual guide to patterns, smells, and practical refactoring.' },
+          { title: 'Conventional Commits', url: 'https://www.conventionalcommits.org/', icon: SiGit, description: 'A small convention with a big payoff in release clarity and team communication.' },
+          { title: 'Google Engineering Practices', url: 'https://google.github.io/eng-practices/review/', icon: FaTools, description: 'A mature standard for review, change quality, and engineering discipline.' },
         ],
       },
     ],
@@ -113,10 +113,10 @@ export const resourcesByTopicId = {
       {
         category: 'Best of the Web',
         items: [
-          { title: 'React', url: 'https://react.dev/', icon: SiReact, description: 'The default choice for many teams and still the best place to start when you want modern frontend patterns.' },
-          { title: 'Next.js', url: 'https://nextjs.org/docs', icon: SiNextdotjs, description: 'The most opinionated and practical framework for shipping production-grade React apps without reinventing the stack.' },
-          { title: 'Django', url: 'https://docs.djangoproject.com/', icon: SiDjango, description: 'A proven backend choice when you want secure, batteries-included tooling and rapid product iteration.' },
-          { title: 'State of JS Survey', url: 'https://stateofjs.com/', icon: FaChartLine, description: 'A practical snapshot of what the ecosystem actually values, uses, and is moving toward.' },
+          { title: 'React', url: 'https://react.dev/', icon: SiReact, description: 'The default frontend choice for modern component-driven products.' },
+          { title: 'Next.js', url: 'https://nextjs.org/docs', icon: SiNextdotjs, description: 'The most practical way to ship production React apps at scale.' },
+          { title: 'Vue.js', url: 'https://vuejs.org/', icon: SiVuedotjs, description: 'A clean, approachable framework that still earns serious adoption.' },
+          { title: 'State of JS Survey', url: 'https://stateofjs.com/', icon: FaChartLine, description: 'A useful read on what the ecosystem is actually choosing and why.' },
         ],
       },
     ],
@@ -149,10 +149,10 @@ export const resourcesByTopicId = {
       {
         category: 'Best of the Web',
         items: [
-          { title: 'WCAG 2.2', url: 'https://www.w3.org/TR/WCAG22/', icon: SiW3C, description: 'The authoritative accessibility standard that defines what accessible web experiences should look like.' },
-          { title: 'The A11Y Project', url: 'https://www.a11yproject.com/', icon: FaUniversalAccess, description: 'A practical, human-readable source for everyday accessibility decisions and patterns.' },
-          { title: 'WebAIM', url: 'https://webaim.org/', icon: FaWheelchair, description: 'One of the strongest real-world accessibility resources for both learning and auditing.' },
-          { title: 'axe DevTools', url: 'https://www.deque.com/axe/devtools/', icon: FaTools, description: 'A top-tier automated testing tool for catching issues early in the design and QA loop.' },
+          { title: 'WCAG 2.2', url: 'https://www.w3.org/TR/WCAG22/', icon: SiW3C, description: 'The authoritative standard for accessible web experiences.' },
+          { title: 'The A11Y Project', url: 'https://www.a11yproject.com/', icon: FaUniversalAccess, description: 'A practical, human-readable guide for everyday accessibility decisions.' },
+          { title: 'WebAIM', url: 'https://webaim.org/', icon: FaWheelchair, description: 'A standout source for real-world accessibility testing and education.' },
+          { title: 'axe DevTools', url: 'https://www.deque.com/axe/devtools/', icon: FaTools, description: 'A top-tier automated check for catching issues early in product work.' },
         ],
       },
     ],
@@ -184,10 +184,10 @@ export const resourcesByTopicId = {
       {
         category: 'Best of the Web',
         items: [
-          { title: 'LeetCode', url: 'https://leetcode.com/', icon: SiLeetcode, description: 'The default interview-prep platform for most developers because it is comprehensive and fast to practice on.' },
-          { title: 'NeetCode', url: 'https://neetcode.io/', icon: FaCode, description: 'An excellent structured path that turns a chaotic topic list into a repeatable study plan.' },
-          { title: 'VisuAlgo', url: 'https://visualgo.net/', icon: FaChartLine, description: 'A standout visual teaching tool for understanding algorithms instead of just memorizing them.' },
-          { title: 'Grind 75', url: 'https://www.techinterviewhandbook.org/grind75', icon: FaChartLine, description: 'A highly practical study plan that is opinionated, disciplined, and built for real interview prep.' },
+          { title: 'LeetCode', url: 'https://leetcode.com/', icon: SiLeetcode, description: 'The most complete daily practice platform for interview prep.' },
+          { title: 'NeetCode', url: 'https://neetcode.io/', icon: FaCode, description: 'A disciplined, pattern-based path that cuts through the noise.' },
+          { title: 'VisuAlgo', url: 'https://visualgo.net/', icon: FaChartLine, description: 'A strong visual aid for learning algorithms by intuition, not memorization.' },
+          { title: 'Grind 75', url: 'https://www.techinterviewhandbook.org/grind75', icon: FaChartLine, description: 'One of the best structured plans for getting interview-ready.' },
         ],
       },
     ],
@@ -220,10 +220,10 @@ export const resourcesByTopicId = {
       {
         category: 'Best of the Web',
         items: [
-          { title: "Anthropic's Prompt Engineering Guide", url: 'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview', icon: FaRobot, description: 'A practical, clear introduction to prompting with real-world examples and structure-heavy guidance.' },
-          { title: 'OpenAI Cookbook', url: 'https://cookbook.openai.com/', icon: FaRobot, description: 'A standout resource for production-facing AI patterns like tool use, retrieval, and orchestration.' },
-          { title: "Google's Machine Learning Crash Course", url: 'https://developers.google.com/machine-learning/crash-course', icon: SiGoogle, description: 'One of the best beginner-friendly ML references if you want conceptual understanding without a PhD.' },
-          { title: 'NIST AI Risk Management Framework', url: 'https://www.nist.gov/itl/ai-risk-management-framework', icon: FaBalanceScale, description: 'A strong governance reference for teams building AI systems responsibly and at scale.' },
+          { title: "Anthropic's Prompt Engineering Guide", url: 'https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview', icon: FaRobot, description: 'One of the clearest practical guides for writing prompts that work.' },
+          { title: 'OpenAI Cookbook', url: 'https://cookbook.openai.com/', icon: FaRobot, description: 'A strong production-oriented resource for tool use, evaluation, and orchestration.' },
+          { title: "Google's Machine Learning Crash Course", url: 'https://developers.google.com/machine-learning/crash-course', icon: SiGoogle, description: 'A high-value intro to ML concepts without getting lost in theory.' },
+          { title: 'NIST AI Risk Management Framework', url: 'https://www.nist.gov/itl/ai-risk-management-framework', icon: FaBalanceScale, description: 'The best governance reference for responsible AI system design.' },
         ],
       },
     ],
