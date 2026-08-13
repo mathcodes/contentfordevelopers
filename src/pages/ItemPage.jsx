@@ -75,6 +75,18 @@ export default function ItemPage({ sol }) {
             <button className="text-2xl" id="button" onClick={showHide}>Diagram</button>
             <a href={data[id].image}><img id="image" src={data[id].image} alt="img" width="50%" /></a>
           </div>
+          {data[id].animation && (
+            <div className="md:col-span-2">
+              <h1 className="text-2xl">Animation</h1>
+              <iframe
+                title="Solution animation"
+                src={`${process.env.PUBLIC_URL}/${data[id].animation}`}
+                width="100%"
+                height="500"
+                style={{ border: "none" }}
+              />
+            </div>
+          )}
         </div>
         <Footer />
       </div>

@@ -93,6 +93,7 @@ var addTwoNumbers = function(l1, l2) {
   'Time_Complexity': "O(max(m,n))",
   'Space_Complexity': "O(max(m,n))",
   'image':'https://raw.githubusercontent.com/mathcodes/contentfordevelopers/main/src/assets/LeetCode/0002.AddTwoNumbers/1.addTwoNumbers.png',
+  'animation':'animations/leetcode-0002-add-two-numbers.html',
 },
 
 {
