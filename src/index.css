@@ -54,7 +54,8 @@ body {
   }
 
   .display {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(1.75rem, 7vw, 3.5rem);
+    overflow-wrap: anywhere;
     @apply font-extrabold leading-tight tracking-tight;
   }
 

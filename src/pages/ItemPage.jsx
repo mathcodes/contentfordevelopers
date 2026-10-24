@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/navbar/Navbar";
-import ReactPlayer from 'react-player'
+import VideoFacade from '../components/video/VideoFacade'
 import { BsFillImageFill, BsFilm } from 'react-icons/bs'
 import { SelectionText } from "@uiw/react-textarea-code-editor";
 import { useParams } from 'react-router-dom';
@@ -69,11 +69,11 @@ export default function ItemPage({ sol }) {
           </div>
           <div className="mb-12 min-h-500">
             <h1 className="text-2xl">Video Solution</h1>
-            <ReactPlayer url={data[id].video} width="100%" height="100%" />
+            <VideoFacade url={data[id].video} title={`${data[id].title || "solution"} walkthrough`} />
           </div>
           <div id="showHideDiagram">
             <button className="text-2xl" id="button" onClick={showHide}>Diagram</button>
-            <a href={data[id].image}><img id="image" src={data[id].image} alt="img" width="50%" /></a>
+            <a href={data[id].image}><img id="image" src={data[id].image} alt={`Solution diagram for ${data[id].title || "this problem"}`} width="50%" /></a>
           </div>
           {data[id].animation && (
             <div className="md:col-span-2">
