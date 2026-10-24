@@ -10,9 +10,9 @@ function ResourceCard({ item }) {
   const cardInner = (
     <div className="card p-5 h-full flex flex-col">
       <div className="flex items-center gap-3 mb-2">
-        {ItemIcon && <ItemIcon className="w-5 h-5 text-accent2 flex-shrink-0" />}
+        {ItemIcon && <ItemIcon aria-hidden="true" className="w-5 h-5 text-accent2 flex-shrink-0" />}
         <h3 className="heading-3 text-base">{title}</h3>
-        {!internal && <FaExternalLinkAlt className="w-3 h-3 text-slate-400 ml-auto flex-shrink-0" />}
+        {!internal && <FaExternalLinkAlt aria-hidden="true" className="w-3 h-3 text-slate-500 dark:text-slate-400 ml-auto flex-shrink-0" />}
       </div>
       {description && (
         <p className="body text-sm text-slate-600 dark:text-slate-400">{description}</p>
@@ -27,6 +27,7 @@ function ResourceCard({ item }) {
   ) : (
     <a href={url} target="_blank" rel="noreferrer" className="no-underline text-inherit">
       {cardInner}
+      <span className="sr-only"> (opens in a new tab)</span>
     </a>
   );
 }
@@ -42,7 +43,7 @@ export default function PageTemplate({ topic }) {
         <section className="py-16 bg-slate-50 dark:bg-slate-800/30">
           <div className="site-container">
             <div className="flex items-center gap-3 mb-4">
-              {Icon && <Icon className="w-8 h-8 text-accent2" />}
+              {Icon && <Icon aria-hidden="true" className="w-8 h-8 text-accent2" />}
               <h1 className="heading-1">{title}</h1>
             </div>
             <p className="body-lg text-slate-600 dark:text-slate-400 max-w-2xl mb-6">{description}</p>
@@ -77,9 +78,9 @@ export default function PageTemplate({ topic }) {
               ))}
 
               <div className="rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 p-10 text-center">
-                <p className="eyebrow text-slate-400 mb-2">Know a better resource?</p>
+                <p className="eyebrow text-slate-500 dark:text-slate-400 mb-2">Know a better resource?</p>
                 <h2 className="heading-3 text-slate-500 dark:text-slate-400">Help keep this list current</h2>
-                <p className="body text-sm text-slate-400 mt-2 max-w-md mx-auto">
+                <p className="body text-sm text-slate-500 dark:text-slate-400 mt-2 max-w-md mx-auto">
                   Links and best practices age fast — open a PR if something here is outdated or missing.
                 </p>
                 <a
@@ -97,9 +98,9 @@ export default function PageTemplate({ topic }) {
           <section className="py-16">
             <div className="site-container">
               <div className="rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 p-12 text-center">
-                <p className="eyebrow text-slate-400 mb-2">In Progress</p>
+                <p className="eyebrow text-slate-500 dark:text-slate-400 mb-2">In Progress</p>
                 <h2 className="heading-2 text-slate-500 dark:text-slate-400">Content Coming Soon</h2>
-                <p className="body text-slate-400 mt-3 max-w-md mx-auto">
+                <p className="body text-slate-500 dark:text-slate-400 mt-3 max-w-md mx-auto">
                   This section is actively being built. Want to help shape it?
                 </p>
                 <a

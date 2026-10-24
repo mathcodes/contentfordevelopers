@@ -14,8 +14,6 @@ body {
   flex-direction: column;
 }
 
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
 
 @layer base {
   .hero-bg {
@@ -91,7 +89,7 @@ body {
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold border-2 border-accent text-accent hover:bg-accent hover:text-white active:scale-95 transition-all duration-200 no-underline;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold border-2 border-accent text-accent dark:border-[#f472d0] dark:text-[#f472d0] hover:bg-accent hover:text-white dark:hover:text-white active:scale-95 transition-all duration-200 no-underline;
   }
 
   .card {

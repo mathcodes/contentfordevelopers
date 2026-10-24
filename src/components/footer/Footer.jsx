@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-slate-200 dark:border-slate-700 pt-8">
-          <p className="text-xs text-slate-400 dark:text-slate-500">
+          <p className="text-xs text-slate-500 dark:text-slate-400">
             &copy; {new Date().getFullYear()} ContentForDevelopers — Open source & community powered.
           </p>
         </div>
